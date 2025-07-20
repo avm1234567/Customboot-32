@@ -1,0 +1,10 @@
+CMake Error at /home/varun/esp/esp-idf/components/xtensa/project_include.cmake:19 (message):
+  Internal error, toolchain has not been set correctly by project (or an
+  invalid CMakeCache.txt file has been generated somehow)
+Call Stack (most recent call first):
+  /home/varun/esp/esp-idf/tools/cmake/build.cmake:467 (include)
+  /home/varun/esp/esp-idf/tools/cmake/build.cmake:700 (__build_process_project_includes)
+  /home/varun/esp/esp-idf/tools/cmake/project.cmake:718 (idf_build_process)
+  CMakeLists.txt:9 (project)
+
+
