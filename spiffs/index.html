@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Firmware Uploader</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f2f2f2;
+    }
+    h1 {
+      color: #333;
+    }
+    form {
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    input[type="file"] {
+      margin-bottom: 10px;
+    }
+    input[type="submit"] {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Upload Firmware</h1>
+
+  <form method="POST" action="/uploadA" enctype="multipart/form-data">
+    <h3>Upload Firmware A</h3>
+    <input type="file" name="firmware" required>
+    <br>
+    <input type="submit" value="Upload A">
+  </form>
+
+  <form method="POST" action="/uploadB" enctype="multipart/form-data">
+    <h3>Upload Firmware B</h3>
+    <input type="file" name="firmware" required>
+    <br>
+    <input type="submit" value="Upload B">
+  </form>
+
+</body>
+</html>
+
