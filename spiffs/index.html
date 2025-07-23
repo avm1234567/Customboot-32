@@ -39,20 +39,19 @@
 
   <h1>Upload Firmware</h1>
 
-  <form method="POST" action="/uploadA" enctype="multipart/form-data">
+  <form method="POST" action="/upload_a" enctype="multipart/form-data">
     <h3>Upload Firmware A</h3>
-    <input type="file" name="firmware" required>
+    <input type="file" name="firmware" id="A" required>
     <br>
-    <input type="submit" value="Upload A">
+    <input type="submit" value="upload_a">
   </form>
 
-  <form method="POST" action="/uploadB" enctype="multipart/form-data">
+  <form method="POST" action="/upload_b" enctype="multipart/form-data">
     <h3>Upload Firmware B</h3>
-    <input type="file" name="firmware" required>
+    <input type="file" name="firmware" id="B" required>
     <br>
-    <input type="submit" value="Upload B">
+    <input type="submit" value="upload_b">
   </form>
 
-</body>
 </html>
 
