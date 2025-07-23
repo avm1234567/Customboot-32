@@ -1,203 +1,197 @@
-#include <stdio.h>
 #include <string.h>
-#include <stdbool.h>
-#include "freertos/FreeRTOS.h"
-#include "freertos/task.h"
-#include "driver/uart.h"
+#include <dirent.h>
+#include <sys/stat.h>
 #include "esp_log.h"
+#include "esp_spiffs.h"
+#include "esp_http_server.h"
+#include "esp_vfs.h"
 #include "esp_wifi.h"
 #include "esp_event.h"
-#include "nvs_flash.h"
-#include "esp_http_server.h"
-#include "lwip/sockets.h"
-#include "esp_spiffs.h"
 #include "esp_netif.h"
-#include "sdkconfig.h"  // Needed for CONFIG_WIFI_SSID & CONFIG_WIFI_PASSWORD
+#include "nvs_flash.h"
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
 
-#define UART_PORT UART_NUM_1
-#define UART_TX 17
-#define UART_RX 16
-#define UART_RTS 14
-#define UART_CTS 15
-#define BUF_SIZE 512
-#define MAX_ATTEMPTS 3
+#define TAG "OTA_SERVER"
+#define WIFI_SSID "Delta_Virus_2.4G"
+#define WIFI_PASS "66380115"
+#define UPLOAD_PATH_A "/spiffs/firmware_a.bin"
+#define UPLOAD_PATH_B "/spiffs/firmware_b.bin"
 
-#define SSID "Delta_Virus_2.4G"
-#define PASS "66380115"
+static esp_err_t spiffs_init(void)
+{
+    esp_vfs_spiffs_conf_t conf = {
+        .base_path = "/spiffs",
+        .partition_label = "storage",
+        .max_files = 5,
+        .format_if_mount_failed = true
+    };
 
-static const char *TAG = "ESP_IDF_OTA";
-static httpd_handle_t server = NULL;
-
-uint32_t crc32_table[256];
-
-void crc32_init() {
-    const uint32_t poly = 0xEDB88320;
-    for (uint32_t i = 0; i < 256; i++) {
-        uint32_t crc = i;
-        for (uint8_t j = 0; j < 8; j++) {
-            crc = (crc & 1) ? (crc >> 1) ^ poly : crc >> 1;
-        }
-        crc32_table[i] = crc;
-    }
-}
-
-uint32_t crc32(const uint8_t *data, size_t len) {
-    uint32_t crc = 0xFFFFFFFF;
-    for (size_t i = 0; i < len; i++) {
-        uint8_t byte = data[i];
-        crc = crc32_table[(crc ^ byte) & 0xFF] ^ (crc >> 8);
-    }
-    return ~crc;
-}
-
-uint32_t crc32_continue(uint32_t prev_crc, uint8_t *data, uint32_t len) {
-    uint32_t crc = ~prev_crc;
-    for (uint32_t i = 0; i < len; i++) {
-        crc = crc32_table[(crc ^ data[i]) & 0xFF] ^ (crc >> 8);
-    }
-    return ~crc;
-}
-
-esp_err_t send_firmware(const char *path) {
-    FILE *fw = fopen(path, "rb");
-    if (!fw) {
-        ESP_LOGE(TAG, "Failed to open firmware file");
-        return ESP_FAIL;
+    esp_err_t ret = esp_vfs_spiffs_register(&conf);
+    if (ret != ESP_OK)
+    {
+        ESP_LOGE(TAG, "Failed to mount SPIFFS (%s)", esp_err_to_name(ret));
+        return ret;
     }
 
-    uint8_t buffer[BUF_SIZE];
-    uint32_t total_crc = ~0L;
-
-    while (!feof(fw)) {
-        size_t len = fread(buffer, 1, BUF_SIZE, fw);
-        uint32_t chunk_crc = crc32(buffer, len);
-
-        uart_write_bytes(UART_PORT, (const char *)&len, 4);
-        uart_write_bytes(UART_PORT, (const char *)&chunk_crc, 4);
-
-        for (int attempt = 0; attempt < MAX_ATTEMPTS; attempt++) {
-            uart_write_bytes(UART_PORT, (const char *)buffer, len);
-
-            char ack[64] = {0};
-            int len_ack = uart_read_bytes(UART_PORT, (uint8_t *)ack, sizeof(ack) - 1, 1000 / portTICK_PERIOD_MS);
-            if (len_ack > 0 && strstr(ack, "[STM] CRC matched")) {
-                break;
-            } else if (attempt == MAX_ATTEMPTS - 1) {
-                ESP_LOGE(TAG, "Chunk failed after 3 attempts");
-                fclose(fw);
-                return ESP_FAIL;
-            }
-        }
-
-        total_crc = crc32_continue(total_crc, buffer, len);
+    size_t total = 0, used = 0;
+    ret = esp_spiffs_info("storage", &total, &used);
+    if (ret != ESP_OK)
+    {
+        ESP_LOGE(TAG, "Failed to get SPIFFS info (%s)", esp_err_to_name(ret));
+        return ret;
     }
 
-    uint32_t eof = 0xFFFFFFFF;
-    uart_write_bytes(UART_PORT, (const char *)&eof, 4);
-    uart_write_bytes(UART_PORT, (const char *)&eof, 4);
-    uart_write_bytes(UART_PORT, (const char *)&total_crc, 4);
-
-    fclose(fw);
-    ESP_LOGI(TAG, "Firmware transfer complete");
+    ESP_LOGI(TAG, "SPIFFS mounted. Total: %d bytes, Used: %d bytes", total, used);
     return ESP_OK;
 }
 
-void uart_task(void *arg) {
-    char line[128];
-    while (1) {
-        int len = uart_read_bytes(UART_PORT, (uint8_t *)line, sizeof(line) - 1, 100 / portTICK_PERIOD_MS);
-        if (len > 0) {
-            line[len] = '\0';
-            if (strstr(line, "REQ_A")) {
-                ESP_LOGI(TAG, "STM requested firmware A");
-                send_firmware("/spiffs/firmware_a.bin");
-            } else if (strstr(line, "REQ_B")) {
-                ESP_LOGI(TAG, "STM requested firmware B");
-                send_firmware("/spiffs/firmware_b.bin");
-            } else if (strstr(line, "[STM]")) {
-                ESP_LOGI(TAG, "%s", line);
-            }
-        }
-    }
-}
+void list_spiffs_files()
+{	
+    DIR *dir = opendir("/spiffs");
+    struct dirent *entry;
 
-esp_err_t upload_handler(httpd_req_t *req, const char *filename) {
-    char filepath[64];
-    snprintf(filepath, sizeof(filepath), "/spiffs/%s", filename);
-
-    FILE *f = fopen(filepath, "w");
-    if (!f) return ESP_FAIL;
-
-    char buf[512];
-    int received;
-    while ((received = httpd_req_recv(req, buf, sizeof(buf))) > 0) {
-        fwrite(buf, 1, received, f);
+    if (!dir)
+    {
+        ESP_LOGE(TAG, "Failed to open /spiffs");
+        return;
     }
 
-    fclose(f);
-    httpd_resp_send(req, "Upload done", HTTPD_RESP_USE_STRLEN);
-    return ESP_OK;
+    while ((entry = readdir(dir)) != NULL)
+    {
+        char filepath[512];
+        snprintf(filepath, sizeof(filepath), "/spiffs/%s", entry->d_name);
+        FILE *f = fopen(filepath, "r");
+        if (!f) continue;
+        fseek(f, 0, SEEK_END);
+        long size = ftell(f);
+        fclose(f);
+        ESP_LOGI(TAG, "  %s (%ld bytes)", entry->d_name, size);
+    }
+
+    closedir(dir);
 }
 
-esp_err_t upload_a_post_handler(httpd_req_t *req) {
-    return upload_handler(req, "firmware_a.bin");
-}
-
-esp_err_t upload_b_post_handler(httpd_req_t *req) {
-    return upload_handler(req, "firmware_b.bin");
-}
-
-esp_err_t root_get_handler(httpd_req_t *req) {
-    //jhcnsjahfbnekasnfiuesakfoiesajf
+static esp_err_t index_get_handler(httpd_req_t *req)
+{
+    list_spiffs_files();
     FILE *file = fopen("/spiffs/index.html", "r");
-    if (!file) {
-        httpd_resp_send_404(req);
+    if (!file)
+    {
+        ESP_LOGE(TAG, "index.html not found on SPIFFS");
+        httpd_resp_send_err(req, HTTPD_500_INTERNAL_SERVER_ERROR, "index.html missing");
         return ESP_FAIL;
     }
 
     char line[256];
     httpd_resp_set_type(req, "text/html");
-
-    while (fgets(line, sizeof(line), file)) {
+    while (fgets(line, sizeof(line), file))
+    {
         httpd_resp_sendstr_chunk(req, line);
     }
-
     fclose(file);
-    httpd_resp_sendstr_chunk(req, NULL);  // End response
+    httpd_resp_sendstr_chunk(req, NULL);
     return ESP_OK;
 }
 
-void start_server() {
-    httpd_config_t config = HTTPD_DEFAULT_CONFIG();
-    httpd_start(&server, &config);
-
-    httpd_uri_t root = {
-        .uri = "/",
-        .method = HTTP_GET,
-        .handler = root_get_handler,
-        .user_ctx = NULL
-    };
-    httpd_register_uri_handler(server, &root);
-
-    httpd_uri_t uri_a = {
-        .uri = "/uploadA",
-        .method = HTTP_POST,
-        .handler = upload_a_post_handler,
-        .user_ctx = NULL
-    };
-    httpd_uri_t uri_b = {
-        .uri = "/uploadB",
-        .method = HTTP_POST,
-        .handler = upload_b_post_handler,
-        .user_ctx = NULL
-    };
-
-    httpd_register_uri_handler(server, &uri_a);
-    httpd_register_uri_handler(server, &uri_b);
+static esp_err_t favicon_handler(httpd_req_t *req)
+{
+    httpd_resp_send_err(req, HTTPD_404_NOT_FOUND, "favicon not found");
+    return ESP_FAIL;
 }
 
-// === WiFi Addition Start ===
-void wifi_connect() {
+
+static esp_err_t upload_post_handler(httpd_req_t *req, const char *path)
+{
+    FILE *f = fopen(path, "w");
+    if (!f)
+    {
+        ESP_LOGE(TAG, "Failed to open %s for writing", path);
+        httpd_resp_send_err(req, HTTPD_500_INTERNAL_SERVER_ERROR, "File open failed");
+        return ESP_FAIL;
+    }
+
+    char buf[1024];
+    int total = 0;
+    int received;
+    while ((received = httpd_req_recv(req, buf, sizeof(buf))) > 0)
+    {
+        fwrite(buf, 1, received, f);
+        total += received;
+    }
+
+    fclose(f);
+
+    if (received < 0)
+    {
+        ESP_LOGE(TAG, "File receive failed");
+        httpd_resp_send_err(req, HTTPD_500_INTERNAL_SERVER_ERROR, "Receive failed");
+        return ESP_FAIL;
+    }
+
+    ESP_LOGI(TAG, "Received %d bytes to %s", total, path);
+    list_spiffs_files();
+    return ESP_OK;
+}
+static esp_err_t upload_a_post(httpd_req_t *req)
+{
+    return upload_post_handler(req, UPLOAD_PATH_A);
+    
+}
+
+static esp_err_t upload_b_post(httpd_req_t *req)
+{
+    return upload_post_handler(req, UPLOAD_PATH_B);
+    
+}
+
+
+
+static httpd_handle_t start_webserver(void)
+{
+    httpd_config_t config = HTTPD_DEFAULT_CONFIG();
+    httpd_handle_t server = NULL;
+
+    if (httpd_start(&server, &config) == ESP_OK)
+    {
+        httpd_register_uri_handler(server, &(httpd_uri_t){
+            .uri = "/", .method = HTTP_GET, .handler = index_get_handler});
+
+        httpd_register_uri_handler(server, &(httpd_uri_t){
+            .uri = "/upload_a", .method = HTTP_POST, .handler = upload_a_post});
+
+        httpd_register_uri_handler(server, &(httpd_uri_t){
+            .uri = "/upload_b", .method = HTTP_POST, .handler = upload_b_post});
+
+        httpd_register_uri_handler(server, &(httpd_uri_t){
+            .uri = "/favicon.ico", .method = HTTP_GET, .handler = favicon_handler});
+    }
+
+    return server;
+}
+
+static void wifi_event_handler(void *arg, esp_event_base_t event_base,
+                               int32_t event_id, void *event_data)
+{
+    if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_START)
+    {
+        esp_wifi_connect();
+    }
+    else if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_DISCONNECTED)
+    {
+        ESP_LOGW(TAG, "Wi-Fi disconnected, reconnecting...");
+        esp_wifi_connect();
+    }
+    else if (event_base == IP_EVENT && event_id == IP_EVENT_STA_GOT_IP)
+    {
+        ip_event_got_ip_t *event = (ip_event_got_ip_t *)event_data;
+        ESP_LOGI(TAG, "Got IP: " IPSTR, IP2STR(&event->ip_info.ip));
+        start_webserver();
+    }
+}
+
+static void wifi_init_sta(void)
+{
     esp_netif_init();
     esp_event_loop_create_default();
     esp_netif_create_default_wifi_sta();
@@ -205,11 +199,13 @@ void wifi_connect() {
     wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
     esp_wifi_init(&cfg);
 
+    esp_event_handler_register(WIFI_EVENT, ESP_EVENT_ANY_ID, &wifi_event_handler, NULL);
+    esp_event_handler_register(IP_EVENT, IP_EVENT_STA_GOT_IP, &wifi_event_handler, NULL);
+
     wifi_config_t wifi_config = {
         .sta = {
-            .ssid = SSID,
-            .password = PASS,
-            .threshold.authmode = WIFI_AUTH_WPA2_PSK,
+            .ssid = WIFI_SSID,
+            .password = WIFI_PASS,
         },
     };
 
@@ -217,46 +213,14 @@ void wifi_connect() {
     esp_wifi_set_config(WIFI_IF_STA, &wifi_config);
     esp_wifi_start();
 
-    ESP_LOGI(TAG, "Connecting to WiFi: %s", SSID);
-    esp_wifi_connect();
+    ESP_LOGI(TAG, "Wi-Fi connecting to SSID: %s", WIFI_SSID);
 }
-// === WiFi Addition End ===
 
-void app_main() {
-    nvs_flash_init();
-
-    // === WiFi Addition Start ===
-    wifi_connect();
-    // === WiFi Addition End ===
-
-    esp_vfs_spiffs_conf_t conf = {
-        .base_path = "/spiffs",
-        .partition_label = "storage",
-        .max_files = 5,
-        .format_if_mount_failed = true,
-    };
-
-    esp_err_t err = esp_vfs_spiffs_register(&conf);
-    if (err != ESP_OK) {
-        ESP_LOGE(TAG, "Failed to mount SPIFFS: %s", esp_err_to_name(err));
-        return;
-    }
-    ESP_LOGI(TAG, "SPIFFS mounted successfully.");
-
-    uart_config_t uart_config = {
-        .baud_rate = 115200,
-        .data_bits = UART_DATA_8_BITS,
-        .parity = UART_PARITY_DISABLE,
-        .stop_bits = UART_STOP_BITS_1,
-        .flow_ctrl = UART_HW_FLOWCTRL_CTS_RTS,
-        .rx_flow_ctrl_thresh = 122,
-    };
-
-    uart_driver_install(UART_PORT, BUF_SIZE * 2, 0, 0, NULL, 0);
-    uart_param_config(UART_PORT, &uart_config);
-    uart_set_pin(UART_PORT, UART_TX, UART_RX, UART_RTS, UART_CTS);
-
-    crc32_init();
-    xTaskCreate(uart_task, "uart_task", 4096, NULL, 10, NULL);
-    start_server();
+void app_main(void)
+{
+    ESP_ERROR_CHECK(nvs_flash_init());
+    ESP_ERROR_CHECK(spiffs_init());
+    wifi_init_sta();
+    
 }
+
