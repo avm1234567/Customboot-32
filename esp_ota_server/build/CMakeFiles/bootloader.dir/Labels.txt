@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+C:/Users/archi/Customboot-32/esp_ota_server/build/CMakeFiles/bootloader
+C:/Users/archi/Customboot-32/esp_ota_server/build/CMakeFiles/bootloader.rule
+C:/Users/archi/Customboot-32/esp_ota_server/build/CMakeFiles/bootloader-complete.rule
+C:/Users/archi/Customboot-32/esp_ota_server/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+C:/Users/archi/Customboot-32/esp_ota_server/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+C:/Users/archi/Customboot-32/esp_ota_server/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+C:/Users/archi/Customboot-32/esp_ota_server/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+C:/Users/archi/Customboot-32/esp_ota_server/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+C:/Users/archi/Customboot-32/esp_ota_server/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+C:/Users/archi/Customboot-32/esp_ota_server/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

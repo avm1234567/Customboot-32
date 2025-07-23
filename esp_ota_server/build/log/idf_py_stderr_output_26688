@@ -1,0 +1,39 @@
+CMake Error at C:/Espressif/frameworks/esp-idf-v5.2.3/tools/cmake/component.cmake:225 (message):
+  CMake Warning (dev) at build_properties.temp.cmake:8:
+
+    Syntax Warning in cmake code at column 106
+
+  
+
+    Argument not separated from preceding token by whitespace.
+
+  Call Stack (most recent call first):
+
+    C:/Espressif/frameworks/esp-idf-v5.2.3/tools/cmake/scripts/component_get_requirements.cmake:3 (include)
+
+  This warning is for project developers.  Use -Wno-dev to suppress it.
+
+  
+
+  CMake Error at
+  C:/Users/archi/Customboot-32/esp_ota_server/components/protocol_examples_tapif_io/CMakeLists.txt:8
+  (message):
+
+    This component is currently only supported for linux target
+
+  Call Stack (most recent call first):
+
+    C:/Espressif/frameworks/esp-idf-v5.2.3/tools/cmake/scripts/component_get_requirements.cmake:107 (include)
+    C:/Espressif/frameworks/esp-idf-v5.2.3/tools/cmake/scripts/component_get_requirements.cmake:127 (__component_get_requirements)
+
+  
+
+  
+
+Call Stack (most recent call first):
+  C:/Espressif/frameworks/esp-idf-v5.2.3/tools/cmake/build.cmake:586 (__component_get_requirements)
+  C:/Espressif/frameworks/esp-idf-v5.2.3/tools/cmake/project.cmake:605 (idf_build_process)
+  CMakeLists.txt:8 (project)
+
+
+ninja: error: rebuilding 'build.ninja': subcommand failed

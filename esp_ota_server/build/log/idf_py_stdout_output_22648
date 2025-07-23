@@ -1,0 +1,8 @@
+-- Component directory C:/Users/archi/Customboot-32/esp_ota_server/components/env_caps does not contain a CMakeLists.txt file. No component will be added
+-- ccache will be used for faster recompilation
+-- Building ESP-IDF components for target esp32
+-- Configuring incomplete, errors occurred!
+See also "C:/Users/archi/Customboot-32/esp_ota_server/build/CMakeFiles/CMakeOutput.log".
+[0/1] Re-running CMake...
+FAILED: build.ninja 
+C:\Espressif\tools\cmake\3.24.0\bin\cmake.exe --regenerate-during-build -SC:\Users\archi\Customboot-32\esp_ota_server -BC:\Users\archi\Customboot-32\esp_ota_server\build

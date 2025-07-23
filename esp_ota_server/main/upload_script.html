@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ESP32 Dual Binary Upload</title>
+</head>
+<body>
+    <h2>ESP32 OTA File Server</h2>
+
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>Binary File</th>
+            <th>Select File</th>
+            <th>Set Path on Server</th>
+        </tr>
+        <tr>
+            <td>Firmware 1</td>
+            <td><input type="file" id="file1" onchange="setPath('file1', 'path1')"></td>
+            <td><input type="text" id="path1" placeholder="e.g. app1.bin"></td>
+        </tr>
+        <tr>
+            <td>Firmware 2</td>
+            <td><input type="file" id="file2" onchange="setPath('file2', 'path2')"></td>
+            <td><input type="text" id="path2" placeholder="e.g. app2.bin"></td>
+        </tr>
+    </table>
+
+    <br>
+    <button onclick="uploadBoth()">Upload Both</button>
+
+    <script>
+    const MAX_SIZE = 200 * 1024;
+
+    function setPath(fileInputId, pathInputId) {
+        const fileInput = document.getElementById(fileInputId);
+        const pathInput = document.getElementById(pathInputId);
+        if (fileInput.files.length > 0) {
+            pathInput.value = fileInput.files[0].name;
+        }
+    }
+
+    function uploadFile(fileInputId, pathInputId, callback) {
+        const fileInput = document.getElementById(fileInputId);
+        const pathInput = document.getElementById(pathInputId);
+        const file = fileInput.files[0];
+        const filepath = pathInput.value.trim();
+
+        if (!file) {
+            alert("No file selected for " + fileInputId);
+            return callback(false);
+        }
+        if (filepath.length === 0 || filepath.endsWith("/")) {
+            alert("Invalid server path for " + pathInputId);
+            return callback(false);
+        }
+        if (file.size > MAX_SIZE) {
+            alert("File too large (max 200KB) for " + fileInputId);
+            return callback(false);
+        }
+
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "/upload/" + filepath, true);
+        xhr.onload = function () {
+            if (xhr.status === 200) {
+                console.log("Uploaded: " + filepath);
+                callback(true);
+            } else {
+                alert("Error uploading " + filepath + ": " + xhr.status + "\n" + xhr.responseText);
+                callback(false);
+            }
+        };
+        xhr.onerror = function () {
+            alert("Failed to upload " + filepath);
+            callback(false);
+        };
+        xhr.send(file);
+    }
+
+    function uploadBoth() {
+        uploadFile("file1", "path1", function(success1) {
+            if (success1) {
+                uploadFile("file2", "path2", function(success2) {
+                    if (success2) {
+                        alert("Both binaries uploaded successfully!");
+                        location.reload();
+                    }
+                });
+            }
+        });
+    }
+    </script>
+</body>
+</html>

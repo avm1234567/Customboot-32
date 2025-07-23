@@ -1,0 +1,9 @@
+CMake Error at C:/Espressif/frameworks/esp-idf-v5.2.3/tools/cmake/project.cmake:407 (message):
+  Directory specified in EXTRA_COMPONENT_DIRS doesn't exist:
+  C:/Users/archi/Customboot-32/esp_ota_server/components/protocol_examples_common
+Call Stack (most recent call first):
+  C:/Espressif/frameworks/esp-idf-v5.2.3/tools/cmake/project.cmake:491 (__project_init)
+  CMakeLists.txt:10 (project)
+
+
+ninja: error: rebuilding 'build.ninja': subcommand failed
