@@ -1,0 +1,25 @@
+[1/6] cd /home/varun/esp/OTA_ESP/build/esp-idf/esptool_py && /home/varun/.espressif/python_env/idf5.4_py3.10_env/bin/python /home/varun/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/varun/esp/OTA_ESP/build/partition_table/partition-table.bin /home/varun/esp/OTA_ESP/build/OTA_ESP.bin
+OTA_ESP.bin binary size 0xc94f0 bytes. Smallest app partition is 0x1f0000 bytes. 0x126b10 bytes (59%) free.
+[2/6] Performing build step for 'bootloader'
+[1/1] cd /home/varun/esp/OTA_ESP/build/bootloader/esp-idf/esptool_py && /home/varun/.espressif/python_env/idf5.4_py3.10_env/bin/python /home/varun/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/varun/esp/OTA_ESP/build/bootloader/bootloader.bin
+Bootloader binary size 0x6570 bytes. 0xa90 bytes (9%) free.
+[3/4] cd /home/varun/esp/OTA_ESP/build && /home/varun/.espressif/python_env/idf5.4_py3.10_env/bin/python /home/varun/esp/esp-idf/components/spiffs/spiffsgen.py 0x100000 /home/varun/esp/OTA_ESP/spiffs /home/varun/esp/OTA_ESP/build/storage.bin --page-size=256 --obj-name-len=32 --meta-len=4 --use-magic --use-magic-len
+[3/4] cd /home/varun/esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/varun/esp/esp-idf -D "SERIAL_TOOL=/home/varun/.espressif/python_env/idf5.4_py3.10_env/bin/python;;/home/varun/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/varun/esp/OTA_ESP/build -P /home/varun/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 4MB 0x1000 bootloader/bootloader.bin 0x10000 OTA_ESP.bin 0x8000 partition_table/partition-table.bin 0x200000 storage.bin
+esptool.py v4.9.0
+Serial port /dev/ttyUSB0
+Connecting...
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 00:4b:12:33:cb:18
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+
+A fatal error occurred: Unable to verify flash chip connection (No serial data received.).
+FAILED: CMakeFiles/flash /home/varun/esp/OTA_ESP/build/CMakeFiles/flash 
+cd /home/varun/esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/varun/esp/esp-idf -D "SERIAL_TOOL=/home/varun/.espressif/python_env/idf5.4_py3.10_env/bin/python;;/home/varun/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/varun/esp/OTA_ESP/build -P /home/varun/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+ninja: build stopped: subcommand failed.

@@ -13,8 +13,8 @@
 #include "freertos/task.h"
 
 #define TAG "OTA_SERVER"
-#define WIFI_SSID "Delta_Virus_2.4G"
-#define WIFI_PASS "66380115"
+#define WIFI_SSID "Amita"
+#define WIFI_PASS "05072006"
 #define UPLOAD_PATH_A "/spiffs/firmware_a.bin"
 #define UPLOAD_PATH_B "/spiffs/firmware_b.bin"
 
@@ -24,8 +24,7 @@ static esp_err_t spiffs_init(void)
         .base_path = "/spiffs",
         .partition_label = "storage",
         .max_files = 5,
-        .format_if_mount_failed = true
-    };
+        .format_if_mount_failed = true};
 
     esp_err_t ret = esp_vfs_spiffs_register(&conf);
     if (ret != ESP_OK)
@@ -47,7 +46,7 @@ static esp_err_t spiffs_init(void)
 }
 
 void list_spiffs_files()
-{	
+{
     DIR *dir = opendir("/spiffs");
     struct dirent *entry;
 
@@ -62,7 +61,8 @@ void list_spiffs_files()
         char filepath[512];
         snprintf(filepath, sizeof(filepath), "/spiffs/%s", entry->d_name);
         FILE *f = fopen(filepath, "r");
-        if (!f) continue;
+        if (!f)
+            continue;
         fseek(f, 0, SEEK_END);
         long size = ftell(f);
         fclose(f);
@@ -100,52 +100,87 @@ static esp_err_t favicon_handler(httpd_req_t *req)
     return ESP_FAIL;
 }
 
-
-static esp_err_t upload_post_handler(httpd_req_t *req, const char *path)
+esp_err_t upload_post_handler(httpd_req_t *req, const char *path)
 {
     FILE *f = fopen(path, "w");
-    if (!f)
-    {
-        ESP_LOGE(TAG, "Failed to open %s for writing", path);
-        httpd_resp_send_err(req, HTTPD_500_INTERNAL_SERVER_ERROR, "File open failed");
+    if (!f) {
+        ESP_LOGE(TAG, "Failed to open file for writing");
+        httpd_resp_send_500(req);
         return ESP_FAIL;
     }
 
     char buf[1024];
-    int total = 0;
     int received;
-    while ((received = httpd_req_recv(req, buf, sizeof(buf))) > 0)
-    {
-        fwrite(buf, 1, received, f);
-        total += received;
+    bool header_skipped = false;
+    int total_written = 0;
+    int trailing_cut = 46;
+
+    // Temporary buffer to store tail for stripping
+    char tail_buffer[64] = {0};  // 46 < 64
+    int tail_len = 0;
+
+    while ((received = httpd_req_recv(req, buf, sizeof(buf))) > 0) {
+        char *data = buf;
+        int len = received;
+
+        // Skip multipart headers
+        if (!header_skipped) {
+            char *start = strstr(buf, "\r\n\r\n");
+            if (!start) continue;
+            data = start + 4;
+            len = received - (data - buf);
+            header_skipped = true;
+        }
+
+        // Handle tail buffer
+        if (tail_len + len <= trailing_cut) {
+            memcpy(tail_buffer + tail_len, data, len);
+            tail_len += len;
+            continue;  // still haven't reached cut limit
+        }
+
+        // First, flush previous tail (except 46 final bytes)
+        int flush_len = (tail_len > 0) ? tail_len : 0;
+        int keep_tail = trailing_cut;
+        if (flush_len > 0) {
+            int to_write = flush_len - keep_tail;
+            if (to_write > 0) {
+                fwrite(tail_buffer, 1, to_write, f);
+                total_written += to_write;
+            }
+        }
+
+        // Append current chunk to tail
+        int copy_len = len + tail_len - trailing_cut;
+        if (copy_len > 0) {
+            fwrite(data, 1, copy_len, f);
+            total_written += copy_len;
+        }
+
+        // Save last 46 bytes as tail for next round
+        int tail_start = len - trailing_cut;
+        if (tail_start >= 0) {
+            memcpy(tail_buffer, data + tail_start, trailing_cut);
+            tail_len = trailing_cut;
+        }
     }
 
     fclose(f);
 
-    if (received < 0)
-    {
-        ESP_LOGE(TAG, "File receive failed");
-        httpd_resp_send_err(req, HTTPD_500_INTERNAL_SERVER_ERROR, "Receive failed");
-        return ESP_FAIL;
-    }
-
-    ESP_LOGI(TAG, "Received %d bytes to %s", total, path);
     list_spiffs_files();
+    // httpd_resp_sendstr(req, "Upload complete");
     return ESP_OK;
 }
+
 static esp_err_t upload_a_post(httpd_req_t *req)
 {
     return upload_post_handler(req, UPLOAD_PATH_A);
-    
 }
 
 static esp_err_t upload_b_post(httpd_req_t *req)
 {
     return upload_post_handler(req, UPLOAD_PATH_B);
-    
 }
-
-
 
 static httpd_handle_t start_webserver(void)
 {
@@ -155,16 +190,16 @@ static httpd_handle_t start_webserver(void)
     if (httpd_start(&server, &config) == ESP_OK)
     {
         httpd_register_uri_handler(server, &(httpd_uri_t){
-            .uri = "/", .method = HTTP_GET, .handler = index_get_handler});
+                                               .uri = "/", .method = HTTP_GET, .handler = index_get_handler});
 
         httpd_register_uri_handler(server, &(httpd_uri_t){
-            .uri = "/upload_a", .method = HTTP_POST, .handler = upload_a_post});
+                                               .uri = "/upload_a", .method = HTTP_POST, .handler = upload_a_post});
 
         httpd_register_uri_handler(server, &(httpd_uri_t){
-            .uri = "/upload_b", .method = HTTP_POST, .handler = upload_b_post});
+                                               .uri = "/upload_b", .method = HTTP_POST, .handler = upload_b_post});
 
         httpd_register_uri_handler(server, &(httpd_uri_t){
-            .uri = "/favicon.ico", .method = HTTP_GET, .handler = favicon_handler});
+                                               .uri = "/favicon.ico", .method = HTTP_GET, .handler = favicon_handler});
     }
 
     return server;
@@ -221,6 +256,4 @@ void app_main(void)
     ESP_ERROR_CHECK(nvs_flash_init());
     ESP_ERROR_CHECK(spiffs_init());
     wifi_init_sta();
-    
 }
-
