@@ -1,0 +1,2 @@
+source /home/varun/esp/OTA_ESP/build/gdbinit/symbols
+source /home/varun/esp/OTA_ESP/build/gdbinit/connect
