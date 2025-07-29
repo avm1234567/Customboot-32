@@ -6,16 +6,12 @@
 #include <string.h>
 
 #define UART_PORT       UART_NUM_0
-#define TX_PIN GPIO_NUM_1    // TXD0 (ESP32 to PC)
-#define RX_PIN GPIO_NUM_3    // RXD0 (PC to ESP32)
+#define TX_PIN GPIO_NUM_1   // TXD0 (ESP32 to PC)
+#define RX_PIN GPIO_NUM_3  // RXD0 (PC to ESP32)
 #define BUF_SIZE        1024
 
 static const char *TAG = "UART_ECHO";
 
-void list_dummy_files() {
-    const char *files = "firmware.bin\r\ndummy.txt\r\n";
-    uart_write_bytes(UART_PORT, files, strlen(files));
-}
 
 void uart_echo_task(void *arg)
 {
@@ -26,11 +22,8 @@ void uart_echo_task(void *arg)
             data[len] = '\0';
             ESP_LOGI(TAG, "Received: %s", data);
 
-            if (strncmp((char *)data, "ls", 2) == 0) {
-                list_dummy_files();
-            } else {
                 uart_write_bytes(UART_PORT, (const char *)data, len);
-            }
+            
         }
     }
 }
@@ -49,5 +42,5 @@ void app_main(void)
     uart_param_config(UART_PORT, &uart_config);
     uart_set_pin(UART_PORT, TX_PIN, RX_PIN, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE);
 
-    xTaskCreate(uart_echo_task, "uart_echo_task", 4096, NULL, 10, NULL);
+    xTaskCreate(uart_echo_task, "uart_echo_task", 4096, NULL, 10, NULL);
 }
