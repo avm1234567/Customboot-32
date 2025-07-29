@@ -1,0 +1,1286 @@
+�镁in the binary imag�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15736
+load:0x40080400,len:4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (29) boot: ESP-IDF v5.4.2 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Jul 24 2025 14:53:01[0m
+[0;32mI (30) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0ab54h ( 43860) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001ab7c vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (103) esp_image: segment 2: paddr=0001aba0 vaddr=3ffb0000 size=023e8h (  9192) load[0m
+[0;32mI (110) esp_image: segment 3: paddr=0001cf90 vaddr=40080000 size=03088h ( 12424) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=15b74h ( 88948) map[0m
+[0;32mI (153) esp_image: segment 5: paddr=00035b9c vaddr=40083088 size=0ad6ch ( 44396) load[0m
+[0;32mI (177) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (177) boot: Disabling RNG early entropy source...[0m
+[0;32mI (187) cpu_start: Multicore app[0m
+[0;32mI (196) cpu_start: Pro cpu start user code[0m
+[0;32mI (196) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (196) app_init: Application information:[0m
+[0;32mI (196) app_init: Project name:     ESP_STM_COMM[0m
+[0;32mI (200) app_init: App version:      1[0m
+[0;32mI (203) app_init: Compile time:     Jul 24 2025 14:52:47[0m
+[0;32mI (208) app_init: ELF file SHA256:  15c2dbffa...[0m
+[0;32mI (213) app_init: ESP-IDF:          v5.4.2[0m
+[0;32mI (217) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (220) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (224) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (229) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (235) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (240) heap_init: At 3FFB2CB0 len 0002D350 (180 KiB): DRAM[0m
+[0;32mI (245) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (250) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (256) heap_init: At 4008DDF4 len 0001220C (72 KiB): IRAM[0m
+[0;32mI (262) spi_flash: detected chip: generic[0m
+[0;32mI (265) spi_flash: flash io: dio[0m
+[0;33mW (268) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (281) main_task: Started on CPU0[0m
+[0;32mI (291) main_task: Calling app_main()[0m
+[0;32mI (631) UART_ECHO: Received: [0m
+[0;32mI (691) UART_ECHO: Received: ��<0@[0m
+[0;32mI (771) UART_ECHO: Received: [0m
+[0;32mI (891) UART_ECHO: Received: [0m
+[0;32mI (1031) UART_ECHO: Received: [0m
+[0;32mI (1831) UART_ECHO: Received: [0m
+[0;32mI (1951) UART_ECHO: Received: [0m
+[0;32mI (2191) UART_ECHO: Received: [0m
+[0;32mI (2291) UART_ECHO: Received: [0m
+[0;32mI (2371) UART_ECHO: Received: ���>=�p�8[0m
+[0;32mI (2511) UART_ECHO: Received: [0m
+[0;32mI (2651) UART_ECHO: Received: ><�8[0m
+[0;32mI (2791) UART_ECHO: Received: [0m
+[0;32mI (2911) UART_ECHO: Received: �x��>x@[0m
+[0;32mI (3031) UART_ECHO: Received: �x߿8� [0m
+[0;32mI (3171) UART_ECHO: Received: [0m
+[0;32mI (3271) UART_ECHO: Received: �>�8[0m
+[0;32mI (3371) UART_ECHO: Received: <��~?<�0[0m
+[0;32mI (3571) UART_ECHO: Received: [0m
+[0;32mI (3651) UART_ECHO: Received: ��>�8[0m
+[0;32mI (3731) UART_ECHO: Received: [0m
+[0;32mI (3811) UART_ECHO: Received: 0@[0m
+[0;32mI (3891) UART_ECHO: Received: �0[0m
+[0;32mI (3951) UART_ECHO: Received: 88�0[0m
+[0;32mI (4011) UART_ECHO: Received: p�x�x�<�<�00� �[0m
+[0;32mI (4091) UART_ECHO: Received: [0m
+[0;32mI (4151) UART_ECHO: Received: p8p[0m
+[0;32mI (4231) UART_ECHO: Received: �8���~>>�~�>>�<p�a[0m
+[0;32mI (4371) UART_ECHO: Received: [0m
+[0;32mI (4431) UART_ECHO: Received: [0m
+[0;32mI (4511) UART_ECHO: Received: [0m
+[0;32mI (4591) UART_ECHO: Received: [0m
+[0;32mI (4671) UART_ECHO: Received: [0m
+[0;32mI (4751) UART_ECHO: Received: [0m
+[0;32mI (4831) UART_ECHO: Received: [0m
+[0;32mI (4991) UART_ECHO: Received: [0m
+[0;32mI (5051) UART_ECHO: Received: [0m
+[0;32mI (5131) UART_ECHO: Received: [0m
+[0;32mI (5191) UART_ECHO: Received: [0m
+[0;32mI (5271) UART_ECHO: Received: [0m
+[0;32mI (5331) UART_ECHO: Received: @[0m
+[0;32mI (5411) UART_ECHO: Received: 80[0m
+[0;32mI (5471) UART_ECHO: Received: p�x�8p0� [0m
+[0;32mI (5551) UART_ECHO: Received: [0m
+[0;32mI (5611) UART_ECHO: Received: �
+[0;32mI (5691) UART_ECHO: Received: x80�0[0m
+[0;32mI (5751) UART_ECHO: Received: [0m
+[0;32mI (5831) UART_ECHO: Received: [0m
+[0;32mI (5911) UART_ECHO: Received: 8� [0m
+[0;32mI (5991) UART_ECHO: Received: ><x0[0m
+[0;32mI (6051) UART_ECHO: Received: � [0m
+[0;32mI (6131) UART_ECHO: Received: ~�<>8� [0m
+[0;32mI (6291) UART_ECHO: Received: }�<��[0m
+[0;32mI (6351) UART_ECHO: Received: [0m
+[0;32mI (6431) UART_ECHO: Received: `[0m
+[0;32mI (6511) UART_ECHO: Received: <�[0m
+[0;32mI (6571) UART_ECHO: Received: �<|�t�x�8�[0m
+[0;32mI (6671) UART_ECHO: Received: ������><<�8�0[0m
+[0;32mI (6731) UART_ECHO: Received: 0������߿x8�0[0m
+[0;32mI (6811) UART_ECHO: Received: 8�8�p[0m
+[0;32mI (6871) UART_ECHO: Received: ||>�~><~<<�0 [0m
+[0;32mI (6951) UART_ECHO: Received: <�?����?�>><p [0m
+[0;32mI (7031) UART_ECHO: Received: [0m
+[0;32mI (7091) UART_ECHO: Received: [0m
+[0;32mI (7171) UART_ECHO: Received: �[0m
+[0;32mI (7231) UART_ECHO: Received: �<�<�8�8[0m
+[0;32mI (7311) UART_ECHO: Received: [0m
+[0;32mI (7411) UART_ECHO: Received: [0m
+[0;32mI (7491) UART_ECHO: Received: [0m
+[0;32mI (7711) UART_ECHO: Received: [0m
+[0;32mI (7811) UART_ECHO: Received: < [0m
+[0;32mI (7911) UART_ECHO: Received: [0m
+[0;32mI (7971) UART_ECHO: Received: <�p[0m
+[0;32mI (8071) UART_ECHO: Received: [0m
+[0;32mI (8151) UART_ECHO: Received: [0m
+[0;32mI (8231) UART_ECHO: Received: 8� [0m
+[0;32mI (8331) UART_ECHO: Received: [0m
+[0;32mI (8431) UART_ECHO: Received: [0m
+[0;32mI (8531) UART_ECHO: Received: |���=|x8[0m
+[0;32mI (8631) UART_ECHO: Received: <`[0m
+[0;32mI (8751) UART_ECHO: Received: [0m
+[0;32mI (8851) UART_ECHO: Received: �>~8�0@[0m
+[0;32mI (8931) UART_ECHO: Received: [0m
+[0;32mI (9051) UART_ECHO: Received: [0m
+[0;32mI (9151) UART_ECHO: Received: �0[0m
+[0;32mI (9251) UART_ECHO: Received: [0m
+[0;32mI (9471) UART_ECHO: Received: [0m
+[0;32mI (9551) UART_ECHO: Received: [0m
+[0;32mI (9651) UART_ECHO: Received: `[0m
+[0;32mI (9751) UART_ECHO: Received: [0m
+[0;32mI (9851) UART_ECHO: Received: [0m
+[0;32mI (9971) UART_ECHO: Received: Ͼ��~|�<� [0m
+[0;32mI (10071) UART_ECHO: Received: [0m
+[0;32mI (10171) UART_ECHO: Received: :�80[0m
+[0;32mI (10271) UART_ECHO: Received: [0m
+[0;32mI (10371) UART_ECHO: Received: [0m
+[0;32mI (10491) UART_ECHO: Received: ��>�<p`�[0m
+[0;32mI (10591) UART_ECHO: Received: [0m
+[0;32mI (10691) UART_ECHO: Received: [0m
+[0;32mI (10811) UART_ECHO: Received: |���7|�8[0m
+[0;32mI (10911) UART_ECHO: Received: [0m
+[0;32mI (11011) UART_ECHO: Received: �0[0m
+[0;32mI (11111) UART_ECHO: Received: [0m
+[0;32mI (11311) UART_ECHO: Received: [0m
+[0;32mI (11431) UART_ECHO: Received: 8�`[0m
+[0;32mI (11511) UART_ECHO: Received: [0m
+[0;32mI (11611) UART_ECHO: Received: �
+[0;32mI (11711) UART_ECHO: Received: [0m
+[0;32mI (11811) UART_ECHO: Received: [0m
+[0;32mI (11931) UART_ECHO: Received: [0m
+[0;32mI (12051) UART_ECHO: Received: [0m
+[0;32mI (12151) UART_ECHO: Received: [0m
+[0;32mI (12251) UART_ECHO: Received: [0m
+[0;32mI (12331) UART_ECHO: Received: [0m
+[0;32mI (12431) UART_ECHO: Received: x����>�<�H`[0m
+[0;32mI (12491) UART_ECHO: Received: [0m
+[0;32mI (12591) UART_ECHO: Received: [0m
+[0;32mI (12691) UART_ECHO: Received: >�0��[0m
+[0;32mI (12791) UART_ECHO: Received: �><�8`[0m
+[0;32mI (12891) UART_ECHO: Received: [0m
+[0;32mI (12991) UART_ECHO: Received: [0m
+[0;32mI (13211) UART_ECHO: Received: [0m
+[0;32mI (13291) UART_ECHO: Received: �x�`[0m
+[0;32mI (13391) UART_ECHO: Received: [0m
+[0;32mI (13471) UART_ECHO: Received: [0m
+[0;32mI (13551) UART_ECHO: Received: <�8�0[0m
+[0;32mI (13631) UART_ECHO: Received: 8�0�[0m
+[0;32mI (13711) UART_ECHO: Received: [0m
+[0;32mI (13791) UART_ECHO: Received: [0m
+[0;32mI (13871) UART_ECHO: Received: ?<>x�[0m
+[0;32mI (13951) UART_ECHO: Received: [0m
+[0;32mI (14011) UART_ECHO: Received: [0m
+[0;32mI (14091) UART_ECHO: Received: 8�0[0m
+[0;32mI (14171) UART_ECHO: Received: <�8p[0m
+[0;32mI (14251) UART_ECHO: Received: �~>><y0[0m
+[0;32mI (14311) UART_ECHO: Received: >??<�<�8 @[0m
+[0;32mI (14391) UART_ECHO: Received: ���?�~�?~<�9# �
+[0;32mI (14471) UART_ECHO: Received: �0��~~~>>|�8�8 [0m
+[0;32mI (14611) UART_ECHO: Received: [0m
+[0;32mI (14691) UART_ECHO: Received: [0m
+[0;32mI (14751) UART_ECHO: Received: [0m
+[0;32mI (14831) UART_ECHO: Received: [0m
+[0;32mI (14911) UART_ECHO: Received: 0[0m
+[0;32mI (14991) UART_ECHO: Received: ?<|�80�
+[0;32mI (15071) UART_ECHO: Received: <�8@[0m
+[0;32mI (15171) UART_ECHO: Received: `<>���><�8`[0m
+[0;32mI (15251) UART_ECHO: Received: [0m
+[0;32mI (15351) UART_ECHO: Received: <�� [0m
+[0;32mI (15431) UART_ECHO: Received: >>�<� [0m
+[0;32mI (15531) UART_ECHO: Received: [0m
+[0;32mI (15611) UART_ECHO: Received: [0m
+[0;32mI (15691) UART_ECHO: Received: �>>��<�p@[0m
+[0;32mI (15771) UART_ECHO: Received: �8�8 [0m
+[0;32mI (15831) UART_ECHO: Received: pG0[0m
+[0;32mI (15911) UART_ECHO: Received: [0m
+[0;32mI (16071) UART_ECHO: Received: [0m
+[0;32mI (16151) UART_ECHO: Received: [0m
+[0;32mI (16231) UART_ECHO: Received: ��?�>|�<�0�[0m
+[0;32mI (16311) UART_ECHO: Received: >>�x8[0m
+[0;32mI (16411) UART_ECHO: Received: [0m
+[0;32mI (16491) UART_ECHO: Received: �p����??]�<�`[0m
+[0;32mI (16571) UART_ECHO: Received: [0m
+[0;32mI (16651) UART_ECHO: Received: ���>�<0[0m
+[0;32mI (16751) UART_ECHO: Received: [0m
+[0;32mI (16831) UART_ECHO: Received: ><<�`�[0m
+[0;32mI (16911) UART_ECHO: Received: �x>�������~�8@[0m
+[0;32mI (16991) UART_ECHO: Received: 4[0m
+[0;32mI (17071) UART_ECHO: Received: p� [0m
+[0;32mI (17151) UART_ECHO: Received:  [0m
+[0;32mI (17231) UART_ECHO: Received: [0m
+[0;32mI (17311) UART_ECHO: Received: [0m
+[0;32mI (17391) UART_ECHO: Received: [0m
+[0;32mI (17551) UART_ECHO: Received: `<?�����~><�<8�0[0m
+[0;32mI (17631) UART_ECHO: Received: �>?<8�[0m
+[0;32mI (17691) UART_ECHO: Received: [0m
+[0;32mI (17771) UART_ECHO: Received: [0m
+[0;32mI (17851) UART_ECHO: Received: [0m
+[0;32mI (17931) UART_ECHO: Received: [0m
+[0;32mI (17991) UART_ECHO: Received: [0m
+[0;32mI (18071) UART_ECHO: Received: [0m
+[0;32mI (18151) UART_ECHO: Received: �0[0m
+[0;32mI (18231) UART_ECHO: Received: `[0m
+[0;32mI (18291) UART_ECHO: Received: `[0m
+[0;32mI (18371) UART_ECHO: Received: <�80[0m
+[0;32mI (18451) UART_ECHO: Received: <�:�p [0m
+[0;32mI (18531) UART_ECHO: Received: ~<><�<0[0m
+[0;32mI (18591) UART_ECHO: Received: x>�<8p[0m
+[0;32mI (18671) UART_ECHO: Received: 8�<�~~~|><<�p�0[0m
+[0;32mI (18751) UART_ECHO: Received: [0m
+[0;32mI (18891) UART_ECHO: Received: [0m
+[0;32mI (18951) UART_ECHO: Received: [0m
+[0;32mI (19031) UART_ECHO: Received: �p@[0m
+[0;32mI (19091) UART_ECHO: Received: <�|�>�<|�8�	[0m
+[0;32mI (19171) UART_ECHO: Received: [0m
+[0;32mI (19241) UART_ECHO: Received: [0m
+[0;32mI (19311) UART_ECHO: Received: [0m
+[0;32mI (19371) UART_ECHO: Received: 8�8�8��0[0m�
+[0;32mI (19451) UART_ECHO: Received: [0m
+[0;32mI (19511) UART_ECHO: Received: [0m
+[0;32mI (19591) UART_ECHO: Received: 88x�800[0m
+[0;32mI (19651) UART_ECHO: Received: [0m
+[0;32mI (19711) UART_ECHO: Received: �88�`[0m
+[0;32mI (19791) UART_ECHO: Received: [0m
+[0;32mI (19851) UART_ECHO: Received: �
+[0;32mI (19931) UART_ECHO: Received: x8�<�x80[0m
+[0;32mI (19991) UART_ECHO: Received: [0m
+[0;32mI (20131) UART_ECHO: Received: �
+[0;32mI (20211) UART_ECHO: Received: �x<�80@[0m
+[0;32mI (20271) UART_ECHO: Received: [0m
+[0;32mI (20351) UART_ECHO: Received: [0m
+[0;32mI (20411) UART_ECHO: Received: 8�8�8p�@[0m
+[0;32mI (20471) UART_ECHO: Received: [0m
+[0;32mI (20551) UART_ECHO: Received: 8@D@[0m
+[0;32mI (20611) UART_ECHO: Received: �p<�98�8�80� [0m
+[0;32mI (20691) UART_ECHO: Received: [0m
+[0;32mI (20751) UART_ECHO: Received: p[0m
+[0;32mI (20831) UART_ECHO: Received: ~<|��<�<0�
+[0;32mI (20891) UART_ECHO: Received: [0m
+[0;32mI (20971) UART_ECHO: Received: [0m
+[0;32mI (21031) UART_ECHO: Received: <<�x@[0m
+[0;32mI (21111) UART_ECHO: Received: [0m
+[0;32mI (21171) UART_ECHO: Received: [0m
+[0;32mI (21251) UART_ECHO: Received: <�<�<�8[0m
+[0;32mI (21391) UART_ECHO: Received: [0m
+[0;32mI (21471) UART_ECHO: Received: [0m
+[0;32mI (21551) UART_ECHO: Received: [0m
+[0;32mI (21631) UART_ECHO: Received: [0m
+[0;32mI (21711) UART_ECHO: Received: ?���>|�8�8�P[0m
+[0;32mI (21791) UART_ECHO: Received: ><<0[0m
+[0;32mI (21871) UART_ECHO: Received: ��8[0m
+[0;32mI (21951) UART_ECHO: Received: [0m
+[0;32mI (22031) UART_ECHO: Received: [0m
+[0;32mI (22111) UART_ECHO: Received: 4!a[0m
+[0;32mI (22191) UART_ECHO: Received: [0m
+[0;32mI (22291) UART_ECHO: Received: [0m
+[0;32mI (22371) UART_ECHO: Received: [0m
+[0;32mI (22461) UART_ECHO: Received: [0m
+[0;32mI (22551) UART_ECHO: Received: [0m
+[0;32mI (22651) UART_ECHO: Received: x8� [0m
+[0;32mI (22751) UART_ECHO: Received: [0m
+[0;32mI (22851) UART_ECHO: Received: [0m
+[0;32mI (23011) UART_ECHO: Received: �8���?<�0[0m
+[0;32mI (23091) UART_ECHO: Received: [0m
+[0;32mI (23171) UART_ECHO: Received: |>����><<�8`[0m
+[0;32mI (23231) UART_ECHO: Received: ξ���?><8 [0m
+[0;32mI (23311) UART_ECHO: Received: �4�<�<�<<�|8�80[0m
+[0;32mI (23391) UART_ECHO: Received: [0m
+[0;32mI (23451) UART_ECHO: Received: [0m
+[0;32mI (23531) UART_ECHO: Received: [0m
+[0;32mI (23611) UART_ECHO: Received: �<�8�0[0m
+[0;32mI (23671) UART_ECHO: Received: �?���~><x �
+[0;32mI (23751) UART_ECHO: Received: [0m
+[0;32mI (23811) UART_ECHO: Received: [0m
+[0;32mI (23891) UART_ECHO: Received: [0m
+[0;32mI (23971) UART_ECHO: Received: [0m
+[0;32mI (24031) UART_ECHO: Received: |�8@[0m
+[0;32mI (24111) UART_ECHO: Received: �8<���<�<4 [0m
+[0;32mI (24171) UART_ECHO: Received: [0m
+[0;32mI (24331) UART_ECHO: Received: [0m
+[0;32mI (24391) UART_ECHO: Received: `[0m
+[0;32mI (24471) UART_ECHO: Received: <�8�p [0m
+[0;32mI (24531) UART_ECHO: Received: �<~??<<<8�
+[0;32mI (24611) UART_ECHO: Received: [0m
+[0;32mI (24691) UART_ECHO: Received: [0m
+[0;32mI (24751) UART_ECHO: Received: [0m
+[0;32mI (24831) UART_ECHO: Received: �8�`[0m
+[0;32mI (24891) UART_ECHO: Received: ~�<><<�<x�p� [0m
+[0;32mI (24971) UART_ECHO: Received: [0m
+[0;32mI (25051) UART_ECHO: Received: [0m
+[0;32mI (25111) UART_ECHO: Received: [0m
+[0;32mI (25191) UART_ECHO: Received: �p2[0m 
+[0;32mI (25251) UART_ECHO: Received: |>�|<8�0[0m
+[0;32mI (25331) UART_ECHO: Received: <�><>�>>~|�x�0 [0m
+[0;32mI (25411) UART_ECHO: Received: [0m
+[0;32mI (25491) UART_ECHO: Received: >>><�80[0m
+[0;32mI (25631) UART_ECHO: Received: ?|>y80[0m
+[0;32mI (25711) UART_ECHO: Received: �0x<�<�<|8�p�0@[0m
+[0;32mI (25771) UART_ECHO: Received: [0m
+[0;32mI (25851) UART_ECHO: Received: [0m
+[0;32mI (25931) UART_ECHO: Received: 0[0m
+[0;32mI (26001) UART_ECHO: Received: 8�
+[0;32mI (26071) UART_ECHO: Received: � [0m
+[0;32mI (26151) UART_ECHO: Received: ><<�8 [0m
+[0;32mI (26211) UART_ECHO: Received: ����>~<�<�@[0m
+[0;32mI (26291) UART_ECHO: Received: px<x<�>�8<�8�[0m
+[0;32mI (26371) UART_ECHO: Received: [0m
+[0;32mI (26431) UART_ECHO: Received: [0m
+[0;32mI (26511) UART_ECHO: Received: 0�0[0m
+[0;32mI (26571) UART_ECHO: Received: �|>�|~�880$[0m
+[0;32mI (26651) UART_ECHO: Received: [0m
+[0;32mI (26721) UART_ECHO: Received: [0m
+[0;32mI (26791) UART_ECHO: Received: [0m
+[0;32mI (26941) UART_ECHO: Received: [0m
+[0;32mI (27011) UART_ECHO: Received: 4�8�`[0m
+[0;32mI (27091) UART_ECHO: Received: �>�>>?�<8�0�[0m
+[0;32mI (27151) UART_ECHO: Received: x<�<>�>|�<x0�0[0m
+[0;32mI (27231) UART_ECHO: Received: [0m
+[0;32mI (27291) UART_ECHO: Received: [0m
+[0;32mI (27371) UART_ECHO: Received: |<<<�8�[0m
+[0;32mI (27451) UART_ECHO: Received: �����>~><�8[0m
+[0;32mI (27511) UART_ECHO: Received: @x�8�88�8�8�0[0m
+[0;32mI (27591) UART_ECHO: Received: [0m
+[0;32mI (27651) UART_ECHO: Received: [0m
+[0;32mI (27731) UART_ECHO: Received: <�p0�[0m
+[0;32mI (27791) UART_ECHO: Received: 8<�<�|�<<�8�0 [0m
+[0;32mI (27871) UART_ECHO: Received: [0m
+[0;32mI (27951) UART_ECHO: Received: [0m
+[0;32mI (28011) UART_ECHO: Received:  [0m
+[0;32mI (28091) UART_ECHO: Received: 0[0m
+[0;32mI (28231) UART_ECHO: Received: [0m
+[0;32mI (28311) UART_ECHO: Received: [0m
+[0;32mI (28411) UART_ECHO: Received: [0m
+[0;32mI (28511) UART_ECHO: Received: [0m
+[0;32mI (28631) UART_ECHO: Received: [0m
+[0;32mI (28751) UART_ECHO: Received: [0m
+[0;32mI (28871) UART_ECHO: Received: [0m
+[0;32mI (29011) UART_ECHO: Received: [0m
+[0;32mI (29111) UART_ECHO: Received: [0m
+[0;32mI (29191) UART_ECHO: Received: [0m
+[0;32mI (29271) UART_ECHO: Received: [0m
+[0;32mI (29331) UART_ECHO: Received: [0m
+[0;32mI (29411) UART_ECHO: Received: [0m
+[0;32mI (29491) UART_ECHO: Received: 8�0�[0m
+[0;32mI (29551) UART_ECHO: Received: <�8�8�80��[0m
+[0;32mI (29631) UART_ECHO: Received: [0m
+I (29731) UART_ECHO: Received: 
+[0;32mI (30091) UART_ECHO: Received: [0m
+[0;32mI (30151) UART_ECHO: Received: }@[0m
+[0;32mI (30231) UART_ECHO: Received: [0m
+[0;32mI (30311) UART_ECHO: Received: [0m
+[0;32mI (30391) UART_ECHO: Received: [0m
+[0;32mI (30611) UART_ECHO: Received: [0m
+[0;32mI (30811) UART_ECHO: Received: [0m
+[0;32mI (31031) UART_ECHO: Received: 8[0m
+[0;32mI (31291) UART_ECHO: Received: �?[0m
+[0;32mI (31551) UART_ECHO: Received: [0m
+[0;32mI (31831) UART_ECHO: Received: [0m
+[0;32mI (31891) UART_ECHO: Received: [0m
+[0;32mI (31971) UART_ECHO: Received: �880 �[0m
+[0;32mI (32151) UART_ECHO: Received: [0m
+[0;32mI (32291) UART_ECHO: Received: [0m
+[0;32mI (32591) UART_ECHO: Received: [0m
+[0;32mI (32751) UART_ECHO: Received: p[0m
+[0;32mI (32831) UART_ECHO: Received: [0m
+[0;32mI (33291) UART_ECHO: Received: [0m
+[0;32mI (33371) UART_ECHO: Received: <�?>��>�<<�8p[0m
+[0;32mI (33511) UART_ECHO: Received: `[0m
+[0;32mI (33671) UART_ECHO: Received: ?<�<�@[0m
+[0;32mI (33851) UART_ECHO: Received: � [0m
+[0;32mI (34011) UART_ECHO: Received: [0m
+[0;32mI (34151) UART_ECHO: Received: [0m
+[0;32mI (34251) UART_ECHO: Received: [0m
+[0;32mI (34371) UART_ECHO: Received: ��~>p[0m
+[0;32mI (34471) UART_ECHO: Received: [0m
+[0;32mI (34611) UART_ECHO: Received: p [0m
+[0;32mI (34731) UART_ECHO: Received: ��p[0m
+[0;32mI (34851) UART_ECHO: Received: `>�78@[0m
+[0;32mI (34931) UART_ECHO: Received: ~>~�~<�>�8�p�8[0m
+[0;32mI (35111) UART_ECHO: Received: [0m
+[0;32mI (35211) UART_ECHO: Received: [0m
+[0;32mI (35391) UART_ECHO: Received: [0m
+[0;32mI (35531) UART_ECHO: Received: [0m
+[0;32mI (35671) UART_ECHO: Received: |0[0m
+[0;32mI (35951) UART_ECHO: Received: [0m
+[0;32mI (36191) UART_ECHO: Received: [0m
+[0;32mI (36491) UART_ECHO: Received: �<<[0m
+[0;32mI (36651) UART_ECHO: Received: [0m
+[0;32mI (36811) UART_ECHO: Received: ><x� [0m
+[0;32mI (36971) UART_ECHO: Received: 8?>xp@[0m
+[0;32mI (37151) UART_ECHO: Received: [0m
+[0;32mI (37251) UART_ECHO: Received: [0m
+[0;32mI (37651) UART_ECHO: Received: [0m
+[0;32mI (38071) UART_ECHO: Received: <[0m
+[0;32mI (38471) UART_ECHO: Received: �![0m
+[0;32mI (38831) UART_ECHO: Received: [0m
+[0;32mI (39231) UART_ECHO: Received: �[0m
+[0;32mI (39611) UART_ECHO: Received: [0m
+[0;32mI (39971) UART_ECHO: Received: [0m
+[0;32mI (40391) UART_ECHO: Received: @=[0m
+[0;32mI (40831) UART_ECHO: Received: �^[0m
+[0;32mI (41211) UART_ECHO: Received: [0m
+[0;32mI (41531) UART_ECHO: Received: [0m
+[0;32mI (41911) UART_ECHO: Received: �?�[0m
+[0;32mI (42291) UART_ECHO: Received: [0m
+[0;32mI (42611) UART_ECHO: Received: [0m
+[0;32mI (42931) UART_ECHO: Received: [0m
+[0;32mI (43251) UART_ECHO: Received: [0m
+[0;32mI (43591) UART_ECHO: Received: >[0m
+[0;32mI (43911) UART_ECHO: Received: [0m
+[0;32mI (44251) UART_ECHO: Received: �[0m
+[0;32mI (44591) UART_ECHO: Received: [0m
+[0;32mI (44931) UART_ECHO: Received: [0m
+[0;32mI (45251) UART_ECHO: Received: �=�[0m
+[0;32mI (45611) UART_ECHO: Received:  [0m
+[0;32mI (45931) UART_ECHO: Received: [0m
+[0;32mI (46211) UART_ECHO: Received: [0m
+[0;32mI (46471) UART_ECHO: Received: [0m
+[0;32mI (46691) UART_ECHO: Received: [0m
+[0;32mI (46951) UART_ECHO: Received: [0m
+[0;32mI (47231) UART_ECHO: Received: [0m
+[0;32mI (47491) UART_ECHO: Received: [0m
+[0;32mI (47791) UART_ECHO: Received: @[0m
+[0;32mI (48081) UART_ECHO: Received: �[0m
+[0;32mI (48381) UART_ECHO: Received: [0m
+[0;32mI (48681) UART_ECHO: Received: [0m
+[0;32mI (48961) UART_ECHO: Received: [0m
+[0;32mI (49261) UART_ECHO: Received: 0[0m
+[0;32mI (49561) UART_ECHO: Received: [0m
+[0;32mI (49841) UART_ECHO: Received: [0m
+[0;32mI (50141) UART_ECHO: Received: ��[0m
+[0;32mI (50461) UART_ECHO: Received: [0m
+[0;32mI (50781) UART_ECHO: Received: [0m
+[0;32mI (51081) UART_ECHO: Received: [0m
+[0;32mI (51381) UART_ECHO: Received: [0m
+[0;32mI (51681) UART_ECHO: Received: [0m
+[0;32mI (51961) UART_ECHO: Received: [0m
+[0;32mI (52241) UART_ECHO: Received: �[0m
+[0;32mI (52541) UART_ECHO: Received: [0m
+[0;32mI (52841) UART_ECHO: Received: [0m
+[0;32mI (53181) UART_ECHO: Received: [0m
+[0;32mI (53501) UART_ECHO: Received: [0m
+[0;32mI (53841) UART_ECHO: Received: [0m
+[0;32mI (54161) UART_ECHO: Received: [0m
+[0;32mI (54501) UART_ECHO: Received: [0m
+[0;32mI (54781) UART_ECHO: Received: [0m
+[0;32mI (55081) UART_ECHO: Received: [0m
+[0;32mI (55381) UART_ECHO: Received: �^ [0m
+[0;32mI (55701) UART_ECHO: Received: 8[0m
+[0;32mI (56001) UART_ECHO: Received: [0m
+[0;32mI (56281) UART_ECHO: Received: [0m
+[0;32mI (56541) UART_ECHO: Received: [0m
+[0;32mI (56821) UART_ECHO: Received: [0m
+[0;32mI (57101) UART_ECHO: Received: [0m
+[0;32mI (57381) UART_ECHO: Received: [0m
+[0;32mI (57681) UART_ECHO: Received: [0m
+[0;32mI (58001) UART_ECHO: Received: [0m
+[0;32mI (58301) UART_ECHO: Received: [0m
+[0;32mI (58601) UART_ECHO: Received: [0m
+[0;32mI (58861) UART_ECHO: Received: [0m
+[0;32mI (59161) UART_ECHO: Received: �<G[0m
+[0;32mI (59441) UART_ECHO: Received: [0m
+[0;32mI (59741) UART_ECHO: Received: [0m
+[0;32mI (60161) UART_ECHO: Received: �>[0m
+[0;32mI (60481) UART_ECHO: Received: [0m
+[0;32mI (60761) UART_ECHO: Received: [0m
+[0;32mI (61021) UART_ECHO: Received: [0m
+[0;32mI (61281) UART_ECHO: Received: [0m
+[0;32mI (61541) UART_ECHO: Received: [0m
+[0;32mI (61821) UART_ECHO: Received: [0m
+[0;32mI (62101) UART_ECHO: Received: ��8[0m
+[0;32mI (62341) UART_ECHO: Received: [0m
+[0;32mI (62561) UART_ECHO: Received: [0m
+[0;32mI (62801) UART_ECHO: Received: [0m
+[0;32mI (63041) UART_ECHO: Received: �� [0m
+[0;32mI (63301) UART_ECHO: Received: [0m
+[0;32mI (63581) UART_ECHO: Received: [0m
+[0;32mI (63821) UART_ECHO: Received: [0m
+[0;32mI (64081) UART_ECHO: Received: [0m
+[0;32mI (64321) UART_ECHO: Received: [0m
+[0;32mI (64561) UART_ECHO: Received: [0m
+[0;32mI (64841) UART_ECHO: Received: [0m
+[0;32mI (65131) UART_ECHO: Received: [0m
+[0;32mI (65431) UART_ECHO: Received: �0[0m
+[0;32mI (65711) UART_ECHO: Received: [0m
+[0;32mI (65991) UART_ECHO: Received: [0m
+[0;32mI (66271) UART_ECHO: Received: [0m
+[0;32mI (66591) UART_ECHO: Received: [0m
+[0;32mI (66891) UART_ECHO: Received: [0m
+[0;32mI (67211) UART_ECHO: Received: [0m
+[0;32mI (67491) UART_ECHO: Received: [0m
+[0;32mI (67811) UART_ECHO: Received: �A[0m
+[0;32mI (68131) UART_ECHO: Received: �?[0m
+[0;32mI (68431) UART_ECHO: Received: [0m
+[0;32mI (68751) UART_ECHO: Received: [0m
+[0;32mI (69051) UART_ECHO: Received: [0m
+[0;32mI (69431) UART_ECHO: Received: [0m
+[0;32mI (69811) UART_ECHO: Received: <[0m
+[0;32mI (70131) UART_ECHO: Received: [0m
+[0;32mI (70491) UART_ECHO: Received: [0m
+[0;32mI (70871) UART_ECHO: Received: [0m
+[0;32mI (71231) UART_ECHO: Received: [0m
+[0;32mI (71571) UART_ECHO: Received: [0m
+[0;32mI (71911) UART_ECHO: Received: [0m
+[0;32mI (72231) UART_ECHO: Received: �� [0m
+[0;32mI (72591) UART_ECHO: Received: �� [0m
+[0;32mI (72911) UART_ECHO: Received: [0m
+[0;32mI (73251) UART_ECHO: Received: [0m
+[0;32mI (73631) UART_ECHO: Received: [0m
+[0;32mI (74051) UART_ECHO: Received: �[0m
+[0;32mI (74471) UART_ECHO: Received: �[0m
+[0;32mI (74731) UART_ECHO: Received: [0m
+[0;32mI (75011) UART_ECHO: Received: ��8[0m
+[0;32mI (75291) UART_ECHO: Received: [0m
+[0;32mI (75571) UART_ECHO: Received: [0m
+[0;32mI (75871) UART_ECHO: Received: [0m
+[0;32mI (76171) UART_ECHO: Received: [0m
+[0;32mI (76471) UART_ECHO: Received: [0m
+[0;32mI (76751) UART_ECHO: Received: [0m
+[0;32mI (77051) UART_ECHO: Received: �>[0m
+[0;32mI (77351) UART_ECHO: Received: �>[0m
+[0;32mI (77631) UART_ECHO: Received: <�
+[0;32mI (77931) UART_ECHO: Received: ?�
+[0;32mI (78271) UART_ECHO: Received: ?[0m
+[0;32mI (78571) UART_ECHO: Received:  [0m
+[0;32mI (78851) UART_ECHO: Received: [0m
+[0;32mI (79171) UART_ECHO: Received: [0m
+[0;32mI (79461) UART_ECHO: Received: [0m
+[0;32mI (79761) UART_ECHO: Received: [0m
+[0;32mI (80061) UART_ECHO: Received: [0m
+[0;32mI (80501) UART_ECHO: Received: �/[0m
+[0;32mI (81041) UART_ECHO: Received: [0m
+[0;32mI (81401) UART_ECHO: Received: �[0m
+[0;32mI (81701) UART_ECHO: Received: [0m
+[0;32mI (82021) UART_ECHO: Received: > [0m
+[0;32mI (82341) UART_ECHO: Received: [0m
+[0;32mI (82601) UART_ECHO: Received: � [0m
+[0;32mI (82861) UART_ECHO: Received: [0m
+[0;32mI (83101) UART_ECHO: Received: @[0m
+[0;32mI (83361) UART_ECHO: Received: [0m
+[0;32mI (83601) UART_ECHO: Received: 0[0m
+[0;32mI (83861) UART_ECHO: Received: [0m
+[0;32mI (84141) UART_ECHO: Received: [0m
+[0;32mI (84441) UART_ECHO: Received: [0m
+[0;32mI (84721) UART_ECHO: Received: [0m
+[0;32mI (85021) UART_ECHO: Received: <[0m
+[0;32mI (85321) UART_ECHO: Received: [0m
+[0;32mI (85721) UART_ECHO: Received: >p[0m
+[0;32mI (86161) UART_ECHO: Received: [0m
+[0;32mI (86601) UART_ECHO: Received: [0m
+[0;32mI (86921) UART_ECHO: Received: [0m
+[0;32mI (87201) UART_ECHO: Received: 8[0m
+[0;32mI (87481) UART_ECHO: Received: [0m
+[0;32mI (87741) UART_ECHO: Received: [0m
+[0;32mI (88041) UART_ECHO: Received: �8@[0m
+[0;32mI (88321) UART_ECHO: Received: [0m
+[0;32mI (88601) UART_ECHO: Received: �/0[0m
+[0;32mI (88881) UART_ECHO: Received: ��0[0m
+[0;32mI (89321) UART_ECHO: Received: <[0m
+[0;32mI (89581) UART_ECHO: Received: [0m
+[0;32mI (89841) UART_ECHO: Received: [0m
+[0;32mI (90101) UART_ECHO: Received: [0m
+[0;32mI (90361) UART_ECHO: Received: @[0m
+[0;32mI (90621) UART_ECHO: Received: [0m
+[0;32mI (90861) UART_ECHO: Received: ��x�[0m
+[0;32mI (91141) UART_ECHO: Received: �0 [0m
+[0;32mI (91401) UART_ECHO: Received: [0m
+[0;32mI (91661) UART_ECHO: Received: [0m
+[0;32mI (91921) UART_ECHO: Received: [0m
+[0;32mI (92181) UART_ECHO: Received: [0m
+[0;32mI (92481) UART_ECHO: Received: [0m
+[0;32mI (92761) UART_ECHO: Received: 8[0m
+[0;32mI (93011) UART_ECHO: Received: p[0m
+[0;32mI (93291) UART_ECHO: Received: �?<[0m
+[0;32mI (93551) UART_ECHO: Received: [0m
+[0;32mI (93791) UART_ECHO: Received: 8[0m
+[0;32mI (94051) UART_ECHO: Received: [0m
+[0;32mI (94311) UART_ECHO: Received: [0m
+[0;32mI (94591) UART_ECHO: Received: ��`[0m
+[0;32mI (94851) UART_ECHO: Received: [0m
+[0;32mI (95131) UART_ECHO: Received: [0m
+[0;32mI (95411) UART_ECHO: Received: [0m
+[0;32mI (95691) UART_ECHO: Received: [0m
+[0;32mI (95951) UART_ECHO: Received: [0m
+[0;32mI (96231) UART_ECHO: Received: [0m
+[0;32mI (96491) UART_ECHO: Received: 8[0m
+[0;32mI (96771) UART_ECHO: Received: [0m
+[0;32mI (97031) UART_ECHO: Received: 0@[0m
+[0;32mI (97311) UART_ECHO: Received: [0m
+[0;32mI (97571) UART_ECHO: Received: [0m
+[0;32mI (97831) UART_ECHO: Received: [0m
+[0;32mI (98111) UART_ECHO: Received: [0m
+[0;32mI (98371) UART_ECHO: Received: [0m
+[0;32mI (98631) UART_ECHO: Received: [0m
+[0;32mI (98911) UART_ECHO: Received: �<[0m
+[0;32mI (99151) UART_ECHO: Received: [0m
+[0;32mI (99431) UART_ECHO: Received: <[0m
+[0;32mI (99691) UART_ECHO: Received: @[0m
+[0;32mI (99931) UART_ECHO: Received: [0m
+[0;32mI (100191) UART_ECHO: Received: [0m
+[0;32mI (100451) UART_ECHO: Received: [0m
+[0;32mI (100711) UART_ECHO: Received: [0m
+[0;32mI (100951) UART_ECHO: Received: [0m
+[0;32mI (101211) UART_ECHO: Received: [0m
+[0;32mI (101451) UART_ECHO: Received: [0m
+[0;32mI (101691) UART_ECHO: Received: [0m
+[0;32mI (101951) UART_ECHO: Received: �?0[0m
+[0;32mI (102231) UART_ECHO: Received: ?([0m
+[0;32mI (102491) UART_ECHO: Received: [0m
+[0;32mI (102751) UART_ECHO: Received: [0m
+[0;32mI (103031) UART_ECHO: Received: [0m
+[0;32mI (103291) UART_ECHO: Received: [0m
+[0;32mI (103551) UART_ECHO: Received: [0m
+[0;32mI (104011) UART_ECHO: Received: ���<[0m
+[0;32mI (104471) UART_ECHO: Received: [0m
+[0;32mI (104671) UART_ECHO: Received: �8[0m
+[0;32mI (104751) UART_ECHO: Received: [0m
+[0;32mI (105631) UART_ECHO: Received: [0m
+[0;32mI (105831) UART_ECHO: Received: [0m
+[0;32mI (106051) UART_ECHO: Received: [0m
+[0;32mI (106351) UART_ECHO: Received: [0m
+[0;32mI (106651) UART_ECHO: Received: [0m
+[0;32mI (107161) UART_ECHO: Received: [0m
+[0;32mI (107441) UART_ECHO: Received: [0m
+[0;32mI (107701) UART_ECHO: Received: [0m
+[0;32mI (107941) UART_ECHO: Received: [0m
+[0;32mI (108201) UART_ECHO: Received: [0m
+[0;32mI (108461) UART_ECHO: Received: [0m
+[0;32mI (108721) UART_ECHO: Received: [0m
+[0;32mI (109001) UART_ECHO: Received: �[0m
+[0;32mI (109261) UART_ECHO: Received: [0m
+[0;32mI (109521) UART_ECHO: Received: < [0m
+[0;32mI (109781) UART_ECHO: Received: ��8[0m
+[0;32mI (110061) UART_ECHO: Received: [0m
+[0;32mI (110341) UART_ECHO: Received: [0m
+[0;32mI (110621) UART_ECHO: Received: [0m
+[0;32mI (110901) UART_ECHO: Received: ���[0m
+[0;32mI (111181) UART_ECHO: Received: ?[0m
+[0;32mI (111441) UART_ECHO: Received: [0m
+[0;32mI (111741) UART_ECHO: Received: [0m
+[0;32mI (112021) UART_ECHO: Received: [0m
+[0;32mI (112281) UART_ECHO: Received: [0m
+[0;32mI (112561) UART_ECHO: Received: >[0m
+[0;32mI (112821) UART_ECHO: Received: [0m
+[0;32mI (113081) UART_ECHO: Received: [0m
+[0;32mI (113341) UART_ECHO: Received: [0m
+[0;32mI (113601) UART_ECHO: Received: ��}[0m
+[0;32mI (113881) UART_ECHO: Received: �8[0m
+[0;32mI (114161) UART_ECHO: Received: [0m
+[0;32mI (114441) UART_ECHO: Received: [0m
+[0;32mI (114721) UART_ECHO: Received: [0m
+[0;32mI (114961) UART_ECHO: Received: [0m
+[0;32mI (115201) UART_ECHO: Received: �8[0m
+[0;32mI (115441) UART_ECHO: Received: [0m
+[0;32mI (115681) UART_ECHO: Received: [0m
+[0;32mI (115941) UART_ECHO: Received: �8[0m
+[0;32mI (116181) UART_ECHO: Received: [0m
+[0;32mI (116421) UART_ECHO: Received: ��>0[0m
+[0;32mI (116661) UART_ECHO: Received: [0m
+[0;32mI (116901) UART_ECHO: Received: [0m
+[0;32mI (117141) UART_ECHO: Received: [0m
+[0;32mI (117401) UART_ECHO: Received: ~x[0m
+[0;32mI (117641) UART_ECHO: Received: [0m
+[0;32mI (117901) UART_ECHO: Received: [0m
+[0;32mI (118161) UART_ECHO: Received: [0m
+[0;32mI (118421) UART_ECHO: Received: [0m
+[0;32mI (118661) UART_ECHO: Received: 8A[0m
+[0;32mI (118941) UART_ECHO: Received: [0m
+[0;32mI (119201) UART_ECHO: Received: [0m
+[0;32mI (119461) UART_ECHO: Received: [0m
+[0;32mI (119721) UART_ECHO: Received: �[0m
+[0;32mI (119981) UART_ECHO: Received: ��[0m
+[0;32mI (120261) UART_ECHO: Received: ̿<[0m
+[0;32mI (120521) UART_ECHO: Received: [0m
+[0;32mI (120801) UART_ECHO: Received: ��8[0m
+[0;32mI (121061) UART_ECHO: Received: [0m
+[0;32mI (121321) UART_ECHO: Received: [0m
+[0;32mI (121601) UART_ECHO: Received: [0m
+[0;32mI (121861) UART_ECHO: Received: [0m
+[0;32mI (122141) UART_ECHO: Received: [0m
+[0;32mI (122381) UART_ECHO: Received: 8[0m
+[0;32mI (122661) UART_ECHO: Received: �8C[0m
+[0;32mI (122941) UART_ECHO: Received: [0m
+[0;32mI (123181) UART_ECHO: Received: [0m
+[0;32mI (123461) UART_ECHO: Received: [0m
+[0;32mI (123891) UART_ECHO: Received: [0m
+[0;32mI (124711) UART_ECHO: Received: [0m
+[0;32mI (125511) UART_ECHO: Received: �
+[0;32mI (126331) UART_ECHO: Received: [0m
+[0;32mI (127111) UART_ECHO: Received: [0m
+[0;32mI (127631) UART_ECHO: Received: �
+[0;32mI (127891) UART_ECHO: Received: [0m
+[0;32mI (128131) UART_ECHO: Received: [0m
+[0;32mI (128371) UART_ECHO: Received: [0m
+[0;32mI (128611) UART_ECHO: Received: ��<0[0m
+[0;32mI (128851) UART_ECHO: Received: [0m
+[0;32mI (129091) UART_ECHO: Received: [0m
+[0;32mI (129331) UART_ECHO: Received: [0m
+[0;32mI (129571) UART_ECHO: Received: [0m
+[0;32mI (130031) UART_ECHO: Received: ~�[0m
+[0;32mI (130851) UART_ECHO: Received: [0m
+[0;32mI (131611) UART_ECHO: Received: [0m
+[0;32mI (132451) UART_ECHO: Received: [0m
+[0;32mI (133191) UART_ECHO: Received: [0m
+[0;32mI (134071) UART_ECHO: Received: [0m
+[0;32mI (134531) UART_ECHO: Received: [0m
+[0;32mI (134811) UART_ECHO: Received: ��h[0m
+[0;32mI (135051) UART_ECHO: Received: [0m
+[0;32mI (135311) UART_ECHO: Received: [0m
+[0;32mI (135551) UART_ECHO: Received: [0m
+[0;32mI (135791) UART_ECHO: Received: [0m
+[0;32mI (136051) UART_ECHO: Received: [0m
+[0;32mI (136771) UART_ECHO: Received: [0m
+[0;32mI (137471) UART_ECHO: Received: �
+[0;32mI (138141) UART_ECHO: Received: [0m
+[0;32mI (138821) UART_ECHO: Received: [0m
+[0;32mI (139521) UART_ECHO: Received: �[0m
+[0;32mI (140161) UART_ECHO: Received: �
+[0;32mI (140841) UART_ECHO: Received: [0m
+[0;32mI (141501) UART_ECHO: Received: �[0m
+[0;32mI (142221) UART_ECHO: Received: [0m
+[0;32mI (142961) UART_ECHO: Received: [0m
+[0;32mI (143721) UART_ECHO: Received: [0m
+[0;32mI (144461) UART_ECHO: Received: [0m
+[0;32mI (145241) UART_ECHO: Received: [0m
+[0;32mI (146061) UART_ECHO: Received: [0m
+[0;32mI (146921) UART_ECHO: Received: [0m
+[0;32mI (147751) UART_ECHO: Received: [0m
+[0;32mI (148551) UART_ECHO: Received: �
+[0;32mI (149331) UART_ECHO: Received: [0m
+[0;32mI (150071) UART_ECHO: Received: [0m
+[0;32mI (150871) UART_ECHO: Received: [0m
+[0;32mI (151671) UART_ECHO: Received: [0m
+[0;32mI (152431) UART_ECHO: Received: [0m
+[0;32mI (153271) UART_ECHO: Received: �
+[0;32mI (154091) UART_ECHO: Received: [0m
+[0;32mI (154911) UART_ECHO: Received: [0m
+[0;32mI (155711) UART_ECHO: Received: [0m
+[0;32mI (156501) UART_ECHO: Received: �
+[0;32mI (157221) UART_ECHO: Received: [0m
+[0;32mI (157921) UART_ECHO: Received: [0m
+[0;32mI (158621) UART_ECHO: Received: [0m
+[0;32mI (159341) UART_ECHO: Received: [0m
+[0;32mI (160081) UART_ECHO: Received: [0m
+[0;32mI (160781) UART_ECHO: Received: [0m
+[0;32mI (161441) UART_ECHO: Received: �[0m
+[0;32mI (162141) UART_ECHO: Received: �[0m
+[0;32mI (162801) UART_ECHO: Received: �[0m
+[0;32mI (163441) UART_ECHO: Received: �
+[0;32mI (164101) UART_ECHO: Received: �[0m
+[0;32mI (164761) UART_ECHO: Received: [0m
+[0;32mI (165441) UART_ECHO: Received: [0m
+[0;32mI (166151) UART_ECHO: Received: [0m
+[0;32mI (166811) UART_ECHO: Received: [0m
+[0;32mI (167511) UART_ECHO: Received: [0m
+[0;32mI (168191) UART_ECHO: Received: [0m
+[0;32mI (168891) UART_ECHO: Received: [0m
+[0;32mI (169551) UART_ECHO: Received: �
+[0;32mI (170171) UART_ECHO: Received: �[0m
+[0;32mI (170711) UART_ECHO: Received: [0m
+[0;32mI (171271) UART_ECHO: Received: [0m
+[0;32mI (171851) UART_ECHO: Received: [0m
+[0;32mI (172391) UART_ECHO: Received: [0m
+[0;32mI (172951) UART_ECHO: Received: [0m
+[0;32mI (173491) UART_ECHO: Received: [0m
+[0;32mI (174031) UART_ECHO: Received: [0m
+[0;32mI (174571) UART_ECHO: Received: [0m
+[0;32mI (175131) UART_ECHO: Received: [0m
+[0;32mI (175591) UART_ECHO: Received: �
+[0;32mI (175871) UART_ECHO: Received: [0m
+[0;32mI (176171) UART_ECHO: Received: [0m
+[0;32mI (176431) UART_ECHO: Received: [0m
+[0;32mI (176711) UART_ECHO: Received: ?[0m
+[0;32mI (176991) UART_ECHO: Received: [0m
+[0;32mI (177251) UART_ECHO: Received: [0m
+[0;32mI (177531) UART_ECHO: Received: �~[0m
+[0;32mI (177791) UART_ECHO: Received: [0m
+[0;32mI (178051) UART_ECHO: Received: [0m
+[0;32mI (178311) UART_ECHO: Received: [0m
+[0;32mI (178571) UART_ECHO: Received: ��|[0m
+[0;32mI (178851) UART_ECHO: Received: [0m
+[0;32mI (179131) UART_ECHO: Received: [0m
+[0;32mI (179411) UART_ECHO: Received: [0m
+[0;32mI (179691) UART_ECHO: Received: [0m
+[0;32mI (179991) UART_ECHO: Received: [0m
+[0;32mI (180291) UART_ECHO: Received: [0m
+[0;32mI (180571) UART_ECHO: Received: [0m
+[0;32mI (180851) UART_ECHO: Received: [0m
+[0;32mI (181131) UART_ECHO: Received: [0m
+[0;32mI (181391) UART_ECHO: Received: [0m
+[0;32mI (181651) UART_ECHO: Received: [0m
+[0;32mI (181911) UART_ECHO: Received: [0m
+[0;32mI (182191) UART_ECHO: Received: > [0m
+[0;32mI (182451) UART_ECHO: Received: `[0m
+[0;32mI (182711) UART_ECHO: Received: [0m
+[0;32mI (182991) UART_ECHO: Received: ��?8[0m
+[0;32mI (183271) UART_ECHO: Received: �<[0m
+[0;32mI (183521) UART_ECHO: Received: [0m
+[0;32mI (183781) UART_ECHO: Received: [0m
+[0;32mI (184061) UART_ECHO: Received: [0m
+[0;32mI (184321) UART_ECHO: Received: [0m
+[0;32mI (184601) UART_ECHO: Received: [0m
+[0;32mI (184881) UART_ECHO: Received: [0m
+[0;32mI (185141) UART_ECHO: Received: [0m
+[0;32mI (185421) UART_ECHO: Received: [0m
+[0;32mI (185681) UART_ECHO: Received: [0m
+[0;32mI (185961) UART_ECHO: Received: [0m
+[0;32mI (186241) UART_ECHO: Received: [0m
+[0;32mI (186521) UART_ECHO: Received: [0m
+[0;32mI (186801) UART_ECHO: Received: G[0m
+[0;32mI (187061) UART_ECHO: Received: [0m
+[0;32mI (187341) UART_ECHO: Received: �? [0m
+[0;32mI (187621) UART_ECHO: Received: [0m
+[0;32mI (187901) UART_ECHO: Received: [0m
+[0;32mI (188181) UART_ECHO: Received: [0m
+[0;32mI (188461) UART_ECHO: Received: [0m
+[0;32mI (188741) UART_ECHO: Received: [0m
+[0;32mI (188981) UART_ECHO: Received: [0m
+[0;32mI (189261) UART_ECHO: Received: � [0m
+[0;32mI (189541) UART_ECHO: Received: [0m
+[0;32mI (189801) UART_ECHO: Received: [0m
+[0;32mI (190081) UART_ECHO: Received: [0m
+[0;32mI (190341) UART_ECHO: Received: [0m
+[0;32mI (190621) UART_ECHO: Received: [0m
+[0;32mI (190901) UART_ECHO: Received: 8[0m
+[0;32mI (191181) UART_ECHO: Received: [0m
+[0;32mI (191441) UART_ECHO: Received: [0m
+[0;32mI (191721) UART_ECHO: Received: [0m
+[0;32mI (191981) UART_ECHO: Received: [0m
+[0;32mI (192261) UART_ECHO: Received: [0m
+[0;32mI (192521) UART_ECHO: Received: [0m
+[0;32mI (192801) UART_ECHO: Received: ��8[0m
+[0;32mI (193061) UART_ECHO: Received: [0m
+[0;32mI (193321) UART_ECHO: Received: [0m
+[0;32mI (193581) UART_ECHO: Received: [0m
+[0;32mI (193841) UART_ECHO: Received: [0m
+[0;32mI (194101) UART_ECHO: Received: [0m
+[0;32mI (194381) UART_ECHO: Received: �?[0m
+[0;32mI (194641) UART_ECHO: Received: [0m
+[0;32mI (194901) UART_ECHO: Received: [0m
+[0;32mI (195181) UART_ECHO: Received: �>[0m
+[0;32mI (195441) UART_ECHO: Received: [0m
+[0;32mI (195681) UART_ECHO: Received: [0m
+[0;32mI (195921) UART_ECHO: Received: [0m
+[0;32mI (196181) UART_ECHO: Received: �?8	[0m
+[0;32mI (196441) UART_ECHO: Received: [0m
+[0;32mI (196681) UART_ECHO: Received: [0m
+[0;32mI (196941) UART_ECHO: Received: �߸[0m
+[0;32mI (197181) UART_ECHO: Received: [0m
+[0;32mI (197441) UART_ECHO: Received: [0m
+[0;32mI (197681) UART_ECHO: Received: [0m
+[0;32mI (197941) UART_ECHO: Received: ?0[0m
+[0;32mI (198201) UART_ECHO: Received: [0m
+[0;32mI (198441) UART_ECHO: Received: [0m
+[0;32mI (198701) UART_ECHO: Received: �|[0m
+[0;32mI (198961) UART_ECHO: Received: [0m
+[0;32mI (199221) UART_ECHO: Received: [0m
+[0;32mI (199481) UART_ECHO: Received: @[0m
+[0;32mI (199741) UART_ECHO: Received: [0m
+[0;32mI (200001) UART_ECHO: Received: [0m
+[0;32mI (200261) UART_ECHO: Received: [0m
+[0;32mI (200521) UART_ECHO: Received: [0m
+[0;32mI (200781) UART_ECHO: Received: [0m
+[0;32mI (201041) UART_ECHO: Received: [0m
+[0;32mI (201301) UART_ECHO: Received: [0m
+[0;32mI (201561) UART_ECHO: Received: [0m
+[0;32mI (201801) UART_ECHO: Received:  [0m
+[0;32mI (202081) UART_ECHO: Received: �? [0m
+[0;32mI (202321) UART_ECHO: Received:  [0m
+[0;32mI (202581) UART_ECHO: Received: [0m
+[0;32mI (202841) UART_ECHO: Received: [0m
+[0;32mI (203081) UART_ECHO: Received: [0m
+[0;32mI (203341) UART_ECHO: Received: �\ [0m
+[0;32mI (203601) UART_ECHO: Received: ��?0[0m
+[0;32mI (203861) UART_ECHO: Received: �[0m
+[0;32mI (204101) UART_ECHO: Received: [0m
+[0;32mI (204381) UART_ECHO: Received: ��[0m
+[0;32mI (204621) UART_ECHO: Received: [0m
+[0;32mI (204881) UART_ECHO: Received: �?x[0m
+[0;32mI (205141) UART_ECHO: Received: [0m
+[0;32mI (205401) UART_ECHO: Received: [0m
+[0;32mI (205661) UART_ECHO: Received: [0m
+[0;32mI (205901) UART_ECHO: Received: [0m
+[0;32mI (206161) UART_ECHO: Received: �<[0m
+[0;32mI (206421) UART_ECHO: Received: [0m
+[0;32mI (206681) UART_ECHO: Received: [0m
+[0;32mI (206941) UART_ECHO: Received: [0m
+[0;32mI (207201) UART_ECHO: Received: [0m
+[0;32mI (207461) UART_ECHO: Received: [0m
+[0;32mI (207701) UART_ECHO: Received: [0m
+[0;32mI (207961) UART_ECHO: Received: _2[0m
+[0;32mI (208221) UART_ECHO: Received: [0m
+[0;32mI (208461) UART_ECHO: Received: [0m
+[0;32mI (208721) UART_ECHO: Received: [0m
+[0;32mI (208981) UART_ECHO: Received: [0m
+[0;32mI (209221) UART_ECHO: Received: [0m
+[0;32mI (209481) UART_ECHO: Received: [0m
+[0;32mI (209741) UART_ECHO: Received: [0m
+[0;32mI (209981) UART_ECHO: Received: [0m
+[0;32mI (210221) UART_ECHO: Received: [0m
+[0;32mI (210481) UART_ECHO: Received: 8[0m
+[0;32mI (210761) UART_ECHO: Received: [0m
+[0;32mI (211021) UART_ECHO: Received: [0m
+[0;32mI (211281) UART_ECHO: Received: [0m
+[0;32mI (211521) UART_ECHO: Received: <[0m
+[0;32mI (211781) UART_ECHO: Received: [0m
+[0;32mI (212021) UART_ECHO: Received: [0m
+[0;32mI (212261) UART_ECHO: Received: [0m
+[0;32mI (212521) UART_ECHO: Received: [0m
+[0;32mI (212781) UART_ECHO: Received: [0m
+[0;32mI (213041) UART_ECHO: Received: [0m
+[0;32mI (213281) UART_ECHO: Received: [0m
+[0;32mI (213541) UART_ECHO: Received: ��� [0m
+[0;32mI (213801) UART_ECHO: Received: [0m
+[0;32mI (214061) UART_ECHO: Received: [0m
+[0;32mI (214301) UART_ECHO: Received: [0m
+[0;32mI (214561) UART_ECHO: Received: [0m
+[0;32mI (215281) UART_ECHO: Received: [0m
+[0;32mI (216061) UART_ECHO: Received: [0m
+[0;32mI (216861) UART_ECHO: Received: [0m
+[0;32mI (217681) UART_ECHO: Received: [0m
+[0;32mI (218421) UART_ECHO: Received: [0m
+[0;32mI (219181) UART_ECHO: Received: �
+[0;32mI (219881) UART_ECHO: Received: �
+[0;32mI (220401) UART_ECHO: Received: [0m
+[0;32mI (220921) UART_ECHO: Received: [0m
+[0;32mI (221441) UART_ECHO: Received: �[0m
+[0;32mI (221901) UART_ECHO: Received: [0m
+[0;32mI (222401) UART_ECHO: Received: [0m
+[0;32mI (222941) UART_ECHO: Received: [0m
+[0;32mI (223481) UART_ECHO: Received: [0m
+[0;32mI (223981) UART_ECHO: Received: [0m
+[0;32mI (224481) UART_ECHO: Received: [0m
+[0;32mI (225001) UART_ECHO: Received: [0m
+[0;32mI (225441) UART_ECHO: Received: [0m
+[0;32mI (225941) UART_ECHO: Received: �[0m
+[0;32mI (226401) UART_ECHO: Received: �[0m
+[0;32mI (226861) UART_ECHO: Received: [0m
+[0;32mI (227381) UART_ECHO: Received: [0m
+[0;32mI (227961) UART_ECHO: Received: [0m
+[0;32mI (228461) UART_ECHO: Received: �[0m
+[0;32mI (228981) UART_ECHO: Received: [0m
+[0;32mI (229501) UART_ECHO: Received: [0m
+[0;32mI (229961) UART_ECHO: Received: [0m
+[0;32mI (230461) UART_ECHO: Received: [0m
+[0;32mI (230931) UART_ECHO: Received: [0m
+[0;32mI (231451) UART_ECHO: Received: [0m
+[0;32mI (231931) UART_ECHO: Received: [0m
+[0;32mI (232431) UART_ECHO: Received: [0m
+[0;32mI (232871) UART_ECHO: Received: �
+[0;32mI (233311) UART_ECHO: Received: [0m
+[0;32mI (233771) UART_ECHO: Received: [0m
+[0;32mI (234231) UART_ECHO: Received: �[0m
+[0;32mI (234711) UART_ECHO: Received: [0m
+[0;32mI (235171) UART_ECHO: Received: [0m
+[0;32mI (235631) UART_ECHO: Received: [0m
+[0;32mI (236091) UART_ECHO: Received: [0m
+[0;32mI (236551) UART_ECHO: Received: [0m
+[0;32mI (237031) UART_ECHO: Received: ��[0m
+[0;32mI (237511) UART_ECHO: Received: [0m
+[0;32mI (237971) UART_ECHO: Received: [0m
+[0;32mI (238431) UART_ECHO: Received: @[0m
+[0;32mI (238851) UART_ECHO: Received: [0m
+[0;32mI (239391) UART_ECHO: Received: [0m
+[0;32mI (239851) UART_ECHO: Received: [0m
+[0;32mI (240311) UART_ECHO: Received: [0m
+[0;32mI (240791) UART_ECHO: Received: �A[0m
+[0;32mI (241271) UART_ECHO: Received: [0m
+[0;32mI (241771) UART_ECHO: Received: [0m
+[0;32mI (242251) UART_ECHO: Received: [0m
+[0;32mI (242771) UART_ECHO: Received: [0m
+[0;32mI (243251) UART_ECHO: Received: [0m
+[0;32mI (243751) UART_ECHO: Received: �[0m
+[0;32mI (244271) UART_ECHO: Received: �[0m
+[0;32mI (244751) UART_ECHO: Received: [0m
+[0;32mI (245411) UART_ECHO: Received: [0m
+[0;32mI (245891) UART_ECHO: Received: [0m
+[0;32mI (246431) UART_ECHO: Received: [0m
+[0;32mI (247011) UART_ECHO: Received: [0m
+[0;32mI (247511) UART_ECHO: Received: [0m
+[0;32mI (247991) UART_ECHO: Received: [0m
+[0;32mI (248531) UART_ECHO: Received: [0m
+[0;32mI (248951) UART_ECHO: Received: �
+[0;32mI (249211) UART_ECHO: Received: [0m
+[0;32mI (249491) UART_ECHO: Received: �8[0m
+[0;32mI (249771) UART_ECHO: Received: [0m
+[0;32mI (250051) UART_ECHO: Received: [0m
+[0;32mI (250331) UART_ECHO: Received: [0m
+[0;32mI (250611) UART_ECHO: Received: [0m
+[0;32mI (250891) UART_ECHO: Received: �
+[0;32mI (251171) UART_ECHO: Received: [0m
+[0;32mI (251451) UART_ECHO: Received: [0m
+[0;32mI (251731) UART_ECHO: Received: [0m
+[0;32mI (252011) UART_ECHO: Received: ��[0m
+[0;32mI (252311) UART_ECHO: Received: =[0m
+[0;32mI (252591) UART_ECHO: Received: [0m
+[0;32mI (252911) UART_ECHO: Received: �>[0m
+[0;32mI (253191) UART_ECHO: Received: [0m
+[0;32mI (253471) UART_ECHO: Received: [0m
+[0;32mI (253771) UART_ECHO: Received: [0m
+[0;32mI (254051) UART_ECHO: Received: [0m
+[0;32mI (254351) UART_ECHO: Received: ���[0m
+[0;32mI (254651) UART_ECHO: Received: [0m
+[0;32mI (254931) UART_ECHO: Received: [0m
+[0;32mI (255231) UART_ECHO: Received: 0A[0m
+[0;32mI (255511) UART_ECHO: Received: [0m
+[0;32mI (255831) UART_ECHO: Received: [0m
+[0;32mI (256111) UART_ECHO: Received: [0m
+[0;32mI (256411) UART_ECHO: Received: [0m
+[0;32mI (256711) UART_ECHO: Received: [0m
+[0;32mI (257011) UART_ECHO: Received: [0m
+[0;32mI (257301) UART_ECHO: Received:  [0m
+[0;32mI (257621) UART_ECHO: Received: [0m
+[0;32mI (257901) UART_ECHO: Received: [0m
+[0;32mI (258181) UART_ECHO: Received: �; [0m
+[0;32mI (258461) UART_ECHO: Received: ��[0m
+[0;32mI (258761) UART_ECHO: Received: �<[0m
+[0;32mI (259021) UART_ECHO: Received: [0m
+[0;32mI (259301) UART_ECHO: Received: [0m
+[0;32mI (259581) UART_ECHO: Received: [0m
+[0;32mI (259841) UART_ECHO: Received: [0m
+[0;32mI (260101) UART_ECHO: Received: [0m
+[0;32mI (260361) UART_ECHO: Received: [0m
+[0;32mI (260621) UART_ECHO: Received: [0m
+[0;32mI (260901) UART_ECHO: Received: �0[0m
+[0;32mI (261161) UART_ECHO: Received: [0m
+[0;32mI (261441) UART_ECHO: Received: �G[0m
+[0;32mI (261721) UART_ECHO: Received: [0m
+[0;32mI (261961) UART_ECHO: Received: [0m
+[0;32mI (262221) UART_ECHO: Received: ��8[0m
+[0;32mI (262501) UART_ECHO: Received: [0m
+[0;32mI (262761) UART_ECHO: Received: [0m
+[0;32mI (263021) UART_ECHO: Received: [0m
+[0;32mI (263301) UART_ECHO: Received: [0m
+[0;32mI (263561) UART_ECHO: Received: [0m
+[0;32mI (263841) UART_ECHO: Received:  [0m
+[0;32mI (264081) UART_ECHO: Received: [0m
+[0;32mI (264341) UART_ECHO: Received: �<[0m
+[0;32mI (264621) UART_ECHO: Received: [0m
+[0;32mI (264901) UART_ECHO: Received: [0m
+[0;32mI (265161) UART_ECHO: Received: [0m
+[0;32mI (265421) UART_ECHO: Received: [0m
+[0;32mI (265681) UART_ECHO: Received: [0m
+[0;32mI (265961) UART_ECHO: Received: [0m
+[0;32mI (266221) UART_ECHO: Received: 8[0m
+[0;32mI (266501) UART_ECHO: Received: [0m
+[0;32mI (266761) UART_ECHO: Received: [0m
+[0;32mI (267041) UART_ECHO: Received: [0m
+[0;32mI (267321) UART_ECHO: Received: [0m
+[0;32mI (267581) UART_ECHO: Received: [0m
+[0;32mI (267861) UART_ECHO: Received: [0m
+[0;32mI (268141) UART_ECHO: Received: [0m
+[0;32mI (268461) UART_ECHO: Received: [0m
+[0;32mI (268761) UART_ECHO: Received: [0m
+[0;32mI (269081) UART_ECHO: Received: 8[0m
+[0;32mI (269381) UART_ECHO: Received: [0m
+[0;32mI (269701) UART_ECHO: Received: [0m
+[0;32mI (270021) UART_ECHO: Received: [0m
+[0;32mI (270321) UART_ECHO: Received: [0m
+[0;32mI (270641) UART_ECHO: Received: [0m
+[0;32mI (270941) UART_ECHO: Received: > [0m
+[0;32mI (271261) UART_ECHO: Received: [0m
+[0;32mI (271581) UART_ECHO: Received: [0m
+[0;32mI (272201) UART_ECHO: Received: [0m
+[0;32mI (272901) UART_ECHO: Received: [0m
+[0;32mI (273241) UART_ECHO: Received: [0m
+[0;32mI (273541) UART_ECHO: Received: ��[0m
+[0;32mI (273821) UART_ECHO: Received: [0m
+[0;32mI (274101) UART_ECHO: Received: [0m
+[0;32mI (274381) UART_ECHO: Received: [0m
+[0;32mI (274661) UART_ECHO: Received: �>[0m
+[0;32mI (274931) UART_ECHO: Received: [0m
+[0;32mI (275211) UART_ECHO: Received: [0m
+[0;32mI (275471) UART_ECHO: Received: [0m
+[0;32mI (275771) UART_ECHO: Received: [0m
+[0;32mI (276031) UART_ECHO: Received: [0m
+[0;32mI (276311) UART_ECHO: Received: [0m
+[0;32mI (276591) UART_ECHO: Received: [0m
+[0;32mI (276851) UART_ECHO: Received: [0m
+[0;32mI (277131) UART_ECHO: Received: [0m
+[0;32mI (277411) UART_ECHO: Received: ��?8[0m
+[0;32mI (277711) UART_ECHO: Received: <[0m
+[0;32mI (278011) UART_ECHO: Received: [0m
+[0;32mI (278331) UART_ECHO: Received: [0m
+[0;32mI (278631) UART_ECHO: Received: [0m
+[0;32mI (278911) UART_ECHO: Received: [0m
+[0;32mI (279211) UART_ECHO: Received: �[0m
+[0;32mI (279511) UART_ECHO: Received: [0m
+[0;32mI (279811) UART_ECHO: Received:  [0m
+[0;32mI (280091) UART_ECHO: Received: C[0m
+[0;32mI (280371) UART_ECHO: Received: ?[0m
+[0;32mI (280671) UART_ECHO: Received: �<[0m
+[0;32mI (280951) UART_ECHO: Received: @[0m
+[0;32mI (281231) UART_ECHO: Received: [0m
+[0;32mI (281511) UART_ECHO: Received: [0m
+[0;32mI (281771) UART_ECHO: Received: [0m
+[0;32mI (282031) UART_ECHO: Received: [0m
+[0;32mI (282311) UART_ECHO: Received: [0m
+[0;32mI (282571) UART_ECHO: Received: [0m
+[0;32mI (282851) UART_ECHO: Received: [0m
+[0;32mI (283131) UART_ECHO: Received: [0m
+[0;32mI (283371) UART_ECHO: Received: [0m
+[0;32mI (283651) UART_ECHO: Received: [0m
+[0;32mI (283911) UART_ECHO: Received: [0m
+[0;32mI (284211) UART_ECHO: Received: �[0m
+[0;32mI (284471) UART_ECHO: Received: [0m
+[0;32mI (284751) UART_ECHO: Received: [0m
+[0;32mI (285011) UART_ECHO: Received: [0m
+[0;32mI (285291) UART_ECHO: Received: �>[0m
+[0;32mI (285551) UART_ECHO: Received: [0m
+[0;32mI (285811) UART_ECHO: Received: [0m
+[0;32mI (286091) UART_ECHO: Received: [0m
+[0;32mI (286371) UART_ECHO: Received: [0m
+[0;32mI (286651) UART_ECHO: Received: [0m
+[0;32mI (286911) UART_ECHO: Received: [0m
+[0;32mI (287191) UART_ECHO: Received: }[0m
+[0;32mI (287451) UART_ECHO: Received: [0m
+[0;32mI (287711) UART_ECHO: Received: [0m
+[0;32mI (287971) UART_ECHO: Received: �0[0m
+[0;32mI (288251) UART_ECHO: Received: [0m
+[0;32mI (288511) UART_ECHO: Received:  [0m
+[0;32mI (288771) UART_ECHO: Received: [0m
+[0;32mI (289051) UART_ECHO: Received: �[0m
+[0;32mI (289351) UART_ECHO: Received: �8[0m
+[0;32mI (289611) UART_ECHO: Received: [0m
+[0;32mI (289891) UART_ECHO: Received: [0m
+[0;32mI (290151) UART_ECHO: Received: [0m
+[0;32mI (290431) UART_ECHO: Received: [0m
+[0;32mI (290731) UART_ECHO: Received: ?[0m
+[0;32mI (291011) UART_ECHO: Received: [0m
+[0;32mI (291291) UART_ECHO: Received: [0m
+[0;32mI (291571) UART_ECHO: Received: 8[0m
+[0;32mI (291871) UART_ECHO: Received: >@[0m
+[0;32mI (292151) UART_ECHO: Received: [0m
+[0;32mI (292421) UART_ECHO: Received: [0m
+[0;32mI (292701) UART_ECHO: Received: [0m
+[0;32mI (292981) UART_ECHO: Received: [0m
+[0;32mI (293721) UART_ECHO: Received: �[0m
+[0;32mI (294441) UART_ECHO: Received: [0m
+[0;32mI (295201) UART_ECHO: Received: [0m
+[0;32mI (295901) UART_ECHO: Received: [0m
+[0;32mI (296641) UART_ECHO: Received: [0m
+[0;32mI (297321) UART_ECHO: Received: �
+[0;32mI (298061) UART_ECHO: Received: �[0m
+[0;32mI (298841) UART_ECHO: Received: [0m
+[0;32mI (299621) UART_ECHO: Received: [0m
+[0;32mI (300421) UART_ECHO: Received: [0m
+[0;32mI (301081) UART_ECHO: Received: [0m
+[0;32mI (301821) UART_ECHO: Received: [0m
+[0;32mI (302581) UART_ECHO: Received: �
+[0;32mI (303301) UART_ECHO: Received: [0m
+[0;32mI (304081) UART_ECHO: Received: [0m
+[0;32mI (304901) UART_ECHO: Received: [0m
+[0;32mI (305701) UART_ECHO: Received: [0m
+[0;32mI (306381) UART_ECHO: Received: [0m
+[0;32mI (307021) UART_ECHO: Received: [0m
+[0;32mI (307621) UART_ECHO: Received: [0m
+[0;32mI (308261) UART_ECHO: Received: [0m
+[0;32mI (308901) UART_ECHO: Received: [0m
+[0;32mI (309521) UART_ECHO: Received: [0m
+[0;32mI (310161) UART_ECHO: Received: [0m
+[0;32mI (310801) UART_ECHO: Received: [0m
+[0;32mI (311421) UART_ECHO: Received: �
+[0;32mI (311941) UART_ECHO: Received: [0m
+[0;32mI (312541) UART_ECHO: Received: [0m
+[0;32mI (313201) UART_ECHO: Received: [0m
+[0;32mI (313941) UART_ECHO: Received: [0m
+[0;32mI (314621) UART_ECHO: Received: [0m
+[0;32mI (315341) UART_ECHO: Received: �[0m
+[0;32mI (316021) UART_ECHO: Received: [0m
+[0;32mI (316701) UART_ECHO: Received: [0m
+[0;32mI (317401) UART_ECHO: Received: [0m
+[0;32mI (318161) UART_ECHO: Received: [0m
+[0;32mI (318881) UART_ECHO: Received: �
+[0;32mI (319641) UART_ECHO: Received: [0m
+[0;32mI (320361) UART_ECHO: Received: [0m
+[0;32mI (321101) UART_ECHO: Received: �
+[0;32mI (321841) UART_ECHO: Received: [0m
+[0;32mI (322441) UART_ECHO: Received: �[0m
+[0;32mI (322721) UART_ECHO: Received: [0m
+[0;32mI (323021) UART_ECHO: Received: [0m
+[0;32mI (323321) UART_ECHO: Received: [0m
+[0;32mI (323621) UART_ECHO: Received: [0m
+[0;32mI (323961) UART_ECHO: Received: ��[0m
+[0;32mI (324241) UART_ECHO: Received: [0m
+[0;32mI (324521) UART_ECHO: Received: [0m
+[0;32mI (324801) UART_ECHO: Received: [0m
+[0;32mI (325081) UART_ECHO: Received: ^`[0m
+[0;32mI (325381) UART_ECHO: Received: @�[0m
+[0;32mI (325681) UART_ECHO: Received: �<[0m
+[0;32mI (325961) UART_ECHO: Received: [0m
+[0;32mI (326241) UART_ECHO: Received: �|[0m
+[0;32mI (326541) UART_ECHO: Received: ^[0m
+[0;32mI (326821) UART_ECHO: Received: [0m
+[0;32mI (327101) UART_ECHO: Received: [0m
+[0;32mI (327401) UART_ECHO: Received: [0m
+[0;32mI (327681) UART_ECHO: Received: [0m
+[0;32mI (327941) UART_ECHO: Received: C[0m
+[0;32mI (328241) UART_ECHO: Received: ��[0m
+[0;32mI (328541) UART_ECHO: Received: [0m
+[0;32mI (328821) UART_ECHO: Received: [0m
+[0;32mI (329101) UART_ECHO: Received: [0m
+[0;32mI (329361) UART_ECHO: Received:  [0m
+[0;32mI (329621) UART_ECHO: Received: [0m
+[0;32mI (329901) UART_ECHO: Received: [0m
+[0;32mI (330181) UART_ECHO: Received: [0m
+[0;32mI (330461) UART_ECHO: Received: [0m
+[0;32mI (330741) UART_ECHO: Received: �߁ [0m
+[0;32mI (331021) UART_ECHO: Received: [0m
+[0;32mI (331301) UART_ECHO: Received: [0m
+[0;32mI (331601) UART_ECHO: Received: [0m
+[0;32mI (331881) UART_ECHO: Received: [0m
+[0;32mI (332181) UART_ECHO: Received: [0m
+[0;32mI (332441) UART_ECHO: Received: [0m
+[0;32mI (332721) UART_ECHO: Received: [0m
+[0;32mI (332981) UART_ECHO: Received: [0m
+[0;32mI (333261) UART_ECHO: Received: [0m
+[0;32mI (333541) UART_ECHO: Received: [0m
+[0;32mI (333821) UART_ECHO: Received: [0m
+[0;32mI (334121) UART_ECHO: Received: [0m
+[0;32mI (334401) UART_ECHO: Received: [0m
+[0;32mI (334701) UART_ECHO: Received: [0m
+[0;32mI (335001) UART_ECHO: Received: [0m
+[0;32mI (335261) UART_ECHO: Received: 8[0m
+[0;32mI (335561) UART_ECHO: Received: [0m
+[0;32mI (335861) UART_ECHO: Received: >0[0m
+[0;32mI (336161) UART_ECHO: Received: [0m
+[0;32mI (336481) UART_ECHO: Received: �[0m
+[0;32mI (336801) UART_ECHO: Received: [0m
+[0;32mI (337101) UART_ECHO: Received: [0m
+[0;32mI (337361) UART_ECHO: Received: [0m
+[0;32mI (337621) UART_ECHO: Received: [0m
+[0;32mI (337901) UART_ECHO: Received: �>[0m
+[0;32mI (338181) UART_ECHO: Received: [0m
+[0;32mI (338441) UART_ECHO: Received: [0m
+[0;32mI (338721) UART_ECHO: Received: [0m
+[0;32mI (339001) UART_ECHO: Received: 6[0m
+[0;32mI (339281) UART_ECHO: Received: [0m
+[0;32mI (339581) UART_ECHO: Received: _[0m
+[0;32mI (339841) UART_ECHO: Received: [0m
+[0;32mI (340081) UART_ECHO: Received: [0m
+[0;32mI (340341) UART_ECHO: Received: [0m
+[0;32mI (340641) UART_ECHO: Received: �� [0m
+[0;32mI (340921) UART_ECHO: Received: [0m
+[0;32mI (341201) UART_ECHO: Received: [0m
+[0;32mI (341481) UART_ECHO: Received: [0m
+[0;32mI (341761) UART_ECHO: Received:  [0m
+[0;32mI (342041) UART_ECHO: Received: [0m
+[0;32mI (342321) UART_ECHO: Received: [0m
+[0;32mI (342601) UART_ECHO: Received: [0m
+[0;32mI (343061) UART_ECHO: Received: [0m
