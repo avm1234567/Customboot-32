@@ -22,6 +22,8 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include<stdio.h>
+#include <string.h>
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -46,7 +48,8 @@ UART_HandleTypeDef huart1;
 #define APP_ADDRESS1 (uint32_t)0x08004000
 #define APP_ADDRESS2 (uint32_t)0x08006000
 GPIO_PinState pinState;
-
+#define CHUNK_SIZE 256
+#define MAX_FW_SIZE  (8 * 1024)
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -56,6 +59,16 @@ static void MX_USART1_UART_Init(void);
 /* USER CODE BEGIN PFP */
 static void goto_app(uint32_t addr);
 static void JumpToAddress(uint32_t addr);
+void bootloader_main(uint32_t APP_ADD);
+static void erase_app_flash(uint32_t APP_ADD);
+static void write_flash(uint32_t address, uint8_t *data, uint32_t size);
+#define RX_BUF_SIZE 132
+#define TX_BUF_SIZE 132
+
+uint8_t rx_buffer[RX_BUF_SIZE];
+    uint8_t tx_buffer[TX_BUF_SIZE];
+	const char *msg1 = "REQ_A\r\n";
+	const char *msg2= "REQ_B\r\n";
 
 /* USER CODE END PFP */
 
@@ -95,26 +108,26 @@ int main(void)
   MX_GPIO_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
-    printf("Starting Bootloader");
-  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_RESET );    //Green LED ON
+    //printf("Starting Bootloader");
+          //Green LED ON
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-//  uint8_t i;
+uint8_t i;
   while (1)
   {
-//	  for( i = 0 ; i<=3; i++){
-//		  HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
-//		  HAL_Delay(2000);
-//	  }
+	  for( i = 0 ; i<=3; i++){
+		  HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
+		  HAL_Delay(2000);
+	  }
 	    pinState = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0);
 	    if (pinState == GPIO_PIN_SET) {
-	            goto_app(APP_ADDRESS2);
+	            bootloader_main(APP_ADDRESS2);
 	        } else {
-	            goto_app(APP_ADDRESS1);
+	            bootloader_main(APP_ADDRESS1);
 	        }
-//		  goto_app();
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -269,6 +282,60 @@ void JumpToAddress(uint32_t addr) {
 void goto_app(uint32_t addr) {
     JumpToAddress(addr);
 }
+
+
+
+
+void bootloader_main(uint32_t APP_ADD)
+{
+    uint8_t rx_buf[CHUNK_SIZE];
+    uint32_t flash_addr = APP_ADD;
+    uint32_t total_received = 0;
+    memset(tx_buffer, 0, TX_BUF_SIZE);
+    	  memset(rx_buffer, 0, RX_BUF_SIZE);
+          strcpy((char*)tx_buffer, (char*)msg1);
+    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_RESET );    // Green LED ON
+    HAL_UART_Transmit(&huart1, tx_buffer, strlen(tx_buffer), HAL_MAX_DELAY);
+
+    HAL_Delay(100);
+    erase_app_flash(APP_ADD);
+
+    while (total_received < MAX_FW_SIZE) {
+        memset(rx_buf, 0xFF, CHUNK_SIZE);
+        if (HAL_UART_Receive(&huart1, rx_buf, CHUNK_SIZE, 1000) == HAL_OK) {
+            write_flash(flash_addr, rx_buf, CHUNK_SIZE);
+            flash_addr += CHUNK_SIZE;
+            total_received += CHUNK_SIZE;
+        }
+    }
+
+    goto_app(APP_ADD);
+}
+
+static void erase_app_flash(uint32_t APP_ADD)
+{
+    HAL_FLASH_Unlock();
+    FLASH_EraseInitTypeDef erase;
+    uint32_t error;
+
+    erase.TypeErase = FLASH_TYPEERASE_PAGES;
+    erase.PageAddress = APP_ADD;
+    erase.NbPages = MAX_FW_SIZE / FLASH_PAGE_SIZE;
+    HAL_FLASHEx_Erase(&erase, &error);
+    HAL_FLASH_Lock();
+}
+
+static void write_flash(uint32_t address, uint8_t *data, uint32_t size)
+{
+    HAL_FLASH_Unlock();
+    for (uint32_t i = 0; i < size; i += 2) {
+        uint16_t halfword = data[i] | (data[i+1] << 8);
+        HAL_FLASH_Program(FLASH_TYPEPROGRAM_HALFWORD, address + i, halfword);
+    }
+    HAL_FLASH_Lock();
+}
+
+
 /* USER CODE END 4 */
 
 /**

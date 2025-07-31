@@ -66,8 +66,8 @@ all: main-build
 main-build: Learning_Bootloader.elf secondary-outputs
 
 # Tool invocations
-Learning_Bootloader.elf Learning_Bootloader.map: $(OBJS) $(USER_OBJS) C:\Users\vap05\WebDev\Learning_Bootloader\STM32F103C6TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Learning_Bootloader.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Users\vap05\WebDev\Learning_Bootloader\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Learning_Bootloader.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Learning_Bootloader.elf Learning_Bootloader.map: $(OBJS) $(USER_OBJS) /home/varun/Downloads/DUAL_IMAGE_BOOTLOADER/Dual_Image_Bootloader/Learning_Bootloader/STM32F103C6TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "Learning_Bootloader.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"/home/varun/Downloads/DUAL_IMAGE_BOOTLOADER/Dual_Image_Bootloader/Learning_Bootloader/STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Learning_Bootloader.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
