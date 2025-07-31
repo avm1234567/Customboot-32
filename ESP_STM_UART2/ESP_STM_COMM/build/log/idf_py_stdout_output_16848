@@ -1,0 +1,2028 @@
+� (14 KiB): D/IRAM
+I �ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15736
+load:0x40080400,len:4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (29) boot: ESP-IDF v5.4.2 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Jul 24 2025 14:53:01[0m
+[0;32mI (30) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0abfch ( 44028) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001ac24 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (103) esp_image: segment 2: paddr=0001ac48 vaddr=3ffb0000 size=023e8h (  9192) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=0001d038 vaddr=40080000 size=02fe0h ( 12256) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=15e38h ( 89656) map[0m
+[0;32mI (153) esp_image: segment 5: paddr=00035e60 vaddr=40082fe0 size=0ae34h ( 44596) load[0m
+[0;32mI (177) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (177) boot: Disabling RNG early entropy source...[0m
+[0;32mI (188) cpu_start: Multicore app[0m
+[0;32mI (196) cpu_start: Pro cpu start user code[0m
+[0;32mI (196) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (196) app_init: Application information:[0m
+[0;32mI (196) app_init: Project name:     ESP_STM_COMM[0m
+[0;32mI (200) app_init: App version:      1[0m
+[0;32mI (204) app_init: Compile time:     Jul 24 2025 14:52:47[0m
+[0;32mI (209) app_init: ELF file SHA256:  9791f1e2d...[0m
+[0;32mI (213) app_init: ESP-IDF:          v5.4.2[0m
+[0;32mI (217) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (221) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (225) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (229) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (235) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (240) heap_init: At 3FFB2CB0 len 0002D350 (180 KiB): DRAM[0m
+[0;32mI (245) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (251) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (256) heap_init: At 4008DE14 len 000121EC (72 KiB): IRAM[0m
+[0;32mI (263) spi_flash: detected chip: generic[0m
+[0;32mI (265) spi_flash: flash io: dio[0m
+[0;33mW (268) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (281) main_task: Started on CPU0[0m
+[0;32mI (291) main_task: Calling app_main()[0m
+[0;32mI (691) UART_TEST: Received 2 bytes: [0m
+
+[0;32mI (1301) UART_TEST: Received 127 bytes:  [0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mel
+
+[0;32mI (1911) UART_TEST: Received 127 bytes: SMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (2521) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (3131) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (3741) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (4351) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (4961) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (5571) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (6181) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (6791) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (7401) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (8011) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (8621) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (9231) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (9841) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (10451) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (11061) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (11671) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (12281) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (12891) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (13501) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (14111) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (14721) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (15331) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (15941) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (16551) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (17161) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (17771) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (18381) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (18991) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (19601) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (20211) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (20821) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (21431) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (22041) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (22651) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (23261) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (23871) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (24481) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (25091) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (25701) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (26311) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (26921) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (27531) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (28141) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (28751) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (29361) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (29971) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (30581) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (31191) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (31801) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (32411) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (33021) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (33631) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (34241) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (34851) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (35461) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (36071) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (36681) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (37291) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (37901) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (38511) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (39121) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (39731) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (40341) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (40951) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (41561) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (42171) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (42781) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (43391) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (44001) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (44611) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (45221) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (45831) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (46441) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (47051) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (47661) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (48271) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (48881) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (49491) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (50101) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (50711) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (51321) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (51931) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (52541) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (53151) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (53761) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (54371) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (54981) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (55591) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (56201) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (56811) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (57421) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (58031) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (58641) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (59251) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (59861) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (60471) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (61081) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (61691) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (62301) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (62911) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (63521) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (64131) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (64741) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (65351) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (65961) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (66571) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (67181) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (67791) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (68401) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (69011) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (69621) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (70231) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (70841) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (71451) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (72061) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (72671) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (73281) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (73891) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (74501) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (75111) UART_TEST: Received 127 bytes: TMelLo STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (75721) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (76331) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (76941) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (77551) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (78161) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (78771) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (79381) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (79991) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (80601) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (81211) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (81821) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (82431) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (83041) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (83651) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (84261) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (84871) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (85481) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (86091) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (86701) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (87311) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (87921) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (88531) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (89141) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (89751) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (90361) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (90971) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (91581) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (92191) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (92801) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (93411) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (94021) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (94631) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (95241) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (95851) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (96461) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (97071) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (97681) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (98291) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (98901) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (99511) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (100121) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (100731) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (101341) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (101951) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (102561) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (103171) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (103781) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (104391) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (105001) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (105611) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (106221) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (106831) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (107441) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (108051) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (108661) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (109271) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (109881) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (110491) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (111101) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (111711) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (112321) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (112931) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (113541) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (114151) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (114761) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (115371) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (115981) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (116591) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (117201) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (117811) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (118421) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (119031) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (119641) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (120251) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (120861) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (121471) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (122081) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (122691) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (123301) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (123911) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (124521) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (125131) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (125741) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (126351) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (126961) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (127571) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (128181) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (128791) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (129401) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (130011) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (130621) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (131231) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (131841) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (132451) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (133061) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (133671) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (134281) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (134891) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (135501) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (136111) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (136721) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (137331) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (137941) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (138551) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (139161) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (139771) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (140381) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (140991) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (141601) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (142211) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (142821) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (143431) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (144041) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (144651) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (145261) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (145871) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (146481) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (147091) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (147701) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (148311) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (148921) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (149531) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (150141) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
+[0;32mI (150751) UART_TEST: Received 127 bytes: TMello STM from ESP[0m
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mello STM from ESP
+Mell
+
