@@ -11,7 +11,10 @@
 - Initially started with running the file serving example from the Espressif example directory.
 This is the path to the folder: examples/protocols/http_server/file_serving
 - After examples, we tried to make our own server which accepts two binary files and they are flashed to STM  Referred the code file serving and made changes in it.
-- Then we ran test for uart loopback and uart echo.
+
+### ESP tests
+- We ran test for uart loopback which displays the message that is hardcoded in the code by connecting the TX n RX pin of UART 1.
+- After that we ran UART echo test that displays what we type.
 
 
 
