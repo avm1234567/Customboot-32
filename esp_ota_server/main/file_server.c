@@ -38,6 +38,17 @@
 /* Scratch buffer size */
 #define SCRATCH_BUFSIZE  8192
 
+/*XMODEM implementation*/
+
+#define XMODEM_SOH  0x01
+#define XMODEM_EOT  0x04
+#define XMODEM_ACK  0x06
+#define XMODEM_NAK  0x15
+#define XMODEM_CAN  0x18
+#define XMODEM_BLOCK_SIZE 128
+#define XMODEM_RETRIES 10
+#define XMODEM_TIMEOUT_MS 1000
+
 struct file_server_data {
     /* Base path of file storage */
     char base_path[ESP_VFS_PATH_MAX + 1];
@@ -48,9 +59,70 @@ struct file_server_data {
 
 static const char *TAG = "file_server";
 
+int xmodem_send(uart_port_t uart_num, FILE *file) {
+    uint8_t buffer[XMODEM_BLOCK_SIZE];
+    uint8_t block_num = 1;
+
+    // Wait for initial NAK from receiver
+    uint8_t ch;
+    while (1) {
+        int len = uart_read_bytes(uart_num, &ch, 1, 2000 / portTICK_PERIOD_MS);
+        if (len > 0 && ch == XMODEM_NAK) break;
+    }
+
+    while (!feof(file)) {
+        size_t bytes_read = fread(buffer, 1, XMODEM_BLOCK_SIZE, file);
+        if (bytes_read == 0) break;
+
+        // Pad with 0x1A if less than 128 bytes
+        if (bytes_read < XMODEM_BLOCK_SIZE) {
+            for (size_t i = bytes_read; i < XMODEM_BLOCK_SIZE; i++)
+                buffer[i] = 0x1A;
+        }
+
+        uint8_t packet[132];
+        packet[0] = XMODEM_SOH;
+        packet[1] = block_num;
+        packet[2] = 255 - block_num;
+
+        // Copy data
+        for (int i = 0; i < XMODEM_BLOCK_SIZE; i++) {
+            packet[3 + i] = buffer[i];
+        }
+
+        // Calculate checksum
+        uint8_t checksum = 0;
+        for (int i = 0; i < XMODEM_BLOCK_SIZE; i++) {
+            checksum += buffer[i];
+        }
+        packet[131] = checksum;
+
+        // Send packet
+        uart_write_bytes(uart_num, (const char *)packet, 132);
+
+        // Wait for ACK
+        int len = uart_read_bytes(uart_num, &ch, 1, 2000 / portTICK_PERIOD_MS);
+        if (len <= 0 || ch != XMODEM_ACK) {
+            return -1; // Failed
+        }
+
+        block_num++;
+    }
+
+    // Send EOT
+    uart_write_bytes(uart_num, (const char *)&(uint8_t){XMODEM_EOT}, 1);
+    int len = uart_read_bytes(uart_num, &ch, 1, 2000 / portTICK_PERIOD_MS);
+    if (len <= 0 || ch != XMODEM_ACK) {
+        return -2; // Failed to finish properly
+    }
+
+    return 0; // Success
+}
+
 static void send_file_to_stm32_over_uart(const char *filepath) {
     ESP_LOGI(TAG, "Sending file to STM32 via UART: %s", filepath);
 
+    // Configure UART
     uart_config_t uart_config = {
         .baud_rate = UART_BAUD_RATE,
         .data_bits = UART_DATA_8_BITS,
@@ -62,23 +134,26 @@ static void send_file_to_stm32_over_uart(const char *filepath) {
     uart_param_config(UART_PORT, &uart_config);
     uart_set_pin(UART_PORT, UART_TX_PIN, UART_RX_PIN, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE);
 
+    // Open file to send
     FILE *f = fopen(filepath, "rb");
     if (!f) {
         ESP_LOGE(TAG, "Failed to open .bin file for sending");
         return;
     }
 
-    uint8_t buf[512];
-    size_t n;
-    while ((n = fread(buf, 1, sizeof(buf), f)) > 0) {
-        uart_write_bytes(UART_PORT, (const char *)buf, n);
-        // Optionally: wait for ACK or small delay
-        // vTaskDelay(pdMS_TO_TICKS(10));
+    // Send the file using XMODEM protocol
+    int result = xmodem_send(UART_PORT, f);  // <-- Ensure this function exists and matches signature
+    if (result < 0) {
+        ESP_LOGE(TAG, "XMODEM file transfer failed with error code: %d", result);
+    } else {
+        ESP_LOGI(TAG, "XMODEM file transfer completed successfully");
     }
 
+    // Close file
     fclose(f);
     ESP_LOGI(TAG, "Finished sending firmware to STM32");
 }
+
 
 
 /* Handler to redirect incoming GET request for /index.html to /

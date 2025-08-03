@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "esp_loopback_test",
-    "project_version":    "62a7f62-dirty",
+    "project_version":    "086a5d0-dirty",
     "project_path":       "C:/Users/archi/Customboot-32/esp_loopback_test",
     "idf_path":           "C:/Espressif/frameworks/esp-idf-v5.2.3",
     "build_dir":          "C:/Users/archi/Customboot-32/esp_loopback_test/build",

@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "esp_ota_server",
-    "project_version":    "860ae13-dirty",
+    "project_version":    "086a5d0-dirty",
     "project_path":       "C:/Users/archi/Customboot-32/esp_ota_server",
     "idf_path":           "C:/Espressif/frameworks/esp-idf-v5.2.3",
     "build_dir":          "C:/Users/archi/Customboot-32/esp_ota_server/build",

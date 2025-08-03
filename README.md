@@ -16,6 +16,21 @@ This is the path to the folder: examples/protocols/http_server/file_serving
 - We ran test for uart loopback which displays the message that is hardcoded in the code by connecting the TX n RX pin of UART 1.
 - After that we ran UART echo test that displays what we type on the `screen`.
 
+### Simple Bootloader
+- Made a bootloader which switches to the main application that is contains.
+- In the bootloader the light blinks 2 times with a delay of 100ms.
+- After it switches to application it blinks continuously with a delay of 1sec.
+- To flash the program use STM32CubeProgrammer and put the start address of bootloader as 0x08000000 and application as 0x08004400.
+
+### Implementing File protocol
+- When we transfer the binary files from ESP to STM, we cannot send the whole file at once.
+- It should be sent in chunks and for that we have to use file transfer protocol.
+
+### Exploring libopencm3 to implement 
+- The current size of the bootloader is big and we have to short it. For that we will we using libopencm3.
+- libopencm3 is a low level, bare metal library for ARM Cortex-M microcontroller.
+
+
 
 
 
