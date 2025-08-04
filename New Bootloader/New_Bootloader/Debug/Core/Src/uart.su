@@ -1,0 +1,3 @@
+../Core/Src/uart.c:18:13:uart_receive	24	static
+../Core/Src/uart.c:35:13:uart_transmit_str	24	static
+../Core/Src/uart.c:59:13:uart_transmit_ch	24	static

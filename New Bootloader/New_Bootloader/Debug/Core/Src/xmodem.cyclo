@@ -1,0 +1,4 @@
+../Core/Src/xmodem.c:28:6:xmodem_receive	14
+../Core/Src/xmodem.c:114:17:xmodem_calc_crc	4
+../Core/Src/xmodem.c:141:22:xmodem_handle_packet	14
+../Core/Src/xmodem.c:240:22:xmodem_error_handler	2

@@ -1,0 +1,3 @@
+../Core/Src/flash.c:20:14:flash_erase	40	static
+../Core/Src/flash.c:51:14:flash_write	40	static
+../Core/Src/flash.c:93:6:flash_jump_to_app	16	static,ignoring_inline_asm
