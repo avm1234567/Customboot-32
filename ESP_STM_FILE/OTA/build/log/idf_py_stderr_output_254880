@@ -1,0 +1,32 @@
+[0;33m--- esp-idf-monitor 1.7.0 on /dev/ttyUSB1 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0m--- 0x40080400: [0;33m_init[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/varun/.espressif/python_env/idf5.4_py3.10_env/lib/python3.10/site-packages/esp_idf_monitor/__main__.py", line 4, in <module>
+    main()
+  File "/home/varun/.espressif/python_env/idf5.4_py3.10_env/lib/python3.10/site-packages/esp_idf_monitor/idf_monitor.py", line 457, in main
+    monitor.main_loop()
+  File "/home/varun/.espressif/python_env/idf5.4_py3.10_env/lib/python3.10/site-packages/esp_idf_monitor/idf_monitor.py", line 201, in main_loop
+    self._main_loop()
+  File "/home/varun/.espressif/python_env/idf5.4_py3.10_env/lib/python3.10/site-packages/esp_idf_monitor/idf_monitor.py", line 317, in _main_loop
+    super()._main_loop()
+  File "/home/varun/.espressif/python_env/idf5.4_py3.10_env/lib/python3.10/site-packages/esp_idf_monitor/idf_monitor.py", line 249, in _main_loop
+    self.serial_handler.handle_serial_input(data, self.console_parser, self.coredump,  # type: ignore
+  File "/home/varun/.espressif/python_env/idf5.4_py3.10_env/lib/python3.10/site-packages/esp_idf_monitor/base/serial_handler.py", line 167, in handle_serial_input
+    text_lines, self._last_line_part = self.binlog.convert_to_text(sp[0])
+  File "/home/varun/.espressif/python_env/idf5.4_py3.10_env/lib/python3.10/site-packages/esp_idf_monitor/base/binlog.py", line 247, in convert_to_text
+    msg = Message(self.debug, elf_path, pkg_msg)
+  File "/home/varun/.espressif/python_env/idf5.4_py3.10_env/lib/python3.10/site-packages/esp_idf_monitor/base/binlog.py", line 49, in __init__
+    self.tag, i_text = self.retrieve_string(input_data[idx:])
+  File "/home/varun/.espressif/python_env/idf5.4_py3.10_env/lib/python3.10/site-packages/esp_idf_monitor/base/binlog.py", line 64, in retrieve_string
+    text, text_len = self.retrieve_data(data)
+  File "/home/varun/.espressif/python_env/idf5.4_py3.10_env/lib/python3.10/site-packages/esp_idf_monitor/base/binlog.py", line 69, in retrieve_data
+    data, data_len = self.retrieve_embedded_data(data)
+  File "/home/varun/.espressif/python_env/idf5.4_py3.10_env/lib/python3.10/site-packages/esp_idf_monitor/base/binlog.py", line 110, in retrieve_embedded_data
+    retrieved_data = struct.unpack_from(f'>{data_len}s', raw_args, struct.calcsize(data_len_format))[0]
+struct.error: unpack_from requires a buffer of at least 502 bytes for unpacking 500 bytes at offset 2 (actual buffer size is 33)

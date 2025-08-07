@@ -1,0 +1,1871 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15736
+load:0x40080400,len:4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (29) boot: ESP-IDF v5.4.2 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Aug  2 2025 14:47:35[0m
+[0;32mI (30) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 ota_app          OTA app          00 10 00010000 001f0000[0m
+[0;32mI (77) boot:  3 storage          Unknown data     01 82 00200000 00100000[0m
+[0;32mI (84) boot: End of partition table[0m
+[0;32mI (87) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1c748h (116552) map[0m
+[0;32mI (134) esp_image: segment 1: paddr=0002c770 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (135) esp_image: segment 2: paddr=0002c794 vaddr=3ffb0000 size=03884h ( 14468) load[0m
+[0;32mI (144) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=95438h (611384) map[0m
+[0;32mI (355) esp_image: segment 4: paddr=000c5460 vaddr=3ffb3884 size=00744h (  1860) load[0m
+[0;32mI (356) esp_image: segment 5: paddr=000c5bac vaddr=40080000 size=1897ch (100732) load[0m
+[0;32mI (409) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (410) boot: Disabling RNG early entropy source...[0m
+[0;32mI (420) cpu_start: Multicore app[0m
+[0;32mI (428) cpu_start: Pro cpu start user code[0m
+[0;32mI (428) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (429) app_init: Application information:[0m
+[0;32mI (429) app_init: Project name:     OTA_ESP[0m
+[0;32mI (432) app_init: App version:      1[0m
+[0;32mI (436) app_init: Compile time:     Aug  2 2025 14:47:30[0m
+[0;32mI (441) app_init: ELF file SHA256:  dc9a8e276...[0m
+[0;32mI (445) app_init: ESP-IDF:          v5.4.2[0m
+[0;32mI (449) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (453) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (457) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (461) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (467) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (472) heap_init: At 3FFB8670 len 00027990 (158 KiB): DRAM[0m
+[0;32mI (477) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (483) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (488) heap_init: At 4009897C len 00007684 (29 KiB): IRAM[0m
+[0;32mI (495) spi_flash: detected chip: generic[0m
+[0;32mI (497) spi_flash: flash io: dio[0m
+[0;32mI (501) main_task: Started on CPU0[0m
+[0;32mI (511) main_task: Calling app_main()[0m
+[0;32mI (601) OTA_SERVER: SPIFFS mounted. Total: 956561 bytes, Used: 1506 bytes[0m
+[0;32mI (621) wifi:wifi driver task: 3ffc1020, prio:23, stack:6656, core=0[0m
+[0;32mI (631) wifi:wifi firmware version: bea31f3[0m
+[0;32mI (631) wifi:wifi certification version: v7.0[0m
+[0;32mI (631) wifi:config NVS flash: enabled[0m
+[0;32mI (631) wifi:config nano formatting: disabled[0m
+[0;32mI (631) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (641) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (641) wifi:Init management short buffer num: 32[0m
+[0;32mI (651) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (651) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (661) wifi:Init static rx buffer num: 10[0m
+[0;32mI (661) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (661) wifi_init: rx ba win: 6[0m
+[0;32mI (671) wifi_init: accept mbox: 6[0m
+[0;32mI (671) wifi_init: tcpip mbox: 32[0m
+[0;32mI (671) wifi_init: udp mbox: 6[0m
+[0;32mI (681) wifi_init: tcp mbox: 6[0m
+[0;32mI (681) wifi_init: tcp tx win: 5760[0m
+[0;32mI (681) wifi_init: tcp rx win: 5760[0m
+[0;32mI (681) wifi_init: tcp mss: 1440[0m
+[0;32mI (691) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (691) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (701) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (701) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (791) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (861) wifi:mode : sta (8c:4f:00:2f:5c:38)[0m
+[0;32mI (861) wifi:enable tsf[0m
+[0;32mI (861) OTA_SERVER: Wi-Fi connecting to SSID: 1234[0m
+[0;32mI (881) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (881) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (891) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (901) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (921) wifi:connected with 1234, aid = 19, channel 11, BW20, bssid = 3a:45:28:cb:87:64[0m
+[0;32mI (921) wifi:security: WPA2-PSK, phy: bgn, rssi: -31[0m
+[0;32mI (921) wifi:pm start, type: 1[0m
+
+[0;32mI (921) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (971) OTA_SERVER: Received String From STM: [0m
+[0;32mI (971) OTA_SERVER: Ack received[0m
+[0;32mI (971) OTA_SERVER: Uart initialized[0m
+[0;32mI (991) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (991) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (1071) OTA_SERVER: Received String From STM: [0m
+[0;32mI (1071) OTA_SERVER: Ack received[0m
+[0;32mI (1071) OTA_SERVER: Uart initialized[0m
+[0;32mI (1171) OTA_SERVER: Received String From STM: [0m
+[0;32mI (1171) OTA_SERVER: Ack received[0m
+[0;32mI (1171) OTA_SERVER: Uart initialized[0m
+[0;32mI (1271) OTA_SERVER: Received String From STM: [0m
+[0;32mI (1271) OTA_SERVER: Ack received[0m
+[0;32mI (1271) OTA_SERVER: Uart initialized[0m
+[0;32mI (1371) OTA_SERVER: Received String From STM: [0m
+[0;32mI (1371) OTA_SERVER: Ack received[0m
+[0;32mI (1371) OTA_SERVER: Uart initialized[0m
+[0;32mI (1471) OTA_SERVER: Received String From STM: [0m
+[0;32mI (1471) OTA_SERVER: Ack received[0m
+[0;32mI (1471) OTA_SERVER: Uart initialized[0m
+[0;32mI (1571) OTA_SERVER: Received String From STM: [0m
+[0;32mI (1571) OTA_SERVER: Ack received[0m
+[0;32mI (1571) OTA_SERVER: Uart initialized[0m
+[0;32mI (1671) OTA_SERVER: Received String From STM: [0m
+[0;32mI (1671) OTA_SERVER: Ack received[0m
+[0;32mI (1671) OTA_SERVER: Uart initialized[0m
+[0;32mI (1771) OTA_SERVER: Received String From STM: [0m
+[0;32mI (1771) OTA_SERVER: Ack received[0m
+[0;32mI (1771) OTA_SERVER: Uart initialized[0m
+[0;32mI (1871) OTA_SERVER: Received String From STM: [0m
+[0;32mI (1871) OTA_SERVER: Ack received[0m
+[0;32mI (1871) OTA_SERVER: Uart initialized[0m
+[0;32mI (1951) esp_netif_handlers: sta ip: 10.97.137.158, mask: 255.255.255.0, gw: 10.97.137.139[0m
+[0;32mI (1951) OTA_SERVER: Got IP: 10.97.137.158[0m
+[0;32mI (1971) OTA_SERVER: Received String From STM: [0m
+[0;32mI (1971) OTA_SERVER: Ack received[0m
+[0;32mI (1971) OTA_SERVER: Uart initialized[0m
+[0;32mI (2071) OTA_SERVER: Received String From STM: [0m
+[0;32mI (2071) OTA_SERVER: Ack received[0m
+[0;32mI (2071) OTA_SERVER: Uart initialized[0m
+[0;32mI (2171) OTA_SERVER: Received String From STM: [0m
+[0;32mI (2171) OTA_SERVER: Ack received[0m
+[0;32mI (2171) OTA_SERVER: Uart initialized[0m
+[0;32mI (2271) OTA_SERVER: Received String From STM: [0m
+[0;32mI (2271) OTA_SERVER: Ack received[0m
+[0;32mI (2271) OTA_SERVER: Uart initialized[0m
+[0;32mI (2371) OTA_SERVER: Received String From STM: [0m
+[0;32mI (2371) OTA_SERVER: Ack received[0m
+[0;32mI (2371) OTA_SERVER: Uart initialized[0m
+[0;32mI (2471) OTA_SERVER: Received String From STM: [0m
+[0;32mI (2471) OTA_SERVER: Ack received[0m
+[0;32mI (2471) OTA_SERVER: Uart initialized[0m
+[0;32mI (2571) OTA_SERVER: Received String From STM: [0m
+[0;32mI (2571) OTA_SERVER: Ack received[0m
+[0;32mI (2571) OTA_SERVER: Uart initialized[0m
+[0;32mI (2671) OTA_SERVER: Received String From STM: [0m
+[0;32mI (2671) OTA_SERVER: Ack received[0m
+[0;32mI (2671) OTA_SERVER: Uart initialized[0m
+[0;32mI (2771) OTA_SERVER: Received String From STM: [0m
+[0;32mI (2771) OTA_SERVER: Ack received[0m
+[0;32mI (2771) OTA_SERVER: Uart initialized[0m
+[0;32mI (2871) OTA_SERVER: Received String From STM: [0m
+[0;32mI (2871) OTA_SERVER: Ack received[0m
+[0;32mI (2871) OTA_SERVER: Uart initialized[0m
+[0;32mI (2971) OTA_SERVER: Received String From STM: [0m
+[0;32mI (2971) OTA_SERVER: Ack received[0m
+[0;32mI (2971) OTA_SERVER: Uart initialized[0m
+[0;32mI (3071) OTA_SERVER: Received String From STM: [0m
+[0;32mI (3071) OTA_SERVER: Ack received[0m
+[0;32mI (3071) OTA_SERVER: Uart initialized[0m
+[0;32mI (3171) OTA_SERVER: Received String From STM: [0m
+[0;32mI (3171) OTA_SERVER: Ack received[0m
+[0;32mI (3171) OTA_SERVER: Uart initialized[0m
+[0;32mI (3271) OTA_SERVER: Received String From STM: [0m
+[0;32mI (3271) OTA_SERVER: Ack received[0m
+[0;32mI (3271) OTA_SERVER: Uart initialized[0m
+[0;32mI (3371) OTA_SERVER: Received String From STM: [0m
+[0;32mI (3371) OTA_SERVER: Ack received[0m
+[0;32mI (3371) OTA_SERVER: Uart initialized[0m
+[0;32mI (3471) OTA_SERVER: Received String From STM: [0m
+[0;32mI (3471) OTA_SERVER: Ack received[0m
+[0;32mI (3471) OTA_SERVER: Uart initialized[0m
+[0;32mI (3571) OTA_SERVER: Received String From STM: [0m
+[0;32mI (3571) OTA_SERVER: Ack received[0m
+[0;32mI (3571) OTA_SERVER: Uart initialized[0m
+[0;32mI (3671) OTA_SERVER: Received String From STM: [0m
+[0;32mI (3671) OTA_SERVER: Ack received[0m
+[0;32mI (3671) OTA_SERVER: Uart initialized[0m
+[0;32mI (3771) OTA_SERVER: Received String From STM: [0m
+[0;32mI (3771) OTA_SERVER: Ack received[0m
+[0;32mI (3771) OTA_SERVER: Uart initialized[0m
+[0;32mI (3871) OTA_SERVER: Received String From STM: [0m
+[0;32mI (3871) OTA_SERVER: Ack received[0m
+[0;32mI (3871) OTA_SERVER: Uart initialized[0m
+[0;32mI (3971) OTA_SERVER: Received String From STM: [0m
+[0;32mI (3971) OTA_SERVER: Ack received[0m
+[0;32mI (3971) OTA_SERVER: Uart initialized[0m
+[0;32mI (4071) OTA_SERVER: Received String From STM: [0m
+[0;32mI (4071) OTA_SERVER: Ack received[0m
+[0;32mI (4071) OTA_SERVER: Uart initialized[0m
+[0;32mI (4171) OTA_SERVER: Received String From STM: [0m
+[0;32mI (4171) OTA_SERVER: Ack received[0m
+[0;32mI (4171) OTA_SERVER: Uart initialized[0m
+[0;32mI (4271) OTA_SERVER: Received String From STM: [0m
+[0;32mI (4271) OTA_SERVER: Ack received[0m
+[0;32mI (4271) OTA_SERVER: Uart initialized[0m
+[0;32mI (4371) OTA_SERVER: Received String From STM: [0m
+[0;32mI (4371) OTA_SERVER: Ack received[0m
+[0;32mI (4371) OTA_SERVER: Uart initialized[0m
+[0;32mI (4471) OTA_SERVER: Received String From STM: [0m
+[0;32mI (4471) OTA_SERVER: Ack received[0m
+[0;32mI (4471) OTA_SERVER: Uart initialized[0m
+[0;32mI (4571) OTA_SERVER: Received String From STM: [0m
+[0;32mI (4571) OTA_SERVER: Ack received[0m
+[0;32mI (4571) OTA_SERVER: Uart initialized[0m
+[0;32mI (4671) OTA_SERVER: Received String From STM: [0m
+[0;32mI (4671) OTA_SERVER: Ack received[0m
+[0;32mI (4671) OTA_SERVER: Uart initialized[0m
+[0;32mI (4771) OTA_SERVER: Received String From STM: [0m
+[0;32mI (4771) OTA_SERVER: Ack received[0m
+[0;32mI (4771) OTA_SERVER: Uart initialized[0m
+[0;32mI (4871) OTA_SERVER: Received String From STM: [0m
+[0;32mI (4871) OTA_SERVER: Ack received[0m
+[0;32mI (4871) OTA_SERVER: Uart initialized[0m
+[0;32mI (4971) OTA_SERVER: Received String From STM: [0m
+[0;32mI (4971) OTA_SERVER: Ack received[0m
+[0;32mI (4971) OTA_SERVER: Uart initialized[0m
+[0;32mI (5071) OTA_SERVER: Received String From STM: [0m
+[0;32mI (5071) OTA_SERVER: Ack received[0m
+[0;32mI (5071) OTA_SERVER: Uart initialized[0m
+[0;32mI (5171) OTA_SERVER: Received String From STM: [0m
+[0;32mI (5171) OTA_SERVER: Ack received[0m
+[0;32mI (5171) OTA_SERVER: Uart initialized[0m
+[0;32mI (5271) OTA_SERVER: Received String From STM: [0m
+[0;32mI (5271) OTA_SERVER: Ack received[0m
+[0;32mI (5271) OTA_SERVER: Uart initialized[0m
+[0;32mI (5371) OTA_SERVER: Received String From STM: [0m
+[0;32mI (5371) OTA_SERVER: Ack received[0m
+[0;32mI (5371) OTA_SERVER: Uart initialized[0m
+[0;32mI (5471) OTA_SERVER: Received String From STM: [0m
+[0;32mI (5471) OTA_SERVER: Ack received[0m
+[0;32mI (5471) OTA_SERVER: Uart initialized[0m
+[0;32mI (5571) OTA_SERVER: Received String From STM: [0m
+[0;32mI (5571) OTA_SERVER: Ack received[0m
+[0;32mI (5571) OTA_SERVER: Uart initialized[0m
+[0;32mI (5671) OTA_SERVER: Received String From STM: [0m
+[0;32mI (5671) OTA_SERVER: Ack received[0m
+[0;32mI (5671) OTA_SERVER: Uart initialized[0m
+[0;32mI (5771) OTA_SERVER: Received String From STM: [0m
+[0;32mI (5771) OTA_SERVER: Ack received[0m
+[0;32mI (5771) OTA_SERVER: Uart initialized[0m
+[0;32mI (5871) OTA_SERVER: Received String From STM: [0m
+[0;32mI (5871) OTA_SERVER: Ack received[0m
+[0;32mI (5871) OTA_SERVER: Uart initialized[0m
+[0;32mI (5971) OTA_SERVER: Received String From STM: [0m
+[0;32mI (5971) OTA_SERVER: Ack received[0m
+[0;32mI (5971) OTA_SERVER: Uart initialized[0m
+[0;32mI (6151) OTA_SERVER: Received String From STM: ������������~���������������������������|�[0m
+[0;32mI (6151) OTA_SERVER: Ack received[0m
+[0;32mI (6151) OTA_SERVER: Uart initialized[0m
+[0;32mI (6321) OTA_SERVER: Received String From STM: ���
+[0;32mI (6321) OTA_SERVER: Ack received[0m
+[0;32mI (6321) OTA_SERVER: Uart initialized[0m
+[0;32mI (6421) OTA_SERVER: Received String From STM: [0m
+[0;32mI (6421) OTA_SERVER: Ack received[0m
+[0;32mI (6421) OTA_SERVER: Uart initialized[0m
+[0;32mI (6521) OTA_SERVER: Received String From STM: [0m
+[0;32mI (6521) OTA_SERVER: Ack received[0m
+[0;32mI (6521) OTA_SERVER: Uart initialized[0m
+[0;32mI (6621) OTA_SERVER: Received String From STM: [0m
+[0;32mI (6621) OTA_SERVER: Ack received[0m
+[0;32mI (6621) OTA_SERVER: Uart initialized[0m
+[0;32mI (6721) OTA_SERVER: Received String From STM: [0m
+[0;32mI (6721) OTA_SERVER: Ack received[0m
+[0;32mI (6721) OTA_SERVER: Uart initialized[0m
+[0;32mI (6821) OTA_SERVER: Received String From STM: [0m
+[0;32mI (6821) OTA_SERVER: Ack received[0m
+[0;32mI (6821) OTA_SERVER: Uart initialized[0m
+[0;32mI (6921) OTA_SERVER: Received String From STM: [0m
+[0;32mI (6921) OTA_SERVER: Ack received[0m
+[0;32mI (6921) OTA_SERVER: Uart initialized[0m
+[0;32mI (7021) OTA_SERVER: Received String From STM: [0m
+[0;32mI (7021) OTA_SERVER: Ack received[0m
+[0;32mI (7021) OTA_SERVER: Uart initialized[0m
+[0;32mI (7121) OTA_SERVER: Received String From STM: [0m
+[0;32mI (7121) OTA_SERVER: Ack received[0m
+[0;32mI (7121) OTA_SERVER: Uart initialized[0m
+[0;32mI (7221) OTA_SERVER: Received String From STM: [0m
+[0;32mI (7221) OTA_SERVER: Ack received[0m
+[0;32mI (7221) OTA_SERVER: Uart initialized[0m
+[0;32mI (7321) OTA_SERVER: Received String From STM: [0m
+[0;32mI (7321) OTA_SERVER: Ack received[0m
+[0;32mI (7321) OTA_SERVER: Uart initialized[0m
+[0;32mI (7421) OTA_SERVER: Received String From STM: [0m
+[0;32mI (7421) OTA_SERVER: Ack received[0m
+[0;32mI (7421) OTA_SERVER: Uart initialized[0m
+[0;32mI (7521) OTA_SERVER: Received String From STM: [0m
+[0;32mI (7521) OTA_SERVER: Ack received[0m
+[0;32mI (7521) OTA_SERVER: Uart initialized[0m
+[0;32mI (7621) OTA_SERVER: Received String From STM: [0m
+[0;32mI (7621) OTA_SERVER: Ack received[0m
+[0;32mI (7621) OTA_SERVER: Uart initialized[0m
+[0;32mI (7721) OTA_SERVER: Received String From STM: [0m
+[0;32mI (7721) OTA_SERVER: Ack received[0m
+[0;32mI (7721) OTA_SERVER: Uart initialized[0m
+[0;32mI (7821) OTA_SERVER: Received String From STM: [0m
+[0;32mI (7821) OTA_SERVER: Ack received[0m
+[0;32mI (7821) OTA_SERVER: Uart initialized[0m
+[0;32mI (7921) OTA_SERVER: Received String From STM: [0m
+[0;32mI (7921) OTA_SERVER: Ack received[0m
+[0;32mI (7921) OTA_SERVER: Uart initialized[0m
+[0;32mI (8021) OTA_SERVER: Received String From STM: [0m
+[0;32mI (8021) OTA_SERVER: Ack received[0m
+[0;32mI (8021) OTA_SERVER: Uart initialized[0m
+[0;32mI (8121) OTA_SERVER: Received String From STM: [0m
+[0;32mI (8121) OTA_SERVER: Ack received[0m
+[0;32mI (8121) OTA_SERVER: Uart initialized[0m
+[0;32mI (8221) OTA_SERVER: Received String From STM: [0m
+[0;32mI (8221) OTA_SERVER: Ack received[0m
+[0;32mI (8221) OTA_SERVER: Uart initialized[0m
+[0;32mI (8321) OTA_SERVER: Received String From STM: [0m
+[0;32mI (8321) OTA_SERVER: Ack received[0m
+[0;32mI (8321) OTA_SERVER: Uart initialized[0m
+[0;32mI (8421) OTA_SERVER: Received String From STM: [0m
+[0;32mI (8421) OTA_SERVER: Ack received[0m
+[0;32mI (8421) OTA_SERVER: Uart initialized[0m
+[0;32mI (8521) OTA_SERVER: Received String From STM: [0m
+[0;32mI (8521) OTA_SERVER: Ack received[0m
+[0;32mI (8521) OTA_SERVER: Uart initialized[0m
+[0;32mI (8621) OTA_SERVER: Received String From STM: [0m
+[0;32mI (8621) OTA_SERVER: Ack received[0m
+[0;32mI (8621) OTA_SERVER: Uart initialized[0m
+[0;32mI (8721) OTA_SERVER: Received String From STM: [0m
+[0;32mI (8721) OTA_SERVER: Ack received[0m
+[0;32mI (8721) OTA_SERVER: Uart initialized[0m
+[0;32mI (8821) OTA_SERVER: Received String From STM: [0m
+[0;32mI (8821) OTA_SERVER: Ack received[0m
+[0;32mI (8821) OTA_SERVER: Uart initialized[0m
+[0;32mI (8931) OTA_SERVER: Received String From STM: Calling ReceiveChunkOverUART...[0m
+
+[0;32mI (8931) OTA_SERVER: Ack received[0m
+[0;32mI (8931) OTA_SERVER: Uart initialized[0m
+[0;32mI (9101) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (9101) OTA_SERVER: Ack received[0m
+[0;32mI (9101) OTA_SERVER: Uart initialized[0m
+[0;32mI (9201) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (9201) OTA_SERVER: Ack received[0m
+[0;32mI (9201) OTA_SERVER: Uart initialized[0m
+[0;32mI (9301) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (9301) OTA_SERVER: Ack received[0m
+[0;32mI (9301) OTA_SERVER: Uart initialized[0m
+[0;32mI (9401) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (9401) OTA_SERVER: Ack received[0m
+[0;32mI (9401) OTA_SERVER: Uart initialized[0m
+[0;32mI (9501) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (9501) OTA_SERVER: Ack received[0m
+[0;32mI (9501) OTA_SERVER: Uart initialized[0m
+[0;32mI (9601) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (9601) OTA_SERVER: Ack received[0m
+[0;32mI (9601) OTA_SERVER: Uart initialized[0m
+[0;32mI (9701) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (9701) OTA_SERVER: Ack received[0m
+[0;32mI (9701) OTA_SERVER: Uart initialized[0m
+[0;32mI (9801) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (9801) OTA_SERVER: Ack received[0m
+[0;32mI (9801) OTA_SERVER: Uart initialized[0m
+[0;32mI (9901) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (9901) OTA_SERVER: Ack received[0m
+[0;32mI (9901) OTA_SERVER: Uart initialized[0m
+[0;32mI (10001) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (10001) OTA_SERVER: Ack received[0m
+[0;32mI (10001) OTA_SERVER: Uart initialized[0m
+[0;32mI (10101) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (10101) OTA_SERVER: Ack received[0m
+[0;32mI (10101) OTA_SERVER: Uart initialized[0m
+[0;32mI (10201) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (10201) OTA_SERVER: Ack received[0m
+[0;32mI (10201) OTA_SERVER: Uart initialized[0m
+[0;32mI (10301) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (10301) OTA_SERVER: Ack received[0m
+[0;32mI (10301) OTA_SERVER: Uart initialized[0m
+[0;32mI (10401) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (10401) OTA_SERVER: Ack received[0m
+[0;32mI (10401) OTA_SERVER: Uart initialized[0m
+[0;32mI (10501) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (10501) OTA_SERVER: Ack received[0m
+[0;32mI (10501) OTA_SERVER: Uart initialized[0m
+[0;32mI (10601) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (10601) OTA_SERVER: Ack received[0m
+[0;32mI (10601) OTA_SERVER: Uart initialized[0m
+[0;32mI (10701) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (10701) OTA_SERVER: Ack received[0m
+[0;32mI (10701) OTA_SERVER: Uart initialized[0m
+[0;32mI (10801) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (10801) OTA_SERVER: Ack received[0m
+[0;32mI (10801) OTA_SERVER: Uart initialized[0m
+[0;32mI (10901) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (10901) OTA_SERVER: Ack received[0m
+[0;32mI (10901) OTA_SERVER: Uart initialized[0m
+[0;32mI (11001) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (11001) OTA_SERVER: Ack received[0m
+[0;32mI (11001) OTA_SERVER: Uart initialized[0m
+[0;32mI (11101) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (11101) OTA_SERVER: Ack received[0m
+[0;32mI (11101) OTA_SERVER: Uart initialized[0m
+[0;32mI (11201) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (11201) OTA_SERVER: Ack received[0m
+[0;32mI (11201) OTA_SERVER: Uart initialized[0m
+[0;32mI (11301) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (11301) OTA_SERVER: Ack received[0m
+[0;32mI (11301) OTA_SERVER: Uart initialized[0m
+[0;32mI (11401) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (11401) OTA_SERVER: Ack received[0m
+[0;32mI (11401) OTA_SERVER: Uart initialized[0m
+[0;32mI (11501) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (11501) OTA_SERVER: Ack received[0m
+[0;32mI (11501) OTA_SERVER: Uart initialized[0m
+[0;32mI (11601) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (11601) OTA_SERVER: Ack received[0m
+[0;32mI (11601) OTA_SERVER: Uart initialized[0m
+[0;32mI (11701) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (11701) OTA_SERVER: Ack received[0m
+[0;32mI (11701) OTA_SERVER: Uart initialized[0m
+[0;32mI (11801) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (11801) OTA_SERVER: Ack received[0m
+[0;32mI (11801) OTA_SERVER: Uart initialized[0m
+[0;32mI (11901) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (11901) OTA_SERVER: Ack received[0m
+[0;32mI (11901) OTA_SERVER: Uart initialized[0m
+[0;32mI (12001) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (12001) OTA_SERVER: Ack received[0m
+[0;32mI (12001) OTA_SERVER: Uart initialized[0m
+[0;32mI (12101) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (12101) OTA_SERVER: Ack received[0m
+[0;32mI (12101) OTA_SERVER: Uart initialized[0m
+[0;32mI (12201) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (12201) OTA_SERVER: Ack received[0m
+[0;32mI (12201) OTA_SERVER: Uart initialized[0m
+[0;32mI (12301) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (12301) OTA_SERVER: Ack received[0m
+[0;32mI (12301) OTA_SERVER: Uart initialized[0m
+[0;32mI (12401) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (12401) OTA_SERVER: Ack received[0m
+[0;32mI (12401) OTA_SERVER: Uart initialized[0m
+[0;32mI (12501) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (12501) OTA_SERVER: Ack received[0m
+[0;32mI (12501) OTA_SERVER: Uart initialized[0m
+[0;32mI (12601) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (12601) OTA_SERVER: Ack received[0m
+[0;32mI (12601) OTA_SERVER: Uart initialized[0m
+[0;32mI (12701) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (12701) OTA_SERVER: Ack received[0m
+[0;32mI (12701) OTA_SERVER: Uart initialized[0m
+[0;32mI (12801) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (12801) OTA_SERVER: Ack received[0m
+[0;32mI (12801) OTA_SERVER: Uart initialized[0m
+[0;32mI (12901) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (12901) OTA_SERVER: Ack received[0m
+[0;32mI (12901) OTA_SERVER: Uart initialized[0m
+[0;32mI (13001) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (13001) OTA_SERVER: Ack received[0m
+[0;32mI (13001) OTA_SERVER: Uart initialized[0m
+[0;32mI (13101) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (13101) OTA_SERVER: Ack received[0m
+[0;32mI (13101) OTA_SERVER: Uart initialized[0m
+[0;32mI (13201) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (13201) OTA_SERVER: Ack received[0m
+[0;32mI (13201) OTA_SERVER: Uart initialized[0m
+[0;32mI (13301) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (13301) OTA_SERVER: Ack received[0m
+[0;32mI (13301) OTA_SERVER: Uart initialized[0m
+[0;32mI (13401) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (13401) OTA_SERVER: Ack received[0m
+[0;32mI (13401) OTA_SERVER: Uart initialized[0m
+[0;32mI (13501) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (13501) OTA_SERVER: Ack received[0m
+[0;32mI (13501) OTA_SERVER: Uart initialized[0m
+[0;32mI (13601) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (13601) OTA_SERVER: Ack received[0m
+[0;32mI (13601) OTA_SERVER: Uart initialized[0m
+[0;32mI (13701) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (13701) OTA_SERVER: Ack received[0m
+[0;32mI (13701) OTA_SERVER: Uart initialized[0m
+[0;32mI (13801) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (13801) OTA_SERVER: Ack received[0m
+[0;32mI (13801) OTA_SERVER: Uart initialized[0m
+[0;32mI (13901) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (13901) OTA_SERVER: Ack received[0m
+[0;32mI (13901) OTA_SERVER: Uart initialized[0m
+[0;32mI (14001) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (14001) OTA_SERVER: Ack received[0m
+[0;32mI (14001) OTA_SERVER: Uart initialized[0m
+[0;32mI (14101) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (14101) OTA_SERVER: Ack received[0m
+[0;32mI (14101) OTA_SERVER: Uart initialized[0m
+[0;32mI (14201) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (14201) OTA_SERVER: Ack received[0m
+[0;32mI (14201) OTA_SERVER: Uart initialized[0m
+[0;32mI (14301) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (14301) OTA_SERVER: Ack received[0m
+[0;32mI (14301) OTA_SERVER: Uart initialized[0m
+[0;32mI (14401) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (14401) OTA_SERVER: Ack received[0m
+[0;32mI (14401) OTA_SERVER: Uart initialized[0m
+[0;32mI (14501) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (14501) OTA_SERVER: Ack received[0m
+[0;32mI (14501) OTA_SERVER: Uart initialized[0m
+[0;32mI (14601) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (14601) OTA_SERVER: Ack received[0m
+[0;32mI (14601) OTA_SERVER: Uart initialized[0m
+[0;32mI (14701) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (14701) OTA_SERVER: Ack received[0m
+[0;32mI (14701) OTA_SERVER: Uart initialized[0m
+[0;32mI (14801) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (14801) OTA_SERVER: Ack received[0m
+[0;32mI (14801) OTA_SERVER: Uart initialized[0m
+[0;32mI (14901) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (14901) OTA_SERVER: Ack received[0m
+[0;32mI (14901) OTA_SERVER: Uart initialized[0m
+[0;32mI (15001) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (15001) OTA_SERVER: Ack received[0m
+[0;32mI (15001) OTA_SERVER: Uart initialized[0m
+[0;32mI (15101) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (15101) OTA_SERVER: Ack received[0m
+[0;32mI (15101) OTA_SERVER: Uart initialized[0m
+[0;32mI (15201) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (15201) OTA_SERVER: Ack received[0m
+[0;32mI (15201) OTA_SERVER: Uart initialized[0m
+[0;32mI (15301) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (15301) OTA_SERVER: Ack received[0m
+[0;32mI (15301) OTA_SERVER: Uart initialized[0m
+[0;32mI (15401) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (15401) OTA_SERVER: Ack received[0m
+[0;32mI (15401) OTA_SERVER: Uart initialized[0m
+[0;32mI (15501) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (15501) OTA_SERVER: Ack received[0m
+[0;32mI (15501) OTA_SERVER: Uart initialized[0m
+[0;32mI (15601) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (15601) OTA_SERVER: Ack received[0m
+[0;32mI (15601) OTA_SERVER: Uart initialized[0m
+[0;32mI (15701) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (15701) OTA_SERVER: Ack received[0m
+[0;32mI (15701) OTA_SERVER: Uart initialized[0m
+[0;32mI (15801) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (15801) OTA_SERVER: Ack received[0m
+[0;32mI (15801) OTA_SERVER: Uart initialized[0m
+[0;32mI (15901) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (15901) OTA_SERVER: Ack received[0m
+[0;32mI (15901) OTA_SERVER: Uart initialized[0m
+[0;32mI (16001) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (16001) OTA_SERVER: Ack received[0m
+[0;32mI (16001) OTA_SERVER: Uart initialized[0m
+[0;32mI (16101) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (16101) OTA_SERVER: Ack received[0m
+[0;32mI (16101) OTA_SERVER: Uart initialized[0m
+[0;32mI (16201) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (16201) OTA_SERVER: Ack received[0m
+[0;32mI (16201) OTA_SERVER: Uart initialized[0m
+[0;32mI (16301) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (16301) OTA_SERVER: Ack received[0m
+[0;32mI (16301) OTA_SERVER: Uart initialized[0m
+[0;32mI (16401) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (16401) OTA_SERVER: Ack received[0m
+[0;32mI (16401) OTA_SERVER: Uart initialized[0m
+[0;32mI (16501) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (16501) OTA_SERVER: Ack received[0m
+[0;32mI (16501) OTA_SERVER: Uart initialized[0m
+[0;32mI (16601) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (16601) OTA_SERVER: Ack received[0m
+[0;32mI (16601) OTA_SERVER: Uart initialized[0m
+[0;32mI (16701) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (16701) OTA_SERVER: Ack received[0m
+[0;32mI (16701) OTA_SERVER: Uart initialized[0m
+[0;32mI (16801) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (16801) OTA_SERVER: Ack received[0m
+[0;32mI (16801) OTA_SERVER: Uart initialized[0m
+[0;32mI (16901) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (16901) OTA_SERVER: Ack received[0m
+[0;32mI (16901) OTA_SERVER: Uart initialized[0m
+[0;32mI (17001) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (17001) OTA_SERVER: Ack received[0m
+[0;32mI (17001) OTA_SERVER: Uart initialized[0m
+[0;32mI (17101) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (17101) OTA_SERVER: Ack received[0m
+[0;32mI (17101) OTA_SERVER: Uart initialized[0m
+[0;32mI (17201) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (17201) OTA_SERVER: Ack received[0m
+[0;32mI (17201) OTA_SERVER: Uart initialized[0m
+[0;32mI (17301) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (17301) OTA_SERVER: Ack received[0m
+[0;32mI (17301) OTA_SERVER: Uart initialized[0m
+[0;32mI (17401) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (17401) OTA_SERVER: Ack received[0m
+[0;32mI (17401) OTA_SERVER: Uart initialized[0m
+[0;32mI (17501) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (17501) OTA_SERVER: Ack received[0m
+[0;32mI (17501) OTA_SERVER: Uart initialized[0m
+[0;32mI (17601) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (17601) OTA_SERVER: Ack received[0m
+[0;32mI (17601) OTA_SERVER: Uart initialized[0m
+[0;32mI (17701) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (17701) OTA_SERVER: Ack received[0m
+[0;32mI (17701) OTA_SERVER: Uart initialized[0m
+[0;32mI (17801) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (17801) OTA_SERVER: Ack received[0m
+[0;32mI (17801) OTA_SERVER: Uart initialized[0m
+[0;32mI (17901) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (17901) OTA_SERVER: Ack received[0m
+[0;32mI (17901) OTA_SERVER: Uart initialized[0m
+[0;32mI (18001) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (18001) OTA_SERVER: Ack received[0m
+[0;32mI (18001) OTA_SERVER: Uart initialized[0m
+[0;32mI (18101) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (18101) OTA_SERVER: Ack received[0m
+[0;32mI (18101) OTA_SERVER: Uart initialized[0m
+[0;32mI (18201) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (18201) OTA_SERVER: Ack received[0m
+[0;32mI (18201) OTA_SERVER: Uart initialized[0m
+[0;32mI (18301) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (18301) OTA_SERVER: Ack received[0m
+[0;32mI (18301) OTA_SERVER: Uart initialized[0m
+[0;32mI (18401) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (18401) OTA_SERVER: Ack received[0m
+[0;32mI (18401) OTA_SERVER: Uart initialized[0m
+[0;32mI (18501) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (18501) OTA_SERVER: Ack received[0m
+[0;32mI (18501) OTA_SERVER: Uart initialized[0m
+[0;32mI (18601) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (18601) OTA_SERVER: Ack received[0m
+[0;32mI (18601) OTA_SERVER: Uart initialized[0m
+[0;32mI (18701) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (18701) OTA_SERVER: Ack received[0m
+[0;32mI (18701) OTA_SERVER: Uart initialized[0m
+[0;32mI (18801) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (18801) OTA_SERVER: Ack received[0m
+[0;32mI (18801) OTA_SERVER: Uart initialized[0m
+[0;32mI (18901) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (18901) OTA_SERVER: Ack received[0m
+[0;32mI (18901) OTA_SERVER: Uart initialized[0m
+[0;32mI (19001) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (19001) OTA_SERVER: Ack received[0m
+[0;32mI (19001) OTA_SERVER: Uart initialized[0m
+[0;32mI (19101) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (19101) OTA_SERVER: Ack received[0m
+[0;32mI (19101) OTA_SERVER: Uart initialized[0m
+[0;32mI (19201) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (19201) OTA_SERVER: Ack received[0m
+[0;32mI (19201) OTA_SERVER: Uart initialized[0m
+[0;32mI (19301) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (19301) OTA_SERVER: Ack received[0m
+[0;32mI (19301) OTA_SERVER: Uart initialized[0m
+[0;32mI (19401) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (19401) OTA_SERVER: Ack received[0m
+[0;32mI (19401) OTA_SERVER: Uart initialized[0m
+[0;32mI (19501) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (19501) OTA_SERVER: Ack received[0m
+[0;32mI (19501) OTA_SERVER: Uart initialized[0m
+[0;32mI (19601) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (19601) OTA_SERVER: Ack received[0m
+[0;32mI (19601) OTA_SERVER: Uart initialized[0m
+[0;32mI (19701) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (19701) OTA_SERVER: Ack received[0m
+[0;32mI (19701) OTA_SERVER: Uart initialized[0m
+[0;32mI (19801) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (19801) OTA_SERVER: Ack received[0m
+[0;32mI (19801) OTA_SERVER: Uart initialized[0m
+[0;32mI (19901) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (19901) OTA_SERVER: Ack received[0m
+[0;32mI (19901) OTA_SERVER: Uart initialized[0m
+[0;32mI (20001) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (20001) OTA_SERVER: Ack received[0m
+[0;32mI (20001) OTA_SERVER: Uart initialized[0m
+[0;32mI (20101) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (20101) OTA_SERVER: Ack received[0m
+[0;32mI (20101) OTA_SERVER: Uart initialized[0m
+[0;32mI (20201) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (20201) OTA_SERVER: Ack received[0m
+[0;32mI (20201) OTA_SERVER: Uart initialized[0m
+[0;32mI (20301) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (20301) OTA_SERVER: Ack received[0m
+[0;32mI (20301) OTA_SERVER: Uart initialized[0m
+[0;32mI (20401) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (20401) OTA_SERVER: Ack received[0m
+[0;32mI (20401) OTA_SERVER: Uart initialized[0m
+[0;32mI (20501) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (20501) OTA_SERVER: Ack received[0m
+[0;32mI (20501) OTA_SERVER: Uart initialized[0m
+[0;32mI (20601) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (20601) OTA_SERVER: Ack received[0m
+[0;32mI (20601) OTA_SERVER: Uart initialized[0m
+[0;32mI (20701) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (20701) OTA_SERVER: Ack received[0m
+[0;32mI (20701) OTA_SERVER: Uart initialized[0m
+[0;32mI (20801) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (20801) OTA_SERVER: Ack received[0m
+[0;32mI (20801) OTA_SERVER: Uart initialized[0m
+[0;32mI (20901) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (20901) OTA_SERVER: Ack received[0m
+[0;32mI (20901) OTA_SERVER: Uart initialized[0m
+[0;32mI (21001) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (21001) OTA_SERVER: Ack received[0m
+[0;32mI (21001) OTA_SERVER: Uart initialized[0m
+[0;32mI (21101) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (21101) OTA_SERVER: Ack received[0m
+[0;32mI (21101) OTA_SERVER: Uart initialized[0m
+[0;32mI (21201) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (21201) OTA_SERVER: Ack received[0m
+[0;32mI (21201) OTA_SERVER: Uart initialized[0m
+[0;32mI (21301) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (21301) OTA_SERVER: Ack received[0m
+[0;32mI (21301) OTA_SERVER: Uart initialized[0m
+[0;32mI (21401) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (21401) OTA_SERVER: Ack received[0m
+[0;32mI (21401) OTA_SERVER: Uart initialized[0m
+[0;32mI (21501) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (21501) OTA_SERVER: Ack received[0m
+[0;32mI (21501) OTA_SERVER: Uart initialized[0m
+[0;32mI (21601) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (21601) OTA_SERVER: Ack received[0m
+[0;32mI (21601) OTA_SERVER: Uart initialized[0m
+[0;32mI (21701) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (21701) OTA_SERVER: Ack received[0m
+[0;32mI (21701) OTA_SERVER: Uart initialized[0m
+[0;32mI (21801) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (21801) OTA_SERVER: Ack received[0m
+[0;32mI (21801) OTA_SERVER: Uart initialized[0m
+[0;32mI (21901) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (21901) OTA_SERVER: Ack received[0m
+[0;32mI (21901) OTA_SERVER: Uart initialized[0m
+[0;32mI (22001) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (22001) OTA_SERVER: Ack received[0m
+[0;32mI (22001) OTA_SERVER: Uart initialized[0m
+[0;32mI (22101) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (22101) OTA_SERVER: Ack received[0m
+[0;32mI (22101) OTA_SERVER: Uart initialized[0m
+[0;32mI (22201) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (22201) OTA_SERVER: Ack received[0m
+[0;32mI (22201) OTA_SERVER: Uart initialized[0m
+[0;32mI (22301) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (22301) OTA_SERVER: Ack received[0m
+[0;32mI (22301) OTA_SERVER: Uart initialized[0m
+[0;32mI (22401) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (22401) OTA_SERVER: Ack received[0m
+[0;32mI (22401) OTA_SERVER: Uart initialized[0m
+[0;32mI (22501) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (22501) OTA_SERVER: Ack received[0m
+[0;32mI (22501) OTA_SERVER: Uart initialized[0m
+[0;32mI (22601) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (22601) OTA_SERVER: Ack received[0m
+[0;32mI (22601) OTA_SERVER: Uart initialized[0m
+[0;32mI (22701) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (22701) OTA_SERVER: Ack received[0m
+[0;32mI (22701) OTA_SERVER: Uart initialized[0m
+[0;32mI (22801) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (22801) OTA_SERVER: Ack received[0m
+[0;32mI (22801) OTA_SERVER: Uart initialized[0m
+[0;32mI (22901) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (22901) OTA_SERVER: Ack received[0m
+[0;32mI (22901) OTA_SERVER: Uart initialized[0m
+[0;32mI (23001) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (23001) OTA_SERVER: Ack received[0m
+[0;32mI (23001) OTA_SERVER: Uart initialized[0m
+[0;32mI (23101) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (23101) OTA_SERVER: Ack received[0m
+[0;32mI (23101) OTA_SERVER: Uart initialized[0m
+[0;32mI (23201) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (23201) OTA_SERVER: Ack received[0m
+[0;32mI (23201) OTA_SERVER: Uart initialized[0m
+[0;32mI (23301) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (23301) OTA_SERVER: Ack received[0m
+[0;32mI (23301) OTA_SERVER: Uart initialized[0m
+[0;32mI (23401) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (23401) OTA_SERVER: Ack received[0m
+[0;32mI (23401) OTA_SERVER: Uart initialized[0m
+[0;32mI (23501) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (23501) OTA_SERVER: Ack received[0m
+[0;32mI (23501) OTA_SERVER: Uart initialized[0m
+[0;32mI (23601) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (23601) OTA_SERVER: Ack received[0m
+[0;32mI (23601) OTA_SERVER: Uart initialized[0m
+[0;32mI (23701) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (23701) OTA_SERVER: Ack received[0m
+[0;32mI (23701) OTA_SERVER: Uart initialized[0m
+[0;32mI (23801) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (23801) OTA_SERVER: Ack received[0m
+[0;32mI (23801) OTA_SERVER: Uart initialized[0m
+[0;32mI (23901) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (23901) OTA_SERVER: Ack received[0m
+[0;32mI (23901) OTA_SERVER: Uart initialized[0m
+[0;32mI (24001) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (24001) OTA_SERVER: Ack received[0m
+[0;32mI (24001) OTA_SERVER: Uart initialized[0m
+[0;32mI (24101) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (24101) OTA_SERVER: Ack received[0m
+[0;32mI (24101) OTA_SERVER: Uart initialized[0m
+[0;32mI (24201) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (24201) OTA_SERVER: Ack received[0m
+[0;32mI (24201) OTA_SERVER: Uart initialized[0m
+[0;32mI (24301) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (24301) OTA_SERVER: Ack received[0m
+[0;32mI (24301) OTA_SERVER: Uart initialized[0m
+[0;32mI (24401) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (24401) OTA_SERVER: Ack received[0m
+[0;32mI (24401) OTA_SERVER: Uart initialized[0m
+[0;32mI (24501) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (24501) OTA_SERVER: Ack received[0m
+[0;32mI (24501) OTA_SERVER: Uart initialized[0m
+[0;32mI (24601) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (24601) OTA_SERVER: Ack received[0m
+[0;32mI (24601) OTA_SERVER: Uart initialized[0m
+[0;32mI (24701) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (24701) OTA_SERVER: Ack received[0m
+[0;32mI (24701) OTA_SERVER: Uart initialized[0m
+[0;32mI (24801) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (24801) OTA_SERVER: Ack received[0m
+[0;32mI (24801) OTA_SERVER: Uart initialized[0m
+[0;32mI (24901) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (24901) OTA_SERVER: Ack received[0m
+[0;32mI (24901) OTA_SERVER: Uart initialized[0m
+[0;32mI (25001) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (25001) OTA_SERVER: Ack received[0m
+[0;32mI (25001) OTA_SERVER: Uart initialized[0m
+[0;32mI (25101) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (25101) OTA_SERVER: Ack received[0m
+[0;32mI (25101) OTA_SERVER: Uart initialized[0m
+[0;32mI (25201) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (25201) OTA_SERVER: Ack received[0m
+[0;32mI (25201) OTA_SERVER: Uart initialized[0m
+[0;32mI (25301) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (25301) OTA_SERVER: Ack received[0m
+[0;32mI (25301) OTA_SERVER: Uart initialized[0m
+[0;32mI (25401) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (25401) OTA_SERVER: Ack received[0m
+[0;32mI (25401) OTA_SERVER: Uart initialized[0m
+[0;32mI (25501) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (25501) OTA_SERVER: Ack received[0m
+[0;32mI (25501) OTA_SERVER: Uart initialized[0m
+[0;32mI (25601) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (25601) OTA_SERVER: Ack received[0m
+[0;32mI (25601) OTA_SERVER: Uart initialized[0m
+[0;32mI (25701) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (25701) OTA_SERVER: Ack received[0m
+[0;32mI (25701) OTA_SERVER: Uart initialized[0m
+[0;32mI (25801) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (25801) OTA_SERVER: Ack received[0m
+[0;32mI (25801) OTA_SERVER: Uart initialized[0m
+[0;32mI (25901) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (25901) OTA_SERVER: Ack received[0m
+[0;32mI (25901) OTA_SERVER: Uart initialized[0m
+[0;32mI (26001) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (26001) OTA_SERVER: Ack received[0m
+[0;32mI (26001) OTA_SERVER: Uart initialized[0m
+[0;32mI (26101) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (26101) OTA_SERVER: Ack received[0m
+[0;32mI (26101) OTA_SERVER: Uart initialized[0m
+[0;32mI (26201) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (26201) OTA_SERVER: Ack received[0m
+[0;32mI (26201) OTA_SERVER: Uart initialized[0m
+[0;32mI (26301) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (26301) OTA_SERVER: Ack received[0m
+[0;32mI (26301) OTA_SERVER: Uart initialized[0m
+[0;32mI (26401) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (26401) OTA_SERVER: Ack received[0m
+[0;32mI (26401) OTA_SERVER: Uart initialized[0m
+[0;32mI (26501) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (26501) OTA_SERVER: Ack received[0m
+[0;32mI (26501) OTA_SERVER: Uart initialized[0m
+[0;32mI (26601) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (26601) OTA_SERVER: Ack received[0m
+[0;32mI (26601) OTA_SERVER: Uart initialized[0m
+[0;32mI (26701) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (26701) OTA_SERVER: Ack received[0m
+[0;32mI (26701) OTA_SERVER: Uart initialized[0m
+[0;32mI (26801) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (26801) OTA_SERVER: Ack received[0m
+[0;32mI (26801) OTA_SERVER: Uart initialized[0m
+[0;32mI (26901) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (26901) OTA_SERVER: Ack received[0m
+[0;32mI (26901) OTA_SERVER: Uart initialized[0m
+[0;32mI (27001) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (27001) OTA_SERVER: Ack received[0m
+[0;32mI (27001) OTA_SERVER: Uart initialized[0m
+[0;32mI (27101) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (27101) OTA_SERVER: Ack received[0m
+[0;32mI (27101) OTA_SERVER: Uart initialized[0m
+[0;32mI (27201) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (27201) OTA_SERVER: Ack received[0m
+[0;32mI (27201) OTA_SERVER: Uart initialized[0m
+[0;32mI (27301) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (27301) OTA_SERVER: Ack received[0m
+[0;32mI (27301) OTA_SERVER: Uart initialized[0m
+[0;32mI (27401) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (27401) OTA_SERVER: Ack received[0m
+[0;32mI (27401) OTA_SERVER: Uart initialized[0m
+[0;32mI (27501) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (27501) OTA_SERVER: Ack received[0m
+[0;32mI (27501) OTA_SERVER: Uart initialized[0m
+[0;32mI (27601) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (27601) OTA_SERVER: Ack received[0m
+[0;32mI (27601) OTA_SERVER: Uart initialized[0m
+[0;32mI (27701) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (27701) OTA_SERVER: Ack received[0m
+[0;32mI (27701) OTA_SERVER: Uart initialized[0m
+[0;32mI (27801) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (27801) OTA_SERVER: Ack received[0m
+[0;32mI (27801) OTA_SERVER: Uart initialized[0m
+[0;32mI (27901) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (27901) OTA_SERVER: Ack received[0m
+[0;32mI (27901) OTA_SERVER: Uart initialized[0m
+[0;32mI (28001) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (28001) OTA_SERVER: Ack received[0m
+[0;32mI (28001) OTA_SERVER: Uart initialized[0m
+[0;32mI (28101) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (28101) OTA_SERVER: Ack received[0m
+[0;32mI (28101) OTA_SERVER: Uart initialized[0m
+[0;32mI (28201) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (28201) OTA_SERVER: Ack received[0m
+[0;32mI (28201) OTA_SERVER: Uart initialized[0m
+[0;32mI (28301) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (28301) OTA_SERVER: Ack received[0m
+[0;32mI (28301) OTA_SERVER: Uart initialized[0m
+[0;32mI (28401) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (28401) OTA_SERVER: Ack received[0m
+[0;32mI (28401) OTA_SERVER: Uart initialized[0m
+[0;32mI (28501) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (28501) OTA_SERVER: Ack received[0m
+[0;32mI (28501) OTA_SERVER: Uart initialized[0m
+[0;32mI (28601) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (28601) OTA_SERVER: Ack received[0m
+[0;32mI (28601) OTA_SERVER: Uart initialized[0m
+[0;32mI (28701) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (28701) OTA_SERVER: Ack received[0m
+[0;32mI (28701) OTA_SERVER: Uart initialized[0m
+[0;32mI (28801) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (28801) OTA_SERVER: Ack received[0m
+[0;32mI (28801) OTA_SERVER: Uart initialized[0m
+[0;32mI (28901) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (28901) OTA_SERVER: Ack received[0m
+[0;32mI (28901) OTA_SERVER: Uart initialized[0m
+[0;32mI (29001) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (29001) OTA_SERVER: Ack received[0m
+[0;32mI (29001) OTA_SERVER: Uart initialized[0m
+[0;32mI (29101) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (29101) OTA_SERVER: Ack received[0m
+[0;32mI (29101) OTA_SERVER: Uart initialized[0m
+[0;32mI (29201) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (29201) OTA_SERVER: Ack received[0m
+[0;32mI (29201) OTA_SERVER: Uart initialized[0m
+[0;32mI (29301) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (29301) OTA_SERVER: Ack received[0m
+[0;32mI (29301) OTA_SERVER: Uart initialized[0m
+[0;32mI (29401) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (29401) OTA_SERVER: Ack received[0m
+[0;32mI (29401) OTA_SERVER: Uart initialized[0m
+[0;32mI (29501) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (29501) OTA_SERVER: Ack received[0m
+[0;32mI (29501) OTA_SERVER: Uart initialized[0m
+[0;32mI (29601) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (29601) OTA_SERVER: Ack received[0m
+[0;32mI (29601) OTA_SERVER: Uart initialized[0m
+[0;32mI (29701) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (29701) OTA_SERVER: Ack received[0m
+[0;32mI (29701) OTA_SERVER: Uart initialized[0m
+[0;32mI (29801) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (29801) OTA_SERVER: Ack received[0m
+[0;32mI (29801) OTA_SERVER: Uart initialized[0m
+[0;32mI (29901) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (29901) OTA_SERVER: Ack received[0m
+[0;32mI (29901) OTA_SERVER: Uart initialized[0m
+[0;32mI (30001) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (30001) OTA_SERVER: Ack received[0m
+[0;32mI (30001) OTA_SERVER: Uart initialized[0m
+[0;32mI (30101) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (30101) OTA_SERVER: Ack received[0m
+[0;32mI (30101) OTA_SERVER: Uart initialized[0m
+[0;32mI (30201) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (30201) OTA_SERVER: Ack received[0m
+[0;32mI (30201) OTA_SERVER: Uart initialized[0m
+[0;32mI (30301) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (30301) OTA_SERVER: Ack received[0m
+[0;32mI (30301) OTA_SERVER: Uart initialized[0m
+[0;32mI (30401) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (30401) OTA_SERVER: Ack received[0m
+[0;32mI (30401) OTA_SERVER: Uart initialized[0m
+[0;32mI (30501) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (30501) OTA_SERVER: Ack received[0m
+[0;32mI (30501) OTA_SERVER: Uart initialized[0m
+[0;32mI (30601) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (30601) OTA_SERVER: Ack received[0m
+[0;32mI (30601) OTA_SERVER: Uart initialized[0m
+[0;32mI (30701) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (30701) OTA_SERVER: Ack received[0m
+[0;32mI (30701) OTA_SERVER: Uart initialized[0m
+[0;32mI (30801) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (30801) OTA_SERVER: Ack received[0m
+[0;32mI (30801) OTA_SERVER: Uart initialized[0m
+[0;32mI (30901) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (30901) OTA_SERVER: Ack received[0m
+[0;32mI (30901) OTA_SERVER: Uart initialized[0m
+[0;32mI (31001) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (31001) OTA_SERVER: Ack received[0m
+[0;32mI (31001) OTA_SERVER: Uart initialized[0m
+[0;32mI (31101) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (31101) OTA_SERVER: Ack received[0m
+[0;32mI (31101) OTA_SERVER: Uart initialized[0m
+[0;32mI (31201) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (31201) OTA_SERVER: Ack received[0m
+[0;32mI (31201) OTA_SERVER: Uart initialized[0m
+[0;32mI (31301) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (31301) OTA_SERVER: Ack received[0m
+[0;32mI (31301) OTA_SERVER: Uart initialized[0m
+[0;32mI (31401) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (31401) OTA_SERVER: Ack received[0m
+[0;32mI (31401) OTA_SERVER: Uart initialized[0m
+[0;32mI (31501) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (31501) OTA_SERVER: Ack received[0m
+[0;32mI (31501) OTA_SERVER: Uart initialized[0m
+[0;32mI (31601) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (31601) OTA_SERVER: Ack received[0m
+[0;32mI (31601) OTA_SERVER: Uart initialized[0m
+[0;32mI (31701) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (31701) OTA_SERVER: Ack received[0m
+[0;32mI (31701) OTA_SERVER: Uart initialized[0m
+[0;32mI (31801) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (31801) OTA_SERVER: Ack received[0m
+[0;32mI (31801) OTA_SERVER: Uart initialized[0m
+[0;32mI (31901) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (31901) OTA_SERVER: Ack received[0m
+[0;32mI (31901) OTA_SERVER: Uart initialized[0m
+[0;32mI (32001) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (32001) OTA_SERVER: Ack received[0m
+[0;32mI (32001) OTA_SERVER: Uart initialized[0m
+[0;32mI (32101) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (32101) OTA_SERVER: Ack received[0m
+[0;32mI (32101) OTA_SERVER: Uart initialized[0m
+[0;32mI (32201) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (32201) OTA_SERVER: Ack received[0m
+[0;32mI (32201) OTA_SERVER: Uart initialized[0m
+[0;32mI (32301) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (32301) OTA_SERVER: Ack received[0m
+[0;32mI (32301) OTA_SERVER: Uart initialized[0m
+[0;32mI (32401) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (32401) OTA_SERVER: Ack received[0m
+[0;32mI (32401) OTA_SERVER: Uart initialized[0m
+[0;32mI (32501) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (32501) OTA_SERVER: Ack received[0m
+[0;32mI (32501) OTA_SERVER: Uart initialized[0m
+[0;32mI (32601) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (32601) OTA_SERVER: Ack received[0m
+[0;32mI (32601) OTA_SERVER: Uart initialized[0m
+[0;32mI (32701) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (32701) OTA_SERVER: Ack received[0m
+[0;32mI (32701) OTA_SERVER: Uart initialized[0m
+[0;32mI (32801) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (32801) OTA_SERVER: Ack received[0m
+[0;32mI (32801) OTA_SERVER: Uart initialized[0m
+[0;32mI (32901) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (32901) OTA_SERVER: Ack received[0m
+[0;32mI (32901) OTA_SERVER: Uart initialized[0m
+[0;32mI (33001) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (33001) OTA_SERVER: Ack received[0m
+[0;32mI (33001) OTA_SERVER: Uart initialized[0m
+[0;32mI (33101) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (33101) OTA_SERVER: Ack received[0m
+[0;32mI (33101) OTA_SERVER: Uart initialized[0m
+[0;32mI (33201) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (33201) OTA_SERVER: Ack received[0m
+[0;32mI (33201) OTA_SERVER: Uart initialized[0m
+[0;32mI (33301) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (33301) OTA_SERVER: Ack received[0m
+[0;32mI (33301) OTA_SERVER: Uart initialized[0m
+[0;32mI (33401) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (33401) OTA_SERVER: Ack received[0m
+[0;32mI (33401) OTA_SERVER: Uart initialized[0m
+[0;32mI (33501) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (33501) OTA_SERVER: Ack received[0m
+[0;32mI (33501) OTA_SERVER: Uart initialized[0m
+[0;32mI (33601) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (33601) OTA_SERVER: Ack received[0m
+[0;32mI (33601) OTA_SERVER: Uart initialized[0m
+[0;32mI (33701) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (33701) OTA_SERVER: Ack received[0m
+[0;32mI (33701) OTA_SERVER: Uart initialized[0m
+[0;32mI (33801) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (33801) OTA_SERVER: Ack received[0m
+[0;32mI (33801) OTA_SERVER: Uart initialized[0m
+[0;32mI (33901) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (33901) OTA_SERVER: Ack received[0m
+[0;32mI (33901) OTA_SERVER: Uart initialized[0m
+[0;32mI (34001) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (34001) OTA_SERVER: Ack received[0m
+[0;32mI (34001) OTA_SERVER: Uart initialized[0m
+[0;32mI (34101) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (34101) OTA_SERVER: Ack received[0m
+[0;32mI (34101) OTA_SERVER: Uart initialized[0m
+[0;32mI (34201) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (34201) OTA_SERVER: Ack received[0m
+[0;32mI (34201) OTA_SERVER: Uart initialized[0m
+[0;32mI (34301) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (34301) OTA_SERVER: Ack received[0m
+[0;32mI (34301) OTA_SERVER: Uart initialized[0m
+[0;32mI (34401) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (34401) OTA_SERVER: Ack received[0m
+[0;32mI (34401) OTA_SERVER: Uart initialized[0m
+[0;32mI (34501) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (34501) OTA_SERVER: Ack received[0m
+[0;32mI (34501) OTA_SERVER: Uart initialized[0m
+[0;32mI (34601) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (34601) OTA_SERVER: Ack received[0m
+[0;32mI (34601) OTA_SERVER: Uart initialized[0m
+[0;32mI (34701) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (34701) OTA_SERVER: Ack received[0m
+[0;32mI (34701) OTA_SERVER: Uart initialized[0m
+[0;32mI (34801) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (34801) OTA_SERVER: Ack received[0m
+[0;32mI (34801) OTA_SERVER: Uart initialized[0m
+[0;32mI (34901) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (34901) OTA_SERVER: Ack received[0m
+[0;32mI (34901) OTA_SERVER: Uart initialized[0m
+[0;32mI (35001) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (35001) OTA_SERVER: Ack received[0m
+[0;32mI (35001) OTA_SERVER: Uart initialized[0m
+[0;32mI (35101) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (35101) OTA_SERVER: Ack received[0m
+[0;32mI (35101) OTA_SERVER: Uart initialized[0m
+[0;32mI (35201) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (35201) OTA_SERVER: Ack received[0m
+[0;32mI (35201) OTA_SERVER: Uart initialized[0m
+[0;32mI (35301) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (35301) OTA_SERVER: Ack received[0m
+[0;32mI (35301) OTA_SERVER: Uart initialized[0m
+[0;32mI (35401) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (35401) OTA_SERVER: Ack received[0m
+[0;32mI (35401) OTA_SERVER: Uart initialized[0m
+[0;32mI (35501) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (35501) OTA_SERVER: Ack received[0m
+[0;32mI (35501) OTA_SERVER: Uart initialized[0m
+[0;32mI (35601) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (35601) OTA_SERVER: Ack received[0m
+[0;32mI (35601) OTA_SERVER: Uart initialized[0m
+[0;32mI (35701) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (35701) OTA_SERVER: Ack received[0m
+[0;32mI (35701) OTA_SERVER: Uart initialized[0m
+[0;32mI (35801) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (35801) OTA_SERVER: Ack received[0m
+[0;32mI (35801) OTA_SERVER: Uart initialized[0m
+[0;32mI (35901) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (35901) OTA_SERVER: Ack received[0m
+[0;32mI (35901) OTA_SERVER: Uart initialized[0m
+[0;32mI (36001) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (36001) OTA_SERVER: Ack received[0m
+[0;32mI (36001) OTA_SERVER: Uart initialized[0m
+[0;32mI (36101) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (36101) OTA_SERVER: Ack received[0m
+[0;32mI (36101) OTA_SERVER: Uart initialized[0m
+[0;32mI (36201) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (36201) OTA_SERVER: Ack received[0m
+[0;32mI (36201) OTA_SERVER: Uart initialized[0m
+[0;32mI (36301) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (36301) OTA_SERVER: Ack received[0m
+[0;32mI (36301) OTA_SERVER: Uart initialized[0m
+[0;32mI (36401) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (36401) OTA_SERVER: Ack received[0m
+[0;32mI (36401) OTA_SERVER: Uart initialized[0m
+[0;32mI (36501) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (36501) OTA_SERVER: Ack received[0m
+[0;32mI (36501) OTA_SERVER: Uart initialized[0m
+[0;32mI (36601) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (36601) OTA_SERVER: Ack received[0m
+[0;32mI (36601) OTA_SERVER: Uart initialized[0m
+[0;32mI (36701) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (36701) OTA_SERVER: Ack received[0m
+[0;32mI (36701) OTA_SERVER: Uart initialized[0m
+[0;32mI (36801) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (36801) OTA_SERVER: Ack received[0m
+[0;32mI (36801) OTA_SERVER: Uart initialized[0m
+[0;32mI (36901) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (36901) OTA_SERVER: Ack received[0m
+[0;32mI (36901) OTA_SERVER: Uart initialized[0m
+[0;32mI (37001) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (37001) OTA_SERVER: Ack received[0m
+[0;32mI (37001) OTA_SERVER: Uart initialized[0m
+[0;32mI (37101) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (37101) OTA_SERVER: Ack received[0m
+[0;32mI (37101) OTA_SERVER: Uart initialized[0m
+[0;32mI (37201) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (37201) OTA_SERVER: Ack received[0m
+[0;32mI (37201) OTA_SERVER: Uart initialized[0m
+[0;32mI (37301) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (37301) OTA_SERVER: Ack received[0m
+[0;32mI (37301) OTA_SERVER: Uart initialized[0m
+[0;32mI (37401) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (37401) OTA_SERVER: Ack received[0m
+[0;32mI (37401) OTA_SERVER: Uart initialized[0m
+[0;32mI (37501) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (37501) OTA_SERVER: Ack received[0m
+[0;32mI (37501) OTA_SERVER: Uart initialized[0m
+[0;32mI (37601) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (37601) OTA_SERVER: Ack received[0m
+[0;32mI (37601) OTA_SERVER: Uart initialized[0m
+[0;32mI (37701) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (37701) OTA_SERVER: Ack received[0m
+[0;32mI (37701) OTA_SERVER: Uart initialized[0m
+[0;32mI (37801) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (37801) OTA_SERVER: Ack received[0m
+[0;32mI (37801) OTA_SERVER: Uart initialized[0m
+[0;32mI (37901) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (37901) OTA_SERVER: Ack received[0m
+[0;32mI (37901) OTA_SERVER: Uart initialized[0m
+[0;32mI (38001) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (38001) OTA_SERVER: Ack received[0m
+[0;32mI (38001) OTA_SERVER: Uart initialized[0m
+[0;32mI (38101) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (38101) OTA_SERVER: Ack received[0m
+[0;32mI (38101) OTA_SERVER: Uart initialized[0m
+[0;32mI (38201) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (38201) OTA_SERVER: Ack received[0m
+[0;32mI (38201) OTA_SERVER: Uart initialized[0m
+[0;32mI (38301) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (38301) OTA_SERVER: Ack received[0m
+[0;32mI (38301) OTA_SERVER: Uart initialized[0m
+[0;32mI (38401) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (38401) OTA_SERVER: Ack received[0m
+[0;32mI (38401) OTA_SERVER: Uart initialized[0m
+[0;32mI (38501) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (38501) OTA_SERVER: Ack received[0m
+[0;32mI (38501) OTA_SERVER: Uart initialized[0m
+[0;32mI (38601) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (38601) OTA_SERVER: Ack received[0m
+[0;32mI (38601) OTA_SERVER: Uart initialized[0m
+[0;32mI (38701) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (38701) OTA_SERVER: Ack received[0m
+[0;32mI (38701) OTA_SERVER: Uart initialized[0m
+[0;32mI (38801) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (38801) OTA_SERVER: Ack received[0m
+[0;32mI (38801) OTA_SERVER: Uart initialized[0m
+[0;32mI (38901) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (38901) OTA_SERVER: Ack received[0m
+[0;32mI (38901) OTA_SERVER: Uart initialized[0m
+[0;32mI (39001) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (39001) OTA_SERVER: Ack received[0m
+[0;32mI (39001) OTA_SERVER: Uart initialized[0m
+[0;32mI (39101) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (39101) OTA_SERVER: Ack received[0m
+[0;32mI (39101) OTA_SERVER: Uart initialized[0m
+[0;32mI (39201) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (39201) OTA_SERVER: Ack received[0m
+[0;32mI (39201) OTA_SERVER: Uart initialized[0m
+[0;32mI (39301) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (39301) OTA_SERVER: Ack received[0m
+[0;32mI (39301) OTA_SERVER: Uart initialized[0m
+[0;32mI (39401) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (39401) OTA_SERVER: Ack received[0m
+[0;32mI (39401) OTA_SERVER: Uart initialized[0m
+[0;32mI (39501) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (39501) OTA_SERVER: Ack received[0m
+[0;32mI (39501) OTA_SERVER: Uart initialized[0m
+[0;32mI (39601) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (39601) OTA_SERVER: Ack received[0m
+[0;32mI (39601) OTA_SERVER: Uart initialized[0m
+[0;32mI (39701) OTA_SERVER: Received String From STM: Ready[0m
+ ReceiveChunkOverUART...
+
+[0;32mI (39701) OTA_SERVER: Ack received[0m
+[0;32mI (39701) OTA_SERVER: Uart initialized[0m

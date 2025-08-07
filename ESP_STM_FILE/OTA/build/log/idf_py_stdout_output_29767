@@ -1,0 +1,840 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15736
+load:0x40080400,len:4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (29) boot: ESP-IDF v5.4.2 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Aug  2 2025 14:47:35[0m
+[0;32mI (30) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 ota_app          OTA app          00 10 00010000 001f0000[0m
+[0;32mI (77) boot:  3 storage          Unknown data     01 82 00200000 00100000[0m
+[0;32mI (84) boot: End of partition table[0m
+[0;32mI (87) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1c778h (116600) map[0m
+[0;32mI (135) esp_image: segment 1: paddr=0002c7a0 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (135) esp_image: segment 2: paddr=0002c7c4 vaddr=3ffb0000 size=03854h ( 14420) load[0m
+[0;32mI (144) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=954a4h (611492) map[0m
+[0;32mI (355) esp_image: segment 4: paddr=000c54cc vaddr=3ffb3854 size=00774h (  1908) load[0m
+[0;32mI (356) esp_image: segment 5: paddr=000c5c48 vaddr=40080000 size=1897ch (100732) load[0m
+[0;32mI (409) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (410) boot: Disabling RNG early entropy source...[0m
+[0;32mI (420) cpu_start: Multicore app[0m
+[0;32mI (428) cpu_start: Pro cpu start user code[0m
+[0;32mI (428) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (429) app_init: Application information:[0m
+[0;32mI (429) app_init: Project name:     OTA_ESP[0m
+[0;32mI (432) app_init: App version:      1[0m
+[0;32mI (436) app_init: Compile time:     Aug  2 2025 14:47:30[0m
+[0;32mI (441) app_init: ELF file SHA256:  4be3106db...[0m
+[0;32mI (445) app_init: ESP-IDF:          v5.4.2[0m
+[0;32mI (449) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (453) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (457) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (461) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (467) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (472) heap_init: At 3FFB8678 len 00027988 (158 KiB): DRAM[0m
+[0;32mI (477) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (483) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (488) heap_init: At 4009897C len 00007684 (29 KiB): IRAM[0m
+[0;32mI (495) spi_flash: detected chip: generic[0m
+[0;32mI (497) spi_flash: flash io: dio[0m
+[0;32mI (501) main_task: Started on CPU0[0m
+[0;32mI (511) main_task: Calling app_main()[0m
+[0;32mI (601) OTA_SERVER: SPIFFS mounted. Total: 956561 bytes, Used: 1506 bytes[0m
+[0;32mI (611) main_task: Returned from app_main()[0m
+[0;32mI (611) OTA_SERVER: UART initialized[0m
+[0;32mI (621) wifi:wifi driver task: 3ffc2190, prio:23, stack:6656, core=0[0m
+[0;32mI (631) wifi:wifi firmware version: bea31f3[0m
+[0;32mI (631) wifi:wifi certification version: v7.0[0m
+[0;32mI (631) wifi:config NVS flash: enabled[0m
+[0;32mI (631) wifi:config nano formatting: disabled[0m
+[0;32mI (631) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (641) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (641) wifi:Init management short buffer num: 32[0m
+[0;32mI (651) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (651) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (661) wifi:Init static rx buffer num: 10[0m
+[0;32mI (661) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (661) wifi_init: rx ba win: 6[0m
+[0;32mI (671) wifi_init: accept mbox: 6[0m
+[0;32mI (671) wifi_init: tcpip mbox: 32[0m
+[0;32mI (671) wifi_init: udp mbox: 6[0m
+[0;32mI (681) wifi_init: tcp mbox: 6[0m
+[0;32mI (681) wifi_init: tcp tx win: 5760[0m
+[0;32mI (681) wifi_init: tcp rx win: 5760[0m
+[0;32mI (681) wifi_init: tcp mss: 1440[0m
+[0;32mI (691) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (691) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (701) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (701) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (711) OTA_SERVER: Received String From STM: [0m
+[0;32mI (711) OTA_SERVER: Ack received[0m
+[0;32mI (791) wifi:mode : sta (8c:4f:00:2f:5c:38)[0m
+[0;32mI (791) wifi:enable tsf[0m
+[0;32mI (801) OTA_SERVER: Wi-Fi connecting to SSID: 1234[0m
+[0;32mI (811) wifi:new:<4,0>, old:<1,0>, ap:<255,255>, sta:<4,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (811) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (821) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (841) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (861) wifi:connected with 1234, aid = 5, channel 4, BW20, bssid = 6e:42:f1:b1:52:20[0m
+[0;32mI (861) wifi:security: WPA2-PSK, phy: bgn, rssi: -39[0m
+[0;32mI (861) wifi:pm start, type: 1[0m
+
+[0;32mI (861) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (871) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (881) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (921) OTA_SERVER: Received String From STM: [0m
+[0;32mI (921) OTA_SERVER: Ack received[0m
+[0;32mI (1121) OTA_SERVER: Received String From STM: [0m
+[0;32mI (1121) OTA_SERVER: Ack received[0m
+[0;32mI (1321) OTA_SERVER: Received String From STM: [0m
+[0;32mI (1321) OTA_SERVER: Ack received[0m
+[0;32mI (1521) OTA_SERVER: Received String From STM: [0m
+[0;32mI (1521) OTA_SERVER: Ack received[0m
+[0;32mI (1721) OTA_SERVER: Received String From STM: [0m
+[0;32mI (1721) OTA_SERVER: Ack received[0m
+[0;32mI (1921) esp_netif_handlers: sta ip: 10.97.137.158, mask: 255.255.255.0, gw: 10.97.137.139[0m
+[0;32mI (1921) OTA_SERVER: Received String From STM: [0m
+[0;32mI (1921) OTA_SERVER: Got IP: 10.97.137.158[0m
+[0;32mI (1921) OTA_SERVER: Ack received[0m
+[0;32mI (2121) OTA_SERVER: Received String From STM: [0m
+[0;32mI (2121) OTA_SERVER: Ack received[0m
+[0;32mI (2321) OTA_SERVER: Received String From STM: [0m
+[0;32mI (2321) OTA_SERVER: Ack received[0m
+[0;32mI (2521) OTA_SERVER: Received String From STM: [0m
+[0;32mI (2521) OTA_SERVER: Ack received[0m
+[0;32mI (2721) OTA_SERVER: Received String From STM: [0m
+[0;32mI (2721) OTA_SERVER: Ack received[0m
+[0;32mI (2921) OTA_SERVER: Received String From STM: [0m
+[0;32mI (2921) OTA_SERVER: Ack received[0m
+[0;32mI (3121) OTA_SERVER: Received String From STM: [0m
+[0;32mI (3121) OTA_SERVER: Ack received[0m
+[0;32mI (3321) OTA_SERVER: Received String From STM: [0m
+[0;32mI (3321) OTA_SERVER: Ack received[0m
+[0;32mI (3521) OTA_SERVER: Received String From STM: [0m
+[0;32mI (3521) OTA_SERVER: Ack received[0m
+[0;32mI (3721) OTA_SERVER: Received String From STM: [0m
+[0;32mI (3721) OTA_SERVER: Ack received[0m
+[0;32mI (3921) OTA_SERVER: Received String From STM: [0m
+[0;32mI (3921) OTA_SERVER: Ack received[0m
+[0;32mI (4121) OTA_SERVER: Received String From STM: [0m
+[0;32mI (4121) OTA_SERVER: Ack received[0m
+[0;32mI (4321) OTA_SERVER: Received String From STM: [0m
+[0;32mI (4321) OTA_SERVER: Ack received[0m
+[0;32mI (4521) OTA_SERVER: Received String From STM: [0m
+[0;32mI (4521) OTA_SERVER: Ack received[0m
+[0;32mI (4721) OTA_SERVER: Received String From STM: [0m
+[0;32mI (4721) OTA_SERVER: Ack received[0m
+[0;32mI (4921) OTA_SERVER: Received String From STM: [0m
+[0;32mI (4921) OTA_SERVER: Ack received[0m
+[0;32mI (5121) OTA_SERVER: Received String From STM: [0m
+[0;32mI (5121) OTA_SERVER: Ack received[0m
+[0;32mI (5321) OTA_SERVER: Received String From STM: [0m
+[0;32mI (5321) OTA_SERVER: Ack received[0m
+[0;32mI (5521) OTA_SERVER: Received String From STM: [0m
+[0;32mI (5521) OTA_SERVER: Ack received[0m
+[0;32mI (5721) OTA_SERVER: Received String From STM: [0m
+[0;32mI (5721) OTA_SERVER: Ack received[0m
+[0;32mI (5921) OTA_SERVER: Received String From STM: [0m
+[0;32mI (5921) OTA_SERVER: Ack received[0m
+[0;32mI (6121) OTA_SERVER: Received String From STM: [0m
+[0;32mI (6121) OTA_SERVER: Ack received[0m
+[0;32mI (6321) OTA_SERVER: Received String From STM: [0m
+[0;32mI (6321) OTA_SERVER: Ack received[0m
+[0;32mI (6521) OTA_SERVER: Received String From STM: [0m
+[0;32mI (6521) OTA_SERVER: Ack received[0m
+[0;32mI (6721) OTA_SERVER: Received String From STM: [0m
+[0;32mI (6721) OTA_SERVER: Ack received[0m
+[0;32mI (6921) OTA_SERVER: Received String From STM: [0m
+[0;32mI (6921) OTA_SERVER: Ack received[0m
+[0;32mI (7121) OTA_SERVER: Received String From STM: [0m
+[0;32mI (7121) OTA_SERVER: Ack received[0m
+[0;32mI (7321) OTA_SERVER: Received String From STM: [0m
+[0;32mI (7321) OTA_SERVER: Ack received[0m
+[0;32mI (7521) OTA_SERVER: Received String From STM: [0m
+[0;32mI (7521) OTA_SERVER: Ack received[0m
+[0;32mI (7721) OTA_SERVER: Received String From STM: [0m
+[0;32mI (7721) OTA_SERVER: Ack received[0m
+[0;32mI (7921) OTA_SERVER: Received String From STM: [0m
+[0;32mI (7921) OTA_SERVER: Ack received[0m
+[0;32mI (8121) OTA_SERVER: Received String From STM: [0m
+[0;32mI (8121) OTA_SERVER: Ack received[0m
+[0;32mI (8321) OTA_SERVER: Received String From STM: [0m
+[0;32mI (8321) OTA_SERVER: Ack received[0m
+[0;32mI (8521) OTA_SERVER: Received String From STM: [0m
+[0;32mI (8521) OTA_SERVER: Ack received[0m
+[0;32mI (8721) OTA_SERVER: Received String From STM: [0m
+[0;32mI (8721) OTA_SERVER: Ack received[0m
+[0;32mI (8921) OTA_SERVER: Received String From STM: [0m
+[0;32mI (8921) OTA_SERVER: Ack received[0m
+[0;32mI (9121) OTA_SERVER: Received String From STM: [0m
+[0;32mI (9121) OTA_SERVER: Ack received[0m
+[0;32mI (9321) OTA_SERVER: Received String From STM: [0m
+[0;32mI (9321) OTA_SERVER: Ack received[0m
+[0;32mI (9521) OTA_SERVER: Received String From STM: [0m
+[0;32mI (9521) OTA_SERVER: Ack received[0m
+[0;32mI (9721) OTA_SERVER: Received String From STM: [0m
+[0;32mI (9721) OTA_SERVER: Ack received[0m
+[0;32mI (9921) OTA_SERVER: Received String From STM: [0m
+[0;32mI (9921) OTA_SERVER: Ack received[0m
+[0;32mI (10121) OTA_SERVER: Received String From STM: [0m
+[0;32mI (10121) OTA_SERVER: Ack received[0m
+[0;32mI (10321) OTA_SERVER: Received String From STM: [0m
+[0;32mI (10321) OTA_SERVER: Ack received[0m
+[0;32mI (10521) OTA_SERVER: Received String From STM: [0m
+[0;32mI (10521) OTA_SERVER: Ack received[0m
+[0;32mI (10721) OTA_SERVER: Received String From STM: [0m
+[0;32mI (10721) OTA_SERVER: Ack received[0m
+[0;32mI (10921) OTA_SERVER: Received String From STM: [0m
+[0;32mI (10921) OTA_SERVER: Ack received[0m
+[0;32mI (11121) OTA_SERVER: Received String From STM: [0m
+[0;32mI (11121) OTA_SERVER: Ack received[0m
+[0;32mI (11321) OTA_SERVER: Received String From STM: [0m
+[0;32mI (11321) OTA_SERVER: Ack received[0m
+[0;32mI (11521) OTA_SERVER: Received String From STM: [0m
+[0;32mI (11521) OTA_SERVER: Ack received[0m
+[0;32mI (11721) OTA_SERVER: Received String From STM: [0m
+[0;32mI (11721) OTA_SERVER: Ack received[0m
+[0;32mI (11921) OTA_SERVER: Received String From STM: [0m
+[0;32mI (11921) OTA_SERVER: Ack received[0m
+[0;32mI (12121) OTA_SERVER: Received String From STM: [0m
+[0;32mI (12121) OTA_SERVER: Ack received[0m
+[0;32mI (12321) OTA_SERVER: Received String From STM: [0m
+[0;32mI (12321) OTA_SERVER: Ack received[0m
+[0;32mI (12521) OTA_SERVER: Received String From STM: [0m
+[0;32mI (12521) OTA_SERVER: Ack received[0m
+[0;32mI (12721) OTA_SERVER: Received String From STM: [0m
+[0;32mI (12721) OTA_SERVER: Ack received[0m
+[0;32mI (12921) OTA_SERVER: Received String From STM: [0m
+[0;32mI (12921) OTA_SERVER: Ack received[0m
+[0;32mI (13121) OTA_SERVER: Received String From STM: [0m
+[0;32mI (13121) OTA_SERVER: Ack received[0m
+[0;32mI (13321) OTA_SERVER: Received String From STM: [0m
+[0;32mI (13321) OTA_SERVER: Ack received[0m
+[0;32mI (13521) OTA_SERVER: Received String From STM: [0m
+[0;32mI (13521) OTA_SERVER: Ack received[0m
+[0;32mI (13721) OTA_SERVER: Received String From STM: [0m
+[0;32mI (13721) OTA_SERVER: Ack received[0m
+[0;32mI (13921) OTA_SERVER: Received String From STM: [0m
+[0;32mI (13921) OTA_SERVER: Ack received[0m
+[0;32mI (14121) OTA_SERVER: Received String From STM: [0m
+[0;32mI (14121) OTA_SERVER: Ack received[0m
+[0;32mI (14321) OTA_SERVER: Received String From STM: [0m
+[0;32mI (14321) OTA_SERVER: Ack received[0m
+[0;32mI (14521) OTA_SERVER: Received String From STM: [0m
+[0;32mI (14521) OTA_SERVER: Ack received[0m
+[0;32mI (14721) OTA_SERVER: Received String From STM: [0m
+[0;32mI (14721) OTA_SERVER: Ack received[0m
+[0;32mI (14921) OTA_SERVER: Received String From STM: [0m
+[0;32mI (14921) OTA_SERVER: Ack received[0m
+[0;32mI (15121) OTA_SERVER: Received String From STM: [0m
+[0;32mI (15121) OTA_SERVER: Ack received[0m
+[0;32mI (15321) OTA_SERVER: Received String From STM: [0m
+[0;32mI (15321) OTA_SERVER: Ack received[0m
+[0;32mI (15521) OTA_SERVER: Received String From STM: [0m
+[0;32mI (15521) OTA_SERVER: Ack received[0m
+[0;32mI (15721) OTA_SERVER: Received String From STM: [0m
+[0;32mI (15721) OTA_SERVER: Ack received[0m
+[0;32mI (15921) OTA_SERVER: Received String From STM: [0m
+[0;32mI (15921) OTA_SERVER: Ack received[0m
+[0;32mI (16121) OTA_SERVER: Received String From STM: [0m
+[0;32mI (16121) OTA_SERVER: Ack received[0m
+[0;32mI (16321) OTA_SERVER: Received String From STM: [0m
+[0;32mI (16321) OTA_SERVER: Ack received[0m
+[0;32mI (16521) OTA_SERVER: Received String From STM: [0m
+[0;32mI (16521) OTA_SERVER: Ack received[0m
+[0;32mI (16721) OTA_SERVER: Received String From STM: [0m
+[0;32mI (16721) OTA_SERVER: Ack received[0m
+[0;32mI (16921) OTA_SERVER: Received String From STM: [0m
+[0;32mI (16921) OTA_SERVER: Ack received[0m
+[0;32mI (17121) OTA_SERVER: Received String From STM: [0m
+[0;32mI (17121) OTA_SERVER: Ack received[0m
+[0;32mI (17321) OTA_SERVER: Received String From STM: [0m
+[0;32mI (17321) OTA_SERVER: Ack received[0m
+[0;32mI (17521) OTA_SERVER: Received String From STM: [0m
+[0;32mI (17521) OTA_SERVER: Ack received[0m
+[0;32mI (17721) OTA_SERVER: Received String From STM: [0m
+[0;32mI (17721) OTA_SERVER: Ack received[0m
+[0;32mI (17921) OTA_SERVER: Received String From STM: [0m
+[0;32mI (17921) OTA_SERVER: Ack received[0m
+[0;32mI (18121) OTA_SERVER: Received String From STM: [0m
+[0;32mI (18121) OTA_SERVER: Ack received[0m
+[0;32mI (18321) OTA_SERVER: Received String From STM: [0m
+[0;32mI (18321) OTA_SERVER: Ack received[0m
+[0;32mI (18521) OTA_SERVER: Received String From STM: [0m
+[0;32mI (18521) OTA_SERVER: Ack received[0m
+[0;32mI (18721) OTA_SERVER: Received String From STM: [0m
+[0;32mI (18721) OTA_SERVER: Ack received[0m
+[0;32mI (18921) OTA_SERVER: Received String From STM: [0m
+[0;32mI (18921) OTA_SERVER: Ack received[0m
+[0;32mI (19121) OTA_SERVER: Received String From STM: [0m
+[0;32mI (19121) OTA_SERVER: Ack received[0m
+[0;32mI (19321) OTA_SERVER: Received String From STM: [0m
+[0;32mI (19321) OTA_SERVER: Ack received[0m
+[0;32mI (19521) OTA_SERVER: Received String From STM: [0m
+[0;32mI (19521) OTA_SERVER: Ack received[0m
+[0;32mI (19721) OTA_SERVER: Received String From STM: [0m
+[0;32mI (19721) OTA_SERVER: Ack received[0m
+[0;32mI (19921) OTA_SERVER: Received String From STM: [0m
+[0;32mI (19921) OTA_SERVER: Ack received[0m
+[0;32mI (20121) OTA_SERVER: Received String From STM: [0m
+[0;32mI (20121) OTA_SERVER: Ack received[0m
+[0;32mI (20321) OTA_SERVER: Received String From STM: [0m
+[0;32mI (20321) OTA_SERVER: Ack received[0m
+[0;32mI (20521) OTA_SERVER: Received String From STM: [0m
+[0;32mI (20521) OTA_SERVER: Ack received[0m
+[0;32mI (20721) OTA_SERVER: Received String From STM: [0m
+[0;32mI (20721) OTA_SERVER: Ack received[0m
+[0;32mI (20921) OTA_SERVER: Received String From STM: [0m
+[0;32mI (20921) OTA_SERVER: Ack received[0m
+[0;32mI (21121) OTA_SERVER: Received String From STM: [0m
+[0;32mI (21121) OTA_SERVER: Ack received[0m
+[0;32mI (21321) OTA_SERVER: Received String From STM: [0m
+[0;32mI (21321) OTA_SERVER: Ack received[0m
+[0;32mI (21521) OTA_SERVER: Received String From STM: [0m
+[0;32mI (21521) OTA_SERVER: Ack received[0m
+[0;32mI (21721) OTA_SERVER: Received String From STM: [0m
+[0;32mI (21721) OTA_SERVER: Ack received[0m
+[0;32mI (21921) OTA_SERVER: Received String From STM: [0m
+[0;32mI (21921) OTA_SERVER: Ack received[0m
+[0;32mI (22121) OTA_SERVER: Received String From STM: [0m
+[0;32mI (22121) OTA_SERVER: Ack received[0m
+[0;32mI (22321) OTA_SERVER: Received String From STM: [0m
+[0;32mI (22321) OTA_SERVER: Ack received[0m
+[0;32mI (22521) OTA_SERVER: Received String From STM: [0m
+[0;32mI (22521) OTA_SERVER: Ack received[0m
+[0;32mI (22721) OTA_SERVER: Received String From STM: [0m
+[0;32mI (22721) OTA_SERVER: Ack received[0m
+[0;32mI (22921) OTA_SERVER: Received String From STM: [0m
+[0;32mI (22921) OTA_SERVER: Ack received[0m
+[0;32mI (23121) OTA_SERVER: Received String From STM: [0m
+[0;32mI (23121) OTA_SERVER: Ack received[0m
+[0;32mI (23321) OTA_SERVER: Received String From STM: [0m
+[0;32mI (23321) OTA_SERVER: Ack received[0m
+[0;32mI (23521) OTA_SERVER: Received String From STM: [0m
+[0;32mI (23521) OTA_SERVER: Ack received[0m
+[0;32mI (23721) OTA_SERVER: Received String From STM: [0m
+[0;32mI (23721) OTA_SERVER: Ack received[0m
+[0;32mI (23921) OTA_SERVER: Received String From STM: [0m
+[0;32mI (23921) OTA_SERVER: Ack received[0m
+[0;32mI (24121) OTA_SERVER: Received String From STM: [0m
+[0;32mI (24121) OTA_SERVER: Ack received[0m
+[0;32mI (24321) OTA_SERVER: Received String From STM: [0m
+[0;32mI (24321) OTA_SERVER: Ack received[0m
+[0;32mI (24521) OTA_SERVER: Received String From STM: [0m
+[0;32mI (24521) OTA_SERVER: Ack received[0m
+[0;32mI (24721) OTA_SERVER: Received String From STM: [0m
+[0;32mI (24721) OTA_SERVER: Ack received[0m
+[0;32mI (24921) OTA_SERVER: Received String From STM: [0m
+[0;32mI (24921) OTA_SERVER: Ack received[0m
+[0;32mI (25121) OTA_SERVER: Received String From STM: [0m
+[0;32mI (25121) OTA_SERVER: Ack received[0m
+[0;32mI (25321) OTA_SERVER: Received String From STM: [0m
+[0;32mI (25321) OTA_SERVER: Ack received[0m
+[0;32mI (25521) OTA_SERVER: Received String From STM: [0m
+[0;32mI (25521) OTA_SERVER: Ack received[0m
+[0;32mI (25721) OTA_SERVER: Received String From STM: [0m
+[0;32mI (25721) OTA_SERVER: Ack received[0m
+[0;32mI (25921) OTA_SERVER: Received String From STM: [0m
+[0;32mI (25921) OTA_SERVER: Ack received[0m
+[0;32mI (26121) OTA_SERVER: Received String From STM: [0m
+[0;32mI (26121) OTA_SERVER: Ack received[0m
+[0;32mI (26321) OTA_SERVER: Received String From STM: [0m
+[0;32mI (26321) OTA_SERVER: Ack received[0m
+[0;32mI (26521) OTA_SERVER: Received String From STM: [0m
+[0;32mI (26521) OTA_SERVER: Ack received[0m
+[0;32mI (26721) OTA_SERVER: Received String From STM: [0m
+[0;32mI (26721) OTA_SERVER: Ack received[0m
+[0;32mI (26921) OTA_SERVER: Received String From STM: [0m
+[0;32mI (26921) OTA_SERVER: Ack received[0m
+[0;32mI (27121) OTA_SERVER: Received String From STM: [0m
+[0;32mI (27121) OTA_SERVER: Ack received[0m
+[0;32mI (27321) OTA_SERVER: Received String From STM: [0m
+[0;32mI (27321) OTA_SERVER: Ack received[0m
+[0;32mI (27521) OTA_SERVER: Received String From STM: [0m
+[0;32mI (27521) OTA_SERVER: Ack received[0m
+[0;32mI (27721) OTA_SERVER: Received String From STM: [0m
+[0;32mI (27721) OTA_SERVER: Ack received[0m
+[0;32mI (27921) OTA_SERVER: Received String From STM: [0m
+[0;32mI (27921) OTA_SERVER: Ack received[0m
+[0;32mI (28121) OTA_SERVER: Received String From STM: [0m
+[0;32mI (28121) OTA_SERVER: Ack received[0m
+[0;32mI (28321) OTA_SERVER: Received String From STM: [0m
+[0;32mI (28321) OTA_SERVER: Ack received[0m
+[0;32mI (28521) OTA_SERVER: Received String From STM: [0m
+[0;32mI (28521) OTA_SERVER: Ack received[0m
+[0;32mI (28721) OTA_SERVER: Received String From STM: [0m
+[0;32mI (28721) OTA_SERVER: Ack received[0m
+[0;32mI (28921) OTA_SERVER: Received String From STM: [0m
+[0;32mI (28921) OTA_SERVER: Ack received[0m
+[0;32mI (29121) OTA_SERVER: Received String From STM: [0m
+[0;32mI (29121) OTA_SERVER: Ack received[0m
+[0;32mI (29321) OTA_SERVER: Received String From STM: [0m
+[0;32mI (29321) OTA_SERVER: Ack received[0m
+[0;32mI (29521) OTA_SERVER: Received String From STM: [0m
+[0;32mI (29521) OTA_SERVER: Ack received[0m
+[0;32mI (29721) OTA_SERVER: Received String From STM: [0m
+[0;32mI (29721) OTA_SERVER: Ack received[0m
+[0;32mI (29921) OTA_SERVER: Received String From STM: [0m
+[0;32mI (29921) OTA_SERVER: Ack received[0m
+[0;32mI (30121) OTA_SERVER: Received String From STM: [0m
+[0;32mI (30121) OTA_SERVER: Ack received[0m
+[0;32mI (30321) OTA_SERVER: Received String From STM: [0m
+[0;32mI (30321) OTA_SERVER: Ack received[0m
+[0;32mI (30521) OTA_SERVER: Received String From STM: [0m
+[0;32mI (30521) OTA_SERVER: Ack received[0m
+[0;32mI (30721) OTA_SERVER: Received String From STM: [0m
+[0;32mI (30721) OTA_SERVER: Ack received[0m
+[0;32mI (30921) OTA_SERVER: Received String From STM: [0m
+[0;32mI (30921) OTA_SERVER: Ack received[0m
+[0;32mI (31121) OTA_SERVER: Received String From STM: [0m
+[0;32mI (31121) OTA_SERVER: Ack received[0m
+[0;32mI (31321) OTA_SERVER: Received String From STM: [0m
+[0;32mI (31321) OTA_SERVER: Ack received[0m
+[0;32mI (31521) OTA_SERVER: Received String From STM: [0m
+[0;32mI (31521) OTA_SERVER: Ack received[0m
+[0;32mI (31721) OTA_SERVER: Received String From STM: [0m
+[0;32mI (31721) OTA_SERVER: Ack received[0m
+[0;32mI (31921) OTA_SERVER: Received String From STM: [0m
+[0;32mI (31921) OTA_SERVER: Ack received[0m
+[0;32mI (32121) OTA_SERVER: Received String From STM: [0m
+[0;32mI (32121) OTA_SERVER: Ack received[0m
+[0;32mI (32321) OTA_SERVER: Received String From STM: [0m
+[0;32mI (32321) OTA_SERVER: Ack received[0m
+[0;32mI (32521) OTA_SERVER: Received String From STM: [0m
+[0;32mI (32521) OTA_SERVER: Ack received[0m
+[0;32mI (32721) OTA_SERVER: Received String From STM: [0m
+[0;32mI (32721) OTA_SERVER: Ack received[0m
+[0;32mI (32921) OTA_SERVER: Received String From STM: [0m
+[0;32mI (32921) OTA_SERVER: Ack received[0m
+[0;32mI (33121) OTA_SERVER: Received String From STM: [0m
+[0;32mI (33121) OTA_SERVER: Ack received[0m
+[0;32mI (33321) OTA_SERVER: Received String From STM: [0m
+[0;32mI (33321) OTA_SERVER: Ack received[0m
+[0;32mI (33521) OTA_SERVER: Received String From STM: [0m
+[0;32mI (33521) OTA_SERVER: Ack received[0m
+[0;32mI (33721) OTA_SERVER: Received String From STM: [0m
+[0;32mI (33721) OTA_SERVER: Ack received[0m
+[0;32mI (33921) OTA_SERVER: Received String From STM: [0m
+[0;32mI (33921) OTA_SERVER: Ack received[0m
+[0;32mI (34121) OTA_SERVER: Received String From STM: [0m
+[0;32mI (34121) OTA_SERVER: Ack received[0m
+[0;32mI (34321) OTA_SERVER: Received String From STM: [0m
+[0;32mI (34321) OTA_SERVER: Ack received[0m
+[0;32mI (34521) OTA_SERVER: Received String From STM: [0m
+[0;32mI (34521) OTA_SERVER: Ack received[0m
+[0;32mI (34721) OTA_SERVER: Received String From STM: [0m
+[0;32mI (34721) OTA_SERVER: Ack received[0m
+[0;32mI (34921) OTA_SERVER: Received String From STM: [0m
+[0;32mI (34921) OTA_SERVER: Ack received[0m
+[0;32mI (35121) OTA_SERVER: Received String From STM: [0m
+[0;32mI (35121) OTA_SERVER: Ack received[0m
+[0;32mI (35321) OTA_SERVER: Received String From STM: [0m
+[0;32mI (35321) OTA_SERVER: Ack received[0m
+[0;32mI (35521) OTA_SERVER: Received String From STM: [0m
+[0;32mI (35521) OTA_SERVER: Ack received[0m
+[0;32mI (35721) OTA_SERVER: Received String From STM: [0m
+[0;32mI (35721) OTA_SERVER: Ack received[0m
+[0;32mI (35921) OTA_SERVER: Received String From STM: [0m
+[0;32mI (35921) OTA_SERVER: Ack received[0m
+[0;32mI (36121) OTA_SERVER: Received String From STM: [0m
+[0;32mI (36121) OTA_SERVER: Ack received[0m
+[0;32mI (36321) OTA_SERVER: Received String From STM: [0m
+[0;32mI (36321) OTA_SERVER: Ack received[0m
+[0;32mI (36521) OTA_SERVER: Received String From STM: [0m
+[0;32mI (36521) OTA_SERVER: Ack received[0m
+[0;32mI (36721) OTA_SERVER: Received String From STM: [0m
+[0;32mI (36721) OTA_SERVER: Ack received[0m
+[0;32mI (36921) OTA_SERVER: Received String From STM: [0m
+[0;32mI (36921) OTA_SERVER: Ack received[0m
+[0;32mI (37121) OTA_SERVER: Received String From STM: [0m
+[0;32mI (37121) OTA_SERVER: Ack received[0m
+[0;32mI (37321) OTA_SERVER: Received String From STM: [0m
+[0;32mI (37321) OTA_SERVER: Ack received[0m
+[0;32mI (37351) OTA_SERVER:   index.html (1221 bytes)[0m
+[0;32mI (37521) OTA_SERVER: Received String From STM: [0m
+[0;32mI (37521) OTA_SERVER: Ack received[0m
+[0;32mI (37721) OTA_SERVER: Received String From STM: [0m
+[0;32mI (37721) OTA_SERVER: Ack received[0m
+[0;32mI (37921) OTA_SERVER: Received String From STM: [0m
+[0;32mI (37921) OTA_SERVER: Ack received[0m
+[0;32mI (38121) OTA_SERVER: Received String From STM: [0m
+[0;32mI (38121) OTA_SERVER: Ack received[0m
+[0;32mI (38321) OTA_SERVER: Received String From STM: [0m
+[0;32mI (38321) OTA_SERVER: Ack received[0m
+[0;32mI (38521) OTA_SERVER: Received String From STM: [0m
+[0;32mI (38521) OTA_SERVER: Ack received[0m
+[0;32mI (38721) OTA_SERVER: Received String From STM: [0m
+[0;32mI (38721) OTA_SERVER: Ack received[0m
+[0;32mI (38921) OTA_SERVER: Received String From STM: [0m
+[0;32mI (38921) OTA_SERVER: Ack received[0m
+[0;32mI (39121) OTA_SERVER: Received String From STM: [0m
+[0;32mI (39121) OTA_SERVER: Ack received[0m
+[0;32mI (39321) OTA_SERVER: Received String From STM: [0m
+[0;32mI (39321) OTA_SERVER: Ack received[0m
+[0;32mI (39521) OTA_SERVER: Received String From STM: [0m
+[0;32mI (39521) OTA_SERVER: Ack received[0m
+[0;32mI (39721) OTA_SERVER: Received String From STM: [0m
+[0;32mI (39721) OTA_SERVER: Ack received[0m
+[0;32mI (39921) OTA_SERVER: Received String From STM: [0m
+[0;32mI (39921) OTA_SERVER: Ack received[0m
+[0;32mI (40121) OTA_SERVER: Received String From STM: [0m
+[0;32mI (40121) OTA_SERVER: Ack received[0m
+[0;32mI (40321) OTA_SERVER: Received String From STM: [0m
+[0;32mI (40321) OTA_SERVER: Ack received[0m
+[0;32mI (40521) OTA_SERVER: Received String From STM: [0m
+[0;32mI (40521) OTA_SERVER: Ack received[0m
+[0;32mI (40721) OTA_SERVER: Received String From STM: [0m
+[0;32mI (40721) OTA_SERVER: Ack received[0m
+[0;32mI (40921) OTA_SERVER: Received String From STM: [0m
+[0;32mI (40921) OTA_SERVER: Ack received[0m
+[0;32mI (41121) OTA_SERVER: Received String From STM: [0m
+[0;32mI (41121) OTA_SERVER: Ack received[0m
+[0;32mI (41321) OTA_SERVER: Received String From STM: [0m
+[0;32mI (41321) OTA_SERVER: Ack received[0m
+[0;32mI (41521) OTA_SERVER: Received String From STM: [0m
+[0;32mI (41521) OTA_SERVER: Ack received[0m
+[0;32mI (41721) OTA_SERVER: Received String From STM: [0m
+[0;32mI (41721) OTA_SERVER: Ack received[0m
+[0;32mI (41921) OTA_SERVER: Received String From STM: [0m
+[0;32mI (41921) OTA_SERVER: Ack received[0m
+[0;32mI (42121) OTA_SERVER: Received String From STM: [0m
+[0;32mI (42121) OTA_SERVER: Ack received[0m
+[0;32mI (42321) OTA_SERVER: Received String From STM: [0m
+[0;32mI (42321) OTA_SERVER: Ack received[0m
+[0;32mI (42521) OTA_SERVER: Received String From STM: [0m
+[0;32mI (42521) OTA_SERVER: Ack received[0m
+[0;32mI (42721) OTA_SERVER: Received String From STM: [0m
+[0;32mI (42721) OTA_SERVER: Ack received[0m
+[0;32mI (1441) OTA_SERVER: Received String From STM: [0m
+[0;32mI (1441) OTA_SERVER: Ack received[0m
+[0;32mI (1641) OTA_SERVER: Received String From STM: [0m
+[0;32mI (1641) OTA_SERVER: Ack received[0m
+[0;32mI (1841) OTA_SERVER: Received String From STM: [0m
+[0;32mI (1841) OTA_SERVER: Ack received[0m
+[0;32mI (1891) esp_netif_handlers: sta ip: 10.97.137.158, mask: 255.255.255.0, gw: 10.97.137.139[0m
+[0;32mI (1891) OTA_SERVER: Got IP: 10.97.137.158[0m
+[0;32mI (2041) OTA_SERVER: Received String From STM: [0m
+[0;32mI (2041) OTA_SERVER: Ack received[0m
+[0;32mI (2361) OTA_SERVER: Received String From STM: 774&[0m
+[0;32mI (2361) OTA_SERVER: Ack received[0m
+[0;32mI (2561) OTA_SERVER: Received String From STM: �Ӻ�[0m
+[0;32mI (2561) OTA_SERVER: Ack received[0m
+[0;32mI (2761) OTA_SERVER: Received String From STM: �Ӻ�[0m
+[0;32mI (2761) OTA_SERVER: Ack received[0m
+[0;32mI (3061) OTA_SERVER: Received String From STM: [0m
+[0;32mI (3061) OTA_SERVER: Ack received[0m
+[0;32mI (3261) OTA_SERVER: Received String From STM: [0m
+[0;32mI (3261) OTA_SERVER: Ack received[0m
+[0;32mI (3461) OTA_SERVER: Received String From STM: [0m
+[0;32mI (3461) OTA_SERVER: Ack received[0m
+[0;32mI (3661) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (3661) OTA_SERVER: Ack received[0m
+[0;32mI (3861) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (3861) OTA_SERVER: Ack received[0m
+[0;32mI (4061) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (4061) OTA_SERVER: Ack received[0m
+[0;32mI (4261) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (4261) OTA_SERVER: Ack received[0m
+[0;32mI (4461) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (4461) OTA_SERVER: Ack received[0m
+[0;32mI (4661) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (4661) OTA_SERVER: Ack received[0m
+[0;32mI (4861) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (4861) OTA_SERVER: Ack received[0m
+[0;32mI (5061) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (5061) OTA_SERVER: Ack received[0m
+[0;32mI (5261) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (5261) OTA_SERVER: Ack received[0m
+[0;32mI (5461) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (5461) OTA_SERVER: Ack received[0m
+[0;32mI (5661) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (5661) OTA_SERVER: Ack received[0m
+[0;32mI (5861) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (5861) OTA_SERVER: Ack received[0m
+[0;32mI (6061) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (6061) OTA_SERVER: Ack received[0m
+[0;32mI (6261) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (6261) OTA_SERVER: Ack received[0m
+[0;32mI (6461) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (6461) OTA_SERVER: Ack received[0m
+[0;32mI (6661) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (6661) OTA_SERVER: Ack received[0m
+[0;32mI (6861) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (6861) OTA_SERVER: Ack received[0m
+[0;32mI (7061) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (7061) OTA_SERVER: Ack received[0m
+[0;32mI (7261) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (7261) OTA_SERVER: Ack received[0m
+[0;32mI (7461) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (7461) OTA_SERVER: Ack received[0m
+[0;32mI (7661) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (7661) OTA_SERVER: Ack received[0m
+[0;32mI (7861) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (7861) OTA_SERVER: Ack received[0m
+[0;32mI (8061) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (8061) OTA_SERVER: Ack received[0m
+[0;32mI (8261) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (8261) OTA_SERVER: Ack received[0m
+[0;32mI (8461) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (8461) OTA_SERVER: Ack received[0m
+[0;32mI (8661) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (8661) OTA_SERVER: Ack received[0m
+[0;32mI (8861) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (8861) OTA_SERVER: Ack received[0m
+[0;32mI (9061) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (9061) OTA_SERVER: Ack received[0m
+[0;32mI (9261) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (9261) OTA_SERVER: Ack received[0m
+[0;32mI (9461) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (9461) OTA_SERVER: Ack received[0m
+[0;32mI (9661) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (9661) OTA_SERVER: Ack received[0m
+[0;32mI (9861) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (9861) OTA_SERVER: Ack received[0m
+[0;32mI (10061) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (10061) OTA_SERVER: Ack received[0m
+[0;32mI (10261) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (10261) OTA_SERVER: Ack received[0m
+[0;32mI (10461) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (10461) OTA_SERVER: Ack received[0m
+[0;32mI (10661) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (10661) OTA_SERVER: Ack received[0m
+[0;32mI (10861) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (10861) OTA_SERVER: Ack received[0m
+[0;32mI (11061) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (11061) OTA_SERVER: Ack received[0m
+[0;32mI (11261) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (11261) OTA_SERVER: Ack received[0m
+[0;32mI (11461) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (11461) OTA_SERVER: Ack received[0m
+[0;32mI (11661) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (11661) OTA_SERVER: Ack received[0m
+[0;32mI (11861) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (11861) OTA_SERVER: Ack received[0m
+[0;32mI (12061) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (12061) OTA_SERVER: Ack received[0m
+[0;32mI (12261) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (12261) OTA_SERVER: Ack received[0m
+[0;32mI (12461) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (12461) OTA_SERVER: Ack received[0m
+[0;32mI (12661) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (12661) OTA_SERVER: Ack received[0m
+[0;32mI (12861) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (12861) OTA_SERVER: Ack received[0m
+[0;32mI (13061) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (13061) OTA_SERVER: Ack received[0m
+[0;32mI (13261) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (13261) OTA_SERVER: Ack received[0m
+[0;32mI (13461) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (13461) OTA_SERVER: Ack received[0m
+[0;32mI (13661) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (13661) OTA_SERVER: Ack received[0m
+[0;32mI (13861) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (13861) OTA_SERVER: Ack received[0m
+[0;32mI (14061) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (14061) OTA_SERVER: Ack received[0m
+[0;32mI (14261) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (14261) OTA_SERVER: Ack received[0m
+[0;32mI (14461) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (14461) OTA_SERVER: Ack received[0m
+[0;32mI (14661) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (14661) OTA_SERVER: Ack received[0m
+[0;32mI (14861) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (14861) OTA_SERVER: Ack received[0m
+[0;32mI (15061) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (15061) OTA_SERVER: Ack received[0m
+[0;32mI (15261) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (15261) OTA_SERVER: Ack received[0m
+[0;32mI (15461) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (15461) OTA_SERVER: Ack received[0m
+[0;32mI (15661) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (15661) OTA_SERVER: Ack received[0m
+[0;32mI (15861) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (15861) OTA_SERVER: Ack received[0m
+[0;32mI (16061) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (16061) OTA_SERVER: Ack received[0m
+[0;32mI (16261) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (16261) OTA_SERVER: Ack received[0m
+[0;32mI (16461) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (16461) OTA_SERVER: Ack received[0m
+[0;32mI (16661) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (16661) OTA_SERVER: Ack received[0m
+[0;32mI (16861) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (16861) OTA_SERVER: Ack received[0m
+[0;32mI (17061) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (17061) OTA_SERVER: Ack received[0m
+[0;32mI (17261) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (17261) OTA_SERVER: Ack received[0m
+[0;32mI (17461) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (17461) OTA_SERVER: Ack received[0m
+[0;32mI (17661) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (17661) OTA_SERVER: Ack received[0m
+[0;32mI (17861) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (17861) OTA_SERVER: Ack received[0m
+[0;32mI (18061) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (18061) OTA_SERVER: Ack received[0m
+[0;32mI (18261) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (18261) OTA_SERVER: Ack received[0m
+[0;32mI (18461) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (18461) OTA_SERVER: Ack received[0m
+[0;32mI (18661) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (18661) OTA_SERVER: Ack received[0m
+[0;32mI (18861) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (18861) OTA_SERVER: Ack received[0m
+[0;32mI (19061) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (19061) OTA_SERVER: Ack received[0m
+[0;32mI (19261) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (19261) OTA_SERVER: Ack received[0m
+[0;32mI (19461) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (19461) OTA_SERVER: Ack received[0m
+[0;32mI (19661) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (19661) OTA_SERVER: Ack received[0m
+[0;32mI (19861) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (19861) OTA_SERVER: Ack received[0m
+[0;32mI (20061) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (20061) OTA_SERVER: Ack received[0m
+[0;32mI (20261) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (20261) OTA_SERVER: Ack received[0m
+[0;32mI (20461) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (20461) OTA_SERVER: Ack received[0m
+[0;32mI (20661) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (20661) OTA_SERVER: Ack received[0m
+[0;32mI (20861) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (20861) OTA_SERVER: Ack received[0m
+[0;32mI (21061) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (21061) OTA_SERVER: Ack received[0m
+[0;32mI (21261) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (21261) OTA_SERVER: Ack received[0m
+[0;32mI (21461) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (21461) OTA_SERVER: Ack received[0m
+[0;32mI (21661) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (21661) OTA_SERVER: Ack received[0m
+[0;32mI (21861) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (21861) OTA_SERVER: Ack received[0m
+[0;32mI (22061) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (22061) OTA_SERVER: Ack received[0m
+[0;32mI (22261) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (22261) OTA_SERVER: Ack received[0m
+[0;32mI (22461) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (22461) OTA_SERVER: Ack received[0m
+[0;32mI (22661) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (22661) OTA_SERVER: Ack received[0m
+[0;32mI (22861) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (22861) OTA_SERVER: Ack received[0m
+[0;32mI (23061) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (23061) OTA_SERVER: Ack received[0m
+[0;32mI (23261) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (23261) OTA_SERVER: Ack received[0m
+[0;32mI (23461) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (23461) OTA_SERVER: Ack received[0m
+[0;32mI (23661) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (23661) OTA_SERVER: Ack received[0m
+[0;32mI (23861) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (23861) OTA_SERVER: Ack received[0m
+[0;32mI (24061) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (24061) OTA_SERVER: Ack received[0m
+[0;32mI (24261) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (24261) OTA_SERVER: Ack received[0m
+[0;32mI (24461) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (24461) OTA_SERVER: Ack received[0m
+[0;32mI (24661) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (24661) OTA_SERVER: Ack received[0m
+[0;32mI (24861) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (24861) OTA_SERVER: Ack received[0m
+[0;32mI (25061) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (25061) OTA_SERVER: Ack received[0m
+[0;32mI (25261) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (25261) OTA_SERVER: Ack received[0m
+[0;32mI (25461) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (25461) OTA_SERVER: Ack received[0m
+[0;32mI (25661) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (25661) OTA_SERVER: Ack received[0m
+[0;32mI (25861) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (25861) OTA_SERVER: Ack received[0m
+[0;32mI (26061) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (26061) OTA_SERVER: Ack received[0m
+[0;32mI (26261) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (26261) OTA_SERVER: Ack received[0m
+[0;32mI (26461) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (26461) OTA_SERVER: Ack received[0m
+[0;32mI (26661) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (26661) OTA_SERVER: Ack received[0m
+[0;32mI (26861) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (26861) OTA_SERVER: Ack received[0m
+[0;32mI (27061) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (27061) OTA_SERVER: Ack received[0m
+[0;32mI (27261) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (27261) OTA_SERVER: Ack received[0m
+[0;32mI (27461) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (27461) OTA_SERVER: Ack received[0m
+[0;32mI (27661) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (27661) OTA_SERVER: Ack received[0m
+[0;32mI (27861) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (27861) OTA_SERVER: Ack received[0m
+[0;32mI (28061) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (28061) OTA_SERVER: Ack received[0m
+[0;32mI (28261) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (28261) OTA_SERVER: Ack received[0m
+[0;32mI (28461) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (28461) OTA_SERVER: Ack received[0m
+[0;32mI (28661) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (28661) OTA_SERVER: Ack received[0m
+[0;32mI (28861) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (28861) OTA_SERVER: Ack received[0m
+[0;32mI (29061) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (29061) OTA_SERVER: Ack received[0m
+[0;32mI (29261) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (29261) OTA_SERVER: Ack received[0m
+[0;32mI (29461) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (29461) OTA_SERVER: Ack received[0m
+[0;32mI (29661) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (29661) OTA_SERVER: Ack received[0m
+[0;32mI (29861) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (29861) OTA_SERVER: Ack received[0m
+[0;32mI (30061) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (30061) OTA_SERVER: Ack received[0m
+[0;32mI (30261) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (30261) OTA_SERVER: Ack received[0m
+[0;32mI (30461) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (30461) OTA_SERVER: Ack received[0m
+[0;32mI (30661) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (30661) OTA_SERVER: Ack received[0m
+[0;32mI (30861) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (30861) OTA_SERVER: Ack received[0m
+[0;32mI (31061) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (31061) OTA_SERVER: Ack received[0m
+[0;32mI (31261) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (31261) OTA_SERVER: Ack received[0m
+[0;32mI (31461) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (31461) OTA_SERVER: Ack received[0m
+[0;32mI (31661) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (31661) OTA_SERVER: Ack received[0m
+[0;32mI (31861) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (31861) OTA_SERVER: Ack received[0m
+[0;32mI (32061) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (32061) OTA_SERVER: Ack received[0m
+[0;32mI (32261) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (32261) OTA_SERVER: Ack received[0m
+[0;32mI (32461) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (32461) OTA_SERVER: Ack received[0m
+[0;32mI (32661) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (32661) OTA_SERVER: Ack received[0m
+[0;32mI (32861) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (32861) OTA_SERVER: Ack received[0m
+[0;32mI (33061) OTA_SERVER: Received String From STM: ������ߝ�ݏE\�
+[0;32mI (33061) OTA_SERVER: Ack received[0m

@@ -1,0 +1,20 @@
+[1/14] Linking C static library esp-idf/mqtt/libmqtt.a
+[2/14] Linking C static library esp-idf/spiffs/libspiffs.a
+[3/14] Linking C static library esp-idf/wifi_provisioning/libwifi_provisioning.a
+[4/14] Performing build step for 'bootloader'
+[1/1] cd /home/varun/ESP_STM_FILE/OTA/build/bootloader/esp-idf/esptool_py && /home/varun/.espressif/python_env/idf5.4_py3.10_env/bin/python /home/varun/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/varun/ESP_STM_FILE/OTA/build/bootloader/bootloader.bin
+Bootloader binary size 0x6570 bytes. 0xa90 bytes (9%) free.
+[5/12] cd /home/varun/ESP_STM_FILE/OTA/build && /home/varun/.espressif/python_env/idf5.4_py3.10_env/bin/python /home/varun/esp/esp-idf/components/spiffs/spiffsgen.py 0x100000 /home/varun/ESP_STM_FILE/OTA/spiffs /home/varun/ESP_STM_FILE/OTA/build/storage.bin --page-size=256 --obj-name-len=32 --meta-len=4 --use-magic --use-magic-len
+[6/12] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+[7/12] Linking C static library esp-idf/main/libmain.a
+[8/12] Generating ld/sections.ld
+[9/12] Building C object CMakeFiles/OTA_ESP.elf.dir/project_elf_src_esp32.c.obj
+[10/12] Linking CXX executable OTA_ESP.elf
+[11/12] Generating binary image from built executable
+esptool.py v4.9.0
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/varun/ESP_STM_FILE/OTA/build/OTA_ESP.bin
+[12/12] cd /home/varun/ESP_STM_FILE/OTA/build/esp-idf/esptool_py && /home/varun/.espressif/python_env/idf5.4_py3.10_env/bin/python /home/varun/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/varun/ESP_STM_FILE/OTA/build/partition_table/partition-table.bin /home/varun/ESP_STM_FILE/OTA/build/OTA_ESP.bin
+OTA_ESP.bin binary size 0xcdba0 bytes. Smallest app partition is 0x1f0000 bytes. 0x122460 bytes (59%) free.

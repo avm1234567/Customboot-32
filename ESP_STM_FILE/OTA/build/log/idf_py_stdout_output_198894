@@ -1,0 +1,728 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15736
+load:0x40080400,len:4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (29) boot: ESP-IDF v5.4.2 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Aug  2 2025 14:47:35[0m
+[0;32mI (30) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 ota_app          OTA app          00 10 00010000 001f0000[0m
+[0;32mI (77) boot:  3 storage          Unknown data     01 82 00200000 00100000[0m
+[0;32mI (84) boot: End of partition table[0m
+[0;32mI (87) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1c7f8h (116728) map[0m
+[0;32mI (135) esp_image: segment 1: paddr=0002c820 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (135) esp_image: segment 2: paddr=0002c844 vaddr=3ffb0000 size=037d4h ( 14292) load[0m
+[0;32mI (144) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=95588h (611720) map[0m
+[0;32mI (355) esp_image: segment 4: paddr=000c55b0 vaddr=3ffb37d4 size=007f4h (  2036) load[0m
+[0;32mI (356) esp_image: segment 5: paddr=000c5dac vaddr=40080000 size=1897ch (100732) load[0m
+[0;32mI (410) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (410) boot: Disabling RNG early entropy source...[0m
+[0;32mI (420) cpu_start: Multicore app[0m
+[0;32mI (429) cpu_start: Pro cpu start user code[0m
+[0;32mI (429) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (429) app_init: Application information:[0m
+[0;32mI (429) app_init: Project name:     OTA_ESP[0m
+[0;32mI (433) app_init: App version:      1[0m
+[0;32mI (436) app_init: Compile time:     Aug  2 2025 14:47:30[0m
+[0;32mI (441) app_init: ELF file SHA256:  ae33cb4d9...[0m
+[0;32mI (445) app_init: ESP-IDF:          v5.4.2[0m
+[0;32mI (449) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (453) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (457) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (461) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (467) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (472) heap_init: At 3FFB8678 len 00027988 (158 KiB): DRAM[0m
+[0;32mI (478) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (483) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (488) heap_init: At 4009897C len 00007684 (29 KiB): IRAM[0m
+[0;32mI (495) spi_flash: detected chip: generic[0m
+[0;32mI (497) spi_flash: flash io: dio[0m
+[0;32mI (501) main_task: Started on CPU0[0m
+[0;32mI (511) main_task: Calling app_main()[0m
+[0;32mI (601) OTA_SERVER: SPIFFS mounted. Total: 956561 bytes, Used: 1506 bytes[0m
+[0;32mI (611) main_task: Returned from app_main()[0m
+[0;32mI (611) OTA_SERVER: UART initialized[0m
+[0;32mI (621) wifi:wifi driver task: 3ffc2190, prio:23, stack:6656, core=0[0m
+[0;32mI (631) wifi:wifi firmware version: bea31f3[0m
+[0;32mI (631) wifi:wifi certification version: v7.0[0m
+[0;32mI (631) wifi:config NVS flash: enabled[0m
+[0;32mI (631) wifi:config nano formatting: disabled[0m
+[0;32mI (631) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (641) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (641) wifi:Init management short buffer num: 32[0m
+[0;32mI (651) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (651) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (661) wifi:Init static rx buffer num: 10[0m
+[0;32mI (661) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (661) wifi_init: rx ba win: 6[0m
+[0;32mI (671) wifi_init: accept mbox: 6[0m
+[0;32mI (671) wifi_init: tcpip mbox: 32[0m
+[0;32mI (671) wifi_init: udp mbox: 6[0m
+[0;32mI (681) wifi_init: tcp mbox: 6[0m
+[0;32mI (681) wifi_init: tcp tx win: 5760[0m
+[0;32mI (681) wifi_init: tcp rx win: 5760[0m
+[0;32mI (681) wifi_init: tcp mss: 1440[0m
+[0;32mI (691) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (691) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (701) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (701) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (711) OTA_SERVER: [0m
+[0;32mI (791) wifi:mode : sta (8c:4f:00:2f:5c:38)[0m
+[0;32mI (791) wifi:enable tsf[0m
+[0;32mI (801) OTA_SERVER: Wi-Fi connecting to SSID: 1234[0m
+[0;32mI (811) wifi:new:<4,0>, old:<1,0>, ap:<255,255>, sta:<4,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (811) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (821) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (831) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (841) wifi:connected with 1234, aid = 6, channel 4, BW20, bssid = 72:df:0f:cf:36:e8[0m
+[0;32mI (841) wifi:security: WPA2-PSK, phy: bgn, rssi: -14[0m
+[0;32mI (851) wifi:pm start, type: 1[0m
+
+[0;32mI (851) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (911) OTA_SERVER: [0m
+[0;32mI (931) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (931) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (1111) OTA_SERVER: [0m
+[0;32mI (1311) OTA_SERVER: [0m
+[0;32mI (1511) OTA_SERVER: [0m
+[0;32mI (1711) OTA_SERVER: [0m
+[0;32mI (1881) esp_netif_handlers: sta ip: 10.97.137.158, mask: 255.255.255.0, gw: 10.97.137.139[0m
+[0;32mI (1881) OTA_SERVER: Got IP: 10.97.137.158[0m
+[0;32mI (1911) OTA_SERVER: [0m
+[0;32mI (2111) OTA_SERVER: [0m
+[0;32mI (2311) OTA_SERVER: [0m
+[0;32mI (2511) OTA_SERVER: [0m
+[0;32mI (2711) OTA_SERVER: [0m
+[0;32mI (2911) OTA_SERVER: [0m
+[0;32mI (3111) OTA_SERVER: [0m
+[0;32mI (3311) OTA_SERVER: [0m
+[0;32mI (3511) OTA_SERVER: [0m
+[0;32mI (3711) OTA_SERVER: [0m
+[0;32mI (3911) OTA_SERVER: [0m
+[0;32mI (4111) OTA_SERVER: [0m
+[0;32mI (4311) OTA_SERVER: [0m
+[0;32mI (4511) OTA_SERVER: [0m
+[0;32mI (4711) OTA_SERVER: [0m
+[0;32mI (4911) OTA_SERVER: [0m
+[0;32mI (5111) OTA_SERVER: [0m
+[0;32mI (5311) OTA_SERVER: [0m
+[0;32mI (5511) OTA_SERVER: [0m
+[0;32mI (5711) OTA_SERVER: [0m
+[0;32mI (5911) OTA_SERVER: [0m
+[0;32mI (6111) OTA_SERVER: [0m
+[0;32mI (6311) OTA_SERVER: [0m
+[0;32mI (6511) OTA_SERVER: [0m
+[0;32mI (6711) OTA_SERVER: [0m
+[0;32mI (6911) OTA_SERVER: [0m
+[0;32mI (7111) OTA_SERVER: [0m
+[0;32mI (7311) OTA_SERVER: [0m
+[0;32mI (7511) OTA_SERVER: [0m
+[0;32mI (7711) OTA_SERVER: [0m
+[0;32mI (7911) OTA_SERVER: [0m
+[0;32mI (8111) OTA_SERVER: [0m
+[0;32mI (8311) OTA_SERVER: [0m
+[0;32mI (8511) OTA_SERVER: [0m
+[0;32mI (8711) OTA_SERVER: [0m
+[0;32mI (8911) OTA_SERVER: [0m
+[0;32mI (9111) OTA_SERVER: [0m
+[0;32mI (9311) OTA_SERVER: [0m
+[0;32mI (9511) OTA_SERVER: [0m
+[0;32mI (9711) OTA_SERVER: [0m
+[0;32mI (9911) OTA_SERVER: [0m
+[0;32mI (10111) OTA_SERVER: [0m
+[0;32mI (10311) OTA_SERVER: [0m
+[0;32mI (10511) OTA_SERVER: [0m
+[0;32mI (10711) OTA_SERVER: [0m
+[0;32mI (10911) OTA_SERVER: [0m
+[0;32mI (11111) OTA_SERVER: [0m
+[0;32mI (11311) OTA_SERVER: [0m
+[0;32mI (11511) OTA_SERVER: [0m
+[0;32mI (11711) OTA_SERVER: [0m
+[0;32mI (11911) OTA_SERVER: [0m
+[0;32mI (12111) OTA_SERVER: [0m
+[0;32mI (12311) OTA_SERVER: [0m
+[0;32mI (12511) OTA_SERVER: [0m
+[0;32mI (12711) OTA_SERVER: [0m
+[0;32mI (12911) OTA_SERVER: [0m
+[0;32mI (13111) OTA_SERVER: [0m
+[0;32mI (13311) OTA_SERVER: [0m
+[0;32mI (13511) OTA_SERVER: [0m
+[0;32mI (13711) OTA_SERVER: [0m
+[0;32mI (13911) OTA_SERVER: [0m
+[0;32mI (14111) OTA_SERVER: [0m
+[0;32mI (14311) OTA_SERVER: [0m
+[0;32mI (14511) OTA_SERVER: [0m
+[0;32mI (14711) OTA_SERVER: [0m
+[0;32mI (14911) OTA_SERVER: [0m
+[0;32mI (15111) OTA_SERVER: [0m
+[0;32mI (15311) OTA_SERVER: [0m
+[0;32mI (15511) OTA_SERVER: [0m
+[0;32mI (15711) OTA_SERVER: [0m
+[0;32mI (15911) OTA_SERVER: [0m
+[0;32mI (16111) OTA_SERVER: [0m
+[0;32mI (16311) OTA_SERVER: [0m
+[0;32mI (16511) OTA_SERVER: [0m
+[0;32mI (16711) OTA_SERVER: [0m
+[0;32mI (16911) OTA_SERVER: [0m
+[0;32mI (17111) OTA_SERVER: [0m
+[0;32mI (17311) OTA_SERVER: [0m
+[0;32mI (17511) OTA_SERVER: [0m
+[0;32mI (17711) OTA_SERVER: [0m
+[0;32mI (17911) OTA_SERVER: [0m
+[0;32mI (18111) OTA_SERVER: [0m
+[0;32mI (18311) OTA_SERVER: [0m
+[0;32mI (18511) OTA_SERVER: [0m
+[0;32mI (18711) OTA_SERVER: [0m
+[0;32mI (18911) OTA_SERVER: [0m
+[0;32mI (19111) OTA_SERVER: [0m
+[0;32mI (19311) OTA_SERVER: [0m
+[0;32mI (19511) OTA_SERVER: [0m
+[0;32mI (19711) OTA_SERVER: [0m
+[0;32mI (19911) OTA_SERVER: [0m
+[0;32mI (20111) OTA_SERVER: [0m
+[0;32mI (20311) OTA_SERVER: [0m
+[0;32mI (20511) OTA_SERVER: [0m
+[0;32mI (20711) OTA_SERVER: [0m
+[0;32mI (20911) OTA_SERVER: [0m
+[0;32mI (21111) OTA_SERVER: [0m
+[0;32mI (21311) OTA_SERVER: [0m
+[0;32mI (21511) OTA_SERVER: [0m
+[0;32mI (21711) OTA_SERVER: [0m
+[0;32mI (21911) OTA_SERVER: [0m
+[0;32mI (22111) OTA_SERVER: [0m
+[0;32mI (22311) OTA_SERVER: [0m
+[0;32mI (22511) OTA_SERVER: [0m
+[0;32mI (22711) OTA_SERVER: [0m
+[0;32mI (22911) OTA_SERVER: [0m
+[0;32mI (23111) OTA_SERVER: [0m
+[0;32mI (23311) OTA_SERVER: [0m
+[0;32mI (23511) OTA_SERVER: [0m
+[0;32mI (23711) OTA_SERVER: [0m
+[0;32mI (23911) OTA_SERVER: [0m
+[0;32mI (24111) OTA_SERVER: [0m
+[0;32mI (24311) OTA_SERVER: [0m
+[0;32mI (24511) OTA_SERVER: [0m
+[0;32mI (24711) OTA_SERVER: [0m
+[0;32mI (24911) OTA_SERVER: [0m
+[0;32mI (25111) OTA_SERVER: [0m
+[0;32mI (25311) OTA_SERVER: [0m
+[0;32mI (25511) OTA_SERVER: [0m
+[0;32mI (25711) OTA_SERVER: [0m
+[0;32mI (25911) OTA_SERVER: [0m
+[0;32mI (26111) OTA_SERVER: [0m
+[0;32mI (26311) OTA_SERVER: [0m
+[0;32mI (26511) OTA_SERVER: [0m
+[0;32mI (26711) OTA_SERVER: [0m
+[0;32mI (26911) OTA_SERVER: [0m
+[0;32mI (27111) OTA_SERVER: [0m
+[0;32mI (27311) OTA_SERVER: [0m
+[0;32mI (27511) OTA_SERVER: [0m
+[0;32mI (27711) OTA_SERVER: [0m
+[0;32mI (27911) OTA_SERVER: [0m
+[0;32mI (28111) OTA_SERVER: [0m
+[0;32mI (28311) OTA_SERVER: [0m
+[0;32mI (28511) OTA_SERVER: [0m
+[0;32mI (28711) OTA_SERVER: [0m
+[0;32mI (28911) OTA_SERVER: [0m
+[0;32mI (29111) OTA_SERVER: [0m
+[0;32mI (29311) OTA_SERVER: [0m
+[0;32mI (29511) OTA_SERVER: [0m
+[0;32mI (29711) OTA_SERVER: [0m
+[0;32mI (29911) OTA_SERVER: [0m
+[0;32mI (30111) OTA_SERVER: [0m
+[0;32mI (30311) OTA_SERVER: [0m
+[0;32mI (30511) OTA_SERVER: [0m
+[0;32mI (30711) OTA_SERVER: [0m
+[0;32mI (30911) OTA_SERVER: [0m
+[0;32mI (31111) OTA_SERVER: [0m
+[0;32mI (31311) OTA_SERVER: [0m
+[0;32mI (31511) OTA_SERVER: [0m
+[0;32mI (31711) OTA_SERVER: [0m
+[0;32mI (31911) OTA_SERVER: [0m
+[0;32mI (32111) OTA_SERVER: [0m
+[0;32mI (32311) OTA_SERVER: [0m
+[0;32mI (32511) OTA_SERVER: [0m
+[0;32mI (32711) OTA_SERVER: [0m
+[0;32mI (32911) OTA_SERVER: [0m
+[0;32mI (33111) OTA_SERVER: [0m
+[0;32mI (33311) OTA_SERVER: [0m
+[0;32mI (33511) OTA_SERVER: [0m
+[0;32mI (33711) OTA_SERVER: [0m
+[0;32mI (33911) OTA_SERVER: [0m
+[0;32mI (34111) OTA_SERVER: [0m
+[0;32mI (34311) OTA_SERVER: [0m
+[0;32mI (34511) OTA_SERVER: [0m
+[0;32mI (34711) OTA_SERVER: [0m
+[0;32mI (34911) OTA_SERVER: [0m
+[0;32mI (35111) OTA_SERVER: [0m
+[0;32mI (35311) OTA_SERVER: [0m
+[0;32mI (35511) OTA_SERVER: [0m
+[0;32mI (35711) OTA_SERVER: [0m
+[0;32mI (35911) OTA_SERVER: [0m
+[0;32mI (36111) OTA_SERVER: [0m
+[0;32mI (36311) OTA_SERVER: [0m
+[0;32mI (36511) OTA_SERVER: [0m
+[0;32mI (36711) OTA_SERVER: [0m
+[0;32mI (36911) OTA_SERVER: [0m
+[0;32mI (37111) OTA_SERVER: [0m
+[0;32mI (37311) OTA_SERVER: [0m
+[0;32mI (37511) OTA_SERVER: [0m
+[0;32mI (37711) OTA_SERVER: [0m
+[0;32mI (37911) OTA_SERVER: [0m
+[0;32mI (38111) OTA_SERVER: [0m
+[0;32mI (38311) OTA_SERVER: [0m
+[0;32mI (38511) OTA_SERVER: [0m
+[0;32mI (38711) OTA_SERVER: [0m
+[0;32mI (38911) OTA_SERVER: [0m
+[0;32mI (39111) OTA_SERVER: [0m
+[0;32mI (39311) OTA_SERVER: [0m
+[0;32mI (39511) OTA_SERVER: [0m
+[0;32mI (39711) OTA_SERVER: [0m
+[0;32mI (39911) OTA_SERVER: [0m
+[0;32mI (40111) OTA_SERVER: [0m
+[0;32mI (40311) OTA_SERVER: [0m
+[0;32mI (40511) OTA_SERVER: [0m
+[0;32mI (40711) OTA_SERVER: [0m
+[0;32mI (40911) OTA_SERVER: [0m
+[0;32mI (41111) OTA_SERVER: [0m
+[0;32mI (41311) OTA_SERVER: [0m
+[0;32mI (41511) OTA_SERVER: [0m
+[0;32mI (41711) OTA_SERVER: [0m
+[0;32mI (41911) OTA_SERVER: [0m
+[0;32mI (42111) OTA_SERVER: [0m
+[0;32mI (42311) OTA_SERVER: [0m
+[0;32mI (42511) OTA_SERVER: [0m
+[0;32mI (42711) OTA_SERVER: [0m
+[0;32mI (42911) OTA_SERVER: [0m
+[0;32mI (43111) OTA_SERVER: [0m
+[0;32mI (43311) OTA_SERVER: [0m
+[0;32mI (43511) OTA_SERVER: [0m
+[0;32mI (43711) OTA_SERVER: [0m
+[0;32mI (43911) OTA_SERVER: [0m
+[0;32mI (44111) OTA_SERVER: [0m
+[0;32mI (44311) OTA_SERVER: [0m
+[0;32mI (44511) OTA_SERVER: [0m
+[0;32mI (44711) OTA_SERVER: [0m
+[0;32mI (44911) OTA_SERVER: [0m
+[0;32mI (45111) OTA_SERVER: [0m
+[0;32mI (45311) OTA_SERVER: [0m
+[0;32mI (45511) OTA_SERVER: [0m
+[0;32mI (45711) OTA_SERVER: [0m
+[0;32mI (45911) OTA_SERVER: [0m
+[0;32mI (46111) OTA_SERVER: [0m
+[0;32mI (46311) OTA_SERVER: [0m
+[0;32mI (46511) OTA_SERVER: [0m
+[0;32mI (46711) OTA_SERVER: [0m
+[0;32mI (46911) OTA_SERVER: [0m
+[0;32mI (47111) OTA_SERVER: [0m
+[0;32mI (47311) OTA_SERVER: [0m
+[0;32mI (47511) OTA_SERVER: [0m
+[0;32mI (47711) OTA_SERVER: [0m
+[0;32mI (47911) OTA_SERVER: [0m
+[0;32mI (48111) OTA_SERVER: [0m
+[0;32mI (48311) OTA_SERVER: [0m
+[0;32mI (48511) OTA_SERVER: [0m
+[0;32mI (48711) OTA_SERVER: [0m
+[0;32mI (48911) OTA_SERVER: [0m
+[0;32mI (49111) OTA_SERVER: [0m
+[0;32mI (49311) OTA_SERVER: [0m
+[0;32mI (49511) OTA_SERVER: [0m
+[0;32mI (49711) OTA_SERVER: [0m
+[0;32mI (49911) OTA_SERVER: [0m
+[0;32mI (50111) OTA_SERVER: [0m
+[0;32mI (50311) OTA_SERVER: [0m
+[0;32mI (50511) OTA_SERVER: [0m
+[0;32mI (50711) OTA_SERVER: [0m
+[0;32mI (50911) OTA_SERVER: [0m
+[0;32mI (51111) OTA_SERVER: [0m
+[0;32mI (51311) OTA_SERVER: [0m
+[0;32mI (51511) OTA_SERVER: [0m
+[0;32mI (51711) OTA_SERVER: [0m
+[0;32mI (51911) OTA_SERVER: [0m
+[0;32mI (52111) OTA_SERVER: [0m
+[0;32mI (52311) OTA_SERVER: [0m
+[0;32mI (52511) OTA_SERVER: [0m
+[0;32mI (52711) OTA_SERVER: [0m
+[0;32mI (52911) OTA_SERVER: [0m
+[0;32mI (53111) OTA_SERVER: [0m
+[0;32mI (53311) OTA_SERVER: [0m
+[0;32mI (53511) OTA_SERVER: [0m
+[0;32mI (53711) OTA_SERVER: [0m
+[0;32mI (53911) OTA_SERVER: [0m
+[0;32mI (54111) OTA_SERVER: [0m
+[0;32mI (54311) OTA_SERVER: [0m
+[0;32mI (54511) OTA_SERVER: [0m
+[0;32mI (54711) OTA_SERVER: [0m
+[0;32mI (54911) OTA_SERVER: [0m
+[0;32mI (55111) OTA_SERVER: [0m
+[0;32mI (55311) OTA_SERVER: [0m
+[0;32mI (55511) OTA_SERVER: [0m
+[0;32mI (55711) OTA_SERVER: [0m
+[0;32mI (55911) OTA_SERVER: [0m
+[0;32mI (56111) OTA_SERVER: [0m
+[0;32mI (56311) OTA_SERVER: [0m
+[0;32mI (56511) OTA_SERVER: [0m
+[0;32mI (56711) OTA_SERVER: [0m
+[0;32mI (56911) OTA_SERVER: [0m
+[0;32mI (57111) OTA_SERVER: [0m
+[0;32mI (57311) OTA_SERVER: [0m
+[0;32mI (57511) OTA_SERVER: [0m
+[0;32mI (57711) OTA_SERVER: [0m
+[0;32mI (57911) OTA_SERVER: [0m
+[0;32mI (58111) OTA_SERVER: [0m
+[0;32mI (58311) OTA_SERVER: [0m
+[0;32mI (58511) OTA_SERVER: [0m
+[0;32mI (58711) OTA_SERVER: [0m
+[0;32mI (58911) OTA_SERVER: [0m
+[0;32mI (59111) OTA_SERVER: [0m
+[0;32mI (59311) OTA_SERVER: [0m
+[0;32mI (59511) OTA_SERVER: [0m
+[0;32mI (59711) OTA_SERVER: [0m
+[0;32mI (59911) OTA_SERVER: [0m
+[0;32mI (60111) OTA_SERVER: [0m
+[0;32mI (60311) OTA_SERVER: [0m
+[0;32mI (60511) OTA_SERVER: [0m
+[0;32mI (60711) OTA_SERVER: [0m
+[0;32mI (60911) OTA_SERVER: [0m
+[0;32mI (61111) OTA_SERVER: [0m
+[0;32mI (61311) OTA_SERVER: [0m
+[0;32mI (61511) OTA_SERVER: [0m
+[0;32mI (61711) OTA_SERVER: [0m
+[0;32mI (61911) OTA_SERVER: [0m
+[0;32mI (62111) OTA_SERVER: [0m
+[0;32mI (62311) OTA_SERVER: [0m
+[0;32mI (62511) OTA_SERVER: [0m
+[0;32mI (62711) OTA_SERVER: [0m
+[0;32mI (62911) OTA_SERVER: [0m
+[0;32mI (63111) OTA_SERVER: [0m
+[0;32mI (63311) OTA_SERVER: [0m
+[0;32mI (63511) OTA_SERVER: [0m
+[0;32mI (63711) OTA_SERVER: [0m
+[0;32mI (63911) OTA_SERVER: [0m
+[0;32mI (64111) OTA_SERVER: [0m
+[0;32mI (64311) OTA_SERVER: [0m
+[0;32mI (64511) OTA_SERVER: [0m
+[0;32mI (64711) OTA_SERVER: [0m
+[0;32mI (64911) OTA_SERVER: [0m
+[0;32mI (65111) OTA_SERVER: [0m
+[0;32mI (65311) OTA_SERVER: [0m
+[0;32mI (65511) OTA_SERVER: [0m
+[0;32mI (65711) OTA_SERVER: [0m
+[0;32mI (65911) OTA_SERVER: [0m
+[0;32mI (66111) OTA_SERVER: [0m
+[0;32mI (66311) OTA_SERVER: [0m
+[0;32mI (66511) OTA_SERVER: [0m
+[0;32mI (66711) OTA_SERVER: [0m
+[0;32mI (66911) OTA_SERVER: [0m
+[0;32mI (67111) OTA_SERVER: [0m
+[0;32mI (67311) OTA_SERVER: [0m
+[0;32mI (67511) OTA_SERVER: [0m
+[0;32mI (67711) OTA_SERVER: [0m
+[0;32mI (67911) OTA_SERVER: [0m
+[0;32mI (68111) OTA_SERVER: [0m
+[0;32mI (68311) OTA_SERVER: [0m
+[0;32mI (68511) OTA_SERVER: [0m
+[0;32mI (68711) OTA_SERVER: [0m
+[0;32mI (68911) OTA_SERVER: [0m
+[0;32mI (69111) OTA_SERVER: [0m
+[0;32mI (69311) OTA_SERVER: [0m
+[0;32mI (69511) OTA_SERVER: [0m
+[0;32mI (69711) OTA_SERVER: [0m
+[0;32mI (69911) OTA_SERVER: [0m
+[0;32mI (70111) OTA_SERVER: [0m
+[0;32mI (70311) OTA_SERVER: [0m
+[0;32mI (70511) OTA_SERVER: [0m
+[0;32mI (70711) OTA_SERVER: [0m
+[0;32mI (70911) OTA_SERVER: [0m
+[0;32mI (71111) OTA_SERVER: [0m
+[0;32mI (71311) OTA_SERVER: [0m
+[0;32mI (71511) OTA_SERVER: [0m
+[0;32mI (71711) OTA_SERVER: [0m
+[0;32mI (71911) OTA_SERVER: [0m
+[0;32mI (72111) OTA_SERVER: [0m
+[0;32mI (72311) OTA_SERVER: [0m
+[0;32mI (72511) OTA_SERVER: [0m
+[0;32mI (72711) OTA_SERVER: [0m
+[0;32mI (72911) OTA_SERVER: [0m
+[0;32mI (73111) OTA_SERVER: [0m
+[0;32mI (73311) OTA_SERVER: [0m
+[0;32mI (73511) OTA_SERVER: [0m
+[0;32mI (73711) OTA_SERVER: [0m
+[0;32mI (73911) OTA_SERVER: [0m
+[0;32mI (74111) OTA_SERVER: ���������������������
+[0;32mI (74331) OTA_SERVER: ��o~��C�m��x���8�a��#\�����g�|�x�x�����������������������������������آ��������q��������G33XA;̐G�[0m
+[0;32mI (74531) OTA_SERVER: [0m
+[0;32mI (74731) OTA_SERVER: [0m
+[0;32mI (74931) OTA_SERVER: [0m
+[0;32mI (75221) OTA_SERVER: Acknowledgement for B verified correct[0m
+[1;31mE (76251) FILE: Failed to open file for reading[0m
+[1;31mE (76251) FreeRTOS: FreeRTOS Task "UART_Firmware_T" should not return, Aborting now![0m
+
+abort() was called at PC 0x4008b16f on core 1
+
+
+Backtrace: 0x40081c69:0x3ffc31c0 0x4008a635:0x3ffc31e0 0x400923b1:0x3ffc3200 0x4008b16f:0x3ffc3270
+
+
+
+
+ELF file SHA256: ae33cb4d9
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15736
+load:0x40080400,len:4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (29) boot: ESP-IDF v5.4.2 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Aug  2 2025 14:47:35[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 ota_app          OTA app          00 10 00010000 001f0000[0m
+[0;32mI (77) boot:  3 storage          Unknown data     01 82 00200000 00100000[0m
+[0;32mI (84) boot: End of partition table[0m
+[0;32mI (87) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1c7f8h (116728) map[0m
+[0;32mI (134) esp_image: segment 1: paddr=0002c820 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (135) esp_image: segment 2: paddr=0002c844 vaddr=3ffb0000 size=037d4h ( 14292) load[0m
+[0;32mI (144) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=95588h (611720) map[0m
+[0;32mI (355) esp_image: segment 4: paddr=000c55b0 vaddr=3ffb37d4 size=007f4h (  2036) load[0m
+[0;32mI (356) esp_image: segment 5: paddr=000c5dac vaddr=40080000 size=1897ch (100732) load[0m
+[0;32mI (410) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (410) boot: Disabling RNG early entropy source...[0m
+[0;32mI (420) cpu_start: Multicore app[0m
+[0;32mI (428) cpu_start: Pro cpu start user code[0m
+[0;32mI (428) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (429) app_init: Application information:[0m
+[0;32mI (429) app_init: Project name:     OTA_ESP[0m
+[0;32mI (432) app_init: App version:      1[0m
+[0;32mI (436) app_init: Compile time:     Aug  2 2025 14:47:30[0m
+[0;32mI (441) app_init: ELF file SHA256:  ae33cb4d9...[0m
+[0;32mI (445) app_init: ESP-IDF:          v5.4.2[0m
+[0;32mI (449) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (453) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (457) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (461) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (467) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (472) heap_init: At 3FFB8678 len 00027988 (158 KiB): DRAM[0m
+[0;32mI (477) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (483) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (488) heap_init: At 4009897C len 00007684 (29 KiB): IRAM[0m
+[0;32mI (495) spi_flash: detected chip: generic[0m
+[0;32mI (497) spi_flash: flash io: dio[0m
+[0;32mI (501) main_task: Started on CPU0[0m
+[0;32mI (511) main_task: Calling app_main()[0m
+[0;32mI (601) OTA_SERVER: SPIFFS mounted. Total: 956561 bytes, Used: 1506 bytes[0m
+[0;32mI (611) main_task: Returned from app_main()[0m
+[0;32mI (611) OTA_SERVER: UART initialized[0m
+[0;32mI (621) wifi:wifi driver task: 3ffc2190, prio:23, stack:6656, core=0[0m
+[0;32mI (631) wifi:wifi firmware version: bea31f3[0m
+[0;32mI (631) wifi:wifi certification version: v7.0[0m
+[0;32mI (631) wifi:config NVS flash: enabled[0m
+[0;32mI (631) wifi:config nano formatting: disabled[0m
+[0;32mI (631) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (641) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (641) wifi:Init management short buffer num: 32[0m
+[0;32mI (651) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (651) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (661) wifi:Init static rx buffer num: 10[0m
+[0;32mI (661) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (661) wifi_init: rx ba win: 6[0m
+[0;32mI (671) wifi_init: accept mbox: 6[0m
+[0;32mI (671) wifi_init: tcpip mbox: 32[0m
+[0;32mI (671) wifi_init: udp mbox: 6[0m
+[0;32mI (681) wifi_init: tcp mbox: 6[0m
+[0;32mI (681) wifi_init: tcp tx win: 5760[0m
+[0;32mI (681) wifi_init: tcp rx win: 5760[0m
+[0;32mI (681) wifi_init: tcp mss: 1440[0m
+[0;32mI (691) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (691) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (701) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (701) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (711) OTA_SERVER: [0m
+[0;32mI (791) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (871) wifi:mode : sta (8c:4f:00:2f:5c:38)[0m
+[0;32mI (871) wifi:enable tsf[0m
+[0;32mI (871) OTA_SERVER: Wi-Fi connecting to SSID: 1234[0m
+[0;32mI (881) wifi:new:<4,0>, old:<1,0>, ap:<255,255>, sta:<4,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (881) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (901) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (911) OTA_SERVER: [0m
+[0;32mI (911) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1001) wifi:state: run -> init (0x2c0)[0m
+[0;32mI (1011) wifi:new:<4,0>, old:<4,0>, ap:<255,255>, sta:<4,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;33mW (1011) OTA_SERVER: Wi-Fi disconnected, reconnecting...[0m
+[0;32mI (1111) OTA_SERVER: [0m
+[0;33mW (1221) wifi:tx null, bss is null[0m
+[0;32mI (1311) OTA_SERVER: [0m
+[0;32mI (1511) OTA_SERVER: [0m
+[0;32mI (1711) OTA_SERVER: [0m
+[0;32mI (1911) OTA_SERVER: [0m
+[0;32mI (2111) OTA_SERVER: [0m
+[0;32mI (2311) OTA_SERVER: [0m
+[0;32mI (2511) OTA_SERVER: [0m
+[0;32mI (2711) OTA_SERVER: [0m
+[0;32mI (2911) OTA_SERVER: [0m
+[0;32mI (3111) OTA_SERVER: [0m
+[0;32mI (3311) OTA_SERVER: [0m
+[0;33mW (3421) OTA_SERVER: Wi-Fi disconnected, reconnecting...[0m
+[0;32mI (3431) wifi:new:<4,0>, old:<4,0>, ap:<255,255>, sta:<4,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (3441) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (3461) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (3471) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (3511) OTA_SERVER: [0m
+[0;32mI (3571) wifi:connected with 1234, aid = 8, channel 4, BW20, bssid = 72:df:0f:cf:36:e8[0m
+[0;32mI (3571) wifi:security: WPA2-PSK, phy: bgn, rssi: -22[0m
+[0;32mI (3581) wifi:pm start, type: 1[0m
+
+[0;32mI (3581) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (3591) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (3591) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (3711) OTA_SERVER: [0m
+[0;32mI (3911) OTA_SERVER: [0m
+[0;32mI (4111) OTA_SERVER: [0m
+[0;32mI (4311) OTA_SERVER: [0m
+[0;32mI (4511) OTA_SERVER: [0m
+[0;32mI (4621) esp_netif_handlers: sta ip: 10.97.137.158, mask: 255.255.255.0, gw: 10.97.137.139[0m
+[0;32mI (4621) OTA_SERVER: Got IP: 10.97.137.158[0m
+[0;32mI (4711) OTA_SERVER: [0m
+[0;32mI (4911) OTA_SERVER: [0m
+[0;32mI (5111) OTA_SERVER: [0m
+[0;32mI (5311) OTA_SERVER: [0m
+[0;32mI (5511) OTA_SERVER: [0m
+[0;32mI (5711) OTA_SERVER: [0m
+[0;32mI (5911) OTA_SERVER: [0m
+[0;32mI (6111) OTA_SERVER: [0m
+[0;32mI (6311) OTA_SERVER: [0m
+[0;32mI (6511) OTA_SERVER: [0m
+[0;32mI (6711) OTA_SERVER: [0m
+[0;32mI (6911) OTA_SERVER: [0m
+[0;32mI (7111) OTA_SERVER: [0m
+[0;32mI (7311) OTA_SERVER: [0m
+[0;32mI (7511) OTA_SERVER: [0m
+[0;32mI (7711) OTA_SERVER: [0m
+[0;32mI (7911) OTA_SERVER: [0m
+[0;32mI (8111) OTA_SERVER: [0m
+[0;32mI (8311) OTA_SERVER: [0m
+[0;32mI (8511) OTA_SERVER: [0m
+[0;32mI (8711) OTA_SERVER: [0m
+[0;32mI (8911) OTA_SERVER: [0m
+[0;32mI (9111) OTA_SERVER: [0m
+[0;32mI (9311) OTA_SERVER: [0m
+[0;32mI (9511) OTA_SERVER: [0m
+[0;32mI (9551) OTA_SERVER:   index.html (1221 bytes)[0m
+[0;32mI (9711) OTA_SERVER: [0m
+[0;32mI (9911) OTA_SERVER: [0m
+[0;32mI (10111) OTA_SERVER: [0m
+[0;32mI (10311) OTA_SERVER: [0m
+[0;32mI (10511) OTA_SERVER: [0m
+[0;32mI (10711) OTA_SERVER: [0m
+[0;32mI (10911) OTA_SERVER: [0m
+[0;32mI (11111) OTA_SERVER: [0m
+[0;32mI (11311) OTA_SERVER: [0m
+[0;32mI (11511) OTA_SERVER: [0m
+[0;32mI (11711) OTA_SERVER: [0m
+[0;32mI (11911) OTA_SERVER: [0m
+[0;32mI (12111) OTA_SERVER: [0m
+[0;32mI (12311) OTA_SERVER: [0m
+[0;32mI (12511) OTA_SERVER: [0m
+[0;32mI (12711) OTA_SERVER: [0m
+[0;32mI (12911) OTA_SERVER: [0m
+[0;32mI (13111) OTA_SERVER: [0m
+[0;32mI (13311) OTA_SERVER: [0m
+[0;32mI (13511) OTA_SERVER: [0m
+[0;32mI (13711) OTA_SERVER: [0m
+[0;32mI (13911) OTA_SERVER: [0m
+[0;32mI (14111) OTA_SERVER: [0m
+[0;32mI (14311) OTA_SERVER: [0m
+[0;32mI (14511) OTA_SERVER: [0m
+[0;32mI (14711) OTA_SERVER: [0m
+[0;32mI (14911) OTA_SERVER: [0m
+[0;32mI (15111) OTA_SERVER: [0m
+[0;32mI (15311) OTA_SERVER: [0m
+[0;32mI (15511) OTA_SERVER: [0m
+[0;32mI (15711) OTA_SERVER: [0m
+[0;32mI (15911) OTA_SERVER: [0m
+[0;32mI (16111) OTA_SERVER: [0m
+[0;32mI (16311) OTA_SERVER: [0m
+[0;32mI (16511) OTA_SERVER: [0m
+[0;32mI (16711) OTA_SERVER: [0m
+[0;32mI (16911) OTA_SERVER: [0m
+[0;32mI (17111) OTA_SERVER: [0m
+[0;32mI (17311) OTA_SERVER: [0m
+[0;32mI (17511) OTA_SERVER: [0m
+[0;32mI (17711) OTA_SERVER: [0m
+[0;32mI (17911) OTA_SERVER: [0m
+[0;32mI (18111) OTA_SERVER: [0m
+[0;32mI (18311) OTA_SERVER: [0m
+[0;32mI (18511) OTA_SERVER: [0m
+[0;32mI (18711) OTA_SERVER: [0m
+[0;32mI (18911) OTA_SERVER: [0m
+[0;32mI (19111) OTA_SERVER: [0m
+[0;32mI (19311) OTA_SERVER: [0m
+[0;32mI (19371) wifi:<ba-add>idx:0 (ifx:0, 72:df:0f:cf:36:e8), tid:0, ssn:16, winSize:64[0m
+[0;32mI (19511) OTA_SERVER: [0m
+[0;32mI (19711) OTA_SERVER: [0m
+[0;32mI (19821) OTA_SERVER: Firmware uploaded. Size after strip: 4612 bytes[0m
+[0;32mI (19821) OTA_SERVER:   index.html (1221 bytes)[0m
+[0;32mI (19821) OTA_SERVER:   firmware_b.bin (4612 bytes)[0m
+[0;32mI (19911) OTA_SERVER: [0m
+[0;32mI (20111) OTA_SERVER: [0m
+[0;32mI (20311) OTA_SERVER: [0m
+[0;32mI (20511) OTA_SERVER: [0m
+[0;32mI (20541) OTA_SERVER: Firmware uploaded. Size after strip: 4628 bytes[0m
+[0;32mI (20541) OTA_SERVER:   index.html (1221 bytes)[0m
+[0;32mI (20541) OTA_SERVER:   firmware_b.bin (4612 bytes)[0m
+[0;32mI (20541) OTA_SERVER:   firmware_a.bin (4628 bytes)[0m
+[0;32mI (20711) OTA_SERVER: [0m
+[0;32mI (20911) OTA_SERVER: [0m
+[0;32mI (21111) OTA_SERVER: [0m
+[0;32mI (21311) OTA_SERVER: [0m
+[0;32mI (21511) OTA_SERVER: [0m
+[0;32mI (21711) OTA_SERVER: [0m
+[0;32mI (21911) OTA_SERVER: [0m
+[0;32mI (22111) OTA_SERVER: [0m
+[0;32mI (22311) OTA_SERVER: [0m
+[0;32mI (22511) OTA_SERVER: [0m
+[0;32mI (22711) OTA_SERVER: [0m
+[0;32mI (22911) OTA_SERVER: [0m
+[0;32mI (23111) OTA_SERVER: [0m
+[0;32mI (23311) OTA_SERVER: [0m
+[0;32mI (23511) OTA_SERVER: [0m
+[0;32mI (23711) OTA_SERVER: [0m
+[0;32mI (23911) OTA_SERVER: [0m
+[0;32mI (24141) OTA_SERVER: ��������������������������������������������������#!��[0m
+[0;32mI (24341) OTA_SERVER: [0m
+[0;32mI (24541) OTA_SERVER: [0m
+[0;32mI (24741) OTA_SERVER: [0m
+[0;32mI (25031) OTA_SERVER: Acknowledgement for B verified correct[0m
+[0;32mI (26031) OTA_SERVER: Chunk Sent[0m
+[0;32mI (26191) OTA_SERVER: Ready[0m
