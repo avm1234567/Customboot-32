@@ -1,0 +1,99 @@
+�IRAM
+[0;32mI (251) heap_�ets Jul 29 2019 12:21:46[0m
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15736
+load:0x40080400,len:4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (29) boot: ESP-IDF v5.4.2 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Jul 24 2025 14:53:01[0m
+[0;32mI (30) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0abfch ( 44028) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001ac24 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (103) esp_image: segment 2: paddr=0001ac48 vaddr=3ffb0000 size=023e8h (  9192) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=0001d038 vaddr=40080000 size=02fe0h ( 12256) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=15e30h ( 89648) map[0m
+[0;32mI (153) esp_image: segment 5: paddr=00035e58 vaddr=40082fe0 size=0ae34h ( 44596) load[0m
+[0;32mI (177) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (177) boot: Disabling RNG early entropy source...[0m
+[0;32mI (188) cpu_start: Multicore app[0m
+[0;32mI (196) cpu_start: Pro cpu start user code[0m
+[0;32mI (196) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (196) app_init: Application information:[0m
+[0;32mI (196) app_init: Project name:     ESP_STM_COMM[0m
+[0;32mI (200) app_init: App version:      1[0m
+[0;32mI (204) app_init: Compile time:     Jul 24 2025 14:52:47[0m
+[0;32mI (209) app_init: ELF file SHA256:  7f354b984...[0m
+[0;32mI (213) app_init: ESP-IDF:          v5.4.2[0m
+[0;32mI (217) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (221) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (225) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (229) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (235) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (240) heap_init: At 3FFB2CB0 len 0002D350 (180 KiB): DRAM[0m
+[0;32mI (245) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (251) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (256) heap_init: At 4008DE14 len 000121EC (72 KiB): IRAM[0m
+[0;32mI (263) spi_flash: detected chip: generic[0m
+[0;32mI (265) spi_flash: flash io: dio[0m
+[0;33mW (268) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (281) main_task: Started on CPU0[0m
+[0;32mI (291) main_task: Calling app_main()[0m
+[0;32mI (4551) UART_TEST: Received 127 bytes: [0m
+[0;32mI (4621) UART_TEST: Received 127 bytes: ���������������������������^��[0m
+[0;32mI (4721) UART_TEST: Received 64 bytes: ��H��
+[0;32mI (5461) UART_TEST: Received 6 bytes: ��[0m
+[0;32mI (5601) UART_TEST: Received 127 bytes: �����F�"[0m
+[0;32mI (5641) UART_TEST: Received 127 bytes: ��<���[0m
+[0;32mI (5721) UART_TEST: Received 127 bytes: ��������������������[0m
+[0;32mI (5761) UART_TEST: Received 127 bytes: ������������޾�[0m
+[0;32mI (5781) UART_TEST: Received 127 bytes: ������������O��������[0m
+[0;32mI (5821) UART_TEST: Received 127 bytes: �����������������������������������w"�������n��[0m
+[0;32mI (5841) UART_TEST: Received 127 bytes: >����>��_~c[0m
+[0;32mI (5881) UART_TEST: Received 127 bytes: <��?�����������������������������?�_�Ğ���o~>>{�Ȍ����NN.�[0m
+[0;32mI (5901) UART_TEST: Received 127 bytes: �6������������n�[0m
+[0;32mI (5921) UART_TEST: Received 127 bytes: [0m
+[0;32mI (5961) UART_TEST: Received 127 bytes: ��������������������6�>���L�O���̌��`��[0m
+[0;32mI (6061) UART_TEST: Received 127 bytes: ���a�7������[0m
+[0;32mI (6101) UART_TEST: Received 127 bytes: [0m
+[0;32mI (6141) UART_TEST: Received 127 bytes: [0m
+[0;32mI (6161) UART_TEST: Received 127 bytes: ć=8��[0m
+[0;32mI (6181) UART_TEST: Received 127 bytes: [0m
+[0;32mI (6221) UART_TEST: Received 127 bytes: ����������������������?ǿ�������7~n~�
+[0;32mI (6261) UART_TEST: Received 127 bytes: ������L����������������������������������������?��������?o�����[0m
+[0;32mI (6281) UART_TEST: Received 127 bytes: ����������x�̌�����?�g>��[0m
+[0;32mI (6321) UART_TEST: Received 127 bytes: �������쮞�����������������������������������������Ȍ����N������
+[0;32mI (6341) UART_TEST: Received 127 bytes: ���������nF�������NN�[0m
+[0;32mI (6441) UART_TEST: Received 127 bytes: g>����>��������������������������o�[0m
+[0;32mI (6481) UART_TEST: Received 127 bytes: ��C��������������>���[0m
+[0;32mI (6501) UART_TEST: Received 127 bytes: �
+[0;32mI (6521) UART_TEST: Received 127 bytes: ��[0m
+[0;32mI (6561) UART_TEST: Received 127 bytes: ������������������?��W��[0m
+[0;32mI (6581) UART_TEST: Received 127 bytes:  �
+[0;32mI (6601) UART_TEST: Received 127 bytes: �
+[0;32mI (6641) UART_TEST: Received 127 bytes: ��������Čć���?/>�[0m
+[0;32mI (6661) UART_TEST: Received 127 bytes: [0m
+[0;32mI (6681) UART_TEST: Received 127 bytes: ?숇=����n7n&��������޾������������������H��?�����8������[0m
+[0;32mI (6721) UART_TEST: Received 127 bytes: ������������>3�ȇ����[0m`NF,7
+[0;32mI (6841) UART_TEST: Received 90 bytes: [0m
+[0;32mI (7281) UART_TEST: Received 127 bytes: ����[0m
+[0;32mI (7381) UART_TEST: Received 90 bytes: ���������������N$[0m
+[0;32mI (10611) UART_TEST: Received 35 bytes: ��������������������[0m
+[0;32mI (11961) UART_TEST: Received 2 bytes: [0m
+[0;32mI (12061) UART_TEST: Received 1 bytes: �

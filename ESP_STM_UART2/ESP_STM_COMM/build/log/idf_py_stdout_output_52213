@@ -1,0 +1,391 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15736
+load:0x40080400,len:4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (29) boot: ESP-IDF v5.4.2 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Jul 24 2025 14:53:01[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=19ca8h (105640) map[0m
+[0;32mI (124) esp_image: segment 1: paddr=00029cd0 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (125) esp_image: segment 2: paddr=00029cf4 vaddr=3ffb0000 size=03fc8h ( 16328) load[0m
+[0;32mI (134) esp_image: segment 3: paddr=0002dcc4 vaddr=40080000 size=02354h (  9044) load[0m
+[0;32mI (139) esp_image: segment 4: paddr=00030020 vaddr=400d0020 size=86a58h (551512) map[0m
+[0;32mI (332) esp_image: segment 5: paddr=000b6a80 vaddr=40082354 size=164c8h ( 91336) load[0m
+[0;32mI (379) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (379) boot: Disabling RNG early entropy source...[0m
+[0;32mI (389) cpu_start: Multicore app[0m
+[0;32mI (398) cpu_start: Pro cpu start user code[0m
+[0;32mI (398) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (398) app_init: Application information:[0m
+[0;32mI (398) app_init: Project name:     ESP_STM_COMM[0m
+[0;32mI (402) app_init: App version:      1[0m
+[0;32mI (406) app_init: Compile time:     Jul 24 2025 14:52:47[0m
+[0;32mI (411) app_init: ELF file SHA256:  8e606272a...[0m
+[0;32mI (415) app_init: ESP-IDF:          v5.4.2[0m
+[0;32mI (419) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (423) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (427) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (431) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (437) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (442) heap_init: At 3FFB8050 len 00027FB0 (159 KiB): DRAM[0m
+[0;32mI (447) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (453) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (458) heap_init: At 4009881C len 000077E4 (29 KiB): IRAM[0m
+[0;32mI (465) spi_flash: detected chip: generic[0m
+[0;32mI (467) spi_flash: flash io: dio[0m
+[0;33mW (470) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (483) main_task: Started on CPU0[0m
+[0;32mI (493) main_task: Calling app_main()[0m
+[0;32mI (533) wifi:wifi driver task: 3ffc00a8, prio:23, stack:6656, core=0[0m
+[0;32mI (543) wifi:wifi firmware version: bea31f3[0m
+[0;32mI (543) wifi:wifi certification version: v7.0[0m
+[0;32mI (553) wifi:config NVS flash: enabled[0m
+[0;32mI (553) wifi:config nano formatting: disabled[0m
+[0;32mI (553) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (553) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (563) wifi:Init management short buffer num: 32[0m
+[0;32mI (563) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (573) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (573) wifi:Init static rx buffer num: 10[0m
+[0;32mI (573) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (583) wifi_init: rx ba win: 6[0m
+[0;32mI (583) wifi_init: accept mbox: 6[0m
+[0;32mI (583) wifi_init: tcpip mbox: 32[0m
+[0;32mI (593) wifi_init: udp mbox: 6[0m
+[0;32mI (593) wifi_init: tcp mbox: 6[0m
+[0;32mI (593) wifi_init: tcp tx win: 5760[0m
+[0;32mI (603) wifi_init: tcp rx win: 5760[0m
+[0;32mI (603) wifi_init: tcp mss: 1440[0m
+[0;32mI (603) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (613) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (613) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (623) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (713) wifi:mode : sta (90:15:06:93:fe:1c)[0m
+[0;32mI (713) wifi:enable tsf[0m
+[0;32mI (723) wifi_sta: wifi_init_sta finished.[0m
+[0;32mI (723) ESP_UART: UART1 initialized on TXD: GPIO17, RXD: GPIO16[0m
+[0;32mI (743) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (743) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (773) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (793) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (863) wifi:state: run -> init (0x2c0)[0m
+[0;32mI (873) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (873) wifi_sta: Disconnected. Retrying...[0m
+[0;33mW (1093) wifi:tx null, bss is null[0m
+[0;32mI (3293) wifi_sta: Disconnected. Retrying...[0m
+[0;32mI (3303) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (3313) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (3343) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (3353) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (3433) wifi:connected with 1234, aid = 15, channel 11, BW20, bssid = 7e:59:9f:a7:25:f2[0m
+[0;32mI (3433) wifi:security: WPA2-PSK, phy: bgn, rssi: -45[0m
+[0;32mI (3443) wifi:pm start, type: 1[0m
+
+[0;32mI (3443) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (3523) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (3523) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (4523) esp_netif_handlers: sta ip: 10.97.137.88, mask: 255.255.255.0, gw: 10.97.137.139[0m
+[0;32mI (4523) wifi_sta: Got IP: 10.97.137.88[0m
+[0;32mI (4523) wifi_sta: Connected to AP: 1234[0m
+[0;32mI (4523) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (5533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (6533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (7533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (8533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (9533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (10533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (11533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (12533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (13533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (14533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (15533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (16533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (17533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (18533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (19533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (20533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (21533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (22533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (23533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (24533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (25533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (26533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (27533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (28533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (29533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (30533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (31533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (32533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (33533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (34533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (35533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (36533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (37533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (38533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (39533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (40533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (41533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (42533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (43533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (44533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (45533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (46533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (47533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (48533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (49533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (50533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (51533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (52533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (53533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (54533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (55533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (56533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (57533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (58533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (59533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (60533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (61533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (62533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (63533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (64533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (65533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (66533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (67533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (68533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (69533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (70533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (71533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (72533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (73533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (74533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (75533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (76533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (77533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (78533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (79533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (80533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (81533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (82533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (83533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (84533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (85533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (86533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (87533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (88533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (89533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (90533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (91533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (92533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (93533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (94533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (95533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (96533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (97533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (98533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (99533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (100533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (101533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (102533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (103533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (104533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (105533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (106533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (107533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (108533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (109533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (110533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (111533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (112533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (113533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (114533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (115533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (116533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (117533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (118533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (119533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (120533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (121533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (122533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (123533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (124533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (125533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (126533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (127533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (128533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (129533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (130533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (131533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (132533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (133533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (134533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (135533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (136533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (137533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (138533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (139533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (140533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (141533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (142533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (143533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (144533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
+[0;32mI (145533) ESP_UART: Sent 15 bytes: Hello from ESP[0m
+
