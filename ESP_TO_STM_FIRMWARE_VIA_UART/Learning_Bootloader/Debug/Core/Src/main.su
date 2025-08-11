@@ -3,7 +3,7 @@
 ../Core/Src/main.c:181:9:WriteUserApplication	24	static
 ../Core/Src/main.c:201:9:UserApplicationExists	0	static
 ../Core/Src/main.c:208:6:ReceiveChunkOverUART	24	static,ignoring_inline_asm
-../Core/Src/main.c:234:6:Error_Handler	8	static,ignoring_inline_asm
+../Core/Src/main.c:236:6:Error_Handler	8	static,ignoring_inline_asm
 ../Core/Src/main.c:63:6:SystemClock_Config	72	static
 ../Core/Src/main.c:93:6:MX_USART1_UART_Init	8	static
 ../Core/Src/main.c:34:5:main	8	static

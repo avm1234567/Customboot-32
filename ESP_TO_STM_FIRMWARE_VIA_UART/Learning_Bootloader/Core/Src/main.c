@@ -219,12 +219,14 @@ void ReceiveChunkOverUART(uint32_t addr, const char* str)
 
         if(rx_buffer[CHUNK_SIZE -1] == 0xAF){
             WriteUserApplication((uint32_t)addr, (uint32_t*)&rx_buffer[3], (CHUNK_SIZE-8)/4, offset);
+//            HAL_Delay(10000);
 //            HAL_UART_Transmit(&huart1, "Received final chunk\r\n", strlen("Received final chunk\r\n"), HAL_MAX_DELAY);
 
             goto_app((uint32_t)addr);
         } else if(rx_buffer[CHUNK_SIZE -1] == 0x00){
 
             WriteUserApplication((uint32_t)addr, (uint32_t*)&rx_buffer[3], (CHUNK_SIZE-8)/4, offset);
+            HAL_UART_Transmit(&huart1, "Ready\r", strlen("Ready\r"), HAL_MAX_DELAY);
 
             offset += 512;
         }

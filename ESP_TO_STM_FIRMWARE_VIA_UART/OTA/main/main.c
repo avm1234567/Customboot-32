@@ -123,7 +123,8 @@ static esp_err_t favicon_handler(httpd_req_t *req)
 esp_err_t upload_post_handler(httpd_req_t *req, const char *path)
 {
     FILE *f = fopen(path, "w");
-    if (!f) {
+    if (!f)
+    {
         ESP_LOGE(TAG, "Failed to open file for writing");
         httpd_resp_send_500(req);
         return ESP_FAIL;
@@ -143,7 +144,8 @@ esp_err_t upload_post_handler(httpd_req_t *req, const char *path)
         int len = received;
 
         // Skip HTTP multipart headers once
-        if (!header_skipped) {
+        if (!header_skipped)
+        {
             char *start = strstr(buf, "\r\n\r\n");
             if (!start)
                 continue; // still reading headers
@@ -154,7 +156,8 @@ esp_err_t upload_post_handler(httpd_req_t *req, const char *path)
 
         // Append to buffer
         uint8_t *new_buffer = realloc(file_buffer, file_size + len);
-        if (!new_buffer) {
+        if (!new_buffer)
+        {
             free(file_buffer);
             fclose(f);
             ESP_LOGE(TAG, "Out of memory");
@@ -166,7 +169,8 @@ esp_err_t upload_post_handler(httpd_req_t *req, const char *path)
     }
 
     // Remove last 46 bytes (boundary)
-    if (file_size > 46) {
+    if (file_size > 46)
+    {
         file_size -= 46;
     }
 
@@ -179,8 +183,6 @@ esp_err_t upload_post_handler(httpd_req_t *req, const char *path)
     list_spiffs_files();
     return ESP_OK;
 }
-
-
 
 static esp_err_t upload_a_post(httpd_req_t *req)
 {
@@ -265,58 +267,75 @@ void Send_firmware_protocol(const char *path)
 {
     struct Chunk_file Firmware;
     Firmware.start = 0x00;
-    Firmware.crc32[0] = 0x00;
-    Firmware.crc32[1] = 0x00;
-    Firmware.crc32[2] = 0x00;
-    Firmware.crc32[3] = 0x00;
+    memset(Firmware.crc32, 0x00, sizeof(Firmware.crc32));
+
     Packet[0] = Firmware.start;
-    memcpy(&Packet[3 + DATA_SIZE], Firmware.crc32, 4);  
+    memcpy(&Packet[3 + DATA_SIZE], Firmware.crc32, 4);
+
     FILE *f = fopen(path, "rb");
     if (!f)
     {
-        ESP_LOGE("FILE", "Failed to open file for reading");
+        ESP_LOGE(TAG, "Failed to open file for reading");
         return;
     }
-    
+
     while (1)
     {
         size_t data_read = fread(Firmware.data, 1, DATA_SIZE, f);
-        if (data_read == 0)
-        {
+
+        if (data_read == 0) // EOF
             break;
-        }
-        else if (data_read < DATA_SIZE)
+
+        // Check if last chunk
+        if (data_read < DATA_SIZE)
         {
             memset(&Firmware.data[data_read], 0xFF, DATA_SIZE - data_read);
-            data_read = DATA_SIZE; // treat as full chunk for transmission
-            Firmware.end = 0xAF;
-            ESP_LOGI(TAG, "Final Chunk Sent");
-            break;
+            Firmware.end = 0xAF; // Final chunk
         }
-        
-        else if(data_read == DATA_SIZE){
-            Firmware.end  = 0x00;
+        else
+        {
+            // Peek ahead: if no more data, this is final chunk
+            int c = fgetc(f);
+            if (c == EOF)
+                Firmware.end = 0xAF;
+            else
+            {
+                ungetc(c, f);
+                Firmware.end = 0x00;
+            }
         }
+
+        // Fill packet
         Packet[1] = (data_read >> 8) & 0xFF;
         Packet[2] = data_read & 0xFF;
-        memcpy(&Packet[3], Firmware.data, data_read);
-        Packet[7 + data_read] = Firmware.end;
-        int sent = uart_write_bytes(UART_NUM, (const char *)Packet, 8 + data_read);
-        if (sent == 8 + data_read)
+        memcpy(&Packet[3], Firmware.data, DATA_SIZE);
+        memcpy(&Packet[3 + DATA_SIZE], Firmware.crc32, 4);
+        Packet[7 + DATA_SIZE] = Firmware.end;
+
+        int sent = uart_write_bytes(UART_NUM, (const char *)Packet, 8 + DATA_SIZE);
+        if (sent == 8 + DATA_SIZE)
         {
-            ESP_LOGI(TAG, "Chunk Sent");
-            while(1){
-                       memset(rx_buffer, 0, BUF_SIZE);
-            uart_read_bytes(UART_NUM, rx_buffer, BUF_SIZE - 1, pdMS_TO_TICKS(100));
-            if(strcmp((char *)rx_buffer, "Ready\r") == 0){
-            	ESP_LOGI(TAG, "%s", rx_buffer);
-            	break;
-            }        
-            }    
+
+            // Wait for STM32 "Ready" before next chunk
+            while (1)
+            {
+                memset(rx_buffer, 0, BUF_SIZE);
+                uart_read_bytes(UART_NUM, rx_buffer, BUF_SIZE - 1, pdMS_TO_TICKS(1000));
+                if (strcmp((char *)rx_buffer, "Ready\r") == 0)
+                {
+                    ESP_LOGI(TAG, "%s", rx_buffer);
+                    break;
+                }
+                if (Firmware.end == 0xAF)
+                {
+                    ESP_LOGI(TAG, "Final Chunk Sent.");
+                    break;
+                }
+            }
         }
     }
+
     fclose(f);
-//    vTaskDelete(NULL);
 }
 
 int Ack(void)
@@ -324,32 +343,34 @@ int Ack(void)
 
     uart_read_bytes(UART_NUM, rx_buffer, BUF_SIZE - 1, pdMS_TO_TICKS(100));
     // ESP_LOGI(TAG, "Received String From STM: %s", rx_buffer);
-            // ESP_LOGI(TAG, "Ack received");
+    // ESP_LOGI(TAG, "Ack received");
 
     if (strcmp((char *)rx_buffer, "Send_A\r") == 0)
     {
         ESP_LOGI(TAG, "Acknowledgement for A verified correct");
-        
-            memset(rx_buffer, 0, BUF_SIZE);
+
+        memset(rx_buffer, 0, BUF_SIZE);
         return 1;
     }
-    else if(strcmp((char *)rx_buffer, "Send_B\r") == 0){
+    else if (strcmp((char *)rx_buffer, "Send_B\r") == 0)
+    {
 
         ESP_LOGI(TAG, "Acknowledgement for B verified correct");
-           memset(rx_buffer, 0, BUF_SIZE);
+        memset(rx_buffer, 0, BUF_SIZE);
         return 2;
     }
-    else {
-    	ESP_LOGI(TAG, "%s",rx_buffer);
-           memset(rx_buffer, 0, BUF_SIZE);
-    return 0;
+    else
+    {
+        ESP_LOGI(TAG, "%s", rx_buffer);
+        memset(rx_buffer, 0, BUF_SIZE);
+        return 0;
     }
 }
 void wifi_spiffs_task(void *pvParameters)
 {
     ESP_ERROR_CHECK(nvs_flash_init());
     ESP_ERROR_CHECK(spiffs_init());
-    wifi_init_sta();  // Starts WiFi and HTTP server in event handler
+    wifi_init_sta(); // Starts WiFi and HTTP server in event handler
     while (1)
     {
         vTaskDelay(pdMS_TO_TICKS(1000));
@@ -363,8 +384,7 @@ void uart_firmware_task(void *pvParameters)
         .data_bits = UART_DATA_8_BITS,
         .parity = UART_PARITY_DISABLE,
         .stop_bits = UART_STOP_BITS_1,
-        .flow_ctrl = UART_HW_FLOWCTRL_DISABLE
-    };
+        .flow_ctrl = UART_HW_FLOWCTRL_DISABLE};
 
     uart_driver_install(UART_NUM, BUF_SIZE * 2, BUF_SIZE * 2, 0, NULL, 0);
     uart_param_config(UART_NUM, &config);
@@ -395,15 +415,14 @@ void uart_firmware_task(void *pvParameters)
 
 void app_main(void)
 {
-      xTaskCreatePinnedToCore(
-        wifi_spiffs_task,   
-        "WiFi_SPIFFS_Task", 
-        4096,               
-        NULL,               
-        5,                  
-        &wifiTaskHandle,    
-        0                   
-    );
+    xTaskCreatePinnedToCore(
+        wifi_spiffs_task,
+        "WiFi_SPIFFS_Task",
+        4096,
+        NULL,
+        5,
+        &wifiTaskHandle,
+        0);
 
     xTaskCreatePinnedToCore(
         uart_firmware_task,
@@ -412,6 +431,5 @@ void app_main(void)
         NULL,
         6,
         &uartTaskHandle,
-        1
-    );
-    }
+        1);
+}
