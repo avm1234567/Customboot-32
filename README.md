@@ -36,10 +36,17 @@ A **Custom Dual Image bootloader** on the STM32 coordinates firmware requests fr
 
 # 📂 Repository Structure (varun branch)
 
-/Dual_Image_Bootloader # STM32 dual image custom bootloader code
-/ESP_STM_FILE_CRC # Firmware CRC logic updates and tools
-/ESP_STM_UART1 # One-way UART communication (ESP → STM)
-/ESP_STM_UART2 # Two-way UART communication implementation
-/ESP_TO_STM_FIRMWARE_VIA_UART # UART protocol for sending firmware to STM
-/OTA # ESP32 OTA code with SPIFFS & partition setup
+# /Dual_Image_Bootloader 
+- STM32 dual image custom bootloader code
+
+# /ESP_STM_FILE_CRC 
+- Firmware CRC logic updates and tools
+# /ESP_STM_UART1 
+- One-way UART communication (ESP → STM)
+# /ESP_STM_UART2 
+- Two-way UART communication implementation
+# /ESP_TO_STM_FIRMWARE_VIA_UART 
+- UART protocol for sending firmware to STM
+# /OTA 
+- ESP32 OTA code with SPIFFS & partition setup
 
