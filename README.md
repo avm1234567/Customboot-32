@@ -11,7 +11,7 @@
 
 This project aims to design a **custom PCB** integrating the powerful **ESP32-WROOM-32D** and **STM32F103C8T6** microcontrollers. The ESP32 acts as the primary firmware manager, receiving updates via **OTA (Over-The-Air)**, storing them securely in SPIFFS, and transmitting them to the STM32 MCU over UART.
 
-A **custom bootloader** on the STM32 coordinates firmware requests from the ESP32 based on user inputs, ensuring robust and reliable firmware flashing with CRC validation for data integrity.
+A **Custom Dual Image bootloader** on the STM32 coordinates firmware requests from the ESP32 based on user inputs, ensuring robust and reliable firmware flashing with CRC validation for data integrity.
 
 ---
 
@@ -21,14 +21,12 @@ A **custom bootloader** on the STM32 coordinates firmware requests from the ESP3
   - Initializes SPIFFS for file storage.  
   - Manages custom memory partitions for firmware.
 
-- **Robust UART Communication**  
+- **UART Communication**  
   - Supports one-way and two-way UART communication between ESP32 and STM32.  
-  - Ready-to-use protocol formats for seamless data transfer.
-
+  
 - **Custom STM32 Bootloader**  
-  - Requests firmware chunks from ESP32 dynamically.  
+  - Requests firmware chunks from ESP32.  
   - Implements CRC32 checks for firmware validation.  
-  - Supports user-driven firmware update control.
 
 - **Extensive Testing & Validation**  
   - UART communication thoroughly tested with real firmware images.  
@@ -36,6 +34,12 @@ A **custom bootloader** on the STM32 coordinates firmware requests from the ESP3
 
 ---
 
-## 📂 Repository Structure (varun branch)
+# 📂 Repository Structure (varun branch)
 
+/Dual_Image_Bootloader # STM32 dual image custom bootloader code
+/ESP_STM_FILE_CRC # Firmware CRC logic updates and tools
+/ESP_STM_UART1 # One-way UART communication (ESP → STM)
+/ESP_STM_UART2 # Two-way UART communication implementation
+/ESP_TO_STM_FIRMWARE_VIA_UART # UART protocol for sending firmware to STM
+/OTA # ESP32 OTA code with SPIFFS & partition setup
 
