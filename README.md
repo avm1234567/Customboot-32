@@ -1,6 +1,6 @@
-#Hello!!!
-#This is **Varun Adinath Patil** from **SY EXTC.**
-###This branch contains my work and will update my progress throughout my Eklavya. 
+# Hello!!!
+# This is **Varun Adinath Patil** from **SY EXTC.**
+### This branch contains my work and will update my progress throughout my Eklavya. 
 # Customboot-32
 
 **Custom PCB integrating ESP32-WROOM-32D & STM32F103C8T6 with OTA Firmware Update & Custom Bootloader**
