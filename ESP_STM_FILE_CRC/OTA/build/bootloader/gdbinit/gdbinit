@@ -1,0 +1,2 @@
+source /home/varun/Downloads/DUAL_IMAGE_BOOTLOADER/ESP_STM_FILE_CRC/OTA/build/bootloader/gdbinit/symbols
+source /home/varun/Downloads/DUAL_IMAGE_BOOTLOADER/ESP_STM_FILE_CRC/OTA/build/bootloader/gdbinit/connect

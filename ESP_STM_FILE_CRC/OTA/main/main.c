@@ -30,6 +30,7 @@ TaskHandle_t wifiTaskHandle;
 TaskHandle_t uartTaskHandle;
 uint8_t Packet[DATA_SIZE + 8];
 uint8_t rx_buffer[BUF_SIZE];
+void receiveAck(void);
 
 struct Chunk_file
 {
@@ -293,7 +294,6 @@ void Send_firmware_protocol(const char *path)
     Firmware.start = 0x00;
     // memset(Firmware.crc32, 0x00, sizeof(Firmware.crc32));
 
-    Packet[0] = Firmware.start;
     // memcpy(&Packet[3 + DATA_SIZE], Firmware.crc32, 4);
 
     FILE *f = fopen(path, "rb");
@@ -301,11 +301,12 @@ void Send_firmware_protocol(const char *path)
     {
         ESP_LOGE(TAG, "Failed to open file for reading");
         memset(Packet, (uint8_t)0xAA, 520);
-        vTaskDelay(pdMS_TO_TICKS(1000));
         uart_write_bytes(UART_NUM, (const char *)Packet, 520);
+        receiveAck();
+
         // uart_write_bytes(UART_NUM, "No firmware\r", strlen("No firmware\r"));
-        return;
     }
+    Packet[0] = Firmware.start;
 
     while (1)
     {
@@ -356,8 +357,8 @@ void Send_firmware_protocol(const char *path)
                 // if(strncmp((char *)rx_buffer, "crc", 3) == 0){
                 //   ESP_LOGI(TAG, "%s", "Ready\r");
                 //}
-                if (strcmp((char *)rx_buffer, "Send_\r") == 0){
-
+                if (strcmp((char *)rx_buffer, "Send_\r") == 0)
+                {
                 }
                 if (strncmp((char *)rx_buffer, "crc", 3) == 0)
                 {
@@ -368,7 +369,7 @@ void Send_firmware_protocol(const char *path)
                 if (Firmware.end == 0xAF)
                 {
                     ESP_LOGI(TAG, "Final Chunk Sent.");
-                    break;
+                    receiveAck();
                 }
             }
         }
@@ -415,21 +416,8 @@ void wifi_spiffs_task(void *pvParameters)
         vTaskDelay(pdMS_TO_TICKS(1000));
     }
 }
-
-void uart_firmware_task(void *pvParameters)
+void receiveAck(void)
 {
-    uart_config_t config = {
-        .baud_rate = 115200,
-        .data_bits = UART_DATA_8_BITS,
-        .parity = UART_PARITY_DISABLE,
-        .stop_bits = UART_STOP_BITS_1,
-        .flow_ctrl = UART_HW_FLOWCTRL_DISABLE};
-
-    uart_driver_install(UART_NUM, BUF_SIZE * 2, BUF_SIZE * 2, 0, NULL, 0);
-    uart_param_config(UART_NUM, &config);
-    uart_set_pin(UART_NUM, TXD_PIN, RXD_PIN, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE);
-
-    ESP_LOGI(TAG, "UART initialized");
 
     while (1)
     {
@@ -452,6 +440,24 @@ void uart_firmware_task(void *pvParameters)
     }
 }
 
+void uart_firmware_task(void *pvParameters)
+{
+    uart_config_t config = {
+        .baud_rate = 115200,
+        .data_bits = UART_DATA_8_BITS,
+        .parity = UART_PARITY_DISABLE,
+        .stop_bits = UART_STOP_BITS_1,
+        .flow_ctrl = UART_HW_FLOWCTRL_DISABLE};
+
+    uart_driver_install(UART_NUM, BUF_SIZE * 2, BUF_SIZE * 2, 0, NULL, 0);
+    uart_param_config(UART_NUM, &config);
+    uart_set_pin(UART_NUM, TXD_PIN, RXD_PIN, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE);
+
+    ESP_LOGI(TAG, "UART initialized");
+
+    receiveAck();
+}
+
 void app_main(void)
 {
     xTaskCreatePinnedToCore(
@@ -472,4 +478,3 @@ void app_main(void)
         &uartTaskHandle,
         1);
 }
-

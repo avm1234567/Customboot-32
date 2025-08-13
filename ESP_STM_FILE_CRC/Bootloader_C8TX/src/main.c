@@ -8,6 +8,7 @@
 #include <libopencm3/stm32/crc.h>
 #include <string.h>
 
+
 #define DEFAULT_APP_ADDRESS (uint32_t)0x08001800
 #define APP_ADDRESS (uint32_t)0x08003000
 uint32_t pinState;
@@ -18,7 +19,6 @@ uint8_t rx_buffer[RX_CHUNK_SIZE];
 uint32_t crc_STM;
 uint32_t crc_ESP;
 
-
 void usart_setup(void);
 void JumpToAddress(uint32_t addr);
 void goto_app(uint32_t addr);
@@ -26,43 +26,39 @@ void EraseUserApplication(uint32_t addr);
 void WriteUserApplication(uint32_t addr, uint32_t *data, uint32_t dataSize, uint32_t offset);
 void uart_transmit(uint32_t usart, const uint8_t *data, uint16_t len);
 void uart_receive_blocking(uint32_t usart, uint8_t *buf, uint16_t len);
-void ReceiveChunkOverUART(uint32_t addr, const char *str, const char *str1);
+void ReceiveChunkOverUART(uint32_t addr, const char *str);
 
-
-// bool is_all_AA(const uint8_t *arr, size_t len)
-// {Import Arduino ProjectImport Arduino Project
-//     for (size_t i = 0; i < len; i++)
-//     {
-//         if (arr[i] != 0xAA)
-//         {
-//             return false; // Found a mismatch
-//         }
-//     }
-//     return true; // All matched
-// }
+bool is_all_AA(const uint8_t *arr, size_t len)
+{
+    for (size_t i = 0; i < len; i++)
+    {
+        if (arr[i] != 0xAA)
+        {
+            return false; // Found a mismatch
+        }
+    }
+    return true; // All matched
+}
 
 uint32_t crc32_libopencm3_style(const uint8_t *data, size_t length)
 {
-        crc_reset();
-        uint32_t word;
-    for (size_t i = 0; i < length; i+=4)
+    crc_reset();
+    uint32_t word;
+    for (size_t i = 0; i < length; i += 4)
     {
-        word = ((uint32_t)data[i]     << 24) |
-       ((uint32_t)data[i + 1] << 16) |
-       ((uint32_t)data[i + 2] << 8)  |
-       ((uint32_t)data[i + 3]);
+        word = ((uint32_t)data[i] << 24) |
+               ((uint32_t)data[i + 1] << 16) |
+               ((uint32_t)data[i + 2] << 8) |
+               ((uint32_t)data[i + 3]);
 
-            CRC_DR = word;
+        CRC_DR = word;
     }
     uint32_t crc_result = CRC_DR;
     return crc_result;
 }
 
-
-
 void usart_setup(void)
 {
-
 
     rcc_periph_clock_enable(RCC_USART1);
     rcc_periph_clock_enable(RCC_GPIOA);
@@ -108,7 +104,6 @@ void JumpToAddress(uint32_t addr)
     systick_interrupt_disable();
     systick_clear();
 
-
     SCB_VTOR = addr;
     cm_enable_interrupts();
 
@@ -134,7 +129,6 @@ void EraseUserApplication(uint32_t addr)
     for (uint32_t i = 0; i < 8; i++)
     {
         flash_erase_page(addr + i * (uint32_t)1024);
-
     }
     flash_lock();
 }
@@ -145,7 +139,6 @@ void WriteUserApplication(uint32_t addr, uint32_t *data, uint32_t dataSize, uint
     for (uint32_t i = 0; i < dataSize; i++)
     {
         flash_program_word(addr + offset + (i * 4), data[i]);
-     
     }
     flash_lock();
 }
@@ -166,29 +159,22 @@ void uart_receive_blocking(uint32_t usart, uint8_t *buf, uint16_t len)
     }
 }
 
-void ReceiveChunkOverUART(uint32_t addr, const char *str, const char *str1)
+void ReceiveChunkOverUART(uint32_t addr, const char *str)
 {
 
     EraseUserApplication(addr);
     uint32_t offset = 0;
     uart_transmit(USART1, str, strlen(str));
-
+    // WriteUserApplication((uint32_t)addr, (uint32_t *)&rx_buffer[3], 128, offset);
     while (1)
     {
         memset(rx_buffer, 0, CHUNK_SIZE);
 
         uart_receive_blocking(USART1, rx_buffer, CHUNK_SIZE);
-        if (rx_buffer[0] == (uint8_t)0xAA)
+
+       
+        if (is_all_AA(rx_buffer, 520))
         {
-            for (int i = 0; i < 5; i++)
-            {
-                gpio_clear(GPIOC, GPIO13);
-                for (int i = 0; i < 800; i++)
-                __asm__("nop");
-                gpio_set(GPIOC, GPIO13); 
-                for (int i = 0; i < 800; i++)
-                __asm__("nop");
-            }
             goto_app((uint32_t)DEFAULT_APP_ADDRESS);
         }
 
@@ -224,20 +210,18 @@ void ReceiveChunkOverUART(uint32_t addr, const char *str, const char *str1)
                 WriteUserApplication((uint32_t)addr, (uint32_t *)&rx_buffer[3], 128, offset);
 
                 offset += 512;
-                
-                    gpio_clear(GPIOC, GPIO13); // LED ON
-                    for (int i = 0; i < 80; i++)
-                        __asm__("nop");
-                    gpio_set(GPIOC, GPIO13); // LED OFF
-                    for (int i = 0; i < 80; i++)
-                        __asm__("nop");
-                
+
+                gpio_clear(GPIOC, GPIO13); // LED ON
+                for (int i = 0; i < 80; i++)
+                    __asm__("nop");
+                gpio_set(GPIOC, GPIO13); // LED OFF
+                for (int i = 0; i < 80; i++)
+                    __asm__("nop");
+
                 char msg[50];
                 int len = snprintf(msg, sizeof(msg), "crc matched %lx\r", (unsigned long)crc_STM);
                 uart_transmit(USART1, msg, len);
-                
             }
-            
         }
     }
 }
@@ -267,11 +251,11 @@ int main(void)
         pinState = gpio_get(GPIOA, GPIO0);
         if (pinState == 0)
         {
-            ReceiveChunkOverUART(APP_ADDRESS, "Send_A\r", "Send_B\r");
+            ReceiveChunkOverUART(APP_ADDRESS, "Send_A\r");
         }
         else
         {
-            ReceiveChunkOverUART(APP_ADDRESS, "Send_B\r", "Send_A\r");
+            ReceiveChunkOverUART(APP_ADDRESS, "Send_B\r");
         }
     }
 }
