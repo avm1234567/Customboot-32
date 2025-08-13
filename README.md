@@ -38,15 +38,24 @@ A **Custom Dual Image bootloader** on the STM32 coordinates firmware requests fr
 
 ## Dual_Image_Bootloader 
 - STM32 dual image custom bootloader code
+- Also contains 2 applications written according to the firmware locations.
+- [Link to old bootloader notes](https://www.notion.so/BootLoader-2298c356155f80d4acd2e90b8f80611c)
 
 ## ESP_STM_FILE_CRC 
 - Firmware CRC logic updates and tools
+- [LibOpenCM3 bootloader notion](https://www.notion.so/LibOpenCM3-2478c356155f80a6afcfc1611a41d326)
+
 ## ESP_STM_UART1 
 - One-way UART communication (ESP → STM)
+
 ## ESP_STM_UART2 
 - Two-way UART communication implementation
+
 ## ESP_TO_STM_FIRMWARE_VIA_UART 
 - UART protocol for sending firmware to STM
+- Implemented File protocols for more controllability
+- [Notion notes of File protocol and my implementation](https://www.notion.so/Esp-to-Stm-File-transfer-File-Protocol-2438c356155f8017bc71f075e02f5cac)
+
 ## OTA 
 - ESP32 OTA code with SPIFFS & partition setup
 

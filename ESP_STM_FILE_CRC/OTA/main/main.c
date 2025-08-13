@@ -24,8 +24,8 @@
 #define UART_NUM UART_NUM_1
 #define TXD_PIN GPIO_NUM_17
 #define RXD_PIN GPIO_NUM_16
-#define CRC_POLY   0x04C11DB7U
-#define CRC_INIT   0xFFFFFFFFU
+#define CRC_POLY 0x04C11DB7U
+#define CRC_INIT 0xFFFFFFFFU
 TaskHandle_t wifiTaskHandle;
 TaskHandle_t uartTaskHandle;
 uint8_t Packet[DATA_SIZE + 8];
@@ -265,17 +265,21 @@ static void wifi_init_sta(void)
     ESP_LOGI(TAG, "Wi-Fi connecting to SSID: %s", WIFI_SSID);
 }
 
-
-
-uint32_t crc32_libopencm3_style(const uint8_t *data, size_t length) {
+uint32_t crc32_libopencm3_style(const uint8_t *data, size_t length)
+{
     uint32_t crc = CRC_INIT;
 
-    for (size_t i = 0; i < length; i++) {
-        crc ^= ((uint32_t)data[i]) << 24;  // align byte to MSB
-        for (uint8_t bit = 0; bit < 8; bit++) {
-            if (crc & 0x80000000U) {
+    for (size_t i = 0; i < length; i++)
+    {
+        crc ^= ((uint32_t)data[i]) << 24; // align byte to MSB
+        for (uint8_t bit = 0; bit < 8; bit++)
+        {
+            if (crc & 0x80000000U)
+            {
                 crc = (crc << 1) ^ CRC_POLY;
-            } else {
+            }
+            else
+            {
                 crc <<= 1;
             }
         }
@@ -283,24 +287,23 @@ uint32_t crc32_libopencm3_style(const uint8_t *data, size_t length) {
     return crc; // no final XOR, same as libopencm3
 }
 
-
 void Send_firmware_protocol(const char *path)
 {
     struct Chunk_file Firmware;
     Firmware.start = 0x00;
-    memset(Firmware.crc32, 0x00, sizeof(Firmware.crc32));
+    // memset(Firmware.crc32, 0x00, sizeof(Firmware.crc32));
 
     Packet[0] = Firmware.start;
-    memcpy(&Packet[3 + DATA_SIZE], Firmware.crc32, 4);
+    // memcpy(&Packet[3 + DATA_SIZE], Firmware.crc32, 4);
 
     FILE *f = fopen(path, "rb");
     if (!f)
     {
         ESP_LOGE(TAG, "Failed to open file for reading");
-        memset(Packet, 0xAA, DATA_SIZE + 8);
+        memset(Packet, (uint8_t)0xAA, 520);
         vTaskDelay(pdMS_TO_TICKS(1000));
-        uart_write_bytes(UART_NUM, (const char *)Packet, 8 + DATA_SIZE);
-        //uart_write_bytes(UART_NUM, "No firmware\r", strlen("No firmware\r"));
+        uart_write_bytes(UART_NUM, (const char *)Packet, 520);
+        // uart_write_bytes(UART_NUM, "No firmware\r", strlen("No firmware\r"));
         return;
     }
 
@@ -336,9 +339,9 @@ void Send_firmware_protocol(const char *path)
         Packet[2] = data_read & 0xFF;
         memcpy(&Packet[3], Firmware.data, DATA_SIZE);
         Packet[515 + 0] = (crc_ESP >> 24) & 0xFF; // MSB
-	Packet[515 + 1] = (crc_ESP >> 16) & 0xFF;
-	Packet[515 + 2] = (crc_ESP >> 8)  & 0xFF;
-	Packet[515 + 3] = (crc_ESP >> 0)  & 0xFF; // LSB
+        Packet[515 + 1] = (crc_ESP >> 16) & 0xFF;
+        Packet[515 + 2] = (crc_ESP >> 8) & 0xFF;
+        Packet[515 + 3] = (crc_ESP >> 0) & 0xFF; // LSB
         Packet[7 + DATA_SIZE] = Firmware.end;
 
         int sent = uart_write_bytes(UART_NUM, (const char *)Packet, 8 + DATA_SIZE);
@@ -350,9 +353,12 @@ void Send_firmware_protocol(const char *path)
             {
                 memset(rx_buffer, 0, BUF_SIZE);
                 uart_read_bytes(UART_NUM, rx_buffer, BUF_SIZE - 1, pdMS_TO_TICKS(1000));
-                //if(strncmp((char *)rx_buffer, "crc", 3) == 0){
-                  //  ESP_LOGI(TAG, "%s", "Ready\r");
+                // if(strncmp((char *)rx_buffer, "crc", 3) == 0){
+                //   ESP_LOGI(TAG, "%s", "Ready\r");
                 //}
+                if (strcmp((char *)rx_buffer, "Send_\r") == 0){
+
+                }
                 if (strncmp((char *)rx_buffer, "crc", 3) == 0)
                 {
                     ESP_LOGI(TAG, "CRC of ESP: %lx\r", crc_ESP);
@@ -466,3 +472,4 @@ void app_main(void)
         &uartTaskHandle,
         1);
 }
+
