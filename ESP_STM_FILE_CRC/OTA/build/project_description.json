@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "OTA_ESP",
-    "project_version":    "f9a8b2e-dirty",
+    "project_version":    "2367610-dirty",
     "project_path":       "/home/varun/Downloads/DUAL_IMAGE_BOOTLOADER/ESP_STM_FILE_CRC/OTA",
     "idf_path":           "/home/varun/esp/esp-idf",
     "build_dir":          "/home/varun/Downloads/DUAL_IMAGE_BOOTLOADER/ESP_STM_FILE_CRC/OTA/build",

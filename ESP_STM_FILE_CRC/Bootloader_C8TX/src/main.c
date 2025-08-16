@@ -8,25 +8,25 @@
 #include <libopencm3/stm32/crc.h>
 #include <string.h>
 
-
 #define DEFAULT_APP_ADDRESS (uint32_t)0x08001800
 #define APP_ADDRESS (uint32_t)0x08003000
 uint32_t pinState;
-#define RX_CHUNK_SIZE 1024
-uint8_t rx_buffer[RX_CHUNK_SIZE];
+uint8_t rx_buffer[1024];
 #define CHUNK_SIZE 520
 #define huart1 "STM"
 uint32_t crc_STM;
 uint32_t crc_ESP;
-
+void uart_print_hex(uint32_t value);
 void usart_setup(void);
 void JumpToAddress(uint32_t addr);
-void goto_app(uint32_t addr);
 void EraseUserApplication(uint32_t addr);
 void WriteUserApplication(uint32_t addr, uint32_t *data, uint32_t dataSize, uint32_t offset);
 void uart_transmit(uint32_t usart, const uint8_t *data, uint16_t len);
 void uart_receive_blocking(uint32_t usart, uint8_t *buf, uint16_t len);
 void ReceiveChunkOverUART(uint32_t addr, const char *str);
+bool is_all_AA(const uint8_t *arr, size_t len);
+uint32_t crc32_libopencm3_style(const uint8_t *data, size_t length);
+
 
 bool is_all_AA(const uint8_t *arr, size_t len)
 {
@@ -92,21 +92,18 @@ void JumpToAddress(uint32_t addr)
 
     RCC_APB2ENR = 0x00000000;
     RCC_APB1ENR = 0x00000000;
-    RCC_AHBENR = 0x00000014; // SRAM + FLITF only
+    RCC_AHBENR = 0x00000014;
 
     RCC_CFGR = 0x00000000;
 
     /* Disable interrupts */
-    cm_disable_interrupts();
-
+    __asm__ volatile("CPSID I\n");
     /* Disable SysTick */
-    systick_counter_disable();
-    systick_interrupt_disable();
-    systick_clear();
-
+    STK_CSR &= ~STK_CSR_ENABLE;
+    STK_CSR &= ~STK_CSR_TICKINT;
+    STK_CVR = 0;
     SCB_VTOR = addr;
-    cm_enable_interrupts();
-
+    __asm__ volatile("CPSIE I\n");
     __asm volatile(
         "msr msp, %[stack_ptr]  \n"
         "bx  %[reset_handler]   \n"
@@ -114,12 +111,6 @@ void JumpToAddress(uint32_t addr)
         : [stack_ptr] "r"(*(volatile uint32_t *)addr),
           [reset_handler] "r"(jump_address)
         :);
-}
-
-void goto_app(uint32_t addr)
-{
-
-    JumpToAddress(addr);
 }
 
 void EraseUserApplication(uint32_t addr)
@@ -164,18 +155,17 @@ void ReceiveChunkOverUART(uint32_t addr, const char *str)
 
     EraseUserApplication(addr);
     uint32_t offset = 0;
-    uart_transmit(USART1, str, strlen(str));
+    uart_transmit(USART1, str, 8);
     // WriteUserApplication((uint32_t)addr, (uint32_t *)&rx_buffer[3], 128, offset);
     while (1)
     {
-        memset(rx_buffer, 0, CHUNK_SIZE);
+        // memset(rx_buffer, 0, CHUNK_SIZE);
 
         uart_receive_blocking(USART1, rx_buffer, CHUNK_SIZE);
 
-       
         if (is_all_AA(rx_buffer, 520))
         {
-            goto_app((uint32_t)DEFAULT_APP_ADDRESS);
+            JumpToAddress((uint32_t)DEFAULT_APP_ADDRESS);
         }
 
         if (rx_buffer[CHUNK_SIZE - 1] == 0xAF)
@@ -192,7 +182,7 @@ void ReceiveChunkOverUART(uint32_t addr, const char *str)
             {
                 WriteUserApplication((uint32_t)addr, (uint32_t *)&rx_buffer[3], 128, offset);
 
-                goto_app((uint32_t)addr);
+                JumpToAddress((uint32_t)addr);
             }
         }
         else if (rx_buffer[CHUNK_SIZE - 1] == 0x00)
@@ -211,20 +201,23 @@ void ReceiveChunkOverUART(uint32_t addr, const char *str)
 
                 offset += 512;
 
-                gpio_clear(GPIOC, GPIO13); // LED ON
-                for (int i = 0; i < 80; i++)
-                    __asm__("nop");
-                gpio_set(GPIOC, GPIO13); // LED OFF
-                for (int i = 0; i < 80; i++)
-                    __asm__("nop");
-
-                char msg[50];
-                int len = snprintf(msg, sizeof(msg), "crc matched %lx\r", (unsigned long)crc_STM);
-                uart_transmit(USART1, msg, len);
+               
+                    uart_print_hex(crc_STM);
             }
         }
     }
 }
+
+void uart_print_hex(uint32_t value) {
+    const char hex[] = "0123456789abcdef";
+    char buf[] = "crc matched: 0x00000000\r";
+    for (int i = 22; i >= 15; i--) {
+        buf[i] = hex[value & 0xF];
+        value >>= 4;
+    }
+    uart_transmit(USART1, (uint8_t*)buf, sizeof(buf) - 1);
+}
+
 
 int main(void)
 {

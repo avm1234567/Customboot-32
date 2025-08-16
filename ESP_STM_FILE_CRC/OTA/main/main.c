@@ -354,16 +354,11 @@ void Send_firmware_protocol(const char *path)
             {
                 memset(rx_buffer, 0, BUF_SIZE);
                 uart_read_bytes(UART_NUM, rx_buffer, BUF_SIZE - 1, pdMS_TO_TICKS(1000));
-                // if(strncmp((char *)rx_buffer, "crc", 3) == 0){
-                //   ESP_LOGI(TAG, "%s", "Ready\r");
-                //}
-                if (strcmp((char *)rx_buffer, "Send_\r") == 0)
-                {
-                }
+              
                 if (strncmp((char *)rx_buffer, "crc", 3) == 0)
                 {
                     ESP_LOGI(TAG, "CRC of ESP: %lx\r", crc_ESP);
-                    ESP_LOGI(TAG, "%s", rx_buffer);
+                    ESP_LOGI(TAG, "CRC of STM: %s\r", (char*)&rx_buffer[15]);
                     break;
                 }
                 if (Firmware.end == 0xAF)
