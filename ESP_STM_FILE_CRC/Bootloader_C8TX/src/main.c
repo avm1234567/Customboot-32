@@ -8,8 +8,8 @@
 #include <libopencm3/stm32/crc.h>
 #include <string.h>
 
-#define DEFAULT_APP_ADDRESS (uint32_t)0x08001800
-#define APP_ADDRESS (uint32_t)0x08003000
+#define DEFAULT_APP_ADDRESS (uint32_t)0x08000800
+#define APP_ADDRESS (uint32_t)0x08000C00
 uint32_t pinState;
 uint8_t rx_buffer[1024];
 #define CHUNK_SIZE 520
@@ -252,3 +252,4 @@ int main(void)
         }
     }
 }
+
