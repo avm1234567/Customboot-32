@@ -1,7 +1,5 @@
 <p>
 <h1 align = "center" > <strong>CustomBoot-32</strong> <br></h1>
-
-
 </p>
 
 # Table of contents
@@ -14,7 +12,10 @@
 - [Getting Started](#getting-started)
     - [Prerequisites](#prerequisites)
     - [Installation](#installation)
-- []
+- [Usage](#usage)
+- [Results](#results)
+- [Contrinutors](#contributors)
+- [Acknowledgement](#acknowledgement)
 
 # About the project
 ## Aim
@@ -31,6 +32,8 @@ The project integrates an STM32F103C8T6 with an ESP32-WROOM-32D to create a self
 ## File Structure
 
 # Getting Started
+## Prerequisites 
+
 ## Installation
 1) Clone the repository<br>
 `git clone https://github.com/avm1234567/Customboot-32.git`
@@ -38,13 +41,22 @@ The project integrates an STM32F103C8T6 with an ESP32-WROOM-32D to create a self
 2) Get in the cloned directory<br>
 `cd Customboot-32`
 
+# Usage
 
-### ESP OTA server testing
-- Initially started with running the file serving example from the Espressif example directory. This is the path to the folder: examples/protocols/http_server/file_serving
-- After examples, we tried to make our own server which accepts two binary files and they are flashed to STM Referred the code file serving and made changes in it.
-  
-### ESP tests
-- We ran test for uart loopback which displays the message that is hardcoded in the code by connecting the TX n RX pin of UART 1.
-- After that we ran UART echo test that displays what we type on the `screen`.
+
+
+# Results
+
+# Contributors
+- Varun Patil
+
+- Omkar Nanajkar
+
+- Archit More
+
+# Acknowledgement
+- Shaunak Datar
+
+- Prithvi Tambewagh
 
 
