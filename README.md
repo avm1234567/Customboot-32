@@ -36,10 +36,14 @@ The project integrates an STM32F103C8T6 with an ESP32-WROOM-32D to create a self
 
 ## Installation
 1) Clone the repository<br>
-`git clone https://github.com/avm1234567/Customboot-32.git`
+```
+git clone https://github.com/avm1234567/Customboot-32.git
+```
 
 2) Get in the cloned directory<br>
-`cd Customboot-32`
+```
+cd Customboot-32
+```
 
 # Usage
 
