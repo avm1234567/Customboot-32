@@ -1,7 +1,7 @@
 <p>
 <h1 align = "center" > <strong>CustomBoot-32</strong> <br></h1>
 
-<h2 align = "center">
+
 </p>
 
 # Table of contents
