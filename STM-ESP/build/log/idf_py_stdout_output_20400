@@ -1,0 +1,583 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.3-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Aug  5 2025 16:17:48[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0adb4h ( 44468) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0001addc vaddr=3ffb0000 size=02274h (  8820) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=0001d058 vaddr=40080000 size=02fc0h ( 12224) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=16690h ( 91792) map[0m
+[0;32mI (166) esp_image: segment 4: paddr=000366b8 vaddr=40082fc0 size=0a5b8h ( 42424) load[0m
+[0;32mI (189) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (189) boot: Disabling RNG early entropy source...[0m
+[0;32mI (201) cpu_start: Multicore app[0m
+[0;32mI (210) cpu_start: Pro cpu start user code[0m
+[0;32mI (210) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (210) cpu_start: Application information:[0m
+[0;32mI (213) cpu_start: Project name:     STM-ESP[0m
+[0;32mI (218) cpu_start: App version:      dc11905[0m
+[0;32mI (223) cpu_start: Compile time:     Aug  5 2025 16:16:13[0m
+[0;32mI (229) cpu_start: ELF file SHA256:  7c4fd9d62...[0m
+[0;32mI (234) cpu_start: ESP-IDF:          v5.2.3-dirty[0m
+[0;32mI (240) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (244) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (249) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (254) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (261) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (267) heap_init: At 3FFB2B58 len 0002D4A8 (181 KiB): DRAM[0m
+[0;32mI (274) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (280) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (286) heap_init: At 4008D578 len 00012A88 (74 KiB): IRAM[0m
+[0;32mI (294) spi_flash: detected chip: generic[0m
+[0;32mI (297) spi_flash: flash io: dio[0m
+[0;33mW (301) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (315) main_task: Started on CPU0[0m
+[0;32mI (325) main_task: Calling app_main()[0m
+[0;32mI (325) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (2325) UART_LOOPBACK: Received: [0m
+[0;32mI (5325) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (7325) UART_LOOPBACK: Received: [0m
+[0;32mI (10325) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (12325) UART_LOOPBACK: Received: [0m
+[0;32mI (15325) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (17325) UART_LOOPBACK: Received: [0m
+[0;32mI (20325) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (22325) UART_LOOPBACK: Received: [0m
+[0;32mI (25325) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (27325) UART_LOOPBACK: Received: [0m
+[0;32mI (30325) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (32325) UART_LOOPBACK: Received: [0m
+[0;32mI (35325) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (37325) UART_LOOPBACK: Received: [0m
+[0;32mI (40325) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (42325) UART_LOOPBACK: Received: [0m
+[0;32mI (45325) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.3-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Aug  5 2025 16:17:48[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0adb4h ( 44468) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0001addc vaddr=3ffb0000 size=02274h (  8820) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=0001d058 vaddr=40080000 size=02fc0h ( 12224) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=16690h ( 91792) map[0m
+[0;32mI (166) esp_image: segment 4: paddr=000366b8 vaddr=40082fc0 size=0a5b8h ( 42424) load[0m
+[0;32mI (189) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (189) boot: Disabling RNG early entropy source...[0m
+[0;32mI (201) cpu_start: Multicore app[0m
+[0;32mI (210) cpu_start: Pro cpu start user code[0m
+[0;32mI (210) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (210) cpu_start: Application information:[0m
+[0;32mI (213) cpu_start: Project name:     STM-ESP[0m
+[0;32mI (218) cpu_start: App version:      dc11905[0m
+[0;32mI (223) cpu_start: Compile time:     Aug  5 2025 16:16:13[0m
+[0;32mI (229) cpu_start: ELF file SHA256:  7c4fd9d62...[0m
+[0;32mI (234) cpu_start: ESP-IDF:          v5.2.3-dirty[0m
+[0;32mI (240) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (244) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (249) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (254) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (261) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (267) heap_init: At 3FFB2B58 len 0002D4A8 (181 KiB): DRAM[0m
+[0;32mI (274) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (280) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (286) heap_init: At 4008D578 len 00012A88 (74 KiB): IRAM[0m
+[0;32mI (294) spi_flash: detected chip: generic[0m
+[0;32mI (297) spi_flash: flash io: dio[0m
+[0;33mW (301) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (315) main_task: Started on CPU0[0m
+[0;32mI (325) main_task: Calling app_main()[0m
+[0;32mI (325) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (2325) UART_LOOPBACK: Received: [0m
+[0;32mI (5325) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (7325) UART_LOOPBACK: Received: [0m
+[0;32mI (10325) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (12325) UART_LOOPBACK: Received: [0m
+[0;32mI (15325) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (17325) UART_LOOPBACK: Received: [0m
+[0;32mI (20325) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (22325) UART_LOOPBACK: Received: [0m
+[0;32mI (25325) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (27325) UART_LOOPBACK: Received: [0m
+[0;32mI (30325) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (32325) UART_LOOPBACK: Received: [0m
+[0;32mI (35325) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (37325) UART_LOOPBACK: Received: [0m
+[0;32mI (40325) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (42325) UART_LOOPBACK: Received: [0m
+[0;32mI (45325) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (47325) UART_LOOPBACK: Received: [0m
+[0;32mI (50325) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (52325) UART_LOOPBACK: Received: [0m
+[0;32mI (55325) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (57325) UART_LOOPBACK: Received: [0m
+[0;32mI (60325) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (62325) UART_LOOPBACK: Received: [0m
+[0;32mI (65325) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (67325) UART_LOOPBACK: Received: [0m
+[0;32mI (70325) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (72325) UART_LOOPBACK: Received: [0m
+[0;32mI (75325) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (77325) UART_LOOPBACK: Received: [0m
+[0;32mI (80325) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (82325) UART_LOOPBACK: Received: [0m
+[0;32mI (85325) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (87325) UART_LOOPBACK: Received: [0m
+[0;32mI (90325) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (92325) UART_LOOPBACK: Received: [0m
+[0;32mI (95325) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (97325) UART_LOOPBACK: Received: [0m
+[0;32mI (100325) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (102325) UART_LOOPBACK: Received: [0m
+[0;32mI (105325) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (107325) UART_LOOPBACK: Received: [0m
+[0;32mI (110325) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (112325) UART_LOOPBACK: Received: [0m
+[0;32mI (115325) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (117325) UART_LOOPBACK: Received: [0m
+[0;32mI (120325) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (122325) UART_LOOPBACK: Received: [0m
+[0;32mI (125325) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (127325) UART_LOOPBACK: Received: [0m
+[0;32mI (130325) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (132325) UART_LOOPBACK: Received: [0m
+[0;32mI (135325) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (137325) UART_LOOPBACK: Received: [0m
+[0;32mI (140325) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (142325) UART_LOOPBACK: Received: [0m
+[0;32mI (145325) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (147325) UART_LOOPBACK: Received: [0m
+[0;32mI (150325) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (152325) UART_LOOPBACK: Received: [0m
+[0;32mI (155325) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (157325) UART_LOOPBACK: Received: [0m
+[0;32mI (160325) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (162325) UART_LOOPBACK: Received: [0m
+[0;32mI (165325) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (167325) UART_LOOPBACK: Received: [0m
+[0;32mI (170325) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (172325) UART_LOOPBACK: Received: [0m
+[0;32mI (175325) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (177325) UART_LOOPBACK: Received: [0m
+[0;32mI (180325) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (2355) UART_LOOPBACK: Received: [0m
+[0;32mI (5355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;33mW (7355) UART_LOOPBACK: No data received[0m
+[0;32mI (10355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (12355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (15355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (17355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (20355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (22355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (25355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (27355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (30355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (32355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (35355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (37355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (40355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (42355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (45355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (47355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (50355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (52355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (55355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (57355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (60355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (62355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (65355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (67355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (70355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (72355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (75355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (77355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (80355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (82355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (85355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (87355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (90355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (92355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (95355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (97355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (100355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (102355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (105355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (107355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (110355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (112355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (115355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (117355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (120355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (122355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (125355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (127355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (130355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (132355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (135355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (137355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (140355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (142355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (145355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (147355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (150355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (152355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (155355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (157355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (160355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (162355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (165355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (167355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (170355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (172355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (175355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (177355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (180355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (182355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (185355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (187355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (190355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (192355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (195355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (197355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (200355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (202355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (205355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (207355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (210355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (212355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (215355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (217355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (220355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (222355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (225355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (227355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (230355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (232355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (235355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (237355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (240355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (242355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (245355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (247355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (250355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (252355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (255355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (257355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (260355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (262355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (265355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (267355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (270355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (272355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (275355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (277355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (280355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (282355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (285355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (287355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (290355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (292355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (295355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (297355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (300355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (302355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (305355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (307355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (310355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (312355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (315355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (317355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (320355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (322355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (325355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (327355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (330355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (332355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (335355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (337355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (340355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (342355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (345355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (347355) UART_LOOPBACK: Received: Hello STM32!
+[0m
+[0;32mI (350355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;33mW (352355) UART_LOOPBACK: No data received[0m
+[0;32mI (355355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;33mW (357355) UART_LOOPBACK: No data received[0m
+[0;32mI (360355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;33mW (362355) UART_LOOPBACK: No data received[0m
+[0;32mI (365355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;33mW (367355) UART_LOOPBACK: No data received[0m
+[0;32mI (370355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;33mW (372355) UART_LOOPBACK: No data received[0m
+[0;32mI (375355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;33mW (377355) UART_LOOPBACK: No data received[0m
+[0;32mI (380355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;33mW (382355) UART_LOOPBACK: No data received[0m
+[0;32mI (385355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;33mW (387355) UART_LOOPBACK: No data received[0m
+[0;32mI (390355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;33mW (392355) UART_LOOPBACK: No data received[0m
+[0;32mI (395355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;33mW (397355) UART_LOOPBACK: No data received[0m
+[0;32mI (400355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;33mW (402355) UART_LOOPBACK: No data received[0m
+[0;32mI (405355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;33mW (407355) UART_LOOPBACK: No data received[0m
+[0;32mI (410355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;33mW (412355) UART_LOOPBACK: No data received[0m
+[0;32mI (415355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;33mW (417355) UART_LOOPBACK: No data received[0m
+[0;32mI (420355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;33mW (422355) UART_LOOPBACK: No data received[0m
+[0;32mI (425355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;33mW (427355) UART_LOOPBACK: No data received[0m
+[0;32mI (430355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;33mW (432355) UART_LOOPBACK: No data received[0m
+[0;32mI (435355) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;33mW (437355) UART_LOOPBACK: No data received[0m
+[0;32mI (440355) UART_LOOPBACK: Sent: Hello STM32!
+[0m

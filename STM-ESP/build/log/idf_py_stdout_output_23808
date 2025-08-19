@@ -1,0 +1,79 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.3-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Aug  5 2025 16:17:48[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0adb4h ( 44468) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0001addc vaddr=3ffb0000 size=02274h (  8820) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=0001d058 vaddr=40080000 size=02fc0h ( 12224) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=16690h ( 91792) map[0m
+[0;32mI (166) esp_image: segment 4: paddr=000366b8 vaddr=40082fc0 size=0a5b8h ( 42424) load[0m
+[0;32mI (189) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (189) boot: Disabling RNG early entropy source...[0m
+[0;32mI (201) cpu_start: Multicore app[0m
+[0;32mI (210) cpu_start: Pro cpu start user code[0m
+[0;32mI (210) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (210) cpu_start: Application information:[0m
+[0;32mI (213) cpu_start: Project name:     STM-ESP[0m
+[0;32mI (218) cpu_start: App version:      dc11905[0m
+[0;32mI (223) cpu_start: Compile time:     Aug  5 2025 16:16:13[0m
+[0;32mI (229) cpu_start: ELF file SHA256:  7c4fd9d62...[0m
+[0;32mI (234) cpu_start: ESP-IDF:          v5.2.3-dirty[0m
+[0;32mI (240) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (244) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (249) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (254) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (261) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (267) heap_init: At 3FFB2B58 len 0002D4A8 (181 KiB): DRAM[0m
+[0;32mI (274) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (280) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (286) heap_init: At 4008D578 len 00012A88 (74 KiB): IRAM[0m
+[0;32mI (294) spi_flash: detected chip: generic[0m
+[0;32mI (297) spi_flash: flash io: dio[0m
+[0;33mW (301) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (315) main_task: Started on CPU0[0m
+[0;32mI (325) main_task: Calling app_main()[0m
+[0;32mI (325) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;33mW (2325) UART_LOOPBACK: No data received[0m
+[0;32mI (5325) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;32mI (7325) UART_LOOPBACK: Received: 
+================================
+UART Bootloader
+https://github.com/ferenc-nemeth
+================================
+
+[0m
+[0;32mI (10325) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;33mW (12325) UART_LOOPBACK: No data received[0m
+[0;32mI (15325) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;33mW (17325) UART_LOOPBACK: No data received[0m
+[0;32mI (20325) UART_LOOPBACK: Sent: Hello STM32!
+[0m
+[0;33mW (22325) UART_LOOPBACK: No data received[0m
+[0;32mI (25325) UART_LOOPBACK: Sent: Hello STM32!
+[0m
