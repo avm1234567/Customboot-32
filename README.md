@@ -169,7 +169,7 @@ All the codes are to be executed using their respective execution environments l
 ![Screenshot](assets/PCBSc.png)
 
 **Simple dual image Bootloader in folder 2:**
-
+![video](assets/SimpleBootloader.mp4)
 <video src="assets/SimpleBootloader.mp4" controls width="720" poster="thumb.jpg" mute align = "center"></video>
 <h3 align = "center">Simple Bootloader</h3>
 
