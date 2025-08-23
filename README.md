@@ -99,7 +99,7 @@ UART.
 
 ## 📁 File structure
 
-    .
+    CustomBoot-32
     ├── 1. OTA
     │   ├── CMakeLists.txt
     │   ├── main
@@ -185,6 +185,8 @@ All the codes are to be executed using their respective execution environments l
 Recording of the perfboard testing of STM32F103C8T6 SOC with the codes available in folder number 7:
 
 [**Full Working using STM SOC soldered on the breakout board andtested on perfboard**](https://drive.google.com/file/d/15sZR7zUH3JRWFjR2rwua6hHhE9rVFGUJ/view?usp=drive_link)
+
+For other results and test videos, please check assets folder.
 </h2>
 
 
