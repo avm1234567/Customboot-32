@@ -98,11 +98,7 @@ UART.
 <br><br>
 
 ## 📁 File structure
-![Static Badge](https://img.shields.io/badge/coming%20soon-red?style=flat-square)
-<br>
-<br>
 
-### File Structure
     .
     ├── 1. OTA
     │   ├── CMakeLists.txt
