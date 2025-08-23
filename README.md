@@ -26,6 +26,7 @@ The project integrates an STM32F103C8T6 with an ESP32-WROOM-32D to create a self
 
 ## Tech Stack
 ![Static Badge](https://img.shields.io/badge/Embedded_C-blue?style=for-the-badge&logo=C&labelColor=black)
+
 ![Static Badge](https://img.shields.io/badge/PCB%20Designing-green?style=for-the-badge)
 
 
@@ -46,6 +47,7 @@ cd Customboot-32
 ```
 
 # Usage
+
 
 
 
