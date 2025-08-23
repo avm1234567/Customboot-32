@@ -168,10 +168,8 @@ All the codes are to be executed using their respective execution environments l
 
 ![Screenshot](assets/PCBSc.png)
 
-**Simple dual image Bootloader in folder 2:**
-![video](assets/SimpleBootloader.mp4)
-<video src="assets/SimpleBootloader.mp4" controls width="720" poster="thumb.jpg" mute align = "center"></video>
-<h3 align = "center">Simple Bootloader</h3>
+<!-- **Simple dual image Bootloader in folder 2:**
+<h3 align = "center">SimpleBootloader.mp4</h3>
 
 **Duplex UART communication between ESP and STM in folder 4:**
 <video src="assets/2WayUART.mp4" controls width="720" poster="thumb.jpg" mute align = "center"></video>
@@ -181,13 +179,13 @@ All the codes are to be executed using their respective execution environments l
 **Test to wirelessly control ESP's GPIOs using buttons in website:**
 <video src="assets/Wireless_CMD_Test.mp4" controls width="720" poster="thumb.jpg" mute align = "center"></video>
 <h3 align = "center">LED on/off using website wirelessly</h3>
+ -->
 
+<h2 align = "center">
+Recording of the perfboard testing of STM32F103C8T6 SOC with the codes available in folder number 7:
 
-
-**Recording of the perfboard testing of STM32F103C8T6 SOC with the codes available in folder number 7.**
-
-<video src="assets/WorkingVideo.mp4" controls width="720" poster="thumb.jpg" mute align = "center"></video>
-<h3 align = "center">Perfboard Testing</h3>
+[**Full Working using STM SOC soldered on the breakout board andtested on perfboard**](https://drive.google.com/file/d/15sZR7zUH3JRWFjR2rwua6hHhE9rVFGUJ/view?usp=drive_link)
+</h2>
 
 
 
