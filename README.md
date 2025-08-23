@@ -34,6 +34,18 @@ The project integrates an STM32F103C8T6 with an ESP32-WROOM-32D to create a self
 
 # Getting Started
 ## Prerequisites 
+- Hardware
+    - ESP32 (tested on ESP32-WROOM-32D / ESP32 variant with Wi-Fi support)
+
+    - STM32 microcontroller (tested on STM32F103C8T6)
+
+    - USB-to-TTL adapter (for debugging / initial flashing)
+- Software 
+    - ESP-IDF
+
+    - STM32CubeIDE 
+
+    - STM32CubeProgrammer
 
 ## Installation
 1) Clone the repository<br>
@@ -52,6 +64,8 @@ cd Customboot-32
 
 
 # Results
+## ESP File Sending 
+![esp file sending](assests/website.png)
 
 # Contributors
 - Varun Patil
