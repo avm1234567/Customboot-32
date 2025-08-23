@@ -1,0 +1,15 @@
+[1/9] Performing build step for 'bootloader'
+[1/1] cd /home/varun/esp/ESP_STM_COMM/build/bootloader/esp-idf/esptool_py && /home/varun/.espressif/python_env/idf5.4_py3.10_env/bin/python /home/varun/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/varun/esp/ESP_STM_COMM/build/bootloader/bootloader.bin
+Bootloader binary size 0x6570 bytes. 0xa90 bytes (9%) free.
+[2/7] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ESP_STM_COMM.c.obj
+[3/7] Linking C static library esp-idf/main/libmain.a
+[4/7] Generating ld/sections.ld
+[5/7] Linking CXX executable ESP_STM_COMM.elf
+[6/7] Generating binary image from built executable
+esptool.py v4.9.0
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/varun/esp/ESP_STM_COMM/build/ESP_STM_COMM.bin
+[7/7] cd /home/varun/esp/ESP_STM_COMM/build/esp-idf/esptool_py && /home/varun/.espressif/python_env/idf5.4_py3.10_env/bin/python /home/varun/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/varun/esp/ESP_STM_COMM/build/partition_table/partition-table.bin /home/varun/esp/ESP_STM_COMM/build/ESP_STM_COMM.bin
+ESP_STM_COMM.bin binary size 0x30cc0 bytes. Smallest app partition is 0x100000 bytes. 0xcf340 bytes (81%) free.
