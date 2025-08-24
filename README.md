@@ -166,8 +166,11 @@ All the codes are to be executed using their respective execution environments l
 
 **Screenshot of our custom PCB:**
 
-![Screenshot](assets/PCBSc.png)
+![Screenshot](assets/PCBSC1.png)
+<h3 align = "center">Front</h3>
 
+![Screenshot](assets/PCBSC2.png)
+<h3 align = "center">Back</h3>
 <!-- **Simple dual image Bootloader in folder 2:**
 <h3 align = "center">SimpleBootloader.mp4</h3>
 
