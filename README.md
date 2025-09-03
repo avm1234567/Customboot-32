@@ -32,7 +32,7 @@ The project integrates an STM32F103C8T6 with an ESP32-WROOM-32D to create a self
 
 ## File Structure
 
-
+```
 
 1) Gerber files
 
@@ -42,7 +42,7 @@ The project integrates an STM32F103C8T6 with an ESP32-WROOM-32D to create a self
 
 3) assets
 
-
+```
 
 # Getting Started
 ## Prerequisites 
