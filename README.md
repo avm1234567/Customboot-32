@@ -67,6 +67,12 @@ cd Customboot-32
 ## ESP File Sending 
 ![esp file sending](assests/website.png)
 
+## Routing 
+![Routing of PCB](assests/Routing.png)
+
+## 3D-View
+![3D](assests/3D-view.png)
+
 # Contributors
 - Varun Patil
 
