@@ -37,8 +37,8 @@ The project integrates an STM32F103C8T6 with an ESP32-WROOM-32D to create a self
 1) Gerber files
 
 2) Schematic files
-├── 4 SRA.kicad_sch
-└── untitled.kicad_sch
+    ├── 4 SRA.kicad_sch
+    └── untitled.kicad_sch
 
 3) assets
 
