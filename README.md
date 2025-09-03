@@ -31,7 +31,11 @@ The project integrates an STM32F103C8T6 with an ESP32-WROOM-32D to create a self
 
 
 ## File Structure
-
+1. Gerber files
+2. Schematic files
+├──4 SRA.kicad_sch
+└──untitled.kicad_sch
+3. assets
 # Getting Started
 ## Prerequisites 
 - Hardware
@@ -46,6 +50,8 @@ The project integrates an STM32F103C8T6 with an ESP32-WROOM-32D to create a self
     - STM32CubeIDE 
 
     - STM32CubeProgrammer
+
+    - KiCad
 
 ## Installation
 1) Clone the repository<br>
@@ -65,13 +71,17 @@ cd Customboot-32
 
 # Results
 ## ESP File Sending 
-![esp file sending](assests/website.png)
+![esp file sending](assets/website.png)
 
 ## Routing 
-![Routing of PCB](assests/Routing.png)
+![Routing of PCB](assets/Routing.png)
 
 ## 3D-View
-![3D](assests/3D-view.png)
+Front
+![3D-Front](assets/3D-view.png)
+
+Back
+![3D-Back](assets/3D-view%20back.png)
 
 # Contributors
 - Varun Patil
