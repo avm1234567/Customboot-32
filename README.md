@@ -4,7 +4,7 @@
 
 
 <!-- TABLE OF CONTENTS -->
-## Table of Contents
+## 📑 Table of Contents
 
 * [About the Project](#about-the-project)
   - [Aim](#aim)
@@ -135,7 +135,7 @@ UART.
 <br><br>    
 
 <!-- GETTING STARTED -->
-## Getting Started
+## 🚀 Getting Started
 
 ### Prerequisites 
 - ESP-IDF v5.2.1
@@ -156,7 +156,7 @@ UART.
 
 
 <!-- USAGE EXAMPLES -->
-## Usage
+## ⚡ Usage
 
 The codes used in our project are in the 'CustomBoot-32' directory. 
 
