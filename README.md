@@ -1,9 +1,5 @@
 <h1 align="center">🚀 CustomBoot-32</h1>
 
-<p>
-<h2 align = "center"> ✨ SRA Eklavya 2025 <br></h2>
-</p>
-
 <h2 align="center">✨ SRA Eklavya 2025</h2>
 
 
