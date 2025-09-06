@@ -1,8 +1,9 @@
-# 🚀 CustomBoot-32
+<h1 align="center">🚀 CustomBoot-32</h1>
 
-## ✨ SRA Eklavya 2025
-32e
----
+
+<h2 align="center">✨ SRA Eklavya 2025</h2>
+
+
 
 ## 📑 Table of Contents
 * [About the Project](#-about-the-project)  
