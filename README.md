@@ -3,7 +3,7 @@
 </p>
 
 <p>
-<h2 align = "centre"> ✨ SRA Eklavya 2025 </h2>
+<h2 align = "center"> ✨ SRA Eklavya 2025 <br></h2>
 </p>
 
 <!-- TABLE OF CONTENTS -->
@@ -221,9 +221,52 @@ cd 3. ESP_STM_UART1\ESP_STM_COMM
 idf.py build
 idf.py flash monitor 
 ```
+
 - To flash the STM code, open STM32CubeIDE and generate the build files.
 
-- After generating flash the bin file into the STM using STM32CubeProgrammer 
+- After generating flash the bin file into the STM using STM32CubeProgrammer at Start Address '0x08000000'
+
+### 4. ESP_STM_UART2
+
+- To run the ESP side of the code change your directory to 'ESP_STM_COMM'.
+```
+cd 3. ESP_STM_UART2\ESP_STM_COMM
+```
+
+- After that build the code and flash it 
+```
+idf.py build
+idf.py flash monitor 
+```
+
+- To flash the STM code, open STM32CubeIDE and generate the build files.
+
+- After generating flash the bin file into the STM using STM32CubeProgrammer at Start Address '0x08000000'.
+
+### 5. ESP_TO_STM_FIRMWARE_VIA_UART
+
+-- To run the ESP side of the code change your directory to 'OTA'.
+```
+cd 5. ESP_TO_STM_FIRMWARE_VIA_UART\OTA
+```
+
+- After that build the code and flash it 
+```
+idf.py build
+idf.py flash monitor 
+```
+ 
+
+- To flash the STM code, open STM32CubeIDE and generate the build files. You will find the bin files in the path
+```
+CustomBoot-32/5. ESP_TO_STM_FIRMWARE_VIA_UART/Learning_Bootloader/Debug/Learning_Bootloader.bin
+```
+
+- After generating flash the bin file into the STM using STM32CubeProgrammer at Start Address '0x08000000'.
+
+### 6. 
+
+
 
 
 
