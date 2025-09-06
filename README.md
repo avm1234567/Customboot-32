@@ -264,7 +264,7 @@ CustomBoot-32/5. ESP_TO_STM_FIRMWARE_VIA_UART/Learning_Bootloader/Debug/Learning
 
 - After generating flash the bin file into the STM using STM32CubeProgrammer at Start Address '0x08000000'.
 
-### 6. 
+### 6. ESP_STM_FILE_CRC
 
 
 
@@ -277,111 +277,86 @@ CustomBoot-32/5. ESP_TO_STM_FIRMWARE_VIA_UART/Learning_Bootloader/Debug/Learning
 
 
 
-<!-- RESULTS AND DEMO -->
-## Results and Demo
+## 📸 Results
 
-**Screenshot of our custom PCB:**
+**Screenshot of our custom PCB:**  
 
-![Screenshot](assets/PCBSC1.png)
-<h3 align = "center">Front</h3>
+![Front](assets/PCBSC1.png)  
+<br>
+![Back](assets/PCBSC2.png)  
+<br>
+<img src="assets/Final_PCB.png" alt="Actual PCB" width="800">
 
-![Screenshot](assets/PCBSC2.png)
-<h3 align = "center">Back</h3>
-<!-- **Simple dual image Bootloader in folder 2:**
-<h3 align = "center">SimpleBootloader.mp4</h3>
+## Demo:  
+[Working Demo of final PCB)](https://drive.google.com/file/d/1Z0VfDI0KjEA28zM6vQ-hMSaG2jekwzWR/view?usp=drive_link)  
 
-**Duplex UART communication between ESP and STM in folder 4:**
-<video src="assets/2WayUART.mp4" controls width="720" poster="thumb.jpg" mute align = "center"></video>
-<h3 align = "center">Duplex Communication between ESP and STM via UART</h3>
+For other results and test videos, please check our [Google Drive](https://drive.google.com/drive/folders/1JogM4m4yME66ZIJGMlyX8mcmxp7ndMSk?usp=drive_link).
 
+## Report
+Refer our own [report](https://drive.google.com/file/d/13CS2zIfVXfLGR-wP4OjCv9lpuOwN3wu8/view?usp=drive_link) of project where we explain the entire process in detail.
 
-**Test to wirelessly control ESP's GPIOs using buttons in website:**
-<video src="assets/Wireless_CMD_Test.mp4" controls width="720" poster="thumb.jpg" mute align = "center"></video>
-<h3 align = "center">LED on/off using website wirelessly</h3>
- -->
+## 🛠 Troubleshooting
+* ERC rule check errors in PCB schematics.  
+* Routing issues in compact areas while adhering to manufacturer constraints.  
+* Wi-Fi SSID and password options not appearing in Menuconfig.  
+* CMakeLists errors affecting SPIFFS initialization.  
+* Partition table not being detected.  
+* SPIFFS initialization failure at runtime.  
+* Favicon loading errors.  
+* OTA binaries containing unnecessary bloatware.  
+* UART initialization issues.  
+* Binary file transfer failures.  
+* Errors in custom file protocol implementation.  
+* End-byte transmission errors during communication.  
+* Application jump not functioning correctly (MSP not set).  
+* Correct HAL-like application jump with LibOpenCM3.  
+* Schematic issues resolved through perfboard prototyping and testing.  
 
-<h2 align = "center">
-Recording of the perfboard testing of STM32F103C8T6 SOC with the codes available in folder number 7:
+---
 
-[**Full Working using STM SOC soldered on the breakout board andtested on perfboard**](https://drive.google.com/file/d/15sZR7zUH3JRWFjR2rwua6hHhE9rVFGUJ/view?usp=drive_link)
+## 👥 Contributors
+* [Varun Patil](https://github.com/varun05050505)  
+* [Omkar Nanajkar](https://github.com/nomkar24)  
+* [Archit More](https://github.com/avm1234567)  
 
-For other results and test videos, please check assets folder.
-</h2>
+## 🎓 Mentors
+* [Prithvi Tambewagh](https://github.com/rkt-1597)  
+* [Shaunak Datar](https://github.com/nomkar24)  
+* [Vishal Mutha](https://github.com/avm1234567)  
 
+---
 
-
-<!-- FUTURE WORK -->
-## Future Work
-
-- Trying to integrate SD card support to handle morre than 2 firmwares.
-- Adding LED arrays for better visual appealing.
-- Running multiple STM based projects to test our board's capabilities.
-
-
-
-<!-- TROUBLESHOOTING -->
-## Troubleshooting
-* ERC rule check errors in PCB schematics.
-* Routing in compact areas while adhering to PCB manufacturer constraints.
-* Wi-Fi SSID and password options not appearing in Menuconfig.
-* CMakeLists errors affecting SPIFFS initialization.
-* Partition table not being detected.
-* SPIFFS initialization failure at runtime.
-* Favicon loading errors.
-* Unnecessary bloatware included with OTA binary files, requiring filtering.
-* UART initialization issues.
-* Failure in binary file transfer.
-* Errors in custom file protocol implementation.
-* End-byte transmission errors during communication.
-* Application jump not functioning correctly; MSP not set properly.
-* Accurate implementation of HAL-like application jump using LibOpenCM3.
-* Resolving major schematic issues through perfboard prototyping and testing.
-
-
-
-<!-- CONTRIBUTORS -->
-## Contributors
-* [Varun Patil](https://github.com/varun05050505)
-* [Omkar Nanajkar](https://github.com/nomkar24)
-* [Archit More](https://github.com/avm1234567)
-
-## Mentors
-* [Prithvi Tambewagh](https://github.com/rkt-1597)
-* [Shaunak Datar](https://github.com/nomkar24)
-* [Vishal Mutha](https://github.com/avm1234567)
-
-
-## Resources
+## 📚 Resources
 - [Understanding GIT](https://youtu.be/apGV9Kg7ics?si=QQJMHjStjuuJt9wC)  
-- [ESP32 WROOM-32D datasheet](https://www.digikey.in/en/htmldatasheets/production/3267269/0/0/1/esp32-devkitc-32d)  
+- [ESP32 WROOM-32D datasheet](https://www.digikey.in/en/htmldatasheets/production/3267269/0/0/1/esp32-devkitc-32e)  
 - [STM32F103C8T6 datasheet](https://www.st.com/resource/en/datasheet/stm32f103c8.pdf)  
-- [CP2102 datasheet](https://www.digikey.in/htmldatasheets/production/121410/0/0/1/cp2102-gm.html?gclsrc=aw.ds&gad_source=1&gad_campaignid=146895304&gbraid=0AAAAADrbLlhJZZqjvv2UCZZ3iVlr4LYsd&gclid=Cj0KCQjw5JXFBhCrARIsAL1ckPsLeNYVgjHdsQhaNjdFA3oVTSbDaxx1qRKgEMt8qiXLX2qIpof5GuIaAlVaEALw_wcB)  
+- [CP2102 datasheet](https://www.digikey.in/htmldatasheets/production/121410/0/0/1/cp2102-gm.html)  
 - [AMS1117 datasheet](https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/5011/AMS1117.pdf)  
-- [Learning KiCad](https://youtube.com/playlist?list=PLEBQazB0HUyR24ckSZ5u05TZHV9khgA1O&si=0HIawDfIP4Njrpo-)  
-- [Designing a full STM blue pill in KiCad](https://youtu.be/aVUqaB0IMh4?si=N4PDonKOkEUr_ZC0)  
-- [Bootloader basics (EmbeTronicx)](https://embetronicx.com/tutorials/microcontrollers/stm32/bootloader/bootloader-basics/#goog_rewarded)  
-- [Getting Started with bootloader (EmbeddedInventor)](https://embeddedinventor.com/embedded-bootloader-and-booting-process-explained/)  
-- [Another blog on bootloader](https://blog.sperka.pl/en/2021/01/lets-make-a-bootloader-for-stm32-pt-1/)  
-- [Video on bootloader](https://youtu.be/S0s69xNE1dE?si=PkRS1qKZMWDQEO5x)  
-- [Getting started with STM32](https://youtube.com/playlist?list=PLNyfXcjhOAwO5HNTKpZPsqBhelLF2rWQx&si=Qqjizr4BlnJ0h9xE)  
+- [Learning KiCad](https://youtube.com/playlist?list=PLEBQazB0HUyR24ckSZ5u05TZHV9khgA1O)  
+- [Designing STM Blue Pill in KiCad](https://youtu.be/aVUqaB0IMh4)  
+- [Bootloader basics (EmbeTronicx)](https://embetronicx.com/tutorials/microcontrollers/stm32/bootloader/bootloader-basics/)  
+- [EmbeddedInventor: Bootloader](https://embeddedinventor.com/embedded-bootloader-and-booting-process-explained/)  
+- [Blog: Bootloader for STM32](https://blog.sperka.pl/en/2021/01/lets-make-a-bootloader-for-stm32-pt-1/)  
+- [Video: Bootloader STM32](https://youtu.be/S0s69xNE1dE)  
+- [Getting Started with STM32](https://youtube.com/playlist?list=PLNyfXcjhOAwO5HNTKpZPsqBhelLF2rWQx)  
 - [Bare-metal UART STM32](https://vivonomicon.com/2020/06/28/bare-metal-stm32-programming-part-10-uart-communication/)  
-- [Programming STM32 using USB-to-TTL](https://youtu.be/zUsollWLnV4?si=Ee3k7bhfY8afoKE_)  
+- [Programming STM32 via USB-TTL](https://youtu.be/zUsollWLnV4)  
 - [CRC32 for STM](https://www.st.com/resource/en/application_note/an4187-using-the-stm32-hardware-crc-unit-stmicroelectronics.pdf)  
 - [LibOpenCM3 documentation](https://libopencm3.org/docs/latest/stm32f1/html/modules.html)  
-- [Git repo to refer LibOpenCM3 implementation](https://github.com/ziteh/stm32-examples)  
-- [ESP32 devkit schematic (V4)](https://dl.espressif.com/dl/schematics/esp32_devkitc_v4-sch.pdf)  
-- [ESP-IDF programming basics](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/index.html)  
+- [LibOpenCM3 Examples](https://github.com/ziteh/stm32-examples)  
+- [ESP32 DevkitC V4 schematic](https://dl.espressif.com/dl/schematics/esp32_devkitc_v4-sch.pdf)  
+- [ESP-IDF Programming Basics](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/index.html)  
 - [ESP32 UART](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-reference/peripherals/uart.html)  
-- [File systems in ESP32](https://youtu.be/V9-cgXag4Ko?si=5PlxUC6kEpwWESMx)  
+- [File systems in ESP32](https://youtu.be/V9-cgXag4Ko)  
 - [SPIFFS](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-reference/storage/spiffs.html)  
 - [FreeRTOS](https://my-esp-idf.readthedocs.io/en/latest/api-guides/freertos-smp.html#tasks-and-task-creation)  
-- [Web server handling in ESP](https://esp32tutorials.com/esp32-web-server-esp-idf/)  
-- [File transfer protocols](https://www.geeksforgeeks.org/computer-networks/xmodem-file-transfer-protocol/)  
-- [C implementation of file protocols at sender's side](https://gist.github.com/zonque/0ae2dc8cedbcdbd9b933)  
+- [ESP Web Server Handling](https://esp32tutorials.com/esp32-web-server-esp-idf/)  
+- [File Transfer Protocols](https://www.geeksforgeeks.org/computer-networks/xmodem-file-transfer-protocol/)  
+- [C implementation of file protocols (Sender side)](https://gist.github.com/zonque/0ae2dc8cedbcdbd9b933)  
 
+---
 
-<!-- ACKNOWLEDGEMENTS AND REFERENCES -->
-## Acknowledgements
-We are extremely grateful to our mentors – **Prithvi Tambewagh, Shaunak Datar and Vishal Mutha** for their guidance and support throughout the course of this project.
+## 🙏 Acknowledgements
+We are extremely grateful to our mentors – **Prithvi Tambewagh, Shaunak Datar, and Vishal Mutha** – for their guidance and support throughout the course of this project.  
 
-We also express gratitude towards [SRA-VJTI](https://sravjti.in/) for their support as well as organization of [’Elkavya - 2025’](https://sravjti.in/projects/eklavya/) and providing us with the opportunity to work on this project. 
+We also thank [SRA-VJTI](https://sravjti.in/) for their support in organizing [Eklavya 2025](https://sravjti.in/projects/eklavya/) and for providing us the opportunity to work on this project.  
