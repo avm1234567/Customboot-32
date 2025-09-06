@@ -1,10 +1,3 @@
-<p>
-<h1 align = "center" > <strong>🚀 CustomBoot-32</strong> <br></h1>
-
-<h2 align = "center">
-
-</p>
-
 [SRA](https://www.sravjti.in/) Eklavya 2025 ✨<br></h2>  
 
 
