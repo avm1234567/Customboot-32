@@ -162,8 +162,7 @@ Before execution, clean the previous builds for error-free compilation.
 <br>
 ![Back](assets/PCBSC2.png)  
 <br>
-![Actual PCB](assets/Final_PCB.png)
-
+<img src="assets/Final_PCB.png" alt="Actual PCB" width="700">
 ## Demo:  
 [Working Demo of final PCB)](https://drive.google.com/file/d/1Z0VfDI0KjEA28zM6vQ-hMSaG2jekwzWR/view?usp=drive_link)  
 
