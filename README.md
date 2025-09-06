@@ -1,7 +1,10 @@
-[SRA](https://www.sravjti.in/) Eklavya 2025 ✨<br></h2>  
+<p>
+<h1 align = "center" > <strong> 🚀 CustomBoot-32</strong> <br></h1>
+</p>
 
-
-
+<p>
+<h2 align = "centre"> ✨ SRA Eklavya 2025 </h2>
+</p>
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
@@ -28,10 +31,10 @@
 <!-- ABOUT THE PROJECT -->
 # ⭐ About the project
 ## Aim
-Designing a custom PCB with OTA support and dual image Bootloader using ESP32 WROOM-32D and STM32F103C8T6.
+Designing a custom PCB with OTA support and dual image Bootloader using ESP32 WROOM-32E and STM32F103C8T6.
 
 ## Description
-The main aim is creating a custom PCB that integrates Blue Pill(STM32F103C8T6) with ESP32 WROOM-32D, 
+The main aim is creating a custom PCB that integrates Blue Pill(STM32F103C8T6) with ESP32 WROOM-32E, 
 which uses OTA feature of ESP to receive two firmwares from a Website hosted
 by ESP itself, create memory partitions in ESP and initialize a File System in
 one of the partitions. Further on the STM side, we created a Dual-Image Boot-
@@ -137,6 +140,14 @@ UART.
 <!-- GETTING STARTED -->
 ## Getting Started
 
+### Prerequisites 
+- ESP-IDF v5.2.1
+
+- STM32CubeIDE v1.18.1
+
+- STM32CubeProgrammer v2.20.0
+
+
 ### Installation
 1) Clone the repo<br>
 `git clone https://github.com/avm1234567/Customboot-32/tree/varun`
@@ -149,9 +160,78 @@ UART.
 
 <!-- USAGE EXAMPLES -->
 ## Usage
+
+The codes used in our project are in the 'CustomBoot-32' directory. 
+
+### 1. OTA
+
+- From the CustomBoot-32 directory head to the OTA directory.
 ```
-All the codes are to be executed using their respective execution environments like ESP-IDF, PlatformIO, STM32 Cube IDE, STM32 CUBE Programmer, etc. Before execution do clean the previous builds for errorless execution.
+cd 1. OTA
 ```
+
+- In the code enter the SSID and password of your wifi in line 16 and 17.
+```
+#define WIFI_SSID "Your_SSID"
+#define WIFI_PASS "Your_Password"
+```
+
+- Then open ESP-IDF Powershell and build the project.
+```
+idf.py build
+```
+
+- After the build is complete flash it.
+```
+idf.py flash monitor 
+```
+
+### 2. Dual_Image_Bootloader
+
+- To generate the bin files open this project in STM32CubeIDE and build it 
+
+- To flash this Code use STM32CubeProgrammer. Change your directory to Dual image bootloader directory. 
+
+- After opening the directory first flash the LED_BLINK_2 bin file into STM-32 at the Start Address '0x08006000'. The path for the bin is: 
+```
+CustomBoot-32/2. Dual_Image_Bootloader/LED_BLINK_2/Debug/LED_BLINK_2.bin
+```
+
+- After flashing the first bin file flash the LED_BLINK bin file into STM-32 at the Start Address '0x08004000'. The path for the bin is:
+```
+CustomBoot-32/2. Dual_Image_Bootloader/LED_BLINK/Debug/LED_BLINK.bin
+```
+
+- Lastly, flash the Bootloader at the Start Address '0x08000000'. The path for the bin is:
+```
+CustomBoot-32/2. Dual_Image_Bootloader/Learning_Bootloader/Debug/Learning_Bootloader.bin
+```
+
+- Press the 'Start Programming' button to run the program.
+
+### 3. ESP_STM_UART1
+
+- To run the ESP side of the code change your directory to 'ESP_STM_COMM'.
+```
+cd 3. ESP_STM_UART1\ESP_STM_COMM
+```
+
+- After that build the code and flash it 
+```
+idf.py build
+idf.py flash monitor 
+```
+- To flash the STM code, open STM32CubeIDE and generate the build files.
+
+- After generating flash the bin file into the STM using STM32CubeProgrammer 
+
+
+
+
+
+
+
+
 
 
 <!-- RESULTS AND DEMO -->

@@ -1,0 +1,6 @@
+CMake Error at CMakeLists.txt:6 (include):
+  include could not find requested file:
+
+    /home/varun/esp/esp-idf/components/spiffs/project_include.cmake
+
+
