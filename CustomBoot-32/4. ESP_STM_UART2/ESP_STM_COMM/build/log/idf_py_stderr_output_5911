@@ -1,0 +1,10 @@
+CMake Error at /home/varun/esp/esp-idf/tools/cmake/build.cmake:328 (message):
+  Failed to resolve component 'WiFi' required by component 'main': unknown
+  name.
+Call Stack (most recent call first):
+  /home/varun/esp/esp-idf/tools/cmake/build.cmake:371 (__build_resolve_and_add_req)
+  /home/varun/esp/esp-idf/tools/cmake/build.cmake:675 (__build_expand_requirements)
+  /home/varun/esp/esp-idf/tools/cmake/project.cmake:718 (idf_build_process)
+  CMakeLists.txt:6 (project)
+
+

@@ -1,0 +1,36 @@
+[0;33m--- esp-idf-monitor 1.7.0 on /dev/ttyUSB0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0m--- 0x40080400: [0;33m_init[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x4014f92c: [0;33m_fread_r[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fread.c[0m[0m:[1;31m160[0m
+[0m--- 0x400d545c: [0;33mesp_cleanup_r[0m[0m at [0;32m/home/varun/esp/esp-idf/components/newlib/newlib_init.c[0m[0m:[1;31m43[0m
+[0m--- 0x4000c2e0: [0;33mmemcpy[0m[0m in [0;32mROM[0m
+[0m--- 0x4000c2f6: [0;33mmemcpy[0m[0m in [0;32mROM[0m
+[0m--- 0x4014f929: [0;33m_fread_r[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fread.c[0m[0m:[1;31m158[0m
+[0m--- 0x4014f9ed: [0;33mfread[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fread.c[0m[0m:[1;31m266[0m
+[0m--- 0x400db4bb: [0;33mSend_firmware_protocol[0m[0m at [0;32m/home/varun/ESP_STM_FILE/OTA/main/main.c[0m[0m:[1;31m312[0m
+[0m--- 0x400db6fd: [0;33muart_firmware_task[0m[0m at [0;32m/home/varun/ESP_STM_FILE/OTA/main/main.c[0m[0m:[1;31m440[0m
+[0m--- 0x4008b151: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/varun/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x40080400: [0;33m_init[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x4008b16f: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/varun/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m143[0m
+[0m--- 0x40081c69: [0;33mpanic_abort[0m[0m at [0;32m/home/varun/esp/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m469[0m
+[0m--- 0x4008a635: [0;33mesp_system_abort[0m[0m at [0;32m/home/varun/esp/esp-idf/components/esp_system/port/esp_system_chip.c[0m[0m:[1;31m87[0m
+[0m--- 0x400923b1: [0;33mabort[0m[0m at [0;32m/home/varun/esp/esp-idf/components/newlib/abort.c[0m[0m:[1;31m38[0m
+[0m--- 0x4008b16f: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/varun/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m143[0m
+[0m--- 0x40080400: [0;33m_init[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x4014f92c: [0;33m_fread_r[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fread.c[0m[0m:[1;31m160[0m
+[0m--- 0x400d545c: [0;33mesp_cleanup_r[0m[0m at [0;32m/home/varun/esp/esp-idf/components/newlib/newlib_init.c[0m[0m:[1;31m43[0m
+[0m--- 0x4000c2e0: [0;33mmemcpy[0m[0m in [0;32mROM[0m
+[0m--- 0x4000c2f6: [0;33mmemcpy[0m[0m in [0;32mROM[0m
+[0m--- 0x4014f929: [0;33m_fread_r[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fread.c[0m[0m:[1;31m158[0m
+[0m--- 0x4014f9ed: [0;33mfread[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fread.c[0m[0m:[1;31m266[0m
+[0m--- 0x400db4bb: [0;33mSend_firmware_protocol[0m[0m at [0;32m/home/varun/ESP_STM_FILE/OTA/main/main.c[0m[0m:[1;31m312[0m
+[0m--- 0x400db710: [0;33muart_firmware_task[0m[0m at [0;32m/home/varun/ESP_STM_FILE/OTA/main/main.c[0m[0m:[1;31m447[0m
+[0m--- 0x4008b151: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/varun/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x40080400: [0;33m_init[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x4008b16f: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/varun/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m143[0m
+[0m--- 0x40081c69: [0;33mpanic_abort[0m[0m at [0;32m/home/varun/esp/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m469[0m
+[0m--- 0x4008a635: [0;33mesp_system_abort[0m[0m at [0;32m/home/varun/esp/esp-idf/components/esp_system/port/esp_system_chip.c[0m[0m:[1;31m87[0m
+[0m--- 0x400923b1: [0;33mabort[0m[0m at [0;32m/home/varun/esp/esp-idf/components/newlib/abort.c[0m[0m:[1;31m38[0m
+[0m--- 0x4008b16f: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/varun/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m143[0m
+[0m--- 0x40080400: [0;33m_init[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m

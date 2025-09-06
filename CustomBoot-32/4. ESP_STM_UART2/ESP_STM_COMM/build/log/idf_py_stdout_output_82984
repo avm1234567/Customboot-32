@@ -1,0 +1,289 @@
+M
+[0;32mI (250) heap_ini�ets Jul 29 2019 12:21:46[0m
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15736
+load:0x40080400,len:4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (29) boot: ESP-IDF v5.4.2 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Jul 24 2025 14:53:01[0m
+[0;32mI (30) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0ab54h ( 43860) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001ab7c vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (103) esp_image: segment 2: paddr=0001aba0 vaddr=3ffb0000 size=023e8h (  9192) load[0m
+[0;32mI (110) esp_image: segment 3: paddr=0001cf90 vaddr=40080000 size=03088h ( 12424) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=15b7ch ( 88956) map[0m
+[0;32mI (153) esp_image: segment 5: paddr=00035ba4 vaddr=40083088 size=0ad6ch ( 44396) load[0m
+[0;32mI (177) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (177) boot: Disabling RNG early entropy source...[0m
+[0;32mI (187) cpu_start: Multicore app[0m
+[0;32mI (196) cpu_start: Pro cpu start user code[0m
+[0;32mI (196) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (196) app_init: Application information:[0m
+[0;32mI (196) app_init: Project name:     ESP_STM_COMM[0m
+[0;32mI (200) app_init: App version:      1[0m
+[0;32mI (203) app_init: Compile time:     Jul 24 2025 14:52:47[0m
+[0;32mI (208) app_init: ELF file SHA256:  def827663...[0m
+[0;32mI (213) app_init: ESP-IDF:          v5.4.2[0m
+[0;32mI (217) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (220) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (224) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (229) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (235) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (240) heap_init: At 3FFB2CB0 len 0002D350 (180 KiB): DRAM[0m
+[0;32mI (245) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (250) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (256) heap_init: At 4008DDF4 len 0001220C (72 KiB): IRAM[0m
+[0;32mI (262) spi_flash: detected chip: generic[0m
+[0;32mI (265) spi_flash: flash io: dio[0m
+[0;33mW (268) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (281) main_task: Started on CPU0[0m
+[0;32mI (291) main_task: Calling app_main()[0m
+[0;32mI (741) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (1051) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (1351) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (1661) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (1961) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (2261) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (2571) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (2871) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (3171) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (3481) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (3781) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (4081) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (4391) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (4691) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (4991) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (5301) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (5601) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (5901) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (6211) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (6511) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (6821) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (7121) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (7421) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (7731) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (8031) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (8331) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (8641) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (8941) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (9241) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (9551) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (9851) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (10151) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (10461) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (10761) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (11061) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (11371) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (11671) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (11981) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (12281) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (12581) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (12891) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (13191) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (13491) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (13801) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (14101) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (14401) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (14711) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (15011) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (15311) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (15621) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (15921) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (16231) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (16531) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (16831) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (17141) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (17441) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (17741) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (18051) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (18351) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (18651) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (18961) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (19261) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (19561) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (19871) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (20171) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (20481) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (20781) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (21081) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (21391) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (21691) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (21991) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (22301) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (22601) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (22901) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (23211) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (23511) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (23811) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (24121) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (24421) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (24731) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (25031) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (25331) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (25641) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (25941) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (26241) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (26551) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (26851) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (27151) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (27461) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (27761) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (28061) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (28371) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (28671) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (28981) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (29281) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (29581) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (29891) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (30191) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (30491) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (30801) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (31101) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (31401) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (31711) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (32011) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (32311) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (32621) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (32921) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (33231) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (33531) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (33831) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (34141) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (34441) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (34741) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (35051) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (35351) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+
+[0;32mI (35651) UART_TEST: Received 22 bytes: Send hoja Bhai!!!!!![0m
+

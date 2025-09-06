@@ -1,0 +1,123 @@
+an the size in th�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15736
+load:0x40080400,len:4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (29) boot: ESP-IDF v5.4.2 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Jul 24 2025 14:53:01[0m
+[0;32mI (30) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0ac6ch ( 44140) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001ac94 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (104) esp_image: segment 2: paddr=0001acb8 vaddr=3ffb0000 size=023e8h (  9192) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=0001d0a8 vaddr=40080000 size=02f70h ( 12144) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=16024h ( 90148) map[0m
+[0;32mI (153) esp_image: segment 5: paddr=0003604c vaddr=40082f70 size=0aea4h ( 44708) load[0m
+[0;32mI (177) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (177) boot: Disabling RNG early entropy source...[0m
+[0;32mI (188) cpu_start: Multicore app[0m
+[0;32mI (196) cpu_start: Pro cpu start user code[0m
+[0;32mI (196) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (196) app_init: Application information:[0m
+[0;32mI (196) app_init: Project name:     ESP_STM_COMM[0m
+[0;32mI (201) app_init: App version:      1[0m
+[0;32mI (204) app_init: Compile time:     Jul 24 2025 14:52:47[0m
+[0;32mI (209) app_init: ELF file SHA256:  c8284e90b...[0m
+[0;32mI (213) app_init: ESP-IDF:          v5.4.2[0m
+[0;32mI (217) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (221) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (225) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (229) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (235) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (240) heap_init: At 3FFB2CB0 len 0002D350 (180 KiB): DRAM[0m
+[0;32mI (246) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (251) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (256) heap_init: At 4008DE14 len 000121EC (72 KiB): IRAM[0m
+[0;32mI (263) spi_flash: detected chip: generic[0m
+[0;32mI (265) spi_flash: flash io: dio[0m
+[0;33mW (268) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (281) main_task: Started on CPU0[0m
+[0;32mI (291) main_task: Calling app_main()[0m
+[0;32mI (291) UART_ECHO: Sent: Hjkdsnzfvkdnrfgioejmrflsiaerlfjd[0m
+[0;32mI (10721) UART_ECHO: Received: Hj[0m
+[0;32mI (10721) UART_ECHO: 48 6a 00 ff 00 f1 00 fd 00 fe 00 fc 00 ff 00 f8[0m
+[0;32mI (10721) UART_ECHO: 04 fb 00 ff 07 f8 00 f6 00 fe 00 ff 00 00 fc 00[0m
+[0;32mI (10721) UART_ECHO: fd 00 ff 00 f8 02 fd 00 ff 00 f8 00 fd 00 fe 00[0m
+[0;32mI (10731) UART_ECHO: f0 00 00 f8 00 fe 00 ff 00 f8 00 ff 00 fc 03 fc[0m
+[0;32mI (10741) UART_ECHO: 00 fe 00 f8 00 fe 00 fe 00 fe 00 fe 00 f8 00 f8[0m
+[0;32mI (10741) UART_ECHO: 00 ff 00 ff 00 fc 00 f9 00 fe 00 f8 00 ff 00 fc[0m
+[0;32mI (10751) UART_ECHO: 00 fa 00 fe 00 f8 00 fe 00 fc 00 fc 00 fe 00 f4[0m
+[0;32mI (10751) UART_ECHO: 00 ff 00 fc 00 fc 00 ff 00 f8 00 ff 00 00 f8 00[0m
+[0;32mI (10761) UART_ECHO: fe 00 f8 00 fd 00 ff 00 f8 00 fe 00 ff 00 f8 00[0m
+[0;32mI (10771) UART_ECHO: ff 00 fe 00 f8 00 fe 00 f8 00 ff 00 f8 00 f0 00[0m
+[0;32mI (10771) UART_ECHO: fe 00 fe 00 f8 00 ff 00 fc 00 fc 00 00 f8 00 fe[0m
+[0;32mI (10781) UART_ECHO: 00 ff 00 f9 02 00 f8 00 f0 00 ff 00 f8 00 fd 00[0m
+[0;32mI (10791) UART_ECHO: ff 00 f0 00 ff 00 fc 00 f8 04 ff 00 f0 00 fa 00[0m
+[0;32mI (10791) UART_ECHO: ff 00 f8 00 f8 00 00 fc 00 fe 00 00 f0 03 fe 00[0m
+[0;32mI (10801) UART_ECHO: fe 00 f8 00 ff 00 f8 04 ff 00 fe 00 f0 01 ff 00[0m
+[0;32mI (10801) UART_ECHO: f0 00 f8 03 fe 00 fc 00 fc 00 ff 00 f8 00 ff 03[0m
+[0;32mI (10811) UART_ECHO: fe 00 f8 00 fe 00 fc 00 fc 00 00 f8 00 fc 00 fc[0m
+[0;32mI (10821) UART_ECHO: 00 fe 00 fc 00 fc 00 fe 00 fe 00 f8 02 ff 00 fe[0m
+[0;32mI (10821) UART_ECHO: 00 fc 00 fe 00 f0 00 fc 00 ff 00 f8 00 ff 00 f8[0m
+[0;32mI (10831) UART_ECHO: 00 fd 00 fe 00 f8 00 fe 00 00 f8 00 fe 00 fc 00[0m
+[0;32mI (10831) UART_ECHO: f8 00 00 f0 00 f4 00 fe 00 f8 00 ff 00 fc 00 f8[0m
+[0;32mI (10841) UART_ECHO: 00 ff 00 ff 00 f4 00 ff 00 f8 03 f7 00 fc 00 f8[0m
+[0;32mI (10851) UART_ECHO: 00 00 ff 00 f8 02 ff 00 f0 00 fd 00 f8 00 f1 00[0m
+[0;32mI (10851) UART_ECHO: fe 00 f8 00 fe 00 00 f8 00 ff 01 ff 00 f0 00 fe[0m
+[0;32mI (10861) UART_ECHO: 00 f8 00 f0 00 fe 00 f8 03 fb 06 fe 00 f8 00 ff[0m
+[0;32mI (10861) UART_ECHO: 00 fc 00 f0 00 00 f8 00 fd 02 fe 00 f8 00 ff 00[0m
+[0;32mI (10871) UART_ECHO: fe 01 f8 00 ff 00 ff 00 f8 00 ff 00 fc 00 fe 00[0m
+[0;32mI (10881) UART_ECHO: fe 00 f8 00 fa 00 ff 00 fc 00 fe 00 f8 00 fe 00[0m
+[0;32mI (10881) UART_ECHO: fe 00 fc 02 fc 00 ff 00 fc 00 ff 03 f8 00 fe 00[0m
+[0;32mI (10891) UART_ECHO: f0 00 fe 00 ff 00 f8 00 ff 00 fc 01 fe 00 ff 00[0m
+[0;32mI (10891) UART_ECHO: f0 00 ff 00 fc 00 f0 00 ff 00 fc 03 fc 07 ff 00[0m
+[0;32mI (10901) UART_ECHO: f8 00 ff 00 fe 00 fc 00 00 f8 00 fc 00 fe 00 fc[0m
+[0;32mI (10911) UART_ECHO: 00 fd 00 fe 00 fd 00 fe 00 fc 00 fe 00 fc 00 f8[0m
+[0;32mI (10911) UART_ECHO: 00 ff 00 f8 01 ff 00 f8 00 fc 00 fe 00 f0 00 ff[0m
+[0;32mI (10921) UART_ECHO: 00 fc 00 f9 00 ff 00 00 fe 00 ff 00 f8 01 ff 00[0m
+[0;32mI (10921) UART_ECHO: f8 00 fc 01 ff 00 f8 00 f9 00 ff 00 f8 00 fc 00[0m
+[0;32mI (10931) UART_ECHO: ff 00 f0 00 ff 00 fc 00 f8 01 fe 00 f8 00 ff 00[0m
+[0;32mI (10941) UART_ECHO: ff 00 f1 00 fe 00 ff 00 fe 00 fc 00 fd 00 fe 00[0m
+[0;32mI (10941) UART_ECHO: fc 01 fd 00 fe 00 fc 00 fc 00 f0 00 fe 01 fe 00[0m
+[0;32mI (10951) UART_ECHO: fc 00 ff 00 ff 00 f8 07 00 f0 00 f8 00 ff 00 f8[0m
+[0;32mI (10961) UART_ECHO: 00 fa 00 ff 00 fe 00 ff 00 ff 00 f8 00 ff 00 f8[0m
+[0;32mI (10961) UART_ECHO: 00 fd 00 ff 00 f8 01 fe 00 ff 00 f8 00 fe 00 fc[0m
+[0;32mI (10971) UART_ECHO: 00 f8 00 ff 00 f1 00 fe 00 f8 00 ff 00 fc 00 fc[0m
+[0;32mI (10971) UART_ECHO: 00 ff 00 f8 00 fc 00 00 fc 00 fe 00 f8 00 f8 00[0m
+[0;32mI (10981) UART_ECHO: fe 00 f8 00 ff 00 fe 00 f8 00 ff 00 fe 00 f0 00[0m
+[0;32mI (10991) UART_ECHO: ff 00 f8 00 f9 00 ff 00 f8 00 fc 00 fe 00 f8 01[0m
+[0;32mI (10991) UART_ECHO: fc 00 fc 00 ff 00 ff 00 00 f8 00 fc 00 ff 00 fc[0m
+[0;32mI (11001) UART_ECHO: 00 fc 00 fe 00 fd 01 ff 00 f8 00 fc 01 ff 00 f8[0m
+[0;32mI (11001) UART_ECHO: 03 ff 00 ff 00 f8 00 fe 00 f8 00 fe 01 ff 00 f8[0m
+[0;32mI (11011) UART_ECHO: 00 fe 00 fe 00 fe 07 00 fc 00 f4 00 ff 00 fc 00[0m
+[0;32mI (11021) UART_ECHO: fe 00 f8 00 fc 00 fc 00 f8 00 fe 00 fe 01 fc 00[0m
+[0;32mI (11021) UART_ECHO: fc 00 f8 00 ff 01 fc 00 ff 00 fe 00 f8 02 fe 00[0m
+[0;32mI (11031) UART_ECHO: fc 07 ff 00 ff 00 00 ff 00 f8 01 fd 00 00 f0 00[0m
+[0;32mI (11031) UART_ECHO: ff 00 fc 00 f9 00 fe 00 f8 00 fe 00 fc 00 fc 00[0m
+[0;32mI (11041) UART_ECHO: fc 00 f8 00 fe 00 f8 00 ff 00 f8 00 f9 00 fe 00[0m
+[0;32mI (11051) UART_ECHO: f8 00 00 f8 00 f8 00 ff 00 f8 00 ff 03 f8 00 f4[0m
+[0;32mI (11051) UART_ECHO: 01 ff 00 f8 00 fd 00 ff 00 fc 03 fe 00 fc 00 ff[0m
+[0;32mI (11061) UART_ECHO: 00 fc 00 fe 00 fe 00 fc 00 ff 03 fd 00 fe 00 f8[0m
+[0;32mI (11061) UART_ECHO: 00 00 f8 00 f8 00 ff 00 f8 00 f6 00 ff 00 f0 00[0m
+[0;32mI (11071) UART_ECHO: ff 00 fe 00 fc 00 fc 00 f8 00 fe 00 fc 00 ff 00[0m
+[0;32mI (11081) UART_ECHO: fc 00 fe 00 f0 00 f0 00 ff 00 fc 00 ff 00 f8 00[0m
+[0;32mI (11081) UART_ECHO: ff 01 00 f0 00 ff 00 f8 00 f8 00 00 f0 00 ff 01[0m
+[0;32mI (11091) UART_ECHO: fe 00 fc 00 ff 00 f8 00 f8 00 ff 00 fc 00 fc 00[0m
+[0;32mI (11091) UART_ECHO: f0 00 ff 00 fe 01 fc 00 ff 00 f0 00 fe 00 ff[0m
+[0;32mI (12101) UART_ECHO: Sent: Hjkdsnzfvkdnrfgioejmrflsiaerlfjd[0m

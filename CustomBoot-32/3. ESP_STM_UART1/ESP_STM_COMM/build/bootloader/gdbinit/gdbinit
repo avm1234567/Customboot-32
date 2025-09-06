@@ -1,0 +1,2 @@
+source /home/varun/esp/ESP_STM_COMM/build/bootloader/gdbinit/symbols
+source /home/varun/esp/ESP_STM_COMM/build/bootloader/gdbinit/connect

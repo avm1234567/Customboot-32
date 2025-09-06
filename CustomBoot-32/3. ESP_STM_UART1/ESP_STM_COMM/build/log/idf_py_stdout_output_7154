@@ -1,0 +1,392 @@
+0 len 00003AE0 (14ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15736
+load:0x40080400,len:4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (29) boot: ESP-IDF v5.4.2 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Jul 24 2025 14:53:01[0m
+[0;32mI (30) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0ac6ch ( 44140) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001ac94 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (104) esp_image: segment 2: paddr=0001acb8 vaddr=3ffb0000 size=023e8h (  9192) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=0001d0a8 vaddr=40080000 size=02f70h ( 12144) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=15e4ch ( 89676) map[0m
+[0;32mI (153) esp_image: segment 5: paddr=00035e74 vaddr=40082f70 size=0aea4h ( 44708) load[0m
+[0;32mI (177) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (177) boot: Disabling RNG early entropy source...[0m
+[0;32mI (188) cpu_start: Multicore app[0m
+[0;32mI (196) cpu_start: Pro cpu start user code[0m
+[0;32mI (196) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (196) app_init: Application information:[0m
+[0;32mI (196) app_init: Project name:     ESP_STM_COMM[0m
+[0;32mI (200) app_init: App version:      1[0m
+[0;32mI (204) app_init: Compile time:     Jul 24 2025 14:52:47[0m
+[0;32mI (209) app_init: ELF file SHA256:  5d132d5b2...[0m
+[0;32mI (213) app_init: ESP-IDF:          v5.4.2[0m
+[0;32mI (217) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (221) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (225) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (229) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (235) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (240) heap_init: At 3FFB2CB0 len 0002D350 (180 KiB): DRAM[0m
+[0;32mI (245) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (251) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (256) heap_init: At 4008DE14 len 000121EC (72 KiB): IRAM[0m
+[0;32mI (263) spi_flash: detected chip: generic[0m
+[0;32mI (265) spi_flash: flash io: dio[0m
+[0;33mW (268) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (281) main_task: Started on CPU0[0m
+[0;32mI (291) main_task: Calling app_main()[0m
+[0;32mI (291) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (1491) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (3491) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (4691) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (6691) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (7891) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (9891) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (11091) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (13091) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (14291) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (16291) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (17491) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (19491) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (20691) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (22691) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (23891) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (25891) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (27091) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (29091) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (30291) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (32291) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (33491) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (35491) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (36691) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (38691) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (39891) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (41891) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (43091) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (45091) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (46291) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (48291) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (49491) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (51491) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (52691) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (54691) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (55891) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (57891) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (59091) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (61091) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (62291) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (64291) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (65491) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (67491) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (68691) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (70691) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (71891) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (73891) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (75091) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (77091) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (78291) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (80291) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (81491) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (83491) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (84691) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (86691) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (87891) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (89891) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (91091) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (93091) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (94291) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (96291) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (97491) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (99491) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (100691) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (102691) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (103891) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (105891) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (107091) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (109091) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (110291) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (112291) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (113491) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (115491) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (116691) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (118691) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (119891) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (121891) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (123091) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (125091) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (126291) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (128291) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (129491) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (131491) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (132691) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (134691) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (135891) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (137891) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (139091) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (141091) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (142291) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (144291) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (145491) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (147491) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (148691) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (150691) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (151891) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (153891) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (155091) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (157091) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (158291) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (160291) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (161491) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (163491) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (164691) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (166691) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (167891) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (169891) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (171091) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (173091) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (174291) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (176291) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (177491) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (179491) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (180691) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (182691) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (183891) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (185891) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (187091) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (189091) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (190291) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (192291) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (193491) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (195491) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (196691) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (198691) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (199891) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (201891) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (203091) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (205091) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (206291) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (208291) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (209491) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (211491) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (212691) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (214691) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (215891) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (217891) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (219091) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (221091) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (222291) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (224291) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (225491) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (227491) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (228691) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (230691) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (231891) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (233891) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (235091) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (237091) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (238291) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (240291) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (241491) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (243491) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (244691) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (246691) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (247891) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (249891) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (251091) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (253091) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (254291) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (256291) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (257491) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (259491) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (260691) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (262691) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (263891) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (265891) UART_ECHO: Sent: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
+[0;32mI (267091) UART_ECHO: Received: Hjkytvbyujgbigbjbyigbkhj,,,,,,,,,,,,,,,,,,,gvhgvnb jb guiyhugjbj yyujguyjuyjytjhfvhbyujhbnk,nkuihjbjhbnds[0m
+
