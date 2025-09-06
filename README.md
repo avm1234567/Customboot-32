@@ -147,7 +147,8 @@ CustomBoot-32
 
 ## ⚡ Usage
 ```text
-All the codes are to be executed using their respective execution environments like ESP-IDF, PlatformIO, STM32 CubeIDE, STM32 CUBE Programmer, etc.
+All the codes are to be executed using their respective execution environments like 
+ESP-IDF, PlatformIO, STM32 CubeIDE, STM32 CUBE Programmer, etc.
 Before execution, clean the previous builds for error-free compilation.
 ```
 
