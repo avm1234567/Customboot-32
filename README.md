@@ -182,6 +182,7 @@ cd 1. OTA
 
 - Then open ESP-IDF Powershell and build the project.
 ```
+idf.py fullclean
 idf.py build
 ```
 
@@ -222,6 +223,7 @@ cd 3. ESP_STM_UART1\ESP_STM_COMM
 
 - After that build the code and flash it 
 ```
+idf.py fullclean
 idf.py build
 idf.py flash monitor 
 ```
@@ -239,6 +241,7 @@ cd 3. ESP_STM_UART2\ESP_STM_COMM
 
 - After that build the code and flash it 
 ```
+idf.py fullclean
 idf.py build
 idf.py flash monitor 
 ```
@@ -267,6 +270,44 @@ CustomBoot-32/5. ESP_TO_STM_FIRMWARE_VIA_UART/Learning_Bootloader/Debug/Learning
 ```
 
 - After generating flash the bin file into the STM using STM32CubeProgrammer at Start Address '0x08000000'.
+
+### 6. ESP_STM_FILE CRC
+
+- Download libopencm3 by cloning it to run bootloader file
+```
+git clone https://github.com/libopencm3/libopencm3.git
+cd libopencm3
+```
+- After that flash the ESP32 in the directory
+```
+idf.py fullclean
+CustomBoot-32/6. ESP_STM_FILE_CRC/OTA
+idf.py build flash monitor
+```
+
+### 7. Controling_ESP_GPIO_Wirelessly
+- Firstly fullclean, then build and flash the project.
+```
+idf.py fullclean
+idf.py build
+idf.py flash monitor
+```
+
+### 8. Wireless_Firmware_Selection
+- Download libopencm3 by cloning it to run bootloader file
+```
+git clone https://github.com/libopencm3/libopencm3.git
+cd libopencm3
+```
+- After that flash the ESP32 in the directory
+```
+idf.py fullclean
+CustomBoot-32/8. Wireless_Firmware_Selection_ESP_STM(Additional)/OTA
+idf.py build flash monitor
+```
+
+
+
 
 ## 📸 Results
 
