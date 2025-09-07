@@ -163,14 +163,110 @@ The firmware transfer is carried out via **UART**.
 
 ---
 
-## ⚡ Usage
-    All the codes are to be executed using their respective execution environments 
-    like **ESP-IDF, PlatformIO, STM32 CubeIDE, STM32 CUBE Programmer, etc.**  
-    Before execution, clean the previous builds for error-free compilation.
-    ESP-IDF version 5.4.2
-    STMCubeIDE version 1.19.0
+## Usage
 
----
+The codes used in our project are in the 'CustomBoot-32' directory. 
+
+### 1. OTA
+
+- From the CustomBoot-32 directory head to the OTA directory.
+```
+cd 1. OTA
+```
+
+- In the code enter the SSID and password of your wifi in line 16 and 17.
+```
+#define WIFI_SSID "Your_SSID"
+#define WIFI_PASS "Your_Password"
+```
+
+- Then open ESP-IDF Powershell and build the project.
+```
+idf.py build
+```
+
+- After the build is complete flash it.
+```
+idf.py flash monitor 
+```
+
+### 2. Dual_Image_Bootloader
+
+- To generate the bin files open this project in STM32CubeIDE and build it 
+
+- To flash this Code use STM32CubeProgrammer. Change your directory to Dual image bootloader directory. 
+
+- After opening the directory first flash the LED_BLINK_2 bin file into STM-32 at the Start Address '0x08006000'. The path for the bin is: 
+```
+CustomBoot-32/2. Dual_Image_Bootloader/LED_BLINK_2/Debug/LED_BLINK_2.bin
+```
+
+- After flashing the first bin file flash the LED_BLINK bin file into STM-32 at the Start Address '0x08004000'. The path for the bin is:
+```
+CustomBoot-32/2. Dual_Image_Bootloader/LED_BLINK/Debug/LED_BLINK.bin
+```
+
+- Lastly, flash the Bootloader at the Start Address '0x08000000'. The path for the bin is:
+```
+CustomBoot-32/2. Dual_Image_Bootloader/Learning_Bootloader/Debug/Learning_Bootloader.bin
+```
+
+- Press the 'Start Programming' button to run the program.
+
+### 3. ESP_STM_UART1
+
+- To run the ESP side of the code change your directory to 'ESP_STM_COMM'.
+```
+cd 3. ESP_STM_UART1\ESP_STM_COMM
+```
+
+- After that build the code and flash it 
+```
+idf.py build
+idf.py flash monitor 
+```
+
+- To flash the STM code, open STM32CubeIDE and generate the build files.
+
+- After generating flash the bin file into the STM using STM32CubeProgrammer at Start Address '0x08000000'
+
+### 4. ESP_STM_UART2
+
+- To run the ESP side of the code change your directory to 'ESP_STM_COMM'.
+```
+cd 3. ESP_STM_UART2\ESP_STM_COMM
+```
+
+- After that build the code and flash it 
+```
+idf.py build
+idf.py flash monitor 
+```
+
+- To flash the STM code, open STM32CubeIDE and generate the build files.
+
+- After generating flash the bin file into the STM using STM32CubeProgrammer at Start Address '0x08000000'.
+
+### 5. ESP_TO_STM_FIRMWARE_VIA_UART
+
+-- To run the ESP side of the code change your directory to 'OTA'.
+```
+cd 5. ESP_TO_STM_FIRMWARE_VIA_UART\OTA
+```
+
+- After that build the code and flash it 
+```
+idf.py build
+idf.py flash monitor 
+```
+ 
+
+- To flash the STM code, open STM32CubeIDE and generate the build files. You will find the bin files in the path
+```
+CustomBoot-32/5. ESP_TO_STM_FIRMWARE_VIA_UART/Learning_Bootloader/Debug/Learning_Bootloader.bin
+```
+
+- After generating flash the bin file into the STM using STM32CubeProgrammer at Start Address '0x08000000'.
 
 ## 📸 Results
 
