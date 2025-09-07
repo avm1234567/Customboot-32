@@ -1,43 +1,40 @@
-<h1 align = "center" > <strong> 🚀 CustomBoot-32</strong> <br></h1>
+# 🚀 CustomBoot-32
 
-<h2 align = "center"> ✨ SRA Eklavya 2025 <br></h2>
+## ✨ SRA Eklavya 2025
 
+---
 
-<!-- TABLE OF CONTENTS -->
 ## 📑 Table of Contents
+* [About the Project](#-about-the-project)  
+  - [Aim](#aim)  
+  - [Description](#description)  
+  - [Tech-Stack](#tech-stack)  
+  - [File Structure](#file-structure)  
+* [Getting Started](#getting-started)  
+  * [Installation](#installation)  
+* [Usage](#usage)  
+* [Results and Demo](#results-and-demo)  
+* [Future Work](#future-work)  
+* [Report](#report)
+* [Troubleshooting](#troubleshooting)  
+* [Contributors](#contributors)  
+* [Mentors](#mentors)  
+* [Resources](#resources)  
+* [Acknowledgements](#acknowledgements)  
 
-* [About the Project](#about-the-project)
-  - [Aim](#aim)
-  - [Description](#description)
-  - [Tech-Stack](#tech-stack)
-  - [File Structure](#file-structure)
-* [Getting Started](#getting-started)
-  <!-- * [Prerequisites](#prerequisites) -->
-  * [Installation](#installation)
-* [Usage](#usage)
-* [Results and Demo](#results-and-demo)
-* [Future Work](#future-work)
-* [Troubleshooting](#troubleshooting)
-* [Contributors](#contributors)
-* [Mentors](#mentors)
-* [Resources](#resources)
-* [Acknowledgement](#acknowledgements)
+---
 
+# ⭐ About the Project
 
-
-<!-- ABOUT THE PROJECT -->
-# ⭐ About the project
 ## Aim
-Designing a custom PCB with OTA support and dual image Bootloader using ESP32 WROOM-32E and STM32F103C8T6.
+Designing a custom PCB with OTA support and a dual-image Bootloader using ESP32 WROOM-32D and STM32F103C8T6.
 
 ## Description
-The main aim is creating a custom PCB that integrates Blue Pill(STM32F103C8T6) with ESP32 WROOM-32E, 
-which uses OTA feature of ESP to receive two firmwares from a Website hosted
-by ESP itself, create memory partitions in ESP and initialize a File System in
-one of the partitions. Further on the STM side, we created a Dual-Image Boot-
-loader that requests Firmware according to the user input, verifies it, allocates
-it in the flash memory and executes it. The firmware transfer is carried out via
-UART.
+The project focuses on creating a custom PCB that integrates the Blue Pill (STM32F103C8T6) with ESP32 WROOM-32D.  
+The ESP32 hosts a website, receives two firmwares via OTA, creates memory partitions, and initializes a File System in one of the partitions.  
+
+On the STM side, a dual-image Bootloader requests firmware based on user input, verifies it, allocates it in flash memory, and executes it.  
+The firmware transfer is carried out via **UART**.
 
 ## Tech-Stack
 ### Coding Language
@@ -90,189 +87,69 @@ UART.
 
 <br><br>
 
-## 📁 File structure
+## 📁 File Structure
 
-    CustomBoot-32
-    ├── 1. OTA
-    │   ├── CMakeLists.txt
-    │   ├── main
-    │   ├── partitions.csv
-    │   ├── README.md
-    │   ├── sdkconfig
-    │   ├── sdkconfig.old
-    │   └── spiffs
-    ├── 2. Dual_Image_Bootloader
-    │   ├── Learning_Bootloader
-    │   ├── LED_BLINK
-    │   └── LED_BLINK_2
-    ├── 3. ESP_STM_UART1
-    │   ├── ESP_STM_COMM
-    │   └── UART_Test_3
-    ├── 4. ESP_STM_UART2
-    │   ├── ESP_STM_COMM
-    │   └── UART_Test_3
-    ├── 5. ESP_TO_STM_FIRMWARE_VIA_UART
-    │   ├── Learning_Bootloader
-    │   ├── OTA
-    │   └── STM_Bootloader_Mini_LibOpenCM3
-    ├── 6. ESP_STM_FILE_CRC
-    │   ├── Bootloader_C8TX
-    │   ├── Default_App
-    │   └── OTA
-    ├── 7. Controling_ESP_GPIO_Wirelessly
-    │   ├── build
-    │   ├── CMakeLists.txt
-    │   ├── main
-    │   ├── README.md
-    │   └── sdkconfig
-    └── 8. Wireless_Firmware_Selection_ESP_STM(Additional)
-        ├── Bootloader_C8TX
-        ├── Default_App
-        └── OTA
+```
+CustomBoot-32
+├── 1. OTA
+│   ├── CMakeLists.txt
+│   ├── main
+│   ├── partitions.csv
+│   ├── README.md
+│   ├── sdkconfig
+│   ├── sdkconfig.old
+│   └── spiffs
+├── 2. Dual_Image_Bootloader
+│   ├── Learning_Bootloader
+│   ├── LED_BLINK
+│   └── LED_BLINK_2
+├── 3. ESP_STM_UART1
+│   ├── ESP_STM_COMM
+│   └── UART_Test_3
+├── 4. ESP_STM_UART2
+│   ├── ESP_STM_COMM
+│   └── UART_Test_3
+├── 5. ESP_TO_STM_FIRMWARE_VIA_UART
+│   ├── Learning_Bootloader
+│   ├── OTA
+│   └── STM_Bootloader_Mini_LibOpenCM3
+├── 6. ESP_STM_FILE_CRC
+│   ├── Bootloader_C8TX
+│   ├── Default_App
+│   └── OTA
+├── 7. Controlling_ESP_GPIO_Wirelessly
+│   ├── build
+│   ├── CMakeLists.txt
+│   ├── main
+│   ├── README.md
+│   └── sdkconfig
+└── 8. Wireless_Firmware_Selection_ESP_STM (Additional)
+    ├── Bootloader_C8TX
+    ├── Default_App
+    └── OTA
+```
 
+---
 
-
-<br><br>    
-
-<!-- GETTING STARTED -->
 ## 🚀 Getting Started
 
-### Prerequisites 
-- ESP-IDF v5.2.1
-
-- STM32CubeIDE v1.18.1
-
-- STM32CubeProgrammer v2.20.0
-
-
 ### Installation
-1) Clone the repo<br>
-`git clone https://github.com/avm1234567/Customboot-32/tree/varun`
+1. Clone the repo  
+   ```bash
+   git clone https://github.com/avm1234567/Customboot-32.git
+   ```
+2. Navigate to the project directory  
+   ```bash
+   cd CustomBoot-32
+   ```
 
-2) Navigate to the project directory<br>
-`cd CustomBoot-32` 
-<br><br>
+---
 
-
-
-<!-- USAGE EXAMPLES -->
 ## ⚡ Usage
+    All the codes are to be executed using their respective execution environments like **ESP-IDF, PlatformIO, STM32 CubeIDE, STM32 CUBE Programmer, etc.**  
+    Before execution, clean the previous builds for error-free compilation.
 
-The codes used in our project are in the 'CustomBoot-32' directory. 
-
-### 1. OTA
-
-- From the CustomBoot-32 directory head to the OTA directory.
-```
-cd 1. OTA
-```
-
-- In the code enter the SSID and password of your wifi in line 16 and 17.
-```
-#define WIFI_SSID "Your_SSID"
-#define WIFI_PASS "Your_Password"
-```
-
-- Then open ESP-IDF Powershell and build the project.
-```
-idf.py build
-```
-
-- After the build is complete flash it.
-```
-idf.py flash monitor 
-```
-
-### 2. Dual_Image_Bootloader
-
-- To generate the bin files open this project in STM32CubeIDE and build it 
-
-- To flash this Code use STM32CubeProgrammer. Change your directory to Dual image bootloader directory. 
-
-- After opening the directory first flash the LED_BLINK_2 bin file into STM-32 at the Start Address '0x08006000'. The path for the bin is: 
-```
-CustomBoot-32/2. Dual_Image_Bootloader/LED_BLINK_2/Debug/LED_BLINK_2.bin
-```
-
-- After flashing the first bin file flash the LED_BLINK bin file into STM-32 at the Start Address '0x08004000'. The path for the bin is:
-```
-CustomBoot-32/2. Dual_Image_Bootloader/LED_BLINK/Debug/LED_BLINK.bin
-```
-
-- Lastly, flash the Bootloader at the Start Address '0x08000000'. The path for the bin is:
-```
-CustomBoot-32/2. Dual_Image_Bootloader/Learning_Bootloader/Debug/Learning_Bootloader.bin
-```
-
-- Press the 'Start Programming' button to run the program.
-
-### 3. ESP_STM_UART1
-
-- To run the ESP side of the code change your directory to 'ESP_STM_COMM'.
-```
-cd 3. ESP_STM_UART1\ESP_STM_COMM
-```
-
-- After that build the code and flash it 
-```
-idf.py build
-idf.py flash monitor 
-```
-
-- To flash the STM code, open STM32CubeIDE and generate the build files.
-
-- After generating flash the bin file into the STM using STM32CubeProgrammer at Start Address '0x08000000'
-
-### 4. ESP_STM_UART2
-
-- To run the ESP side of the code change your directory to 'ESP_STM_COMM'.
-```
-cd 3. ESP_STM_UART2\ESP_STM_COMM
-```
-
-- After that build the code and flash it 
-```
-idf.py build
-idf.py flash monitor 
-```
-
-- To flash the STM code, open STM32CubeIDE and generate the build files.
-
-- After generating flash the bin file into the STM using STM32CubeProgrammer at Start Address '0x08000000'.
-
-### 5. ESP_TO_STM_FIRMWARE_VIA_UART
-
--- To run the ESP side of the code change your directory to 'OTA'.
-```
-cd 5. ESP_TO_STM_FIRMWARE_VIA_UART\OTA
-```
-
-- After that build the code and flash it 
-```
-idf.py build
-idf.py flash monitor 
-```
- 
-
-- To flash the STM code, open STM32CubeIDE and generate the build files. You will find the bin files in the path
-```
-CustomBoot-32/5. ESP_TO_STM_FIRMWARE_VIA_UART/Learning_Bootloader/Debug/Learning_Bootloader.bin
-```
-
-- After generating flash the bin file into the STM using STM32CubeProgrammer at Start Address '0x08000000'.
-
-### 6. 
-
-
-
-
-
-
-
-
-
-
-
+---
 
 ## 📸 Results
 
@@ -282,7 +159,7 @@ CustomBoot-32/5. ESP_TO_STM_FIRMWARE_VIA_UART/Learning_Bootloader/Debug/Learning
 <br>
 ![Back](assets/PCBSC2.png)  
 <br>
-<img src="assets/Final_PCB.png" alt="Actual PCB" width="800">
+![Actual PCB](assets/Final_PCB.png)
 
 ## Demo:  
 [Working Demo of final PCB)](https://drive.google.com/file/d/1Z0VfDI0KjEA28zM6vQ-hMSaG2jekwzWR/view?usp=drive_link)  
@@ -325,7 +202,7 @@ Refer our own [report](https://drive.google.com/file/d/13CS2zIfVXfLGR-wP4OjCv9lp
 
 ## 📚 Resources
 - [Understanding GIT](https://youtu.be/apGV9Kg7ics?si=QQJMHjStjuuJt9wC)  
-- [ESP32 WROOM-32D datasheet](https://www.digikey.in/en/htmldatasheets/production/3267269/0/0/1/esp32-devkitc-32e)  
+- [ESP32 WROOM-32D datasheet](https://www.digikey.in/en/htmldatasheets/production/3267269/0/0/1/esp32-devkitc-32d)  
 - [STM32F103C8T6 datasheet](https://www.st.com/resource/en/datasheet/stm32f103c8.pdf)  
 - [CP2102 datasheet](https://www.digikey.in/htmldatasheets/production/121410/0/0/1/cp2102-gm.html)  
 - [AMS1117 datasheet](https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/5011/AMS1117.pdf)  
