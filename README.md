@@ -1,8 +1,9 @@
-# 🚀 CustomBoot-32
+<h1 align="center">🚀 CustomBoot-32</h1>
 
-## ✨ SRA Eklavya 2025
 
----
+<h2 align="center">✨ SRA Eklavya 2025</h2>
+
+
 
 ## 📑 Table of Contents
 * [About the Project](#-about-the-project)  
@@ -27,10 +28,10 @@
 # ⭐ About the Project
 
 ## Aim
-Designing a custom PCB with OTA support and a dual-image Bootloader using ESP32 WROOM-32D and STM32F103C8T6.
+Designing a custom PCB with OTA support and a dual-image Bootloader using ESP32 WROOM-32E and STM32F103C8T6.
 
 ## Description
-The project focuses on creating a custom PCB that integrates the Blue Pill (STM32F103C8T6) with ESP32 WROOM-32D.  
+The project focuses on creating a custom PCB that integrates the Blue Pill (STM32F103C8T6) with ESP32 WROOM-32E.  
 The ESP32 hosts a website, receives two firmwares via OTA, creates memory partitions, and initializes a File System in one of the partitions.  
 
 On the STM side, a dual-image Bootloader requests firmware based on user input, verifies it, allocates it in flash memory, and executes it.  
@@ -90,43 +91,60 @@ The firmware transfer is carried out via **UART**.
 ## 📁 File Structure
 
 ```
-CustomBoot-32
-├── 1. OTA
-│   ├── CMakeLists.txt
-│   ├── main
-│   ├── partitions.csv
-│   ├── README.md
-│   ├── sdkconfig
-│   ├── sdkconfig.old
-│   └── spiffs
-├── 2. Dual_Image_Bootloader
-│   ├── Learning_Bootloader
-│   ├── LED_BLINK
-│   └── LED_BLINK_2
-├── 3. ESP_STM_UART1
-│   ├── ESP_STM_COMM
-│   └── UART_Test_3
-├── 4. ESP_STM_UART2
-│   ├── ESP_STM_COMM
-│   └── UART_Test_3
-├── 5. ESP_TO_STM_FIRMWARE_VIA_UART
-│   ├── Learning_Bootloader
-│   ├── OTA
-│   └── STM_Bootloader_Mini_LibOpenCM3
-├── 6. ESP_STM_FILE_CRC
-│   ├── Bootloader_C8TX
-│   ├── Default_App
-│   └── OTA
-├── 7. Controlling_ESP_GPIO_Wirelessly
-│   ├── build
-│   ├── CMakeLists.txt
-│   ├── main
-│   ├── README.md
-│   └── sdkconfig
-└── 8. Wireless_Firmware_Selection_ESP_STM (Additional)
-    ├── Bootloader_C8TX
-    ├── Default_App
-    └── OTA
+.
+├── assets  #All images and test videos
+│   ├── 2WayUART.mp4
+│   ├── 3D-view back.png
+│   ├── 3D-view.png
+│   ├── EmbedC.png
+│   ├── Final_PCB.png
+│   ├── HAL.png
+│   ├── LibOpenCM3.png
+│   ├── OTA.png
+│   ├── PCBSC1.png
+│   ├── PCBSC2.png
+│   ├── Routing.png
+│   ├── SimpleBootloader.mp4
+│   ├── SPIFFS.png
+│   ├── UART.png
+│   ├── website.png
+│   ├── Wireless_CMD_Test.mp4
+│   └── WorkingVideo.mp4
+├── CustomBoot-32  #All the firmwares for both ESP as well as STM
+│   ├── 1. OTA
+│   ├── 2. Dual_Image_Bootloader
+│   ├── 3. ESP_STM_UART1
+│   ├── 4. ESP_STM_UART2
+│   ├── 5. ESP_TO_STM_FIRMWARE_VIA_UART
+│   ├── 6. ESP_STM_FILE_CRC
+│   ├── 7. Controling_ESP_GPIO_Wirelessly
+│   └── 8. Wireless_Firmware_Selection_ESP_STM(Additional)
+├── Documentation  #Detailed documentation of the project
+│   └── Final_DOC.pdf
+├── Gerber files  #Files made for fabrication of PCB
+│   ├── 4 SRA-B_Cu.gbr
+│   ├── 4 SRA-B_Mask.gbr
+│   ├── 4 SRA-B_Paste.gbr
+│   ├── 4 SRA-B_Silkscreen.gbr
+│   ├── 4 SRA-drlnew.zip
+│   ├── 4 SRA-drl.rpt
+│   ├── 4 SRA-Edge_Cuts.gbr
+│   ├── 4 SRA-F_Cu.gbr
+│   ├── 4 SRA-F_Mask.gbr
+│   ├── 4 SRA-F_Paste.gbr
+│   ├── 4 SRA-F_Silkscreen.gbr
+│   ├── 4 SRA-job.gbrjob
+│   ├── 4 SRA-NPTH-drl.gbr
+│   ├── 4 SRA-NPTH-drl_map.gbr
+│   ├── 4 SRA-PTH-drl.gbr
+│   └── 4 SRA-PTH-drl_map.gbr
+├── README.md
+└── Schematic files  #Schematics of our PCB
+    ├── 4 SRA.kicad_pcb
+    ├── 4 SRA.kicad_sch
+    └── untitled.kicad_sch
+
+
 ```
 
 ---
@@ -146,8 +164,11 @@ CustomBoot-32
 ---
 
 ## ⚡ Usage
-    All the codes are to be executed using their respective execution environments like **ESP-IDF, PlatformIO, STM32 CubeIDE, STM32 CUBE Programmer, etc.**  
+    All the codes are to be executed using their respective execution environments 
+    like **ESP-IDF, PlatformIO, STM32 CubeIDE, STM32 CUBE Programmer, etc.**  
     Before execution, clean the previous builds for error-free compilation.
+    ESP-IDF version 5.4.2
+    STMCubeIDE version 1.19.0
 
 ---
 
@@ -159,7 +180,7 @@ CustomBoot-32
 <br>
 ![Back](assets/PCBSC2.png)  
 <br>
-![Actual PCB](assets/Final_PCB.png)
+<img src="assets/Final_PCB.png" alt="Actual PCB" width="800">
 
 ## Demo:  
 [Working Demo of final PCB)](https://drive.google.com/file/d/1Z0VfDI0KjEA28zM6vQ-hMSaG2jekwzWR/view?usp=drive_link)  
@@ -202,7 +223,7 @@ Refer our own [report](https://drive.google.com/file/d/13CS2zIfVXfLGR-wP4OjCv9lp
 
 ## 📚 Resources
 - [Understanding GIT](https://youtu.be/apGV9Kg7ics?si=QQJMHjStjuuJt9wC)  
-- [ESP32 WROOM-32D datasheet](https://www.digikey.in/en/htmldatasheets/production/3267269/0/0/1/esp32-devkitc-32d)  
+- [ESP32 WROOM-32D datasheet](https://www.digikey.in/en/htmldatasheets/production/3267269/0/0/1/esp32-devkitc-32e)  
 - [STM32F103C8T6 datasheet](https://www.st.com/resource/en/datasheet/stm32f103c8.pdf)  
 - [CP2102 datasheet](https://www.digikey.in/htmldatasheets/production/121410/0/0/1/cp2102-gm.html)  
 - [AMS1117 datasheet](https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/5011/AMS1117.pdf)  
