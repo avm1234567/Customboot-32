@@ -320,7 +320,7 @@ idf.py build flash monitor
 <img src="assets/Final_PCB.png" alt="Actual PCB" width="800">
 
 ## Demo:  
-[Working Demo of final PCB)](https://drive.google.com/file/d/1Z0VfDI0KjEA28zM6vQ-hMSaG2jekwzWR/view?usp=drive_link)  
+[Working Demo of final PCB](https://drive.google.com/file/d/1Z0VfDI0KjEA28zM6vQ-hMSaG2jekwzWR/view?usp=drive_link)  
 
 For other results and test videos, please check our [Google Drive](https://drive.google.com/drive/folders/1JogM4m4yME66ZIJGMlyX8mcmxp7ndMSk?usp=drive_link).
 
