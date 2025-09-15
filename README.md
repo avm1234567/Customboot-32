@@ -316,7 +316,7 @@ idf.py build flash monitor
 |            Front            |            Back            |
 | --------------------------- | -------------------------- |
 | ![Front](assets/PCBSC1.png) | ![Back](assets/PCBSC2.png) |
-:-------------------------:|:-------------------------:| 
+
 
 <img src="assets/Final_PCB.png" alt="Actual PCB" width="800">
 
