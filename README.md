@@ -313,7 +313,7 @@ idf.py build flash monitor
 
 **Screenshot of our custom PCB:**  
 
-
+|            Front            |            Back            |
 | ![Front](assets/PCBSC1.png) | ![Back](assets/PCBSC2.png) |
 :-------------------------:|:-------------------------:| 
 
