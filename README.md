@@ -354,8 +354,8 @@ Refer our own [report](https://drive.google.com/file/d/13CS2zIfVXfLGR-wP4OjCv9lp
 
 ## 🎓 Mentors
 * [Prithvi Tambewagh](https://github.com/rkt-1597)  
-* [Shaunak Datar](https://github.com/nomkar24)  
-* [Vishal Mutha](https://github.com/avm1234567)  
+* [Shaunak Datar](https://github.com/ShaunakKDatar)  
+* [Vishal Mutha](https://github.com/Vishal-Mutha)  
 
 ---
 
